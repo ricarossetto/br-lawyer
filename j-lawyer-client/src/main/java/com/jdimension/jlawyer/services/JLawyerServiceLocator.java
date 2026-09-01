@@ -908,6 +908,33 @@ public class JLawyerServiceLocator {
         }
     }
 
+    public BrazilianPublicationServiceRemote lookupBrazilianPublicationServiceRemote() {
+        try {
+            return (BrazilianPublicationServiceRemote) ic.lookup("ejb:j-lawyer-server/j-lawyer-server-ejb//BrazilianPublicationService!com.jdimension.jlawyer.services.BrazilianPublicationServiceRemote");
+        } catch (NamingException ne) {
+            Logger.getLogger(JLawyerServiceLocator.class.getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
+
+    public BrazilianTaskServiceRemote lookupBrazilianTaskServiceRemote() {
+        try {
+            return (BrazilianTaskServiceRemote) ic.lookup("ejb:j-lawyer-server/j-lawyer-server-ejb//BrazilianTaskService!com.jdimension.jlawyer.services.BrazilianTaskServiceRemote");
+        } catch (NamingException ne) {
+            Logger.getLogger(JLawyerServiceLocator.class.getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
+
+    public BrazilianWorkflowDashboardServiceRemote lookupBrazilianWorkflowDashboardServiceRemote() {
+        try {
+            return (BrazilianWorkflowDashboardServiceRemote) ic.lookup("ejb:j-lawyer-server/j-lawyer-server-ejb//BrazilianWorkflowDashboardService!com.jdimension.jlawyer.services.BrazilianWorkflowDashboardServiceRemote");
+        } catch (NamingException ne) {
+            Logger.getLogger(JLawyerServiceLocator.class.getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
+
     public Topic lookupJMSTopic(String name) {
         try {
             Topic t = (Topic) icJms.lookup(name);

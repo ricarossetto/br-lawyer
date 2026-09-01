@@ -48,7 +48,7 @@ flowchart TD
     end
 
     subgraph Data & Storage Layer
-        JPA[(PostgreSQL / MariaDB - AddressBean, EntityRelationship, Config)]
+        JPA[(MariaDB - AddressBean, EntityRelationship, Config)]
     end
 
     SwingClient -->|EJB Remote / ServiceLocator| EJBService
