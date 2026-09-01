@@ -9,9 +9,10 @@
 package com.jdimension.jlawyer.domain.legal.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
- * DTO para Assuntos Processuais TPU/CNJ.
+ * DTO para Assuntos Processuais TPU/CNJ com suporte a versionamento e proveniência.
  *
  * @author BR-LAWYER Team
  */
@@ -24,6 +25,13 @@ public class TpuSubjectDTO implements Serializable {
     private String name;
     private Integer parentCode;
     private String glossary;
+    private String source;
+    private String sourceVersion;
+    private Date importedAt;
+    private Date validFrom;
+    private Date validTo;
+    private Date lastUpdatedAt;
+    private String checksum;
     private boolean active;
 
     public TpuSubjectDTO() {
@@ -73,6 +81,62 @@ public class TpuSubjectDTO implements Serializable {
 
     public void setGlossary(String glossary) {
         this.glossary = glossary;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getSourceVersion() {
+        return sourceVersion;
+    }
+
+    public void setSourceVersion(String sourceVersion) {
+        this.sourceVersion = sourceVersion;
+    }
+
+    public Date getImportedAt() {
+        return importedAt;
+    }
+
+    public void setImportedAt(Date importedAt) {
+        this.importedAt = importedAt;
+    }
+
+    public Date getValidFrom() {
+        return validFrom;
+    }
+
+    public void setValidFrom(Date validFrom) {
+        this.validFrom = validFrom;
+    }
+
+    public Date getValidTo() {
+        return validTo;
+    }
+
+    public void setValidTo(Date validTo) {
+        this.validTo = validTo;
+    }
+
+    public Date getLastUpdatedAt() {
+        return lastUpdatedAt;
+    }
+
+    public void setLastUpdatedAt(Date lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+    }
+
+    public String getChecksum() {
+        return checksum;
+    }
+
+    public void setChecksum(String checksum) {
+        this.checksum = checksum;
     }
 
     public boolean isActive() {

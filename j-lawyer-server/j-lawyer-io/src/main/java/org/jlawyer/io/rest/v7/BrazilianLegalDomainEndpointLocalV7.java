@@ -27,6 +27,10 @@ public interface BrazilianLegalDomainEndpointLocalV7 {
 
     Response findCaseByCnj(String cnjNumber);
 
+    Response getCaseSubjects(String caseId);
+
+    Response saveCaseSubjects(String caseId, java.util.List<CaseTpuSubjectDTO> subjects);
+
     Response getLawyerRegistrations(String contactId);
 
     Response saveLawyerRegistration(String contactId, LawyerRegistrationDTO registration);

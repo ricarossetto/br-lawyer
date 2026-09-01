@@ -29,6 +29,7 @@ public class JudiciaryCourtDTO implements Serializable {
     private String datajudCode;
     private String djenCode;
     private String electronicPortalUrl;
+    private String courtType;
     private boolean active;
 
     public JudiciaryCourtDTO() {
@@ -120,6 +121,14 @@ public class JudiciaryCourtDTO implements Serializable {
 
     public void setElectronicPortalUrl(String electronicPortalUrl) {
         this.electronicPortalUrl = electronicPortalUrl;
+    }
+
+    public String getCourtType() {
+        return courtType;
+    }
+
+    public void setCourtType(String courtType) {
+        this.courtType = courtType;
     }
 
     public boolean isActive() {

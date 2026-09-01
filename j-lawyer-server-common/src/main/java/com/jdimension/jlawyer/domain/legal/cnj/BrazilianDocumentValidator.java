@@ -278,4 +278,21 @@ public final class BrazilianDocumentValidator {
         if (doc == null) return "";
         return doc.replaceAll("[^a-zA-Z0-9]", "").trim().toUpperCase();
     }
+
+    /**
+     * Formata um número NPU/CNJ de 20 dígitos no padrão NNNNNNN-DD.AAAA.J.TR.OOOO.
+     */
+    public static String formatCnj(String cnjDigits) {
+        String clean = unmask(cnjDigits);
+        if (clean.length() != 20) {
+            return cnjDigits;
+        }
+        return String.format("%s-%s.%s.%s.%s.%s",
+                clean.substring(0, 7),
+                clean.substring(7, 9),
+                clean.substring(9, 13),
+                clean.substring(13, 14),
+                clean.substring(14, 16),
+                clean.substring(16, 20));
+    }
 }

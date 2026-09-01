@@ -203,4 +203,14 @@ public class BrazilianCaseDetailsDTO implements Serializable {
     public void setProvenanceSystem(String provenanceSystem) {
         this.provenanceSystem = provenanceSystem;
     }
+
+    private java.util.List<CaseTpuSubjectDTO> normalizedSubjects;
+
+    public java.util.List<CaseTpuSubjectDTO> getNormalizedSubjects() {
+        return normalizedSubjects;
+    }
+
+    public void setNormalizedSubjects(java.util.List<CaseTpuSubjectDTO> normalizedSubjects) {
+        this.normalizedSubjects = normalizedSubjects;
+    }
 }

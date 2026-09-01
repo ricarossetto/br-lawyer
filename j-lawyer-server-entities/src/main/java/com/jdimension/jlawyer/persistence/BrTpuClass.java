@@ -9,6 +9,7 @@
 package com.jdimension.jlawyer.persistence;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,11 +17,13 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entidade JPA para Classes Processuais das Tabelas Processuais Unificadas (TPU) do CNJ.
- * Catálogo dinâmico e importável (sem hardcode).
+ * Catálogo versionado, dinâmico e importável (sem hardcode).
  *
  * @author BR-LAWYER Team
  */
@@ -31,7 +34,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "BrTpuClass.findAll", query = "SELECT c FROM BrTpuClass c ORDER BY c.name"),
     @NamedQuery(name = "BrTpuClass.findById", query = "SELECT c FROM BrTpuClass c WHERE c.id = :id"),
     @NamedQuery(name = "BrTpuClass.findByCode", query = "SELECT c FROM BrTpuClass c WHERE c.code = :code"),
-    @NamedQuery(name = "BrTpuClass.findByNature", query = "SELECT c FROM BrTpuClass c WHERE c.nature = :nature ORDER BY c.name")
+    @NamedQuery(name = "BrTpuClass.findByNature", query = "SELECT c FROM BrTpuClass c WHERE c.nature = :nature ORDER BY c.name"),
+    @NamedQuery(name = "BrTpuClass.findByVersion", query = "SELECT c FROM BrTpuClass c WHERE c.sourceVersion = :sourceVersion ORDER BY c.name")
 })
 public class BrTpuClass implements Serializable {
 
@@ -55,6 +59,31 @@ public class BrTpuClass implements Serializable {
 
     @Column(name = "nature", length = 50)
     private String nature;
+
+    @Column(name = "source", length = 50)
+    private String source;
+
+    @Column(name = "source_version", length = 50)
+    private String sourceVersion;
+
+    @Column(name = "imported_at")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date importedAt;
+
+    @Column(name = "valid_from")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date validFrom;
+
+    @Column(name = "valid_to")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date validTo;
+
+    @Column(name = "last_updated_at")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastUpdatedAt;
+
+    @Column(name = "checksum", length = 64)
+    private String checksum;
 
     @Basic(optional = false)
     @Column(name = "active")
@@ -112,6 +141,62 @@ public class BrTpuClass implements Serializable {
 
     public void setNature(String nature) {
         this.nature = nature;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getSourceVersion() {
+        return sourceVersion;
+    }
+
+    public void setSourceVersion(String sourceVersion) {
+        this.sourceVersion = sourceVersion;
+    }
+
+    public Date getImportedAt() {
+        return importedAt;
+    }
+
+    public void setImportedAt(Date importedAt) {
+        this.importedAt = importedAt;
+    }
+
+    public Date getValidFrom() {
+        return validFrom;
+    }
+
+    public void setValidFrom(Date validFrom) {
+        this.validFrom = validFrom;
+    }
+
+    public Date getValidTo() {
+        return validTo;
+    }
+
+    public void setValidTo(Date validTo) {
+        this.validTo = validTo;
+    }
+
+    public Date getLastUpdatedAt() {
+        return lastUpdatedAt;
+    }
+
+    public void setLastUpdatedAt(Date lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
+    }
+
+    public String getChecksum() {
+        return checksum;
+    }
+
+    public void setChecksum(String checksum) {
+        this.checksum = checksum;
     }
 
     public boolean isActive() {

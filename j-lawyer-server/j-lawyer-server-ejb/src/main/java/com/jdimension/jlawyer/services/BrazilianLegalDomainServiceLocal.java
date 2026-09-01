@@ -32,6 +32,10 @@ public interface BrazilianLegalDomainServiceLocal {
 
     BrazilianCaseDetailsDTO findCaseByCnjNumber(String cnjNumber) throws Exception;
 
+    List<CaseTpuSubjectDTO> getCaseTpuSubjects(String caseId) throws Exception;
+
+    void setCaseTpuSubjects(String caseId, List<CaseTpuSubjectDTO> subjects) throws Exception;
+
     List<JudiciaryCourtDTO> listCourts() throws Exception;
 
     List<JudiciaryCourtDTO> listCourtsBySegment(int justiceSegment) throws Exception;

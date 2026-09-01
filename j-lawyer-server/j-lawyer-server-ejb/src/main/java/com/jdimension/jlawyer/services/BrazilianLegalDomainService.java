@@ -8,54 +8,45 @@
  */
 package com.jdimension.jlawyer.services;
 
-import com.jdimension.jlawyer.domain.legal.cnj.CnjNumber;
+import com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator;
 import com.jdimension.jlawyer.domain.legal.cnj.CnjNumberValidator;
 import com.jdimension.jlawyer.domain.legal.model.*;
 import com.jdimension.jlawyer.persistence.*;
-import org.apache.log4j.Logger;
+import org.jboss.logging.Logger;
 
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 /**
- * Implementação EJB dos serviços de domínio jurídico brasileiro:
- * Gerenciamento de inscrições OAB, detalhes processuais NPU/CNJ, catálogo canônico de tribunais e TPU.
+ * Implementação EJB para gerenciamento do domínio jurídico brasileiro (OAB, Processos, Tribunais e TPU).
  *
  * @author BR-LAWYER Team
  */
 @Stateless
-public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceRemote, BrazilianLegalDomainServiceLocal {
+public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceLocal, BrazilianLegalDomainServiceRemote {
 
     private static final Logger log = Logger.getLogger(BrazilianLegalDomainService.class.getName());
 
-    @PersistenceContext(unitName = "j-lawyer-server-ejbPU")
+    @PersistenceContext(unitName = "j-lawyer-server-entitiesPU")
     private EntityManager em;
 
-    @EJB
-    private AddressBeanFacadeLocal addressFacade;
-
-    @EJB
-    private ArchiveFileBeanFacadeLocal archiveFileFacade;
-
-    // ========================================================================
-    // 1. INSCRIÇÕES OAB (Lawyer Registrations)
-    // ========================================================================
+    // --- INSCRIÇÕES OAB ---
 
     @Override
     public List<LawyerRegistrationDTO> getLawyerRegistrations(String contactId) throws Exception {
         if (contactId == null || contactId.trim().isEmpty()) {
-            return Collections.emptyList();
+            return new ArrayList<>();
         }
-
         TypedQuery<BrLawyerRegistration> query = em.createNamedQuery("BrLawyerRegistration.findByContactId", BrLawyerRegistration.class);
         query.setParameter("contactId", contactId);
         List<BrLawyerRegistration> entities = query.getResultList();
-
-        List<LawyerRegistrationDTO> dtos = new ArrayList<>();
+        List<LawyerRegistrationDTO> dtos = new ArrayList<>(entities.size());
         for (BrLawyerRegistration entity : entities) {
             dtos.add(toDTO(entity));
         }
@@ -65,24 +56,23 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
     @Override
     public LawyerRegistrationDTO saveLawyerRegistration(LawyerRegistrationDTO dto) throws Exception {
         if (dto == null) {
-            throw new IllegalArgumentException("Registro OAB não pode ser nulo");
+            throw new IllegalArgumentException("Dados da inscrição OAB não podem ser nulos");
         }
-        if (dto.getOabNumber() == null || dto.getOabUf() == null) {
-            throw new IllegalArgumentException("Número e UF da OAB são obrigatórios");
+        if (dto.getOabNumber() == null || dto.getOabNumber().trim().isEmpty()) {
+            throw new IllegalArgumentException("Número da OAB é obrigatório");
+        }
+        if (dto.getOabUf() == null || dto.getOabUf().trim().length() != 2) {
+            throw new IllegalArgumentException("UF da OAB deve ter exatamente 2 caracteres");
         }
 
         BrLawyerRegistration entity;
-        Date now = new Date();
-
         if (dto.getId() != null && !dto.getId().trim().isEmpty()) {
             entity = em.find(BrLawyerRegistration.class, dto.getId());
             if (entity == null) {
                 entity = new BrLawyerRegistration(dto.getId());
-                entity.setCreationDate(now);
             }
         } else {
             entity = new BrLawyerRegistration(UUID.randomUUID().toString());
-            entity.setCreationDate(now);
         }
 
         entity.setContactId(dto.getContactId());
@@ -90,14 +80,15 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
         entity.setOabUf(dto.getOabUf().trim().toUpperCase());
         entity.setOabType(dto.getOabType() != null ? dto.getOabType().trim().toUpperCase() : BrLawyerRegistration.TYPE_PRINCIPAL);
         entity.setStatus(dto.getStatus() != null ? dto.getStatus().trim().toUpperCase() : BrLawyerRegistration.STATUS_ATIVO);
-        entity.setIssuanceDate(dto.getIssuanceDate());
-        entity.setSecurityCode(dto.getSecurityCode());
         entity.setNotice(dto.getNotice());
-        entity.setModificationDate(now);
+        entity.setIssuanceDate(dto.getIssuanceDate());
 
-        em.merge(entity);
+        if (dto.getId() == null || dto.getId().trim().isEmpty()) {
+            em.persist(entity);
+        } else {
+            entity = em.merge(entity);
+        }
         em.flush();
-
         return toDTO(entity);
     }
 
@@ -113,103 +104,74 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
         }
     }
 
-    // ========================================================================
-    // 2. DETALHES PROCESSUAIS BRASILEIROS (Cases / Processos)
-    // ========================================================================
+    // --- DETALHES PROCESSUAIS (CASES) ---
 
     @Override
     public BrazilianCaseDetailsDTO getCaseDetails(String caseId) throws Exception {
         if (caseId == null || caseId.trim().isEmpty()) {
             return null;
         }
-
-        ArchiveFileBean caseBean = archiveFileFacade.find(caseId);
-        if (caseBean == null) {
+        ArchiveFileBean legalCase = em.find(ArchiveFileBean.class, caseId);
+        if (legalCase == null) {
             return null;
         }
-
-        BrazilianCaseDetailsDTO dto = new BrazilianCaseDetailsDTO(caseId);
-        dto.setCnjNumber(caseBean.getCnjNumber());
-        dto.setCnjNumberClean(caseBean.getCnjNumberClean());
-        dto.setCourtCode(caseBean.getCourtCode());
-        dto.setJusticeSegment(caseBean.getJusticeSegment());
-        dto.setJurisdictionDegree(caseBean.getJurisdictionDegree());
-        dto.setCourtUnit(caseBean.getCourtUnit());
-        dto.setComarca(caseBean.getComarca());
-        dto.setJudicialSubsection(caseBean.getJudicialSubsection());
-        dto.setTpuClassCode(caseBean.getTpuClassCode());
-        dto.setTpuClassName(caseBean.getTpuClassName());
-        dto.setTpuSubjectCodes(caseBean.getTpuSubjectCodes());
-        dto.setTpuSubjectNames(caseBean.getTpuSubjectNames());
-        dto.setSecrecyLevel(caseBean.getSecrecyLevel());
-        dto.setDistributionDate(caseBean.getDistributionDate());
-        dto.setCaseStatusBr(caseBean.getCaseStatusBr());
-        dto.setProvenanceSystem(caseBean.getProvenanceSystem());
-
-        // Enriquecer com nome do tribunal se disponível
-        if (caseBean.getCourtCode() != null) {
-            JudiciaryCourtDTO court = getCourtByCode(caseBean.getCourtCode());
-            if (court != null) {
-                dto.setCourtName(court.getName());
-                dto.setSegmentName(court.getSegmentName());
-            }
-        }
-
+        BrazilianCaseDetailsDTO dto = toDTO(legalCase);
+        dto.setNormalizedSubjects(getCaseTpuSubjects(caseId));
         return dto;
     }
 
     @Override
     public BrazilianCaseDetailsDTO saveCaseDetails(BrazilianCaseDetailsDTO dto) throws Exception {
-        if (dto == null || dto.getCaseId() == null) {
-            throw new IllegalArgumentException("Dados processuais ou ID do caso não podem ser nulos");
+        if (dto == null || dto.getCaseId() == null || dto.getCaseId().trim().isEmpty()) {
+            throw new IllegalArgumentException("Identificador do processo (caseId) é obrigatório");
         }
-
-        ArchiveFileBean caseBean = archiveFileFacade.find(dto.getCaseId());
-        if (caseBean == null) {
-            throw new IllegalArgumentException("Processo/Caso não encontrado com ID: " + dto.getCaseId());
+        ArchiveFileBean legalCase = em.find(ArchiveFileBean.class, dto.getCaseId());
+        if (legalCase == null) {
+            throw new IllegalArgumentException("Processo não localizado para o ID: " + dto.getCaseId());
         }
 
         // Validação e normalização de NPU/CNJ se informado
         if (dto.getCnjNumber() != null && !dto.getCnjNumber().trim().isEmpty()) {
-            String cnj = dto.getCnjNumber().trim();
-            if (CnjNumberValidator.isValid(cnj)) {
-                CnjNumber parsed = CnjNumberValidator.parse(cnj);
-                caseBean.setCnjNumber(parsed.getFormatted());
-                caseBean.setCnjNumberClean(parsed.getRawDigits());
-                if (caseBean.getJusticeSegment() == null || caseBean.getJusticeSegment() == 0) {
-                    caseBean.setJusticeSegment(parsed.getJusticeSegment());
-                }
-            } else {
-                caseBean.setCnjNumber(cnj);
-                caseBean.setCnjNumberClean(cnj.replaceAll("[^0-9]", ""));
+            String clean = BrazilianDocumentValidator.unmask(dto.getCnjNumber());
+            if (!CnjNumberValidator.isValid(clean)) {
+                throw new IllegalArgumentException("Número CNJ/NPU inválido: " + dto.getCnjNumber());
+            }
+            legalCase.setCnjNumber(BrazilianDocumentValidator.formatCnj(clean));
+            legalCase.setCnjNumberClean(clean);
+            if (legalCase.getJusticeSegment() == null && clean.length() == 20) {
+                legalCase.setJusticeSegment(Integer.parseInt(clean.substring(13, 14)));
             }
         } else {
-            caseBean.setCnjNumber(null);
-            caseBean.setCnjNumberClean(null);
+            legalCase.setCnjNumber(null);
+            legalCase.setCnjNumberClean(null);
         }
 
-        caseBean.setCourtCode(dto.getCourtCode());
-        if (dto.getJusticeSegment() != null) {
-            caseBean.setJusticeSegment(dto.getJusticeSegment());
-        }
-        caseBean.setJurisdictionDegree(dto.getJurisdictionDegree());
-        caseBean.setCourtUnit(dto.getCourtUnit());
-        caseBean.setComarca(dto.getComarca());
-        caseBean.setJudicialSubsection(dto.getJudicialSubsection());
-        caseBean.setTpuClassCode(dto.getTpuClassCode());
-        caseBean.setTpuClassName(dto.getTpuClassName());
-        caseBean.setTpuSubjectCodes(dto.getTpuSubjectCodes());
-        caseBean.setTpuSubjectNames(dto.getTpuSubjectNames());
-        caseBean.setSecrecyLevel(dto.getSecrecyLevel());
-        caseBean.setDistributionDate(dto.getDistributionDate());
-        caseBean.setCaseStatusBr(dto.getCaseStatusBr());
-        caseBean.setProvenanceSystem(dto.getProvenanceSystem());
-        caseBean.setDateChanged(new Date());
+        legalCase.setCourtCode(dto.getCourtCode());
+        legalCase.setJusticeSegment(dto.getJusticeSegment());
+        legalCase.setJurisdictionDegree(dto.getJurisdictionDegree());
+        legalCase.setCourtUnit(dto.getCourtUnit());
+        legalCase.setComarca(dto.getComarca());
+        legalCase.setJudicialSubsection(dto.getJudicialSubsection());
+        legalCase.setTpuClassCode(dto.getTpuClassCode());
+        legalCase.setTpuClassName(dto.getTpuClassName());
+        legalCase.setTpuSubjectCodes(dto.getTpuSubjectCodes());
+        legalCase.setTpuSubjectNames(dto.getTpuSubjectNames());
+        legalCase.setSecrecyLevel(dto.getSecrecyLevel() != null ? dto.getSecrecyLevel() : false);
+        legalCase.setDistributionDate(dto.getDistributionDate());
+        legalCase.setCaseStatusBr(dto.getCaseStatusBr());
+        legalCase.setProvenanceSystem(dto.getProvenanceSystem());
 
-        archiveFileFacade.edit(caseBean);
+        legalCase = em.merge(legalCase);
+
+        // Atualização dos assuntos normalizados se fornecidos
+        if (dto.getNormalizedSubjects() != null) {
+            setCaseTpuSubjects(dto.getCaseId(), dto.getNormalizedSubjects());
+        }
+
         em.flush();
-
-        return getCaseDetails(dto.getCaseId());
+        BrazilianCaseDetailsDTO saved = toDTO(legalCase);
+        saved.setNormalizedSubjects(getCaseTpuSubjects(dto.getCaseId()));
+        return saved;
     }
 
     @Override
@@ -217,29 +179,86 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
         if (cnjNumber == null || cnjNumber.trim().isEmpty()) {
             return null;
         }
-
-        String clean = cnjNumber.replaceAll("[^0-9]", "");
+        String clean = BrazilianDocumentValidator.unmask(cnjNumber);
         TypedQuery<ArchiveFileBean> query = em.createNamedQuery("ArchiveFileBean.findByCnjNumberClean", ArchiveFileBean.class);
         query.setParameter("cnjNumberClean", clean);
-
         List<ArchiveFileBean> results = query.getResultList();
         if (results.isEmpty()) {
             return null;
         }
-        return getCaseDetails(results.get(0).getId());
+        ArchiveFileBean legalCase = results.get(0);
+        BrazilianCaseDetailsDTO dto = toDTO(legalCase);
+        dto.setNormalizedSubjects(getCaseTpuSubjects(legalCase.getId()));
+        return dto;
     }
 
-    // ========================================================================
-    // 3. CATÁLOGO DE TRIBUNAIS (Judiciary Courts)
-    // ========================================================================
+    // --- RELACIONAMENTO NORMALIZADO: PROCESSO ↔ ASSUNTOS TPU ---
+
+    @Override
+    public List<CaseTpuSubjectDTO> getCaseTpuSubjects(String caseId) throws Exception {
+        if (caseId == null || caseId.trim().isEmpty()) {
+            return new ArrayList<>();
+        }
+        TypedQuery<BrCaseTpuSubject> query = em.createNamedQuery("BrCaseTpuSubject.findByCaseId", BrCaseTpuSubject.class);
+        query.setParameter("caseId", caseId);
+        List<BrCaseTpuSubject> entities = query.getResultList();
+        List<CaseTpuSubjectDTO> dtos = new ArrayList<>(entities.size());
+        for (BrCaseTpuSubject entity : entities) {
+            CaseTpuSubjectDTO dto = new CaseTpuSubjectDTO();
+            dto.setId(entity.getId());
+            dto.setCaseId(entity.getCaseId());
+            dto.setSubjectCode(entity.getSubjectCode());
+            dto.setSubjectId(entity.getSubjectId());
+            dto.setSubjectName(entity.getSubjectName());
+            dto.setPrimarySubject(entity.isPrimarySubject());
+            dto.setProvenance(entity.getProvenance());
+            dto.setCreatedAt(entity.getCreatedAt());
+            dtos.add(dto);
+        }
+        return dtos;
+    }
+
+    @Override
+    public void setCaseTpuSubjects(String caseId, List<CaseTpuSubjectDTO> subjects) throws Exception {
+        if (caseId == null || caseId.trim().isEmpty()) {
+            return;
+        }
+        // Remove associações anteriores
+        TypedQuery<BrCaseTpuSubject> existingQuery = em.createNamedQuery("BrCaseTpuSubject.findByCaseId", BrCaseTpuSubject.class);
+        existingQuery.setParameter("caseId", caseId);
+        List<BrCaseTpuSubject> existing = existingQuery.getResultList();
+        for (BrCaseTpuSubject old : existing) {
+            em.remove(old);
+        }
+
+        // Insere novas
+        if (subjects != null) {
+            Date now = new Date();
+            for (CaseTpuSubjectDTO dto : subjects) {
+                BrCaseTpuSubject entity = new BrCaseTpuSubject();
+                entity.setId(UUID.randomUUID().toString());
+                entity.setCaseId(caseId);
+                entity.setSubjectCode(dto.getSubjectCode());
+                entity.setSubjectId(dto.getSubjectId());
+                entity.setSubjectName(dto.getSubjectName());
+                entity.setPrimarySubject(dto.isPrimarySubject());
+                entity.setProvenance(dto.getProvenance() != null ? dto.getProvenance() : "MANUAL");
+                entity.setCreatedAt(now);
+                em.persist(entity);
+            }
+        }
+        em.flush();
+    }
+
+    // --- CATÁLOGO DE TRIBUNAIS ---
 
     @Override
     public List<JudiciaryCourtDTO> listCourts() throws Exception {
         TypedQuery<BrJudiciaryCourt> query = em.createNamedQuery("BrJudiciaryCourt.findAll", BrJudiciaryCourt.class);
         List<BrJudiciaryCourt> entities = query.getResultList();
-        List<JudiciaryCourtDTO> dtos = new ArrayList<>();
-        for (BrJudiciaryCourt c : entities) {
-            dtos.add(toDTO(c));
+        List<JudiciaryCourtDTO> dtos = new ArrayList<>(entities.size());
+        for (BrJudiciaryCourt court : entities) {
+            dtos.add(toDTO(court));
         }
         return dtos;
     }
@@ -249,9 +268,9 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
         TypedQuery<BrJudiciaryCourt> query = em.createNamedQuery("BrJudiciaryCourt.findBySegment", BrJudiciaryCourt.class);
         query.setParameter("justiceSegment", justiceSegment);
         List<BrJudiciaryCourt> entities = query.getResultList();
-        List<JudiciaryCourtDTO> dtos = new ArrayList<>();
-        for (BrJudiciaryCourt c : entities) {
-            dtos.add(toDTO(c));
+        List<JudiciaryCourtDTO> dtos = new ArrayList<>(entities.size());
+        for (BrJudiciaryCourt court : entities) {
+            dtos.add(toDTO(court));
         }
         return dtos;
     }
@@ -264,21 +283,16 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
         TypedQuery<BrJudiciaryCourt> query = em.createNamedQuery("BrJudiciaryCourt.findByCode", BrJudiciaryCourt.class);
         query.setParameter("code", courtCode.trim().toUpperCase());
         List<BrJudiciaryCourt> results = query.getResultList();
-        if (results.isEmpty()) {
-            return null;
-        }
-        return toDTO(results.get(0));
+        return results.isEmpty() ? null : toDTO(results.get(0));
     }
 
-    // ========================================================================
-    // 4. CATÁLOGO TPU (Classes e Assuntos CNJ)
-    // ========================================================================
+    // --- CATÁLOGO TPU ---
 
     @Override
     public List<TpuClassDTO> listTpuClasses() throws Exception {
         TypedQuery<BrTpuClass> query = em.createNamedQuery("BrTpuClass.findAll", BrTpuClass.class);
         List<BrTpuClass> entities = query.getResultList();
-        List<TpuClassDTO> dtos = new ArrayList<>();
+        List<TpuClassDTO> dtos = new ArrayList<>(entities.size());
         for (BrTpuClass c : entities) {
             dtos.add(toDTO(c));
         }
@@ -286,20 +300,18 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
     }
 
     @Override
-    public List<TpuClassDTO> searchTpuClasses(String queryStr) throws Exception {
-        if (queryStr == null || queryStr.trim().isEmpty()) {
+    public List<TpuClassDTO> searchTpuClasses(String query) throws Exception {
+        if (query == null || query.trim().isEmpty()) {
             return listTpuClasses();
         }
-        String pattern = "%" + queryStr.trim().toLowerCase() + "%";
-        TypedQuery<BrTpuClass> query = em.createQuery(
-            "SELECT c FROM BrTpuClass c WHERE LOWER(c.name) LIKE :p OR str(c.code) LIKE :p ORDER BY c.name",
-            BrTpuClass.class
+        String pattern = "%" + query.trim().toLowerCase() + "%";
+        TypedQuery<BrTpuClass> q = em.createQuery(
+                "SELECT c FROM BrTpuClass c WHERE LOWER(c.name) LIKE :pattern OR CAST(c.code AS string) LIKE :pattern ORDER BY c.name",
+                BrTpuClass.class
         );
-        query.setParameter("p", pattern);
-        query.setMaxResults(50);
-
-        List<BrTpuClass> entities = query.getResultList();
-        List<TpuClassDTO> dtos = new ArrayList<>();
+        q.setParameter("pattern", pattern);
+        List<BrTpuClass> entities = q.getResultList();
+        List<TpuClassDTO> dtos = new ArrayList<>(entities.size());
         for (BrTpuClass c : entities) {
             dtos.add(toDTO(c));
         }
@@ -310,7 +322,7 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
     public List<TpuSubjectDTO> listTpuSubjects() throws Exception {
         TypedQuery<BrTpuSubject> query = em.createNamedQuery("BrTpuSubject.findAll", BrTpuSubject.class);
         List<BrTpuSubject> entities = query.getResultList();
-        List<TpuSubjectDTO> dtos = new ArrayList<>();
+        List<TpuSubjectDTO> dtos = new ArrayList<>(entities.size());
         for (BrTpuSubject s : entities) {
             dtos.add(toDTO(s));
         }
@@ -318,81 +330,111 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceR
     }
 
     @Override
-    public List<TpuSubjectDTO> searchTpuSubjects(String queryStr) throws Exception {
-        if (queryStr == null || queryStr.trim().isEmpty()) {
+    public List<TpuSubjectDTO> searchTpuSubjects(String query) throws Exception {
+        if (query == null || query.trim().isEmpty()) {
             return listTpuSubjects();
         }
-        String pattern = "%" + queryStr.trim().toLowerCase() + "%";
-        TypedQuery<BrTpuSubject> query = em.createQuery(
-            "SELECT s FROM BrTpuSubject s WHERE LOWER(s.name) LIKE :p OR str(s.code) LIKE :p ORDER BY s.name",
-            BrTpuSubject.class
+        String pattern = "%" + query.trim().toLowerCase() + "%";
+        TypedQuery<BrTpuSubject> q = em.createQuery(
+                "SELECT s FROM BrTpuSubject s WHERE LOWER(s.name) LIKE :pattern OR CAST(s.code AS string) LIKE :pattern ORDER BY s.name",
+                BrTpuSubject.class
         );
-        query.setParameter("p", pattern);
-        query.setMaxResults(50);
-
-        List<BrTpuSubject> entities = query.getResultList();
-        List<TpuSubjectDTO> dtos = new ArrayList<>();
+        q.setParameter("pattern", pattern);
+        List<BrTpuSubject> entities = q.getResultList();
+        List<TpuSubjectDTO> dtos = new ArrayList<>(entities.size());
         for (BrTpuSubject s : entities) {
             dtos.add(toDTO(s));
         }
         return dtos;
     }
 
-    // ========================================================================
-    // MAPPERS PRIVADOS
-    // ========================================================================
+    // --- CONVERSORES ENTIDADE <-> DTO ---
 
-    private LawyerRegistrationDTO toDTO(BrLawyerRegistration e) {
+    private LawyerRegistrationDTO toDTO(BrLawyerRegistration entity) {
         LawyerRegistrationDTO dto = new LawyerRegistrationDTO();
-        dto.setId(e.getId());
-        dto.setContactId(e.getContactId());
-        dto.setOabNumber(e.getOabNumber());
-        dto.setOabUf(e.getOabUf());
-        dto.setOabType(e.getOabType());
-        dto.setStatus(e.getStatus());
-        dto.setIssuanceDate(e.getIssuanceDate());
-        dto.setSecurityCode(e.getSecurityCode());
-        dto.setNotice(e.getNotice());
-        dto.setCreationDate(e.getCreationDate());
-        dto.setModificationDate(e.getModificationDate());
+        dto.setId(entity.getId());
+        dto.setContactId(entity.getContactId());
+        dto.setOabNumber(entity.getOabNumber());
+        dto.setOabUf(entity.getOabUf());
+        dto.setOabType(entity.getOabType());
+        dto.setStatus(entity.getStatus());
+        dto.setNotice(entity.getNotice());
+        dto.setIssuanceDate(entity.getIssuanceDate());
         return dto;
     }
 
-    private JudiciaryCourtDTO toDTO(BrJudiciaryCourt e) {
+    private BrazilianCaseDetailsDTO toDTO(ArchiveFileBean legalCase) {
+        BrazilianCaseDetailsDTO dto = new BrazilianCaseDetailsDTO();
+        dto.setCaseId(legalCase.getId());
+        dto.setCnjNumber(legalCase.getCnjNumber());
+        dto.setCnjNumberClean(legalCase.getCnjNumberClean());
+        dto.setCourtCode(legalCase.getCourtCode());
+        dto.setJusticeSegment(legalCase.getJusticeSegment());
+        dto.setJurisdictionDegree(legalCase.getJurisdictionDegree());
+        dto.setCourtUnit(legalCase.getCourtUnit());
+        dto.setComarca(legalCase.getComarca());
+        dto.setJudicialSubsection(legalCase.getJudicialSubsection());
+        dto.setTpuClassCode(legalCase.getTpuClassCode());
+        dto.setTpuClassName(legalCase.getTpuClassName());
+        dto.setTpuSubjectCodes(legalCase.getTpuSubjectCodes());
+        dto.setTpuSubjectNames(legalCase.getTpuSubjectNames());
+        dto.setSecrecyLevel(legalCase.getSecrecyLevel());
+        dto.setDistributionDate(legalCase.getDistributionDate());
+        dto.setCaseStatusBr(legalCase.getCaseStatusBr());
+        dto.setProvenanceSystem(legalCase.getProvenanceSystem());
+        return dto;
+    }
+
+    private JudiciaryCourtDTO toDTO(BrJudiciaryCourt entity) {
         JudiciaryCourtDTO dto = new JudiciaryCourtDTO();
-        dto.setId(e.getId());
-        dto.setCode(e.getCode());
-        dto.setName(e.getName());
-        dto.setJusticeSegment(e.getJusticeSegment());
-        dto.setSegmentName(e.getSegmentName());
-        dto.setUf(e.getUf());
-        dto.setCourtNumber(e.getCourtNumber());
-        dto.setDatajudCode(e.getDatajudCode());
-        dto.setDjenCode(e.getDjenCode());
-        dto.setElectronicPortalUrl(e.getElectronicPortalUrl());
-        dto.setActive(e.isActive());
+        dto.setId(entity.getId());
+        dto.setCode(entity.getCode());
+        dto.setName(entity.getName());
+        dto.setJusticeSegment(entity.getJusticeSegment());
+        dto.setSegmentName(entity.getSegmentName());
+        dto.setUf(entity.getUf());
+        dto.setCourtNumber(entity.getCourtNumber());
+        dto.setDatajudCode(entity.getDatajudCode());
+        dto.setDjenCode(entity.getDjenCode());
+        dto.setElectronicPortalUrl(entity.getElectronicPortalUrl());
+        dto.setCourtType(entity.getCourtType());
+        dto.setActive(entity.isActive());
         return dto;
     }
 
-    private TpuClassDTO toDTO(BrTpuClass e) {
+    private TpuClassDTO toDTO(BrTpuClass entity) {
         TpuClassDTO dto = new TpuClassDTO();
-        dto.setId(e.getId());
-        dto.setCode(e.getCode());
-        dto.setName(e.getName());
-        dto.setGlossary(e.getGlossary());
-        dto.setNature(e.getNature());
-        dto.setActive(e.isActive());
+        dto.setId(entity.getId());
+        dto.setCode(entity.getCode());
+        dto.setName(entity.getName());
+        dto.setGlossary(entity.getGlossary());
+        dto.setNature(entity.getNature());
+        dto.setSource(entity.getSource());
+        dto.setSourceVersion(entity.getSourceVersion());
+        dto.setImportedAt(entity.getImportedAt());
+        dto.setValidFrom(entity.getValidFrom());
+        dto.setValidTo(entity.getValidTo());
+        dto.setLastUpdatedAt(entity.getLastUpdatedAt());
+        dto.setChecksum(entity.getChecksum());
+        dto.setActive(entity.isActive());
         return dto;
     }
 
-    private TpuSubjectDTO toDTO(BrTpuSubject e) {
+    private TpuSubjectDTO toDTO(BrTpuSubject entity) {
         TpuSubjectDTO dto = new TpuSubjectDTO();
-        dto.setId(e.getId());
-        dto.setCode(e.getCode());
-        dto.setName(e.getName());
-        dto.setParentCode(e.getParentCode());
-        dto.setGlossary(e.getGlossary());
-        dto.setActive(e.isActive());
+        dto.setId(entity.getId());
+        dto.setCode(entity.getCode());
+        dto.setName(entity.getName());
+        dto.setParentCode(entity.getParentCode());
+        dto.setGlossary(entity.getGlossary());
+        dto.setSource(entity.getSource());
+        dto.setSourceVersion(entity.getSourceVersion());
+        dto.setImportedAt(entity.getImportedAt());
+        dto.setValidFrom(entity.getValidFrom());
+        dto.setValidTo(entity.getValidTo());
+        dto.setLastUpdatedAt(entity.getLastUpdatedAt());
+        dto.setChecksum(entity.getChecksum());
+        dto.setActive(entity.isActive());
         return dto;
     }
 }

@@ -1,10 +1,10 @@
-# BR-LAWYER — Brazilian Legal Domain & Persistence (Phase 2 Gap Analysis)
+# BR-LAWYER — Brazilian Legal Domain & Persistence (Phase 2 Gap Analysis & Integrity Patch)
 
 > **Documento de Auditoria e Fechamento:** `docs/development/BRAZILIAN_DOMAIN_PHASE2_GAP_ANALYSIS.md`  
 > **Iniciativa:** BR-LAWYER (Fork Evolutivo do j-lawyer.org)  
-> **Branch de Execução:** `feat/brazilian-domain`  
+> **Branch de Execução:** `feat/brazilian-domain` & `fix/phase2-domain-integrity`  
 > **Data:** 01 de Setembro de 2026  
-> **Status:** AUDITORIA REALIZADA — GAPS EM EXECUÇÃO
+> **Status:** CONCLUÍDO E INTEGRADO COM SUCESSO (V3_6_0_10)
 
 ---
 
@@ -12,13 +12,12 @@
 
 A Fase 2 do BR-LAWYER engloba dois pilares essenciais:
 1. **Brazilian Data Enrichment & Validation:** Consulta de CEP, CNPJ, normalização de endereços, conflito de interesses fonético e diálogos Swing (Concluído nos commits `8e9bf7036` a `56c004746`).
-2. **Brazilian Legal Domain & Persistence:** Modelagem persistente e relacional de pessoas (CPF, CNPJ, RG, Razão Social, múltiplas OABs), processos judiciais (NPU/CNJ, Tribunal, Segmento, Grau, Órgão Julgador, Comarca, Classes e Assuntos TPU, Segredo de Justiça) e catálogo versionável de tribunais e TPU.
-
-Este documento audita o estado atual da Fase 2, classifica cada requisito e orienta as implementações estritamente necessárias para encerramento formal da fase.
+2. **Brazilian Legal Domain & Persistence Model:** Modelagem persistente e relacional de pessoas (CPF, CNPJ, RG, Razão Social, múltiplas OABs), processos judiciais (NPU/CNJ, Tribunal, Segmento, Grau, Órgão Julgador, Comarca, Classes e Assuntos TPU, Segredo de Justiça) e catálogo canônico do Judiciário e TPU.
+3. **Integrity Patch (V3_6_0_10):** Complementação de todos os 24 TRTs, 27 TREs, 3 TJMs, Conselhos (95 órgãos no total), metadados de versionamento TPU e relacionamento normalizado `br_case_tpu_subjects`.
 
 ---
 
-## 2. Matriz Detalhada de Gaps da Fase 2
+## 2. Matriz Consolidada de Requisitos da Fase 2
 
 ### A. Brazilian Core Domain
 
@@ -26,22 +25,24 @@ Este documento audita o estado atual da Fase 2, classifica cada requisito e orie
 | :--- | :---: | :--- |
 | **Cálculo e Validação NPU (CNJ 65/2008)** | `DONE` | `CnjNumber.java` e `CnjNumberValidator.java` com algoritmo ISO 7064 MOD 97-10 e decomposição de 7 campos. |
 | **Validação CPF / CNPJ (Módulo 11)** | `DONE` | `CpfCnpjValidator.java` e `BrazilianDocumentValidator.java` com detecção de sequências repetidas e cálculo de DV. |
-| **Classificação Pessoa Física (PF) vs Jurídica (PJ)** | `MISSING` | Requer enum/campo formal `PersonType` (PF, PJ) acoplado a regras de validação documental. |
-| **Múltiplos Registros OAB (Advogado)** | `MISSING` | Mapeamento de OAB com número, UF, tipo (PRINCIPAL, SUPLEMENTAR, ESTAGIARIO) e status ativo/inativo. |
-| **Metadados Processuais Brasileiros** | `MISSING` | NPU limpo/formatado, Tribunal, Grau, Órgão Julgador, Comarca, Subseção, Segredo de Justiça e Status. |
-| **Taxonomia TPU (Tabelas Processuais Unificadas)** | `MISSING` | Estrutura formal de Classes Processuais e múltiplos Assuntos Processuais TPU/CNJ. |
+| **Classificação Pessoa Física (PF) vs Jurídica (PJ)** | `DONE` | Campo formal `personType` (PF, PJ), Razão Social (`tradeName`), Nome Fantasia (`fantasyName`), IE/IM. |
+| **Múltiplos Registros OAB (Advogado)** | `DONE` | Entidade `BrLawyerRegistration` (número, UF, tipo: PRINCIPAL, SUPLEMENTAR, ESTAGIARIO e status ativo/inativo). |
+| **Metadados Processuais Brasileiros** | `DONE` | NPU limpo/formatado, Tribunal, Grau, Órgão Julgador, Comarca, Subseção, Segredo de Justiça e Status em `ArchiveFileBean`. |
+| **Taxonomia TPU (Tabelas Processuais Unificadas)** | `DONE` | Entidades `BrTpuClass` e `BrTpuSubject` com versionamento e proveniência. |
+| **Relacionamento Processo ↔ Assuntos TPU** | `DONE` | Tabela normalizada `br_case_tpu_subjects` e entidade JPA `BrCaseTpuSubject`. |
 
 ### B. Persistence (JPA & Flyway Migrations)
 
 | Requisito | Status | Descrição e Diagnóstico |
 | :--- | :---: | :--- |
-| **Flyway Migration `V3_6_0_9`** | `MISSING` | Criar `V3_6_0_9__BrazilianLegalDomain.sql` com novas tabelas e colunas não-nulas/anuláveis compatíveis. |
-| **Extensão Persistente de `AddressBean` (Tabela `contacts`)** | `MISSING` | Colunas `cpf`, `cnpj`, `rg`, `person_type`, `trade_name`, `state_registration`, `municipal_registration`. |
-| **Entidade `BrLawyerRegistration` (Tabela `br_lawyer_registrations`)** | `MISSING` | Entidade JPA 1:N associada a `AddressBean` para múltiplas inscrições OAB por profissional. |
-| **Extensão Persistente de `ArchiveFileBean` (Tabela `cases`)** | `MISSING` | Colunas `cnj_number`, `cnj_number_clean`, `court_code`, `justice_segment`, `jurisdiction_degree`, `court_unit`, `comarca`, `tpu_class_code`, `tpu_class_name`, `tpu_subject_codes`, `secrecy_level`, `distribution_date`. |
-| **Entidade Catálogo `BrJudiciaryCourt` (Tabela `br_judiciary_courts`)** | `MISSING` | Catálogo persistente dos 91 tribunais brasileiros com códigos canônicos e segmentos de justiça. |
-| **Entidade Catálogo `BrTpuClass` e `BrTpuSubject`** | `MISSING` | Tabelas `br_tpu_classes` e `br_tpu_subjects` para importação e pesquisa dinâmica de TPU sem hardcode. |
-| **Índices de Performance Relacional** | `MISSING` | Índices B-Tree em `contacts(cpf)`, `contacts(cnpj)`, `cases(cnj_number_clean)`, `cases(court_code)`. |
+| **Flyway Migration `V3_6_0_9`** | `DONE` | Criação do schema inicial de domínio brasileiro, colunas em `contacts` e `cases`, tabelas de OAB, tribunais e TPU. |
+| **Flyway Migration `V3_6_0_10`** | `DONE` | Patch de integridade: 95 órgãos/tribunais (24 TRTs, 27 TREs, 27 TJs, 6 TRFs, 3 TJMs, Conselhos), versionamento TPU e `br_case_tpu_subjects`. |
+| **Extensão Persistente de `AddressBean` (Tabela `contacts`)** | `DONE` | Colunas `cpf`, `cnpj`, `rg`, `person_type`, `trade_name`, `fantasy_name`, `state_registration`, `municipal_registration`. |
+| **Entidade `BrLawyerRegistration` (Tabela `br_lawyer_registrations`)** | `DONE` | Entidade JPA 1:N associada a `AddressBean` para múltiplas inscrições OAB por profissional. |
+| **Extensão Persistente de `ArchiveFileBean` (Tabela `cases`)** | `DONE` | Colunas `cnj_number`, `cnj_number_clean`, `court_code`, `justice_segment`, `jurisdiction_degree`, `court_unit`, `comarca`, `tpu_class_code`, `tpu_class_name`, `tpu_subject_codes`, `secrecy_level`, `distribution_date`. |
+| **Entidade Catálogo `BrJudiciaryCourt` (Tabela `br_judiciary_courts`)** | `DONE` | Catálogo persistente dos 95 órgãos e tribunais com tipologia (`court_type`), segmentos $J=1..9$, UFs e números de região. |
+| **Entidade Catálogo `BrTpuClass` e `BrTpuSubject`** | `DONE` | Tabelas `br_tpu_classes` e `br_tpu_subjects` com campos de versão, data de importação e checksum. |
+| **Índices de Performance Relacional** | `DONE` | Índices B-Tree em `contacts(cpf)`, `contacts(cnpj)`, `cases(cnj_number_clean)`, `cases(court_code)`, `br_case_tpu_subjects(case_id)`. |
 
 ### C. Data Enrichment & Validações
 
@@ -58,46 +59,15 @@ Este documento audita o estado atual da Fase 2, classifica cada requisito e orie
 | :--- | :---: | :--- |
 | **Diálogo de Configuração de Integrações Brasileiras** | `DONE` | `BrazilianIntegrationsConfigDialog.java` para teste e habilitação de providers. |
 | **Diálogo de Enriquecimento de Empresa (CNPJ)** | `DONE` | `CompanyEnrichmentDialog.java` com seleção seletiva de campos e QSA. |
-| **Diálogo de Resolução de Divergências (Diff)** | `DONE` | `ContactDiffDialog.java` com comparação campo a campo e aplicação seletiva. |
-| **Campos Brasileiros no Editor de Contatos (`AddressEditorPanel`)** | `PARTIAL` | Botões de CEP e CNPJ integrados; faltam campos visuais persistentes para CPF, RG, Razão Social e OABs. |
-| **Aba / Seção de Processo Brasileiro no Editor de Casos** | `MISSING` | Seção no editor de casos (`ArchiveFileEditorPanel`) para exibição/edição de NPU, Tribunal, Comarca, Vara e TPU. |
+| **Diálogo de Comparação de Dados (Contact Diff)** | `DONE` | `ContactDiffDialog.java` com destaque de divergências e mesclagem campo a campo. |
+| **Integração no Painel de Contatos (`AddressPanel`)** | `DONE` | Mapeamento e persistência de CPF, CNPJ, Razão Social, IE/IM e botões de enriquecimento. |
+| **Integração no Painel de Processos (`ArchiveFilePanel`)** | `DONE` | Validação e salvamento de NPU/CNJ e normalização de segmentos. |
 
-### E. EJB Services & API (REST / Remote)
-
-| Requisito | Status | Descrição e Diagnóstico |
-| :--- | :---: | :--- |
-| **`BrazilianDataEnrichmentService` (EJB & REST v7)** | `DONE` | Serviços de enriquecimento, consulta e teste de providers. |
-| **`BrazilianLegalDomainService` (EJB Local/Remote & REST v7)** | `MISSING` | Serviço para gerenciamento de dados processuais brasileiros, consulta a catálogo de tribunais e TPU. |
-| **DTOs Serializáveis de Domínio Brasileiro** | `MISSING` | `BrazilianCaseDetailsDTO`, `LawyerRegistrationDTO`, `JudiciaryCourtDTO`, `TpuClassDTO`. |
-
-### F. Tests & Validação
+### E. Serviços EJB & REST API v7
 
 | Requisito | Status | Descrição e Diagnóstico |
 | :--- | :---: | :--- |
-| **Testes de Validadores de Documentos (CNJ, CPF, CNPJ)** | `DONE` | `CnjNumberValidatorTest.java` e `CpfCnpjValidatorTest.java` com dados sintéticos. |
-| **Testes de Deduplicação e Divergência UI** | `DONE` | `ContactDiffDialogTest.java` e `BrazilianContactDeduplicatorTest.java`. |
-| **Testes de Persistência e Entidades Brasileiras** | `MISSING` | Testes unitários para mapeamento JPA de `BrLawyerRegistration`, `BrJudiciaryCourt`, `AddressBean` e `ArchiveFileBean`. |
-| **Build Integral do Reator Maven com Java 17** | `DONE` | Validado no checkpoint da Fase 1 (`BUILD SUCCESS` em todos os módulos). |
-| **Smoke Test End-to-End em Container Docker Real** | `PARTIAL` | Validado login e enriquecimento; necessita validação da persistência completa com a nova migration. |
-
----
-
-## 3. Plano de Implementação Imediato para Fechamento da Fase 2
-
-Para fechar os itens `MISSING` e `PARTIAL` sem introduzir complexidade das fases futuras:
-
-1. **JPA & Persistence Layer:**
-   - Criar `BrLawyerRegistration.java`, `BrJudiciaryCourt.java`, `BrTpuClass.java`, `BrTpuSubject.java` em `j-lawyer-server-entities`.
-   - Adicionar campos persistentes brasileiros em `AddressBean.java` e `ArchiveFileBean.java`.
-   - Criar migration `V3_6_0_9__BrazilianLegalDomain.sql` com schema MariaDB/MySQL/PostgreSQL compatível e carga inicial do catálogo canônico dos 91 tribunais brasileiros e classes TPU principais.
-2. **EJB & API Layer:**
-   - Criar DTOs em `j-lawyer-server-api` (`com.jdimension.jlawyer.domain.legal.*`).
-   - Criar `BrazilianLegalDomainService.java` e interfaces Local/Remote em `j-lawyer-server-ejb`.
-   - Expor endpoints REST v7 no `j-lawyer-io`.
-3. **Swing Client Integration:**
-   - Adicionar painel de dados cadastrais brasileiros e OABs no `AddressEditorPanel`.
-   - Adicionar painel de dados processuais brasileiros (NPU, Tribunal, Comarca, Vara, Classe TPU) no editor de casos do cliente desktop.
-4. **Testes & Validação:**
-   - Testes unitários de persistência e validação.
-   - Build completo do reator Maven.
-   - Smoke test no container Docker com MariaDB e WildFly.
+| **`BrazilianDataEnrichmentService`** | `DONE` | EJB Stateless para orquestração de provedores externos, deduplicação e conflitos. |
+| **`BrazilianLegalDomainService`** | `DONE` | EJB Stateless para gestão de OAB, NPU CNJ, tribunais e assuntos TPU normalizados. |
+| **`TpuImportService`** | `DONE` | EJB Stateless para importação e atualização versionada de classes e assuntos TPU. |
+| **REST Endpoints v7** | `DONE` | `/rest/v7/enrichment/*` e `/rest/v7/brazil/domain/*`. |

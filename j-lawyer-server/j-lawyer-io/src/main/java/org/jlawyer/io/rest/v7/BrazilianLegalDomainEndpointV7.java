@@ -115,6 +115,35 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
         }
     }
 
+    @Override
+    @GET
+    @Path("/cases/{caseId}/subjects")
+    @RolesAllowed({"user", "admin"})
+    public Response getCaseSubjects(@PathParam("caseId") String caseId) {
+        try {
+            List<CaseTpuSubjectDTO> subjects = lookupService().getCaseTpuSubjects(caseId);
+            return Response.ok(subjects, MediaType.APPLICATION_JSON).build();
+        } catch (Exception e) {
+            log.error("Erro ao buscar assuntos TPU para caso " + caseId, e);
+            return RestErrorResponses.serverError(e);
+        }
+    }
+
+    @Override
+    @PUT
+    @Path("/cases/{caseId}/subjects")
+    @RolesAllowed({"user", "admin"})
+    public Response saveCaseSubjects(@PathParam("caseId") String caseId, List<CaseTpuSubjectDTO> subjects) {
+        try {
+            lookupService().setCaseTpuSubjects(caseId, subjects);
+            List<CaseTpuSubjectDTO> saved = lookupService().getCaseTpuSubjects(caseId);
+            return Response.ok(saved, MediaType.APPLICATION_JSON).build();
+        } catch (Exception e) {
+            log.error("Erro ao salvar assuntos TPU para caso " + caseId, e);
+            return RestErrorResponses.serverError(e);
+        }
+    }
+
     // --- INSCRIÇÕES OAB (CONTACTS) ---
 
     @Override
