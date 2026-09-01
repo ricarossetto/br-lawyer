@@ -33,68 +33,19 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCaseForDrawer, setSelectedCaseForDrawer] = useState<RestfulCaseOverviewV8 | null>(null);
 
+  const [error, setError] = useState<string | null>(null);
+
   const fetchCases = async () => {
     setIsLoading(true);
+    setError(null);
     try {
       const page = await casesService.getCasesPage(offset, limit, filter, searchQuery);
-      setCases(page.items);
-      setTotal(page.total);
-    } catch (err) {
-      // Fallback demo data for initial spike showcase if offline
-      const mockCases: RestfulCaseOverviewV8[] = [
-        {
-          id: 'c-101',
-          fileNumber: '5001234-56.2026.8.13.0024',
-          name: 'Ação Revisional de Contrato Bancário — Silva x Banco S/A',
-          subjectField: 'Direito Bancário',
-          lawyer: 'Dr. Carlos Eduardo',
-          claimValue: '145000.00',
-          archived: false,
-          dateChanged: Date.now() - 3600000 * 2,
-        },
-        {
-          id: 'c-102',
-          fileNumber: '0019876-12.2026.5.03.0001',
-          name: 'Reclamação Trabalhista — Oliveira x Construtora Horizonte',
-          subjectField: 'Direito do Trabalho',
-          lawyer: 'Dra. Mariana Rios',
-          claimValue: '87500.00',
-          archived: false,
-          dateChanged: Date.now() - 3600000 * 5,
-        },
-        {
-          id: 'c-103',
-          fileNumber: '1045678-90.2026.4.01.3800',
-          name: 'Mandado de Segurança Tributário — Tech Solutions x Fazenda Nacional',
-          subjectField: 'Direito Tributário',
-          lawyer: 'Dr. Roberto Santos',
-          claimValue: '320000.00',
-          archived: false,
-          dateChanged: Date.now() - 3600000 * 24,
-        },
-        {
-          id: 'c-104',
-          fileNumber: '5012345-88.2026.8.13.0024',
-          name: 'Inventário e Partilha — Espólio de Antônio Ferreira',
-          subjectField: 'Família e Sucessões',
-          lawyer: 'Dra. Mariana Rios',
-          claimValue: '750000.00',
-          archived: false,
-          dateChanged: Date.now() - 3600000 * 48,
-        },
-        {
-          id: 'c-105',
-          fileNumber: '0034567-44.2025.8.13.0024',
-          name: 'Execução de Título Extrajudicial — Distribuidora ABC x Varejo Sul',
-          subjectField: 'Direito Empresarial',
-          lawyer: 'Dr. Carlos Eduardo',
-          claimValue: '92000.00',
-          archived: true,
-          dateChanged: Date.now() - 3600000 * 120,
-        },
-      ];
-      setCases(mockCases);
-      setTotal(mockCases.length);
+      setCases(page.items || []);
+      setTotal(page.total || 0);
+    } catch (err: any) {
+      setError(err?.message || 'Erro ao carregar processos do servidor.');
+      setCases([]);
+      setTotal(0);
     } finally {
       setIsLoading(false);
     }

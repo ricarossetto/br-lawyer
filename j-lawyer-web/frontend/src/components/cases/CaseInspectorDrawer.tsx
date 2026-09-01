@@ -41,17 +41,11 @@ export const CaseInspectorDrawer: React.FC<CaseInspectorDrawerProps> = ({
           casesService.getCaseParties(selectedCase.id).catch(() => []),
           casesService.getCaseDueDates(selectedCase.id).catch(() => []),
         ]);
-        setParties(partiesData);
-        setDueDates(dueDatesData);
+        setParties(partiesData || []);
+        setDueDates(dueDatesData || []);
       } catch (err) {
-        // Fallback for spike demo
-        setParties([
-          { id: 'p1', caseId: selectedCase.id, contactName: 'Silva & Filhos Comércio Ltda', involvementType: 'Autor / Requerente' },
-          { id: 'p2', caseId: selectedCase.id, contactName: 'Banco Nacional S/A', involvementType: 'Réu / Requerido' },
-        ]);
-        setDueDates([
-          { id: 'd1', dueDate: Date.now() + 86400000 * 2, reason: 'Manifestação sobre Laudo Pericial', done: false, type: 'RESPITE' },
-        ]);
+        setParties([]);
+        setDueDates([]);
       } finally {
         setIsLoading(false);
       }

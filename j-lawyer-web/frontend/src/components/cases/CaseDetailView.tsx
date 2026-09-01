@@ -62,39 +62,13 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
         if (c) {
           setCaseData(c);
         } else {
-          // Mock fallback for demo
-          setCaseData({
-            id: caseId,
-            fileNumber: '5001234-56.2026.8.13.0024',
-            name: 'Ação Revisional de Contrato Bancário — Silva x Banco S/A',
-            subjectField: 'Direito Bancário',
-            lawyer: 'Dr. Carlos Eduardo',
-            assistant: 'Gabinete Cível 1',
-            claimValue: '145000.00',
-            notice: 'Processo com pedido de tutela antecipada deferido.',
-            archived: 0,
-          });
+          setCaseData(null);
         }
-        setParties(p.length > 0 ? p : [
-          { id: 'p1', caseId, contactName: 'Silva & Filhos Comércio Ltda', involvementType: 'Autor / Requerente' },
-          { id: 'p2', caseId, contactName: 'Banco Nacional S/A', involvementType: 'Réu / Requerido' },
-        ]);
-        setDocuments(d.length > 0 ? d : [
-          { id: 'doc-1', fileName: 'Peticao_Inicial_Revisional.pdf', version: 1, dateChanged: Date.now() - 86400000 * 5, caseId },
-          { id: 'doc-2', fileName: 'Contrato_Financiamento_Original.pdf', version: 1, dateChanged: Date.now() - 86400000 * 5, caseId },
-          { id: 'doc-3', fileName: 'Decisao_Liminar_Deferida.pdf', version: 1, dateChanged: Date.now() - 86400000 * 2, caseId },
-        ]);
-        setDeadlines(dd.length > 0 ? dd : [
-          { id: 'dd-1', reason: 'Manifestação sobre Contestação', dueDate: Date.now() + 86400000 * 3, done: false, type: 'RESPITE' },
-        ]);
-        setHistory(h.length > 0 ? h : [
-          { id: 'h-1', changeDate: Date.now() - 86400000 * 5, changeType: 'Distribuição', userName: 'admin', description: 'Processo distribuído e autuado no sistema.' },
-          { id: 'h-2', changeDate: Date.now() - 86400000 * 2, changeType: 'Decisão', userName: 'admin', description: 'Juntada de decisão interlocutória.' },
-        ]);
-        setTags(t.length > 0 ? t : [
-          { name: 'Urgente Liminar', dateSet: Date.now() },
-          { name: 'Contrato Bancário', dateSet: Date.now() },
-        ]);
+        setParties(p || []);
+        setDocuments(d || []);
+        setDeadlines(dd || []);
+        setHistory(h || []);
+        setTags(t || []);
       } finally {
         setIsLoading(false);
       }

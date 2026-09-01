@@ -6,12 +6,14 @@ import { formatCNJ, formatDate, formatBRL } from '../../utils/formatters';
 
 interface RecentCasesTableProps {
   cases: RestfulCaseOverviewV8[];
+  isLoading?: boolean;
   onSelectCase: (caseId: string) => void;
   onViewAll: () => void;
 }
 
 export const RecentCasesTable: React.FC<RecentCasesTableProps> = ({
   cases,
+  isLoading = false,
   onSelectCase,
   onViewAll,
 }) => {
@@ -32,55 +34,63 @@ export const RecentCasesTable: React.FC<RecentCasesTableProps> = ({
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse">
-          <thead>
-            <tr className="border-b border-slate-800 text-[11px] font-semibold text-slate-400 uppercase tracking-wider bg-slate-950/40">
-              <th className="py-2.5 px-4">Número CNJ / Pasta</th>
-              <th className="py-2.5 px-4">Título / Ação</th>
-              <th className="py-2.5 px-4">Área / Ramo</th>
-              <th className="py-2.5 px-4">Responsável</th>
-              <th className="py-2.5 px-4">Valor da Causa</th>
-              <th className="py-2.5 px-4">Atualização</th>
-              <th className="py-2.5 px-4 text-right">Ação</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-800/60 text-xs">
-            {cases.slice(0, 7).map((c) => (
-              <tr
-                key={c.id}
-                onClick={() => onSelectCase(c.id)}
-                className="hover:bg-slate-800/50 transition-colors cursor-pointer group"
-              >
-                <td className="py-2.5 px-4 font-mono font-medium text-slate-200 group-hover:text-indigo-300 whitespace-nowrap">
-                  {formatCNJ(c.fileNumber)}
-                </td>
-                <td className="py-2.5 px-4 font-medium text-slate-100 max-w-xs truncate">
-                  {c.name}
-                </td>
-                <td className="py-2.5 px-4 text-slate-400">
-                  <Badge variant="neutral" size="sm">
-                    {c.subjectField || 'Geral'}
-                  </Badge>
-                </td>
-                <td className="py-2.5 px-4 text-slate-300 flex items-center gap-1.5 whitespace-nowrap">
-                  <User className="h-3 w-3 text-slate-500" />
-                  <span>{c.lawyer || 'Não atribuído'}</span>
-                </td>
-                <td className="py-2.5 px-4 font-mono text-slate-300 whitespace-nowrap">
-                  {formatBRL(c.claimValue)}
-                </td>
-                <td className="py-2.5 px-4 text-slate-400 font-mono whitespace-nowrap">
-                  {formatDate(c.dateChanged)}
-                </td>
-                <td className="py-2.5 px-4 text-right">
-                  <span className="text-slate-500 group-hover:text-indigo-400 font-medium text-[11px] inline-flex items-center gap-1">
-                    Abrir <ArrowRight className="h-3 w-3" />
-                  </span>
-                </td>
+        {isLoading ? (
+          <div className="p-8 text-center text-slate-400 text-xs">Carregando processos do servidor...</div>
+        ) : cases.length === 0 ? (
+          <div className="p-8 text-center text-slate-500 text-xs">
+            Nenhum processo em andamento encontrado no banco de dados.
+          </div>
+        ) : (
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="border-b border-slate-800 text-[11px] font-semibold text-slate-400 uppercase tracking-wider bg-slate-950/40">
+                <th className="py-2.5 px-4">Número CNJ / Pasta</th>
+                <th className="py-2.5 px-4">Título / Ação</th>
+                <th className="py-2.5 px-4">Área / Ramo</th>
+                <th className="py-2.5 px-4">Responsável</th>
+                <th className="py-2.5 px-4">Valor da Causa</th>
+                <th className="py-2.5 px-4">Atualização</th>
+                <th className="py-2.5 px-4 text-right">Ação</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-slate-800/60 text-xs">
+              {cases.slice(0, 7).map((c) => (
+                <tr
+                  key={c.id}
+                  onClick={() => onSelectCase(c.id)}
+                  className="hover:bg-slate-800/50 transition-colors cursor-pointer group"
+                >
+                  <td className="py-2.5 px-4 font-mono font-medium text-slate-200 group-hover:text-indigo-300 whitespace-nowrap">
+                    {formatCNJ(c.fileNumber)}
+                  </td>
+                  <td className="py-2.5 px-4 font-medium text-slate-100 max-w-xs truncate">
+                    {c.name}
+                  </td>
+                  <td className="py-2.5 px-4 text-slate-400">
+                    <Badge variant="neutral" size="sm">
+                      {c.subjectField || 'Geral'}
+                    </Badge>
+                  </td>
+                  <td className="py-2.5 px-4 text-slate-300 flex items-center gap-1.5 whitespace-nowrap">
+                    <User className="h-3 w-3 text-slate-500" />
+                    <span>{c.lawyer || 'Não atribuído'}</span>
+                  </td>
+                  <td className="py-2.5 px-4 font-mono text-slate-300 whitespace-nowrap">
+                    {formatBRL(c.claimValue)}
+                  </td>
+                  <td className="py-2.5 px-4 text-slate-400 font-mono whitespace-nowrap">
+                    {formatDate(c.dateChanged)}
+                  </td>
+                  <td className="py-2.5 px-4 text-right">
+                    <span className="text-slate-500 group-hover:text-indigo-400 font-medium text-[11px] inline-flex items-center gap-1">
+                      Abrir <ArrowRight className="h-3 w-3" />
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   );

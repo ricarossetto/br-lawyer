@@ -61,14 +61,17 @@ export interface RestfulTagV1 {
 
 export interface RestfulDocumentV1 {
   id: string;
-  fileName: string;
+  name?: string;
+  fileName?: string;
   version?: number;
   dateChanged?: number;
+  creationDate?: string | number;
   deleted?: boolean;
   folderId?: string;
   caseId?: string;
   externalId?: string;
   tags?: RestfulTagV1[];
+  size?: number;
 }
 
 export interface RestfulDocumentContentV1 {
@@ -99,6 +102,8 @@ export interface RestfulDueDateV1 {
 export interface RestfulCaseHistoryV8 {
   id: string;
   changeDate: number;
+  principal?: string;
+  changeDescription?: string;
   changeType?: string;
   userName?: string;
   description?: string;

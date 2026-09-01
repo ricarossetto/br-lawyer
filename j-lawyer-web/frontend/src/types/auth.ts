@@ -7,8 +7,10 @@ export interface LoginRequestV8 {
 export interface TokenResponseV8 {
   accessToken: string;
   expiresIn: number;
-  principal: string;
+  username: string;
+  principal?: string;
   roles: string[];
+  tokenType?: string;
 }
 
 export interface UserSession {

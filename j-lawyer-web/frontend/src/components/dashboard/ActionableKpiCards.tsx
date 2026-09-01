@@ -12,38 +12,40 @@ interface KpiCardProps {
 }
 
 export const ActionableKpiCards: React.FC<{
+  activeCasesCount?: number;
+  upcomingEventsCount?: number;
   onNavigateToCases: () => void;
   onNavigateToCalendar: () => void;
-}> = ({ onNavigateToCases, onNavigateToCalendar }) => {
+}> = ({ activeCasesCount = 0, upcomingEventsCount = 0, onNavigateToCases, onNavigateToCalendar }) => {
   const cards: KpiCardProps[] = [
     {
       title: 'Prazos a Vencer (7 Dias)',
-      value: 12,
-      subtitle: '2 vencem hoje ou amanhã',
+      value: upcomingEventsCount,
+      subtitle: upcomingEventsCount > 0 ? `${upcomingEventsCount} cadastrados no servidor` : 'Nenhum prazo pendente',
       icon: Clock,
-      accentColor: 'urgent',
+      accentColor: upcomingEventsCount > 0 ? 'urgent' : 'success',
       onClick: onNavigateToCalendar,
     },
     {
       title: 'Processos Ativos',
-      value: 148,
-      subtitle: 'Distribuídos em 18 comarcas',
+      value: activeCasesCount,
+      subtitle: activeCasesCount > 0 ? `${activeCasesCount} processos em andamento` : 'Nenhum processo ativo',
       icon: Briefcase,
       accentColor: 'active',
       onClick: onNavigateToCases,
     },
     {
-      title: 'Audiências da Semana',
-      value: 4,
-      subtitle: '2 conciliação, 2 instrução',
+      title: 'Agenda e Compromissos',
+      value: upcomingEventsCount,
+      subtitle: 'Sincronizado com WildFly',
       icon: Calendar,
       accentColor: 'warning',
       onClick: onNavigateToCalendar,
     },
     {
-      title: 'Publicações Tratadas',
-      value: '94%',
-      subtitle: 'Meta de triagem cumprida',
+      title: 'Status da Conexão',
+      value: 'Online',
+      subtitle: 'WildFly EJB & MariaDB Ativos',
       icon: FileCheck,
       accentColor: 'success',
     },

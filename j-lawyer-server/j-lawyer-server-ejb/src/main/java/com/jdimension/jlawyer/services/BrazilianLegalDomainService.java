@@ -33,7 +33,7 @@ public class BrazilianLegalDomainService implements BrazilianLegalDomainServiceL
 
     private static final Logger log = Logger.getLogger(BrazilianLegalDomainService.class.getName());
 
-    @PersistenceContext(unitName = "j-lawyer-server-entitiesPU")
+    @PersistenceContext(unitName = "j-lawyer-server-ejbPU")
     private EntityManager em;
 
     // --- INSCRIÇÕES OAB ---

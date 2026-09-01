@@ -48,25 +48,9 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       setIsLoading(true);
       try {
         const hits = await searchService.searchFulltext(query, 15);
-        setResults(hits);
+        setResults(hits || []);
       } catch (err) {
-        // Fallback for spike preview if search endpoint offline
-        setResults([
-          {
-            id: 'mock-1',
-            title: '5001234-56.2026.8.13.0024 — Ação Ordinária',
-            summary: 'Autor: Silva & Filhos Ltda | Réu: Banco Nacional S/A',
-            entityType: 'case',
-            caseId: 'case-1',
-          },
-          {
-            id: 'mock-2',
-            title: '0019876-12.2026.5.03.0001 — Reclamação Trabalhista',
-            summary: 'Vara do Trabalho de Belo Horizonte',
-            entityType: 'case',
-            caseId: 'case-2',
-          },
-        ]);
+        setResults([]);
       } finally {
         setIsLoading(false);
       }
@@ -118,13 +102,19 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
           ) : (
             <div className="space-y-1">
               {results.map((hit) => {
-                const Icon = hit.entityType === 'case' ? Briefcase : hit.entityType === 'document' ? FileText : User;
+                const targetCaseId = hit.archiveFileId || hit.caseId || (hit.entityType === 'case' ? hit.id : undefined);
+                const displayTitle = hit.archiveFileNumber
+                  ? `${hit.archiveFileNumber} — ${hit.archiveFileName || hit.fileName || ''}`
+                  : (hit.title || hit.fileName || hit.id);
+                const displaySummary = hit.snippet || hit.summary;
+                const Icon = hit.fileName ? FileText : Briefcase;
+
                 return (
                   <button
                     key={hit.id}
                     onClick={() => {
-                      if (hit.caseId || hit.entityType === 'case') {
-                        onSelectCase(hit.caseId || hit.id);
+                      if (targetCaseId) {
+                        onSelectCase(targetCaseId);
                         onClose();
                       }
                     }}
@@ -136,10 +126,10 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                       </div>
                       <div className="truncate">
                         <div className="text-xs font-medium text-slate-200 group-hover:text-white truncate">
-                          {formatCNJ(hit.title)}
+                          {formatCNJ(displayTitle)}
                         </div>
-                        {hit.summary && (
-                          <div className="text-[11px] text-slate-400 truncate mt-0.5">{hit.summary}</div>
+                        {displaySummary && (
+                          <div className="text-[11px] text-slate-400 truncate mt-0.5">{displaySummary}</div>
                         )}
                       </div>
                     </div>

@@ -26,7 +26,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       try {
         const tokenData = await authService.refresh();
         setSession({
-          principal: tokenData.principal,
+          principal: tokenData.username || tokenData.principal || 'admin',
           roles: tokenData.roles || [],
           accessToken: tokenData.accessToken,
           expiresAt: Date.now() + tokenData.expiresIn * 1000,
@@ -56,7 +56,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       const tokenData = await authService.login({ username, password });
       setSession({
-        principal: tokenData.principal,
+        principal: tokenData.username || tokenData.principal || username,
         roles: tokenData.roles || [],
         accessToken: tokenData.accessToken,
         expiresAt: Date.now() + tokenData.expiresIn * 1000,

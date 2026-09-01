@@ -30,12 +30,8 @@ export const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({
         const data = await casesService.getDocumentPreviewPdf(documentId);
         setPreview(data);
       } catch (err: any) {
-        // Fallback for spike demo
-        setPreview({
-          fileName: documentName,
-          kind: 'text',
-          text: `Pré-visualização do Documento: ${documentName}\n\nConteúdo indexado via Apache Tika / StirlingPDF.\n\nProcessamento com conversão de fidelidade server-side no WildFly.\nEste documento está arquivado de forma segura na base de dados MariaDB do BR-LAWYER.`,
-        });
+        setError(err?.response?.data?.message || err?.message || 'Falha ao carregar pré-visualização do documento do servidor.');
+        setPreview(null);
       } finally {
         setIsLoading(false);
       }

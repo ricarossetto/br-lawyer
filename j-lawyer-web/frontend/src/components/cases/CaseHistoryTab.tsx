@@ -21,13 +21,13 @@ export const CaseHistoryTab: React.FC<{ history: RestfulCaseHistoryV8[] }> = ({ 
               
               <div className="bg-slate-900 border border-slate-800 rounded-lg p-3.5 shadow-xs">
                 <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="font-semibold text-slate-200">{h.changeType || 'Alteração'}</span>
+                  <span className="font-semibold text-slate-200">{h.changeType || 'Auditoria / Histórico'}</span>
                   <span className="font-mono text-[11px] text-slate-500">{formatDateTime(h.changeDate)}</span>
                 </div>
-                <p className="text-xs text-slate-300">{h.description || 'Registro de alteração no processo.'}</p>
+                <p className="text-xs text-slate-300">{h.changeDescription || h.description || 'Registro de alteração no processo.'}</p>
                 <div className="flex items-center gap-1 text-[11px] text-slate-500 mt-2 font-mono">
                   <User className="h-3 w-3" />
-                  <span>Operador: {h.userName || 'Sistema'}</span>
+                  <span>Operador: {h.principal || h.userName || 'admin'}</span>
                 </div>
               </div>
             </div>
