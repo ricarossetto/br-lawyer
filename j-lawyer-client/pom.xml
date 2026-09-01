@@ -49,12 +49,27 @@
             <artifactId>jasperreports</artifactId>
             <version>4.5.1</version>
         </dependency>
-        <!-- JavaFX (base/graphics/controls/fxml/media/swing/web) is provided by the build
-             and runtime JDK: BellSoft Liberica "Full" 17.0.9 (jdk-17.0.9-full) bundles JavaFX
-             17.0.9 as platform modules (jrt:/javafx.*). A classpath app resolves them at both
-             compile and runtime with no dependency and no add-modules flag (verified), so the
-             former vendored javafx.* 0.0.0 jars (JDK-8 era) were redundant and have been removed.
-             NOTE: building requires a JavaFX-bundling JDK (the project already mandates -full). -->
+        <!-- JavaFX dependencies (portable across all JDK 17 distributions: Temurin, Liberica, Corretto, Zulu) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>17.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>17.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>17.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17.0.9</version>
+        </dependency>
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
@@ -514,11 +529,6 @@
             <version>1.0-SNAPSHOT</version>
             <classifier>shaded</classifier>
             <exclusions><exclusion><groupId>*</groupId><artifactId>*</artifactId></exclusion></exclusions>
-        </dependency>
-        <dependency>
-            <groupId>jlawyer.thirdparty</groupId>
-            <artifactId>j-lawyer-bea-wrapper</artifactId>
-            <version>0.0.0</version>
         </dependency>
     </dependencies>
 
