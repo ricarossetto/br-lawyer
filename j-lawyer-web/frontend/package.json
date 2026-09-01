@@ -1,53 +1,32 @@
 {
-  "name": "j-lawyer-web",
-  "version": "0.1.0",
-  "description": "j-lawyer web UI (Angular). See ../SUPPLY-CHAIN.md for the hardened npm workflow.",
-  "license": "AGPL-3.0-only",
+  "name": "br-lawyer-web",
   "private": true,
-  "engines": {
-    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
-    "npm": ">=10.0.0"
-  },
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "start": "ng serve",
-    "build": "ng build",
-    "build:prod": "ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
-    "audit:ci": "npm audit --audit-level=high",
-    "seed:cache": "bash scripts/seed-npm-cache.sh"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:prod": "tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@angular/animations": "21.2.21",
-    "@angular/common": "21.2.21",
-    "@angular/compiler": "21.2.21",
-    "@angular/core": "21.2.21",
-    "@angular/forms": "21.2.21",
-    "@angular/platform-browser": "21.2.21",
-    "@angular/router": "21.2.21",
-    "@jsverse/transloco": "8.4.0",
-    "@tiptap/core": "2.27.2",
-    "@tiptap/extension-color": "2.27.2",
-    "@tiptap/extension-font-family": "2.27.2",
-    "@tiptap/extension-highlight": "2.27.2",
-    "@tiptap/extension-image": "2.27.2",
-    "@tiptap/extension-link": "2.27.2",
-    "@tiptap/extension-table": "2.27.2",
-    "@tiptap/extension-table-cell": "2.27.2",
-    "@tiptap/extension-table-header": "2.27.2",
-    "@tiptap/extension-table-row": "2.27.2",
-    "@tiptap/extension-text-align": "2.27.2",
-    "@tiptap/extension-text-style": "2.27.2",
-    "@tiptap/extension-underline": "2.27.2",
-    "@tiptap/pm": "2.27.2",
-    "@tiptap/starter-kit": "2.27.2",
-    "rxjs": "7.8.2",
-    "tslib": "2.8.1",
-    "zone.js": "0.15.0"
+    "axios": "^1.7.9",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
-    "@angular/build": "21.2.21",
-    "@angular/cli": "21.2.21",
-    "@angular/compiler-cli": "21.2.21",
-    "typescript": "5.9.3"
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
   }
 }

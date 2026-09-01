@@ -1,0 +1,122 @@
+import React, { useState } from 'react';
+import { Scale, Lock, User, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { useAuth } from '../../context/AuthContext';
+import { Button } from '../common/Button';
+import { Input } from '../common/Input';
+
+export const LoginPage: React.FC = () => {
+  const { login } = useAuth();
+  const [username, setUsername] = useState('admin');
+  const [password, setPassword] = useState('a');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!username.trim() || !password.trim()) {
+      setError('Por favor, preencha o usuário e a senha.');
+      return;
+    }
+
+    setError(null);
+    setIsLoading(true);
+
+    try {
+      await login(username, password);
+    } catch (err: any) {
+      if (err.response?.status === 401) {
+        setError('Credenciais inválidas. Verifique seu usuário e senha.');
+      } else if (err.code === 'ERR_NETWORK' || !err.response) {
+        setError('Não foi possível conectar ao servidor WildFly (http://localhost:8000). Verifique se o servidor está em execução.');
+      } else {
+        setError(err.response?.data?.error || 'Erro ao realizar login no servidor.');
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen w-screen bg-slate-950 flex flex-col items-center justify-center p-4 selection:bg-indigo-600 selection:text-white">
+      {/* Background Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))]" />
+
+      <div className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-8 backdrop-blur z-10">
+        {/* Brand Header */}
+        <div className="flex flex-col items-center text-center mb-8">
+          <div className="h-12 w-12 rounded-xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 mb-4 shadow-inner">
+            <Scale className="h-6 w-6" />
+          </div>
+          <h1 className="text-xl font-bold text-slate-100 tracking-tight">BR-LAWYER</h1>
+          <p className="text-xs text-slate-400 mt-1">Plataforma de Prática Jurídica & Gestão Processual</p>
+          <div className="mt-3 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-[11px] text-slate-300 font-mono">
+            <ShieldCheck className="h-3 w-3 text-emerald-400" />
+            <span>WildFly Elytron JWT Authentication</span>
+          </div>
+        </div>
+
+        {/* Error Alert */}
+        {error && (
+          <div className="mb-6 p-3 rounded-lg bg-red-500/10 border border-red-500/30 flex items-start gap-2.5 text-xs text-red-300">
+            <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-red-400" />
+            <div>{error}</div>
+          </div>
+        )}
+
+        {/* Login Form */}
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-xs font-medium text-slate-300 mb-1.5">
+              Usuário / Operador
+            </label>
+            <Input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="ex: admin"
+              leftIcon={<User className="h-3.5 w-3.5" />}
+              autoComplete="username"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs font-medium text-slate-300 mb-1.5">
+              Senha
+            </label>
+            <Input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="••••••••"
+              leftIcon={<Lock className="h-3.5 w-3.5" />}
+              autoComplete="current-password"
+              required
+            />
+          </div>
+
+          <Button
+            type="submit"
+            variant="primary"
+            size="md"
+            isLoading={isLoading}
+            className="w-full mt-6"
+            rightIcon={<ArrowRight className="h-4 w-4" />}
+          >
+            Acessar Sistema
+          </Button>
+        </form>
+
+        {/* Development Tip */}
+        <div className="mt-8 pt-4 border-t border-slate-800/80 text-center">
+          <p className="text-[11px] text-slate-400">
+            Ambiente Local: <span className="font-mono text-slate-300">admin</span> / <span className="font-mono text-slate-300">a</span>
+          </p>
+          <p className="text-[10px] text-slate-400 mt-1">
+            Conectando diretamente a <span className="font-mono">http://localhost:8000</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
