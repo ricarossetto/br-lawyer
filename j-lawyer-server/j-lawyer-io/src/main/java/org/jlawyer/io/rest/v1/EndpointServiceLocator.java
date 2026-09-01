@@ -745,6 +745,11 @@ public class EndpointServiceLocator extends Application
         s.add(ProfileEndpointV8.class);
         s.add(SearchEndpointV8.class);
         s.add(TimesheetsEndpointV8.class);
+        s.add(org.jlawyer.io.rest.v7.BrazilianLegalDomainEndpointV7.class);
+        s.add(org.jlawyer.io.rest.v7.EnrichmentEndpointV7.class);
+        s.add(org.jlawyer.io.rest.v8.PublicationsEndpointV8.class);
+        s.add(org.jlawyer.io.rest.v8.TasksEndpointV8.class);
+        s.add(org.jlawyer.io.rest.v8.WorkflowDashboardEndpointV8.class);
         return s;
     }
 }
