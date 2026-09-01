@@ -11,6 +11,10 @@ package com.jdimension.jlawyer.client.workflow;
 import com.jdimension.jlawyer.client.utils.FrameUtils;
 import com.jdimension.jlawyer.domain.legal.model.*;
 import com.jdimension.jlawyer.services.BrazilianPublicationServiceRemote;
+import com.jdimension.jlawyer.client.settings.ClientSettings;
+import com.jdimension.jlawyer.client.settings.UserSettings;
+import javax.naming.Context;
+import java.util.Properties;
 import com.jdimension.jlawyer.services.JLawyerServiceLocator;
 import org.apache.log4j.Logger;
 
@@ -143,7 +147,7 @@ public class PublicationDetailDialog extends JDialog {
 
                 // Se não lida, marca como lida automaticamente ao abrir
                 if ("UNREAD".equalsIgnoreCase(publication.getReadStatus())) {
-                    service.markRead(publicationId, true, "CURRENT_USER");
+                    service.markRead(publicationId, true, getAuthenticatedUser());
                     changed = true;
                 }
             }
@@ -161,7 +165,7 @@ public class PublicationDetailDialog extends JDialog {
             try {
                 BrazilianPublicationServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianPublicationServiceRemote();
                 PublicationTreatRequestDTO req = new PublicationTreatRequestDTO();
-                req.setUser("CURRENT_USER");
+                req.setUser(getAuthenticatedUser());
                 req.setNotes(txtNotes.getText());
                 req.setCreateFollowUpTask(false); // Já criada pelo TaskEditDialog
                 service.treatPublication(publicationId, req);
@@ -179,7 +183,7 @@ public class PublicationDetailDialog extends JDialog {
         try {
             BrazilianPublicationServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianPublicationServiceRemote();
             PublicationTreatRequestDTO req = new PublicationTreatRequestDTO();
-            req.setUser("CURRENT_USER");
+            req.setUser(getAuthenticatedUser());
             req.setNotes(txtNotes.getText());
             req.setCreateFollowUpTask(false);
             service.treatPublication(publicationId, req);
@@ -197,7 +201,7 @@ public class PublicationDetailDialog extends JDialog {
         if (reason != null) {
             try {
                 BrazilianPublicationServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianPublicationServiceRemote();
-                service.archivePublication(publicationId, "CURRENT_USER", reason);
+                service.archivePublication(publicationId, getAuthenticatedUser(), reason);
                 changed = true;
                 JOptionPane.showMessageDialog(this, "Publicação arquivada com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
                 dispose();
@@ -206,6 +210,26 @@ public class PublicationDetailDialog extends JDialog {
                 JOptionPane.showMessageDialog(this, "Erro ao arquivar: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
             }
         }
+    }
+
+        private String getAuthenticatedUser() {
+        try {
+            if (UserSettings.getInstance().getCurrentUser() != null 
+                    && UserSettings.getInstance().getCurrentUser().getPrincipalId() != null
+                    && !UserSettings.getInstance().getCurrentUser().getPrincipalId().trim().isEmpty()) {
+                return UserSettings.getInstance().getCurrentUser().getPrincipalId().trim();
+            }
+        } catch (Throwable ignored) {}
+        try {
+            Properties lookupProps = ClientSettings.getInstance().getLookupProperties();
+            if (lookupProps != null && lookupProps.getProperty(Context.SECURITY_PRINCIPAL) != null) {
+                String p = lookupProps.getProperty(Context.SECURITY_PRINCIPAL);
+                if (p != null && !p.trim().isEmpty()) {
+                    return p.trim();
+                }
+            }
+        } catch (Throwable ignored) {}
+        return System.getProperty("user.name", "system");
     }
 
     public boolean isChanged() {
