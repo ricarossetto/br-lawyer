@@ -258,8 +258,24 @@ public final class BrazilianDocumentValidator {
             }
 
             return (clean.charAt(11) - '0') == dv2;
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             return false;
         }
+    }
+
+    /**
+     * Remove caracteres não numéricos de documentos formatados (CPF, CEP, etc.).
+     */
+    public static String unmask(String doc) {
+        if (doc == null) return "";
+        return NON_DIGITS.matcher(doc.trim()).replaceAll("");
+    }
+
+    /**
+     * Remove caracteres especiais preservando letras e dígitos (para CNPJ alfanumérico).
+     */
+    public static String cleanAlphaNumeric(String doc) {
+        if (doc == null) return "";
+        return doc.replaceAll("[^a-zA-Z0-9]", "").trim().toUpperCase();
     }
 }
