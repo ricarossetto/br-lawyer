@@ -83,6 +83,9 @@ public class BrJudiciaryCourt implements Serializable {
     @Column(name = "electronic_portal_url", length = 255)
     private String electronicPortalUrl;
 
+    @Column(name = "court_type", length = 50)
+    private String courtType;
+
     @Basic(optional = false)
     @Column(name = "active")
     private boolean active;
@@ -180,6 +183,14 @@ public class BrJudiciaryCourt implements Serializable {
 
     public void setElectronicPortalUrl(String electronicPortalUrl) {
         this.electronicPortalUrl = electronicPortalUrl;
+    }
+
+    public String getCourtType() {
+        return courtType;
+    }
+
+    public void setCourtType(String courtType) {
+        this.courtType = courtType;
     }
 
     public boolean isActive() {
