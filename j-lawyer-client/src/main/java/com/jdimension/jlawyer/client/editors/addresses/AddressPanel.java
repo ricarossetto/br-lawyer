@@ -3451,10 +3451,78 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdChooseCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdChooseCityActionPerformed
+        String zip = this.txtZipCode.getText();
+        String unmasked = com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.unmask(zip);
+        if (com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.isValidCep(unmasked)) {
+            try {
+                com.jdimension.jlawyer.services.BrazilianDataEnrichmentServiceRemote svc =
+                        JLawyerServiceLocator.getInstance(ClientSettings.getInstance().getLookupProperties()).lookupBrazilianDataEnrichmentServiceRemote();
+                com.jdimension.jlawyer.domain.enrichment.model.AddressResult res = svc.lookupAddress(unmasked, false);
+                if (res != null) {
+                    this.txtZipCode.setText(com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.formatCep(res.getCep()));
+                    if (StringUtils.nonEmpty(res.getStreet()) != null) this.txtStreet.setText(res.getStreet());
+                    if (StringUtils.nonEmpty(res.getNeighborhood()) != null) this.txtDistrict.setText(res.getNeighborhood());
+                    if (StringUtils.nonEmpty(res.getCity()) != null) this.txtCity.setText(res.getCity());
+                    if (StringUtils.nonEmpty(res.getState()) != null) this.cmbState.getEditor().setItem(res.getState());
+                    this.cmbCountry.getEditor().setItem("Brasil");
+                    return;
+                }
+            } catch (Exception ex) {
+                log.warn("CEP lookup failed, falling back to CitySearchDialog", ex);
+            }
+        }
         CitySearchDialog dlg = new CitySearchDialog(EditorsRegistry.getInstance().getMainWindow(), true, this.txtZipCode, this.txtCity);
         FrameUtils.centerDialog(dlg, EditorsRegistry.getInstance().getMainWindow());
         dlg.setVisible(true);
     }//GEN-LAST:event_cmdChooseCityActionPerformed
+
+    public void lookupBrazilianCompany() {
+        String cnpj = this.txtVatId != null ? this.txtVatId.getText() : "";
+        if (StringUtils.nonEmpty(cnpj) == null && this.txtCompany != null) {
+            cnpj = this.txtCompany.getText();
+        }
+        AddressBean cur = this.dto != null ? this.dto : new AddressBean();
+        cur.setCompany(this.txtCompany.getText());
+        cur.setCustom1(this.txtDepartment.getText());
+        cur.setVatId(this.txtVatId.getText());
+        cur.setStreet(this.txtStreet.getText());
+        cur.setStreetNumber(this.txtStreetNr.getText());
+        cur.setAdjunct(this.txtAdjunct.getText());
+        cur.setDistrict(this.txtDistrict.getText());
+        cur.setZipCode(this.txtZipCode.getText());
+        cur.setCity(this.txtCity.getText());
+        if (this.cmbState.getEditor().getItem() != null) {
+            cur.setState(this.cmbState.getEditor().getItem().toString());
+        }
+        cur.setPhone(this.txtPhone.getText());
+        cur.setMobile(this.txtMobile.getText());
+        cur.setEmail(this.txtEmail.getText());
+
+        com.jdimension.jlawyer.client.enrichment.CompanyEnrichmentDialog dlg =
+                new com.jdimension.jlawyer.client.enrichment.CompanyEnrichmentDialog(
+                        EditorsRegistry.getInstance().getMainWindow(),
+                        cur,
+                        cnpj
+                );
+        dlg.setVisible(true);
+
+        if (dlg.isApplied()) {
+            if (cur.getCompany() != null) this.txtCompany.setText(cur.getCompany());
+            if (cur.getCustom1() != null) this.txtDepartment.setText(cur.getCustom1());
+            if (cur.getVatId() != null) this.txtVatId.setText(cur.getVatId());
+            if (cur.getStreet() != null) this.txtStreet.setText(cur.getStreet());
+            if (cur.getStreetNumber() != null) this.txtStreetNr.setText(cur.getStreetNumber());
+            if (cur.getAdjunct() != null) this.txtAdjunct.setText(cur.getAdjunct());
+            if (cur.getDistrict() != null) this.txtDistrict.setText(cur.getDistrict());
+            if (cur.getZipCode() != null) this.txtZipCode.setText(cur.getZipCode());
+            if (cur.getCity() != null) this.txtCity.setText(cur.getCity());
+            if (cur.getState() != null) this.cmbState.getEditor().setItem(cur.getState());
+            if (cur.getPhone() != null) this.txtPhone.setText(cur.getPhone());
+            if (cur.getMobile() != null) this.txtMobile.setText(cur.getMobile());
+            if (cur.getEmail() != null) this.txtEmail.setText(cur.getEmail());
+            this.cmbCountry.getEditor().setItem("Brasil");
+        }
+    }
 
     private void cmdChooseBankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdChooseBankActionPerformed
         BankSearchDialog dlg = new BankSearchDialog(EditorsRegistry.getInstance().getMainWindow(), true, this.txtBankCode, this.txtBankName);

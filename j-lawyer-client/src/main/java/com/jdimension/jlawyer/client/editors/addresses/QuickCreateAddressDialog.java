@@ -1379,10 +1379,61 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_cmdUseSelectionActionPerformed
 
     private void cmdChooseCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdChooseCityActionPerformed
+        String zip = this.txtZipCode.getText();
+        String unmasked = com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.unmask(zip);
+        if (com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.isValidCep(unmasked)) {
+            try {
+                com.jdimension.jlawyer.services.BrazilianDataEnrichmentServiceRemote svc =
+                        JLawyerServiceLocator.getInstance(ClientSettings.getInstance().getLookupProperties()).lookupBrazilianDataEnrichmentServiceRemote();
+                com.jdimension.jlawyer.domain.enrichment.model.AddressResult res = svc.lookupAddress(unmasked, false);
+                if (res != null) {
+                    this.txtZipCode.setText(com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.formatCep(res.getCep()));
+                    if (StringUtils.nonEmpty(res.getStreet()) != null) this.txtStreet.setText(res.getStreet());
+                    if (StringUtils.nonEmpty(res.getCity()) != null) this.txtCity.setText(res.getCity());
+                    this.txtCountry.setText("Brasil");
+                    return;
+                }
+            } catch (Exception ex) {
+                log.warn("CEP lookup failed in QuickCreateAddressDialog", ex);
+            }
+        }
         CitySearchDialog dlg = new CitySearchDialog(EditorsRegistry.getInstance().getMainWindow(), true, this.txtZipCode, this.txtCity);
         FrameUtils.centerDialog(dlg, EditorsRegistry.getInstance().getMainWindow());
         dlg.setVisible(true);
     }//GEN-LAST:event_cmdChooseCityActionPerformed
+
+    public void lookupBrazilianCompany() {
+        AddressBean cur = new AddressBean();
+        cur.setCompany(this.txtCompany.getText());
+        cur.setStreet(this.txtStreet.getText());
+        cur.setStreetNumber(this.txtStreetNr.getText());
+        cur.setZipCode(this.txtZipCode.getText());
+        cur.setCity(this.txtCity.getText());
+        cur.setPhone(this.txtPhone.getText());
+        cur.setMobile(this.txtMobile.getText());
+        cur.setEmail(this.txtEmail.getText());
+
+        com.jdimension.jlawyer.client.enrichment.CompanyEnrichmentDialog dlg =
+                new com.jdimension.jlawyer.client.enrichment.CompanyEnrichmentDialog(
+                        this,
+                        cur,
+                        this.txtCompany.getText()
+                );
+        dlg.setVisible(true);
+
+        if (dlg.isApplied()) {
+            if (cur.getCompany() != null) this.txtCompany.setText(cur.getCompany());
+            if (cur.getStreet() != null) this.txtStreet.setText(cur.getStreet());
+            if (cur.getStreetNumber() != null) this.txtStreetNr.setText(cur.getStreetNumber());
+            if (cur.getZipCode() != null) this.txtZipCode.setText(cur.getZipCode());
+            if (cur.getCity() != null) this.txtCity.setText(cur.getCity());
+            if (cur.getPhone() != null) this.txtPhone.setText(cur.getPhone());
+            if (cur.getMobile() != null) this.txtMobile.setText(cur.getMobile());
+            if (cur.getEmail() != null) this.txtEmail.setText(cur.getEmail());
+            this.txtCountry.setText("Brasil");
+            this.rdGenderOrg.setSelected(true);
+        }
+    }
 
     private void cmdAttributesFromClipboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdAttributesFromClipboardActionPerformed
         AddressFromClipboardDialog dlg = new AddressFromClipboardDialog(EditorsRegistry.getInstance().getMainWindow(), true);
