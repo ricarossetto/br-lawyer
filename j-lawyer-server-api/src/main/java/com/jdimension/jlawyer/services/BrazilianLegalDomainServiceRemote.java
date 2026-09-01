@@ -34,6 +34,11 @@ public interface BrazilianLegalDomainServiceRemote {
 
     BrazilianCaseDetailsDTO findCaseByCnjNumber(String cnjNumber) throws Exception;
 
+    // --- Relacionamento Normalizado: Processo ↔ Assuntos TPU ---
+    List<CaseTpuSubjectDTO> getCaseTpuSubjects(String caseId) throws Exception;
+
+    void setCaseTpuSubjects(String caseId, List<CaseTpuSubjectDTO> subjects) throws Exception;
+
     // --- Catálogo de Tribunais ---
     List<JudiciaryCourtDTO> listCourts() throws Exception;
 
