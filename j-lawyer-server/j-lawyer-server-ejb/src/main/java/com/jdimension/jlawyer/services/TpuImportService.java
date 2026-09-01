@@ -32,7 +32,7 @@ public class TpuImportService implements TpuImportServiceLocal, TpuImportService
 
     private static final Logger log = Logger.getLogger(TpuImportService.class.getName());
 
-    @PersistenceContext(unitName = "j-lawyer-server-entitiesPU")
+    @PersistenceContext(unitName = "j-lawyer-server-ejbPU")
     private EntityManager em;
 
     @Override
