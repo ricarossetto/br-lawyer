@@ -50,12 +50,15 @@ public class PublicationsEndpointV8 implements PublicationsEndpointLocalV8 {
     private String getCallerPrincipal() {
         try {
             if (sessionContext != null && sessionContext.getCallerPrincipal() != null) {
-                return sessionContext.getCallerPrincipal().getName();
+                String name = sessionContext.getCallerPrincipal().getName();
+                if (name != null && !name.trim().isEmpty() && !"anonymous".equalsIgnoreCase(name.trim())) {
+                    return name.trim();
+                }
             }
         } catch (Exception e) {
             // ignore
         }
-        return "CURRENT_USER";
+        return "system";
     }
 
     @Override
@@ -243,7 +246,7 @@ public class PublicationsEndpointV8 implements PublicationsEndpointLocalV8 {
             if (request == null) {
                 return Response.status(Response.Status.BAD_REQUEST).build();
             }
-            if (request.getUser() == null || request.getUser().trim().isEmpty()) {
+            if (request.getUser() == null || request.getUser().trim().isEmpty() || "CURRENT_USER".equalsIgnoreCase(request.getUser().trim())) {
                 request.setUser(getCallerPrincipal());
             }
             PublicationDetailDTO updated = getService().linkToCase(id, request);
@@ -308,7 +311,7 @@ public class PublicationsEndpointV8 implements PublicationsEndpointLocalV8 {
             if (request == null) {
                 request = new PublicationTreatRequestDTO();
             }
-            if (request.getUser() == null || request.getUser().trim().isEmpty()) {
+            if (request.getUser() == null || request.getUser().trim().isEmpty() || "CURRENT_USER".equalsIgnoreCase(request.getUser().trim())) {
                 request.setUser(getCallerPrincipal());
             }
             PublicationDetailDTO updated = getService().treatPublication(id, request);

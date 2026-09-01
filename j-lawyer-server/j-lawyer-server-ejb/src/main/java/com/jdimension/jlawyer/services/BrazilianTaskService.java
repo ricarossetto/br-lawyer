@@ -14,6 +14,8 @@ import org.jboss.logging.Logger;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.annotation.Resource;
+import javax.ejb.SessionContext;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
@@ -31,6 +33,26 @@ public class BrazilianTaskService implements BrazilianTaskServiceLocal, Brazilia
 
     @PersistenceContext(unitName = "j-lawyer-server-ejbPU")
     private EntityManager em;
+
+    public String resolveActor(String actor) {
+        if (actor != null && !actor.trim().isEmpty() && !"CURRENT_USER".equalsIgnoreCase(actor.trim())) {
+            return actor.trim();
+        }
+        try {
+            if (sessionContext != null && sessionContext.getCallerPrincipal() != null) {
+                String caller = sessionContext.getCallerPrincipal().getName();
+                if (caller != null && !caller.trim().isEmpty() && !"anonymous".equalsIgnoreCase(caller.trim())) {
+                    return caller.trim();
+                }
+            }
+        } catch (Throwable t) {
+            // ignore
+        }
+        return "system";
+    }
+
+    @Resource
+    private SessionContext sessionContext;
 
     @Override
     public TaskDetailDTO getTask(String id) throws Exception {
@@ -70,7 +92,7 @@ public class BrazilianTaskService implements BrazilianTaskServiceLocal, Brazilia
         entity.setDescription(dto.getDescription());
         entity.setProcessId(dto.getProcessId());
         entity.setPublicationId(dto.getPublicationId());
-        entity.setAssignedUser(dto.getAssignedUser());
+        entity.setAssignedUser(dto.getAssignedUser() != null && !"CURRENT_USER".equalsIgnoreCase(dto.getAssignedUser().trim()) ? dto.getAssignedUser().trim() : resolveActor(user));
         if (dto.getStatus() != null) entity.setStatus(dto.getStatus().trim().toUpperCase());
         if (dto.getPriority() != null) entity.setPriority(dto.getPriority().trim().toUpperCase());
         entity.setDueDate(dto.getDueDate());

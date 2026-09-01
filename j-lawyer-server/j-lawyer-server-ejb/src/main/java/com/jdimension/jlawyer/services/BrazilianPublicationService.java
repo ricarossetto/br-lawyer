@@ -16,6 +16,8 @@ import org.jboss.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.annotation.Resource;
+import javax.ejb.SessionContext;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
@@ -36,8 +38,28 @@ public class BrazilianPublicationService implements BrazilianPublicationServiceL
     @PersistenceContext(unitName = "j-lawyer-server-ejbPU")
     private EntityManager em;
 
+    @Resource
+    private SessionContext sessionContext;
+
     @EJB
     private BrazilianTaskServiceLocal taskService;
+
+    public String resolveActor(String actor) {
+        if (actor != null && !actor.trim().isEmpty() && !"CURRENT_USER".equalsIgnoreCase(actor.trim())) {
+            return actor.trim();
+        }
+        try {
+            if (sessionContext != null && sessionContext.getCallerPrincipal() != null) {
+                String caller = sessionContext.getCallerPrincipal().getName();
+                if (caller != null && !caller.trim().isEmpty() && !"anonymous".equalsIgnoreCase(caller.trim())) {
+                    return caller.trim();
+                }
+            }
+        } catch (Throwable t) {
+            // ignore
+        }
+        return "system";
+    }
 
     @Override
     public PublicationDetailDTO getPublication(String id) throws Exception {
@@ -476,7 +498,7 @@ public class BrazilianPublicationService implements BrazilianPublicationServiceL
             event.setTaskId(taskId);
             event.setProcessId(processId);
             event.setEventType(eventType);
-            event.setActor(actor != null ? actor : "SYSTEM");
+            event.setActor(resolveActor(actor));
             event.setDetails(details);
             event.setCreatedAt(new Date());
             em.persist(event);

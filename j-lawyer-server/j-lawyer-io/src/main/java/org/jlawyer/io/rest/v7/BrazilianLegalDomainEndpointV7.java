@@ -64,7 +64,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/cases/{caseId}")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response getCaseDetails(@PathParam("caseId") String caseId) {
         try {
             BrazilianCaseDetailsDTO details = lookupService().getCaseDetails(caseId);
@@ -81,7 +81,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @PUT
     @Path("/cases/{caseId}")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response saveCaseDetails(@PathParam("caseId") String caseId, BrazilianCaseDetailsDTO details) {
         try {
             if (details == null) {
@@ -101,7 +101,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/cases/by-cnj/{cnjNumber}")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response findCaseByCnj(@PathParam("cnjNumber") String cnjNumber) {
         try {
             BrazilianCaseDetailsDTO details = lookupService().findCaseByCnjNumber(cnjNumber);
@@ -118,7 +118,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/cases/{caseId}/subjects")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response getCaseSubjects(@PathParam("caseId") String caseId) {
         try {
             List<CaseTpuSubjectDTO> subjects = lookupService().getCaseTpuSubjects(caseId);
@@ -132,7 +132,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @PUT
     @Path("/cases/{caseId}/subjects")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response saveCaseSubjects(@PathParam("caseId") String caseId, List<CaseTpuSubjectDTO> subjects) {
         try {
             lookupService().setCaseTpuSubjects(caseId, subjects);
@@ -149,7 +149,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/contacts/{contactId}/oab")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response getLawyerRegistrations(@PathParam("contactId") String contactId) {
         try {
             List<LawyerRegistrationDTO> registrations = lookupService().getLawyerRegistrations(contactId);
@@ -163,7 +163,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @POST
     @Path("/contacts/{contactId}/oab")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response saveLawyerRegistration(@PathParam("contactId") String contactId, LawyerRegistrationDTO registration) {
         try {
             if (registration == null) {
@@ -183,7 +183,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @DELETE
     @Path("/oab/{registrationId}")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response deleteLawyerRegistration(@PathParam("registrationId") String registrationId) {
         try {
             lookupService().deleteLawyerRegistration(registrationId);
@@ -199,7 +199,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/courts")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response listCourts(@QueryParam("segment") Integer segment) {
         try {
             List<JudiciaryCourtDTO> courts;
@@ -218,7 +218,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/courts/{code}")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response getCourtByCode(@PathParam("code") String code) {
         try {
             JudiciaryCourtDTO court = lookupService().getCourtByCode(code);
@@ -237,7 +237,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/tpu/classes")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response listTpuClasses(@QueryParam("q") String query) {
         try {
             List<TpuClassDTO> classes = lookupService().searchTpuClasses(query);
@@ -251,7 +251,7 @@ public class BrazilianLegalDomainEndpointV7 implements BrazilianLegalDomainEndpo
     @Override
     @GET
     @Path("/tpu/subjects")
-    @RolesAllowed({"user", "admin"})
+    @RolesAllowed({"loginRole", "readArchiveFileRole", "readAddressRole", "writeArchiveFileRole", "writeAddressRole", "adminRole"})
     public Response listTpuSubjects(@QueryParam("q") String query) {
         try {
             List<TpuSubjectDTO> subjects = lookupService().searchTpuSubjects(query);

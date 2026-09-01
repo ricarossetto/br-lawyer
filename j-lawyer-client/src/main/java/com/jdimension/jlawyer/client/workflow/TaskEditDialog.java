@@ -10,6 +10,10 @@ package com.jdimension.jlawyer.client.workflow;
 
 import com.jdimension.jlawyer.domain.legal.model.*;
 import com.jdimension.jlawyer.services.BrazilianTaskServiceRemote;
+import com.jdimension.jlawyer.client.settings.ClientSettings;
+import com.jdimension.jlawyer.client.settings.UserSettings;
+import javax.naming.Context;
+import java.util.Properties;
 import com.jdimension.jlawyer.services.JLawyerServiceLocator;
 import org.apache.log4j.Logger;
 
@@ -204,13 +208,33 @@ public class TaskEditDialog extends JDialog {
             dto.setDueTime(txtDueTime.getText().trim());
 
             BrazilianTaskServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianTaskServiceRemote();
-            service.saveTask(dto, "CURRENT_USER", chkSyncCalendar.isSelected());
+            service.saveTask(dto, getAuthenticatedUser(), chkSyncCalendar.isSelected());
             saved = true;
             dispose();
         } catch (Exception ex) {
             log.error("Erro ao salvar tarefa: " + ex.getMessage(), ex);
             JOptionPane.showMessageDialog(this, "Erro ao salvar tarefa: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+        private String getAuthenticatedUser() {
+        try {
+            if (UserSettings.getInstance().getCurrentUser() != null 
+                    && UserSettings.getInstance().getCurrentUser().getPrincipalId() != null
+                    && !UserSettings.getInstance().getCurrentUser().getPrincipalId().trim().isEmpty()) {
+                return UserSettings.getInstance().getCurrentUser().getPrincipalId().trim();
+            }
+        } catch (Throwable ignored) {}
+        try {
+            Properties lookupProps = ClientSettings.getInstance().getLookupProperties();
+            if (lookupProps != null && lookupProps.getProperty(Context.SECURITY_PRINCIPAL) != null) {
+                String p = lookupProps.getProperty(Context.SECURITY_PRINCIPAL);
+                if (p != null && !p.trim().isEmpty()) {
+                    return p.trim();
+                }
+            }
+        } catch (Throwable ignored) {}
+        return System.getProperty("user.name", "system");
     }
 
     public boolean isSaved() {

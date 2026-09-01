@@ -15,6 +15,8 @@ import org.jboss.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.annotation.Resource;
+import javax.ejb.SessionContext;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.*;
@@ -32,6 +34,9 @@ public class BrazilianWorkflowDashboardService implements BrazilianWorkflowDashb
     @PersistenceContext(unitName = "j-lawyer-server-ejbPU")
     private EntityManager em;
 
+    @Resource
+    private SessionContext sessionContext;
+
     @EJB
     private BrazilianPublicationServiceLocal publicationService;
 
@@ -41,6 +46,17 @@ public class BrazilianWorkflowDashboardService implements BrazilianWorkflowDashb
     @Override
     public WorkflowDashboardDTO getDashboard(String currentUser) throws Exception {
         WorkflowDashboardDTO dto = new WorkflowDashboardDTO();
+        String effectiveUser = currentUser;
+        if (effectiveUser == null || effectiveUser.trim().isEmpty() || "CURRENT_USER".equalsIgnoreCase(effectiveUser.trim())) {
+            try {
+                if (sessionContext != null && sessionContext.getCallerPrincipal() != null) {
+                    String caller = sessionContext.getCallerPrincipal().getName();
+                    if (caller != null && !caller.trim().isEmpty() && !"anonymous".equalsIgnoreCase(caller.trim())) {
+                        effectiveUser = caller.trim();
+                    }
+                }
+            } catch (Throwable ignored) {}
+        }
 
         // 1. Métricas de Publicações
         try {
@@ -86,7 +102,7 @@ public class BrazilianWorkflowDashboardService implements BrazilianWorkflowDashb
             qNext7.setParameter("endOfNext7Days", endOfNext7Days);
             dto.setTotalDueNext7DaysTasks(qNext7.getSingleResult());
 
-            if (currentUser != null && !currentUser.trim().isEmpty()) {
+            if (effectiveUser != null && !effectiveUser.trim().isEmpty() && !"CURRENT_USER".equalsIgnoreCase(effectiveUser)) {
                 TypedQuery<Long> qMy = em.createQuery("SELECT COUNT(t) FROM BrTask t WHERE t.status NOT IN ('DONE', 'CANCELLED') AND t.assignedUser = :user", Long.class);
                 qMy.setParameter("user", currentUser.trim());
                 dto.setTotalMyOpenTasks(qMy.getSingleResult());

@@ -49,12 +49,15 @@ public class WorkflowDashboardEndpointV8 implements WorkflowDashboardEndpointLoc
     private String getCallerPrincipal() {
         try {
             if (sessionContext != null && sessionContext.getCallerPrincipal() != null) {
-                return sessionContext.getCallerPrincipal().getName();
+                String name = sessionContext.getCallerPrincipal().getName();
+                if (name != null && !name.trim().isEmpty() && !"anonymous".equalsIgnoreCase(name.trim())) {
+                    return name.trim();
+                }
             }
         } catch (Exception e) {
             // ignore
         }
-        return "CURRENT_USER";
+        return "system";
     }
 
     @Override

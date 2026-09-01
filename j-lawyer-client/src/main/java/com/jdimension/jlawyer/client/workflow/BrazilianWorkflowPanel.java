@@ -10,6 +10,10 @@ package com.jdimension.jlawyer.client.workflow;
 
 import com.jdimension.jlawyer.domain.legal.model.*;
 import com.jdimension.jlawyer.services.*;
+import com.jdimension.jlawyer.client.settings.ClientSettings;
+import com.jdimension.jlawyer.client.settings.UserSettings;
+import javax.naming.Context;
+import java.util.Properties;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
@@ -341,7 +345,7 @@ public class BrazilianWorkflowPanel extends JPanel {
     public void refreshDashboard() {
         try {
             BrazilianWorkflowDashboardServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianWorkflowDashboardServiceRemote();
-            WorkflowDashboardDTO dto = service.getDashboard("CURRENT_USER");
+            WorkflowDashboardDTO dto = service.getDashboard(getAuthenticatedUser());
             if (dto != null) {
                 updateCard(lblDashNewPubs, String.valueOf(dto.getTotalNewPublications()), "Publicações Novas", new Color(0, 120, 215));
                 updateCard(lblDashUntreatedPubs, String.valueOf(dto.getTotalUntreatedPublications()), "Publicações Não Tratadas", new Color(230, 120, 0));
@@ -356,6 +360,26 @@ public class BrazilianWorkflowPanel extends JPanel {
 
     private void updateCard(JLabel lbl, String value, String title, Color color) {
         lbl.setText("<html><center><font size='6' color='" + toHex(color) + "'><b>" + value + "</b></font><br><font size='4'>" + title + "</font></center></html>");
+    }
+
+        private String getAuthenticatedUser() {
+        try {
+            if (UserSettings.getInstance().getCurrentUser() != null 
+                    && UserSettings.getInstance().getCurrentUser().getPrincipalId() != null
+                    && !UserSettings.getInstance().getCurrentUser().getPrincipalId().trim().isEmpty()) {
+                return UserSettings.getInstance().getCurrentUser().getPrincipalId().trim();
+            }
+        } catch (Throwable ignored) {}
+        try {
+            Properties lookupProps = ClientSettings.getInstance().getLookupProperties();
+            if (lookupProps != null && lookupProps.getProperty(Context.SECURITY_PRINCIPAL) != null) {
+                String p = lookupProps.getProperty(Context.SECURITY_PRINCIPAL);
+                if (p != null && !p.trim().isEmpty()) {
+                    return p.trim();
+                }
+            }
+        } catch (Throwable ignored) {}
+        return System.getProperty("user.name", "system");
     }
 
     private void onOpenSelectedPublication() {
@@ -379,7 +403,7 @@ public class BrazilianWorkflowPanel extends JPanel {
         PublicationOverviewDTO selected = currentPublications.get(row);
         try {
             BrazilianPublicationServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianPublicationServiceRemote();
-            service.markRead(selected.getId(), true, "CURRENT_USER");
+            service.markRead(selected.getId(), true, getAuthenticatedUser());
             refreshPublications();
             refreshDashboard();
         } catch (Exception ex) {
@@ -395,7 +419,7 @@ public class BrazilianWorkflowPanel extends JPanel {
         if (reason != null) {
             try {
                 BrazilianPublicationServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianPublicationServiceRemote();
-                service.archivePublication(selected.getId(), "CURRENT_USER", reason);
+                service.archivePublication(selected.getId(), getAuthenticatedUser(), reason);
                 refreshPublications();
                 refreshDashboard();
             } catch (Exception ex) {
@@ -434,7 +458,7 @@ public class BrazilianWorkflowPanel extends JPanel {
         TaskOverviewDTO selected = currentTasks.get(row);
         try {
             BrazilianTaskServiceRemote service = JLawyerServiceLocator.getInstance(null).lookupBrazilianTaskServiceRemote();
-            TaskStatusChangeDTO change = new TaskStatusChangeDTO("DONE", "CURRENT_USER");
+            TaskStatusChangeDTO change = new TaskStatusChangeDTO("DONE", getAuthenticatedUser());
             service.changeStatus(selected.getId(), change);
             refreshTasks();
             refreshDashboard();
