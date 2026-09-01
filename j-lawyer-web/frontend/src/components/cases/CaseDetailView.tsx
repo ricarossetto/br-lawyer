@@ -25,6 +25,8 @@ import { CasePartiesTab } from './CasePartiesTab';
 import { CaseDocumentsTab } from './CaseDocumentsTab';
 import { CaseDeadlinesTab } from './CaseDeadlinesTab';
 import { CaseHistoryTab } from './CaseHistoryTab';
+import { CasePublicationsTab } from './CasePublicationsTab';
+import { CaseTasksTab } from './CaseTasksTab';
 import { CaseTagsTab } from './CaseTagsTab';
 import { formatCNJ, formatBRL } from '../../utils/formatters';
 import { cn } from '../../utils/cn';
@@ -34,7 +36,7 @@ interface CaseDetailViewProps {
   onBack: () => void;
 }
 
-type TabKey = 'parties' | 'documents' | 'deadlines' | 'history' | 'tags';
+type TabKey = 'publications' | 'tasks' | 'parties' | 'documents' | 'deadlines' | 'history' | 'tags';
 
 export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }) => {
   const [activeTab, setActiveTab] = useState<TabKey>('parties');
@@ -78,6 +80,8 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
   }, [caseId]);
 
   const tabs: Array<{ key: TabKey; label: string; icon: React.ComponentType<{ className?: string }>; count?: number }> = [
+    { key: 'publications', label: 'Publicações', icon: Scale },
+    { key: 'tasks', label: 'Tarefas & Providências', icon: Clock },
     { key: 'parties', label: 'Partes & Envolvidos', icon: Users, count: parties.length },
     { key: 'documents', label: 'Documentos & Peças', icon: FileText, count: documents.length },
     { key: 'deadlines', label: 'Prazos & Agenda', icon: Clock, count: deadlines.length },
@@ -190,6 +194,8 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
 
       {/* Tab Panels */}
       <div>
+        {activeTab === 'publications' && <CasePublicationsTab caseId={caseId} cnjNumber={caseData?.fileNumber} />}
+        {activeTab === 'tasks' && <CaseTasksTab caseId={caseId} cnjNumber={caseData?.fileNumber} />}
         {activeTab === 'parties' && <CasePartiesTab parties={parties} />}
         {activeTab === 'documents' && <CaseDocumentsTab documents={documents} />}
         {activeTab === 'deadlines' && <CaseDeadlinesTab deadlines={deadlines} />}

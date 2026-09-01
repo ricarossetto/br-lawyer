@@ -10,6 +10,7 @@ interface ShellProps {
   subtitle?: string;
   children: React.ReactNode;
   onSelectCaseFromSearch: (caseId: string) => void;
+  onOpenNewTask?: () => void;
 }
 
 export const Shell: React.FC<ShellProps> = ({
@@ -19,6 +20,7 @@ export const Shell: React.FC<ShellProps> = ({
   subtitle,
   children,
   onSelectCaseFromSearch,
+  onOpenNewTask,
 }) => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -50,6 +52,8 @@ export const Shell: React.FC<ShellProps> = ({
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
         onSelectCase={onSelectCaseFromSearch}
+        onNavigate={onNavigate}
+        onOpenNewTask={onOpenNewTask}
       />
     </div>
   );

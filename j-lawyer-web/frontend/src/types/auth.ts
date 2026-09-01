@@ -15,6 +15,7 @@ export interface TokenResponseV8 {
 
 export interface UserSession {
   principal: string;
+  username?: string;
   roles: string[];
   accessToken: string;
   expiresAt: number;
