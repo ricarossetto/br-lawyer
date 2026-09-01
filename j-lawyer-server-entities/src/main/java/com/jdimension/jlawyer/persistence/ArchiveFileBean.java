@@ -690,7 +690,10 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "ArchiveFileBean.findByClaimNumber", query = "SELECT a FROM ArchiveFileBean a WHERE a.claimNumber = :claimNumber"),
     @NamedQuery(name = "ArchiveFileBean.findByClaimValue", query = "SELECT a FROM ArchiveFileBean a WHERE a.claimValue = :claimValue"),
     @NamedQuery(name = "ArchiveFileBean.findByArchived", query = "SELECT a FROM ArchiveFileBean a WHERE a.archived = :archived"),
-    @NamedQuery(name = "ArchiveFileBean.findByNotice", query = "SELECT a FROM ArchiveFileBean a WHERE a.notice = :notice")})
+    @NamedQuery(name = "ArchiveFileBean.findByNotice", query = "SELECT a FROM ArchiveFileBean a WHERE a.notice = :notice"),
+    @NamedQuery(name = "ArchiveFileBean.findByCnjNumber", query = "SELECT a FROM ArchiveFileBean a WHERE a.cnjNumber = :cnjNumber"),
+    @NamedQuery(name = "ArchiveFileBean.findByCnjNumberClean", query = "SELECT a FROM ArchiveFileBean a WHERE a.cnjNumberClean = :cnjNumberClean"),
+    @NamedQuery(name = "ArchiveFileBean.findByCourtCode", query = "SELECT a FROM ArchiveFileBean a WHERE a.courtCode = :courtCode")})
 public class ArchiveFileBean implements Serializable {
 
     @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "archiveFileKey")
@@ -768,6 +771,56 @@ public class ArchiveFileBean implements Serializable {
     private String lastCalendarSetupRespites;
     @Column(name = "cal_events")
     private String lastCalendarSetupEvents;
+
+    // Brazilian Legal Domain Persistent Fields
+    @Column(name = "cnj_number", length = 25)
+    private String cnjNumber;
+
+    @Column(name = "cnj_number_clean", length = 20)
+    private String cnjNumberClean;
+
+    @Column(name = "court_code", length = 20)
+    private String courtCode;
+
+    @Column(name = "justice_segment")
+    private Integer justiceSegment;
+
+    @Column(name = "jurisdiction_degree", length = 10)
+    private String jurisdictionDegree;
+
+    @Column(name = "court_unit", length = 150)
+    private String courtUnit;
+
+    @Column(name = "comarca", length = 150)
+    private String comarca;
+
+    @Column(name = "judicial_subsection", length = 150)
+    private String judicialSubsection;
+
+    @Column(name = "tpu_class_code")
+    private Integer tpuClassCode;
+
+    @Column(name = "tpu_class_name", length = 255)
+    private String tpuClassName;
+
+    @Column(name = "tpu_subject_codes", columnDefinition = "TEXT")
+    private String tpuSubjectCodes;
+
+    @Column(name = "tpu_subject_names", columnDefinition = "TEXT")
+    private String tpuSubjectNames;
+
+    @Column(name = "secrecy_level")
+    private Boolean secrecyLevel;
+
+    @Column(name = "distribution_date")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date distributionDate;
+
+    @Column(name = "case_status_br", length = 30)
+    private String caseStatusBr;
+
+    @Column(name = "provenance_system", length = 50)
+    private String provenanceSystem;
 
     public ArchiveFileBean() {
     }
@@ -1233,4 +1286,136 @@ public class ArchiveFileBean implements Serializable {
         this.lastCalendarSetupEvents = lastCalendarSetupEvents;
     }
 
+    public String getCnjNumber() {
+        return cnjNumber;
+    }
+
+    public void setCnjNumber(String cnjNumber) {
+        this.cnjNumber = cnjNumber;
+        if (cnjNumber != null) {
+            this.cnjNumberClean = cnjNumber.replaceAll("[^0-9]", "");
+        } else {
+            this.cnjNumberClean = null;
+        }
+    }
+
+    public String getCnjNumberClean() {
+        return cnjNumberClean;
+    }
+
+    public void setCnjNumberClean(String cnjNumberClean) {
+        this.cnjNumberClean = cnjNumberClean;
+    }
+
+    public String getCourtCode() {
+        return courtCode;
+    }
+
+    public void setCourtCode(String courtCode) {
+        this.courtCode = courtCode;
+    }
+
+    public Integer getJusticeSegment() {
+        return justiceSegment;
+    }
+
+    public void setJusticeSegment(Integer justiceSegment) {
+        this.justiceSegment = justiceSegment;
+    }
+
+    public String getJurisdictionDegree() {
+        return jurisdictionDegree;
+    }
+
+    public void setJurisdictionDegree(String jurisdictionDegree) {
+        this.jurisdictionDegree = jurisdictionDegree;
+    }
+
+    public String getCourtUnit() {
+        return courtUnit;
+    }
+
+    public void setCourtUnit(String courtUnit) {
+        this.courtUnit = courtUnit;
+    }
+
+    public String getComarca() {
+        return comarca;
+    }
+
+    public void setComarca(String comarca) {
+        this.comarca = comarca;
+    }
+
+    public String getJudicialSubsection() {
+        return judicialSubsection;
+    }
+
+    public void setJudicialSubsection(String judicialSubsection) {
+        this.judicialSubsection = judicialSubsection;
+    }
+
+    public Integer getTpuClassCode() {
+        return tpuClassCode;
+    }
+
+    public void setTpuClassCode(Integer tpuClassCode) {
+        this.tpuClassCode = tpuClassCode;
+    }
+
+    public String getTpuClassName() {
+        return tpuClassName;
+    }
+
+    public void setTpuClassName(String tpuClassName) {
+        this.tpuClassName = tpuClassName;
+    }
+
+    public String getTpuSubjectCodes() {
+        return tpuSubjectCodes;
+    }
+
+    public void setTpuSubjectCodes(String tpuSubjectCodes) {
+        this.tpuSubjectCodes = tpuSubjectCodes;
+    }
+
+    public String getTpuSubjectNames() {
+        return tpuSubjectNames;
+    }
+
+    public void setTpuSubjectNames(String tpuSubjectNames) {
+        this.tpuSubjectNames = tpuSubjectNames;
+    }
+
+    public Boolean getSecrecyLevel() {
+        return secrecyLevel;
+    }
+
+    public void setSecrecyLevel(Boolean secrecyLevel) {
+        this.secrecyLevel = secrecyLevel;
+    }
+
+    public Date getDistributionDate() {
+        return distributionDate;
+    }
+
+    public void setDistributionDate(Date distributionDate) {
+        this.distributionDate = distributionDate;
+    }
+
+    public String getCaseStatusBr() {
+        return caseStatusBr;
+    }
+
+    public void setCaseStatusBr(String caseStatusBr) {
+        this.caseStatusBr = caseStatusBr;
+    }
+
+    public String getProvenanceSystem() {
+        return provenanceSystem;
+    }
+
+    public void setProvenanceSystem(String provenanceSystem) {
+        this.provenanceSystem = provenanceSystem;
+    }
 }
