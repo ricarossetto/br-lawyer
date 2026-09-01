@@ -711,7 +711,9 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "AddressBean.findByCreator", query = "SELECT a FROM AddressBean a WHERE a.creator = :creator"),
     @NamedQuery(name = "AddressBean.findByLastModifier", query = "SELECT a FROM AddressBean a WHERE a.lastModifier = :lastModifier"),
     @NamedQuery(name = "AddressBean.findByCreationDate", query = "SELECT a FROM AddressBean a WHERE a.creationDate = :creationDate"),
-    @NamedQuery(name = "AddressBean.findByModificationDate", query = "SELECT a FROM AddressBean a WHERE a.modificationDate = :modificationDate")})
+    @NamedQuery(name = "AddressBean.findByModificationDate", query = "SELECT a FROM AddressBean a WHERE a.modificationDate = :modificationDate"),
+    @NamedQuery(name = "AddressBean.findByCpf", query = "SELECT a FROM AddressBean a WHERE a.cpf = :cpf"),
+    @NamedQuery(name = "AddressBean.findByCnpj", query = "SELECT a FROM AddressBean a WHERE a.cnpj = :cnpj")})
 public class AddressBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -904,6 +906,31 @@ public class AddressBean implements Serializable {
     
     @Column(name = "ext_id_5")
     private String externalId5;
+
+    // Brazilian Legal Domain Persistent Fields
+    @Column(name = "cpf", length = 14)
+    private String cpf;
+
+    @Column(name = "cnpj", length = 18)
+    private String cnpj;
+
+    @Column(name = "rg", length = 20)
+    private String rg;
+
+    @Column(name = "person_type", length = 10)
+    private String personType;
+
+    @Column(name = "trade_name", length = 255)
+    private String tradeName;
+
+    @Column(name = "fantasy_name", length = 255)
+    private String fantasyName;
+
+    @Column(name = "state_registration", length = 30)
+    private String stateRegistration;
+
+    @Column(name = "municipal_registration", length = 30)
+    private String municipalRegistration;
 
     public AddressBean() {
     }
@@ -2104,5 +2131,68 @@ public class AddressBean implements Serializable {
         
         return sb.toString();
     }
-    
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    public String getPersonType() {
+        return personType;
+    }
+
+    public void setPersonType(String personType) {
+        this.personType = personType;
+    }
+
+    public String getTradeName() {
+        return tradeName;
+    }
+
+    public void setTradeName(String tradeName) {
+        this.tradeName = tradeName;
+    }
+
+    public String getFantasyName() {
+        return fantasyName;
+    }
+
+    public void setFantasyName(String fantasyName) {
+        this.fantasyName = fantasyName;
+    }
+
+    public String getStateRegistration() {
+        return stateRegistration;
+    }
+
+    public void setStateRegistration(String stateRegistration) {
+        this.stateRegistration = stateRegistration;
+    }
+
+    public String getMunicipalRegistration() {
+        return municipalRegistration;
+    }
+
+    public void setMunicipalRegistration(String municipalRegistration) {
+        this.municipalRegistration = municipalRegistration;
+    }
 }

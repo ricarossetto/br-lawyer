@@ -14,25 +14,25 @@
 | **Pesquisa de Fontes Governamentais** | ✅ Concluído | `docs/research/BRAZILIAN_DATA_SOURCES.md` | Mapeamento RFB, SERPRO v3, CNA/OAB, IBGE, BACEN |
 | **Matriz de Provedores & Open Source** | ✅ Concluído | `docs/research/BRAZILIAN_REGISTRY_PROVIDER_MATRIX.md` | BrasilAPI, ViaCEP, MinhaReceita, Validações, Fonética PT-BR |
 | **Arquitetura de Referência** | ✅ Concluído | `docs/architecture/DATA_ENRICHMENT_ARCHITECTURE.md` | Especificação completa do subsistema, SPI, DTOs e Fluxos |
-| **Modelos Canônicos & Validação Java** | 🔄 Em Andamento | `j-lawyer-server-common` | DTOs normalizados, CpfCnpjValidator, Metaphone-PT, Normalizer |
-| **SPI de Provedores & Providers Reais** | 🔄 Em Andamento | `j-lawyer-server-common` / `j-lawyer-server-ejb` | BrasilApiProvider, ViaCepProvider, SerproProvider, MockProvider |
-| **Motor de Resiliência, Cache e Fallback** | 🔄 Em Andamento | `j-lawyer-server-ejb` | Circuit Breaker, Exponential Backoff, Multi-tier Cache |
-| **Deduplicação & Conflict Check** | 🔄 Em Andamento | `j-lawyer-server-ejb` | BrazilianContactDeduplicator, ConflictCheckEnricher |
-| **REST API v7** | 🔄 Em Andamento | `j-lawyer-server-io` | Endpoints JAX-RS `/v7/enrichment/...` |
-| **EJB Remote Services** | 🔄 Em Andamento | `j-lawyer-server-api` / `j-lawyer-server-ejb` | `BrazilianDataEnrichmentServiceRemote` |
-| **Interface Swing Desktop** | 🔄 Em Andamento | `j-lawyer-client` | Dialogs de busca CNPJ, preview diff, QSA import e CEP |
-| **Suíte de Testes Unitários e Mock** | 🔄 Em Andamento | `j-lawyer-server-common` / `j-lawyer-server-ejb` | Testes com dados sintéticos sem dependência externa |
+| **Modelos Canônicos & Validação Java** | ✅ Concluído | `j-lawyer-server-common` | DTOs normalizados, BrazilianDocumentValidator, Metaphone-PT, Normalizer |
+| **SPI de Provedores & Providers Reais** | ✅ Concluído | `j-lawyer-server-common` | BrasilApiCompany, BrasilApiAddress, ViaCep, Serpro, Bacen, Ibge, Mock |
+| **Motor de Resiliência, Cache e Fallback** | ✅ Concluído | `j-lawyer-server-ejb` | BrazilianDataEnrichmentService com Circuit Breaker, LRU Cache TTL, Fallback |
+| **Deduplicação & Conflict Check** | ✅ Concluído | `j-lawyer-server-ejb` | BrazilianContactDeduplicator, ConflictCheckEnricher |
+| **REST API v7** | ✅ Concluído | `j-lawyer-server/j-lawyer-io` | Endpoints JAX-RS `/v7/enrichment/...` (company, address, oab, banks, providers) |
+| **EJB Remote Services** | ✅ Concluído | `j-lawyer-server-api` / `j-lawyer-server-ejb` | `BrazilianDataEnrichmentServiceRemote` e `BrazilianDataEnrichmentServiceLocal` |
+| **Interface Swing Desktop (Fase 2 UI)** | ✅ Concluído | `j-lawyer-client` | CompanyEnrichmentDialog, ContactDiffDialog, BrazilianIntegrationsConfigDialog |
+| **Integração com Cadastros** | ✅ Concluído | `j-lawyer-client` | AddressPanel e QuickCreateAddressDialog com busca CEP e CNPJ |
+| **Suíte de Testes Automatizados** | ✅ Concluído | `server-common` / `client` | 22 testes unitários passando (0 falhas) |
 
 ---
 
-## 2. PRÓXIMOS PASSOS IMEDIATOS
+## 2. HISTÓRICO DE COMMITS (BRANCH `feat/brazilian-domain`)
 
-1. Implementar classes de validação e normalização em `j-lawyer-server-common` (`BrazilianDocumentValidator`, `PortugueseMetaphone`, `LegalEntityNormalizer`).
-2. Implementar modelos canônicos e interfaces SPI em `j-lawyer-server-common`.
-3. Implementar provedores em `j-lawyer-server-common` e `j-lawyer-server-ejb` (`BrasilApiProvider`, `ViaCepProvider`, `SerproProvider`, `IbgeProvider`, `BacenProvider`, `MockRegistryProvider`).
-4. Implementar serviço EJB `BrazilianDataEnrichmentService` com fallback, circuit breaker e cache em `j-lawyer-server-ejb`.
-5. Implementar deduplicador e enriquecedor de conflitos em `j-lawyer-server-ejb`.
-6. Implementar endpoints REST em `j-lawyer-server-io`.
-7. Implementar UI Swing no `j-lawyer-client`.
-8. Executar suíte de testes automatizados e validar compilação Maven.
-9. Realizar commits semânticos no Git e efetuar push.
+1. `8e9bf7036` — `feat(enrichment): add Brazilian data enrichment domain models, SPI and providers`
+2. `ef7ecd210` — `feat(enrichment): add EJB enrichment service with fallback, circuit breaker, deduplication and conflict check`
+3. `59505b223` — `feat(enrichment): add REST API v7 endpoints for Brazilian data enrichment`
+4. `d92e65925` — `feat(ui): implement CompanyEnrichmentDialog and ContactDiffDialog`
+5. `ba9b38d5e` — `feat(ui): integrate Brazilian CEP address lookup and CNPJ company enrichment in contact editors`
+6. `9d1a3724a` — `feat(ui): implement BrazilianIntegrationsConfigDialog for provider management`
+7. `7fdd2caf4` — `test(ui): add unit tests for ContactDiffDialog divergence calculation and contact mapping`
+

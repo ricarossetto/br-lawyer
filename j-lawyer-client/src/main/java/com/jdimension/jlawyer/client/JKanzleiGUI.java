@@ -2718,6 +2718,15 @@ public class JKanzleiGUI extends javax.swing.JFrame implements com.jdimension.jl
         }
     }//GEN-LAST:event_mnuBeaSettingsActionPerformed
 
+    public void openBrazilianIntegrationsConfigDialog() {
+        if (checkSysAdmin() || checkAdmin()) {
+            com.jdimension.jlawyer.client.enrichment.BrazilianIntegrationsConfigDialog dlg =
+                    new com.jdimension.jlawyer.client.enrichment.BrazilianIntegrationsConfigDialog(this);
+            FrameUtils.centerDialog(dlg, this);
+            dlg.setVisible(true);
+        }
+    }
+
     private void mnuArchiveFileCustomFieldsInvolvementsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuArchiveFileCustomFieldsInvolvementsActionPerformed
 
         if (checkAdmin()) {

@@ -899,6 +899,15 @@ public class JLawyerServiceLocator {
         }
     }
 
+    public BrazilianDataEnrichmentServiceRemote lookupBrazilianDataEnrichmentServiceRemote() {
+        try {
+            return (BrazilianDataEnrichmentServiceRemote) ic.lookup("ejb:j-lawyer-server/j-lawyer-server-ejb//BrazilianDataEnrichmentService!com.jdimension.jlawyer.services.BrazilianDataEnrichmentServiceRemote");
+        } catch (NamingException ne) {
+            Logger.getLogger(JLawyerServiceLocator.class.getName()).log(Level.SEVERE, "exception caught", ne);
+            throw new RuntimeException(ne);
+        }
+    }
+
     public Topic lookupJMSTopic(String name) {
         try {
             Topic t = (Topic) icJms.lookup(name);
