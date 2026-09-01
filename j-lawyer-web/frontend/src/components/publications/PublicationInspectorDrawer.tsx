@@ -7,6 +7,7 @@ import {
   User,
   CheckCircle2,
   AlertTriangle,
+  Briefcase,
   FileText,
   ExternalLink,
   Link as LinkIcon,

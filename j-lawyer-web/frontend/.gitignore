@@ -3,6 +3,7 @@ node_modules/
 dist/
 .angular/
 target/
+*.tsbuildinfo
 
 # Generated npm cache populated by scripts/seed-npm-cache.sh from vendor-npm/*.tgz
 .npm-cache/
