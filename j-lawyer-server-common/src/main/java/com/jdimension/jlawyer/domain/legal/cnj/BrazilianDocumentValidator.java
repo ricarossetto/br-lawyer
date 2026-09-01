@@ -8,7 +8,6 @@
  */
 package com.jdimension.jlawyer.domain.legal.cnj;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -17,7 +16,7 @@ import java.util.regex.Pattern;
  * - CNPJ (Módulo 11 tradicional e CNPJ Alfanumérico da IN RFB nº 2.229/2024)
  * - CEP (Código de Endereçamento Postal de 8 dígitos)
  * - OAB (Número de Inscrição na OAB com UF)
- * - Título de Eleitor (Módulo 11 com verificação de Unidade Federativa)
+ * - Título de Eleitor (Módulo 11 com verificação de Unidade Federativa TSE)
  * - PIS / PASEP / NIS (Módulo 11)
  *
  * @author BR-LAWYER Team
@@ -27,7 +26,6 @@ public final class BrazilianDocumentValidator {
     private static final Pattern NON_DIGITS = Pattern.compile("[^0-9]");
     private static final Pattern NON_ALPHANUMERIC = Pattern.compile("[^a-zA-Z0-9]");
     private static final Pattern CEP_PATTERN = Pattern.compile("^\\d{5}-?\\d{3}$");
-    private static final Pattern OAB_PATTERN = Pattern.compile("^(OAB/?)?\\s*([A-Z]{2})?\\s*(\\d{1,8})\\s*([A-Z])?$", Pattern.CASE_INSENSITIVE);
     private static final Pattern CNPJ_ALPHANUMERIC_PATTERN = Pattern.compile("^[A-Z0-9]{12}\\d{2}$");
 
     private static final int[] CNPJ_WEIGHTS_DV1 = {5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
@@ -215,7 +213,7 @@ public final class BrazilianDocumentValidator {
     }
 
     /**
-     * Valida Título de Eleitor brasileiro via Módulo 11 e verificação de UF (01..28).
+     * Valida Título de Eleitor brasileiro segundo a regra oficial do TSE (Módulo 11).
      *
      * @param titulo Número do título de eleitor (12 dígitos)
      * @return true se o título for válido
@@ -225,7 +223,6 @@ public final class BrazilianDocumentValidator {
         String clean = NON_DIGITS.matcher(titulo.trim()).replaceAll("");
         if (clean.length() < 10 || clean.length() > 12) return false;
 
-        // Completa com zeros à esquerda se tiver 10 ou 11 dígitos
         while (clean.length() < 12) {
             clean = "0" + clean;
         }
@@ -234,15 +231,14 @@ public final class BrazilianDocumentValidator {
         if (ufCode < 1 || ufCode > 28) return false;
 
         try {
-            // DV 1
             int sum1 = 0;
             for (int i = 0; i < 8; i++) {
-                sum1 += (clean.charAt(i) - '0') * (9 - i);
+                sum1 += (clean.charAt(i) - '0') * (i + 2);
             }
             int rem1 = sum1 % 11;
-            int dv1 = (rem1 == 0 || rem1 == 1) ? (ufCode == 1 || ufCode == 2 ? 0 : 0) : (rem1 == 10 ? 0 : rem1);
-            if (rem1 < 2) {
-                dv1 = 0;
+            int dv1;
+            if (rem1 == 0) {
+                dv1 = (ufCode == 1 || ufCode == 2) ? 1 : 0;
             } else if (rem1 == 10) {
                 dv1 = 0;
             } else {
@@ -250,10 +246,16 @@ public final class BrazilianDocumentValidator {
             }
             if ((clean.charAt(10) - '0') != dv1) return false;
 
-            // DV 2
             int sum2 = (clean.charAt(8) - '0') * 7 + (clean.charAt(9) - '0') * 8 + dv1 * 9;
             int rem2 = sum2 % 11;
-            int dv2 = (rem2 < 2) ? 0 : (rem2 == 10 ? 0 : rem2);
+            int dv2;
+            if (rem2 == 0) {
+                dv2 = (ufCode == 1 || ufCode == 2) ? 1 : 0;
+            } else if (rem2 == 10) {
+                dv2 = 0;
+            } else {
+                dv2 = rem2;
+            }
 
             return (clean.charAt(11) - '0') == dv2;
         } catch (Exception e) {

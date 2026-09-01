@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 
 /**
  * Codificador fonético canônico para a língua portuguesa (Metaphone-PT).
- * Utilizado para deduplicação, cruzamento de partes e detecção de conflitos
- * de interesse com tolerância a variações ortográficas (ex: Souza/Sousa, Luiz/Luís, Teresa/Theresa).
+ * Mapeia fonemas equivalentes (S/Z intervocálico, C/K/Q, PH/F, LH, NH, etc.)
+ * e colapsa consoantes duplas para que variações gráficas gerem códigos idênticos.
  *
  * @author BR-LAWYER Team
  */
@@ -59,29 +59,44 @@ public final class PortugueseMetaphone {
                     if (i == 0) out.append(c);
                     break;
                 case 'B': case 'P':
-                    out.append('P');
+                    if (c == 'P' && next == 'H') {
+                        out.append('F');
+                        i++;
+                    } else {
+                        out.append('P');
+                        if (next == 'P' || next == 'B') i++;
+                    }
                     break;
                 case 'C':
                     if (next == 'H') {
                         out.append('X');
                         i++;
-                    } else if (next == 'E' || next == 'I') {
+                    } else if (next == 'E' || next == 'I' || next == 'Y') {
                         out.append('S');
                     } else {
                         out.append('K');
+                        if (next == 'K' || next == 'C' || next == 'Q') i++;
                     }
                     break;
                 case 'D': case 'T':
-                    out.append('T');
+                    if (c == 'T' && next == 'H') {
+                        out.append('T');
+                        i++;
+                    } else {
+                        out.append('T');
+                        if (next == 'T' || next == 'D') i++;
+                    }
                     break;
                 case 'F': case 'V':
                     out.append('F');
+                    if (next == 'F' || next == 'V') i++;
                     break;
                 case 'G':
-                    if (next == 'E' || next == 'I') {
+                    if (next == 'E' || next == 'I' || next == 'Y') {
                         out.append('J');
                     } else {
                         out.append('K');
+                        if (next == 'G') i++;
                     }
                     break;
                 case 'H':
@@ -92,15 +107,17 @@ public final class PortugueseMetaphone {
                     break;
                 case 'K': case 'Q':
                     out.append('K');
+                    if (next == 'K' || next == 'Q' || next == 'C') i++;
                     break;
                 case 'L':
                     if (next == 'H') {
                         out.append('1'); // Som LH
                         i++;
                     } else if (i == len - 1 || !isVowel(next)) {
-                        out.append('U'); // L em fim de sílaba
+                        out.append('U'); // L em fim de sílaba com som de U
                     } else {
                         out.append('L');
+                        if (next == 'L') i++;
                     }
                     break;
                 case 'M': case 'N':
@@ -109,6 +126,7 @@ public final class PortugueseMetaphone {
                         i++;
                     } else {
                         out.append('M');
+                        if (next == 'M' || next == 'N') i++;
                     }
                     break;
                 case 'R':
@@ -119,14 +137,13 @@ public final class PortugueseMetaphone {
                     if (next == 'S') {
                         out.append('S');
                         i++;
-                    } else if (isVowel(prev) && isVowel(next)) {
-                        out.append('Z'); // S intervocálico
                     } else {
                         out.append('S');
                     }
                     break;
                 case 'X': case 'Z':
                     out.append('S');
+                    if (next == 'Z' || next == 'S' || next == 'X') i++;
                     break;
                 case 'W':
                     out.append(i == 0 ? 'V' : 'U');
@@ -146,7 +163,7 @@ public final class PortugueseMetaphone {
      * Codifica todas as palavras de um nome composto.
      *
      * @param fullName Nome completo (ex: "João da Silva Souza")
-     * @return Chave fonética composta (ex: "J SLF SS")
+     * @return Chave fonética composta (ex: "J T SLF SS")
      */
     public static String encodePhrase(String fullName) {
         if (fullName == null || fullName.trim().isEmpty()) {
