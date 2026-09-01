@@ -1049,9 +1049,16 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         this.cmbNationality.setSelectedItem(dto.getNationality());
         this.txtBirthName.setText(dto.getBirthName());
         this.txtPlaceOfBirth.setText(dto.getPlaceOfBirth());
-        this.txtDeathDate.setText(dto.getDateOfDeath());
-        this.txtVatId.setText(dto.getVatId());
-        this.txtTin.setText(dto.getTin());
+        if (dto.getCpf() != null && !dto.getCpf().isEmpty()) {
+            this.txtTin.setText(dto.getCpf());
+        } else {
+            this.txtTin.setText(dto.getTin());
+        }
+        if (dto.getCnpj() != null && !dto.getCnpj().isEmpty()) {
+            this.txtVatId.setText(dto.getCnpj());
+        } else {
+            this.txtVatId.setText(dto.getVatId());
+        }
         this.chkTaxDeduction.setSelected(dto.isTaxDeduction());
         this.cmbLegalForm.setSelectedItem(dto.getLegalForm());
         this.txtRegCourt.setText(dto.getCompanyRegistrationCourt());
@@ -5278,9 +5285,56 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         }
         adr.setBirthName(this.txtBirthName.getText());
         adr.setPlaceOfBirth(this.txtPlaceOfBirth.getText());
-        adr.setDateOfDeath(this.txtDeathDate.getText());
         adr.setVatId(this.txtVatId.getText());
         adr.setTin(this.txtTin.getText());
+
+        // Brazilian Identifiers Persistence Mapping
+        String tinVal = this.txtTin.getText();
+        if (tinVal != null && !tinVal.trim().isEmpty()) {
+            String digits = tinVal.replaceAll("[^0-9]", "");
+            if (digits.length() == 11) {
+                adr.setCpf(com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.formatCpf(digits));
+                adr.setPersonType("PF");
+            } else if (digits.length() == 14) {
+                adr.setCnpj(com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.formatCnpj(digits));
+                adr.setPersonType("PJ");
+            } else {
+                adr.setCpf(tinVal);
+            }
+        } else if (this.dto != null && this.dto.getCpf() != null) {
+            adr.setCpf(this.dto.getCpf());
+        }
+
+        String vatVal = this.txtVatId.getText();
+        if (vatVal != null && !vatVal.trim().isEmpty()) {
+            String digits = vatVal.replaceAll("[^0-9]", "");
+            if (digits.length() == 14) {
+                adr.setCnpj(com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.formatCnpj(digits));
+                adr.setPersonType("PJ");
+            } else if (digits.length() == 11) {
+                adr.setCpf(com.jdimension.jlawyer.domain.legal.cnj.BrazilianDocumentValidator.formatCpf(digits));
+                adr.setPersonType("PF");
+            } else {
+                adr.setCnpj(vatVal);
+            }
+        } else if (this.dto != null && this.dto.getCnpj() != null) {
+            adr.setCnpj(this.dto.getCnpj());
+        }
+
+        if (this.dto != null) {
+            adr.setTradeName(this.dto.getTradeName() != null ? this.dto.getTradeName() : this.txtCompany.getText());
+            adr.setFantasyName(this.dto.getFantasyName() != null ? this.dto.getFantasyName() : this.txtName.getText());
+            adr.setRg(this.dto.getRg());
+            adr.setStateRegistration(this.dto.getStateRegistration());
+            adr.setMunicipalRegistration(this.dto.getMunicipalRegistration());
+            if (adr.getPersonType() == null) {
+                adr.setPersonType(this.dto.getPersonType());
+            }
+        } else {
+            adr.setTradeName(this.txtCompany.getText());
+            adr.setFantasyName(this.txtName.getText());
+        }
+
         adr.setTaxDeduction(this.chkTaxDeduction.isSelected());
         if (this.cmbLegalForm.getSelectedItem() != null) {
             adr.setLegalForm(this.cmbLegalForm.getSelectedItem().toString());

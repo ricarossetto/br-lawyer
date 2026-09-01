@@ -1769,7 +1769,11 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         this.lblHeaderInfo.setText(this.dto.getFileNumber() + " " + StringUtils.nonEmpty(this.dto.getName()) + " " + StringUtils.nonEmpty(this.dto.getReason()));
         log.info("[AKTE-LOAD] setArchiveFileDTO: Header-Info gesetzt");
 
-        this.txtClaimNumber.setText(dto.getClaimNumber());
+        if (dto.getCnjNumber() != null && !dto.getCnjNumber().isEmpty()) {
+            this.txtClaimNumber.setText(dto.getCnjNumber());
+        } else {
+            this.txtClaimNumber.setText(dto.getClaimNumber());
+        }
         this.txtClaimValue.setText(this.currencyFormat.format(dto.getClaimValue()));
         this.txtFileNumber.setText(dto.getFileNumber());
         this.txtName.setText(dto.getName());
@@ -9690,7 +9694,42 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
     private void fillDTO(ArchiveFileBean aFile, boolean withReviews) throws Exception {
         aFile.setArchived(this.chkArchived.isSelected());
-        aFile.setClaimNumber(this.txtClaimNumber.getText());
+        String claimNum = this.txtClaimNumber.getText();
+        aFile.setClaimNumber(claimNum);
+
+        if (claimNum != null && !claimNum.trim().isEmpty()) {
+            String digits = claimNum.replaceAll("[^0-9]", "");
+            if (digits.length() == 20 && com.jdimension.jlawyer.domain.legal.cnj.CnjNumberValidator.isValid(claimNum)) {
+                com.jdimension.jlawyer.domain.legal.cnj.CnjNumber parsed = com.jdimension.jlawyer.domain.legal.cnj.CnjNumberValidator.parse(claimNum);
+                aFile.setCnjNumber(parsed.getFormatted());
+                aFile.setCnjNumberClean(parsed.getRawDigits());
+                if (aFile.getJusticeSegment() == null || aFile.getJusticeSegment() == 0) {
+                    aFile.setJusticeSegment(parsed.getJusticeSegment());
+                }
+            } else {
+                aFile.setCnjNumber(claimNum);
+                aFile.setCnjNumberClean(digits);
+            }
+        }
+
+        if (this.dto != null) {
+            if (aFile.getCnjNumber() == null) aFile.setCnjNumber(this.dto.getCnjNumber());
+            if (aFile.getCourtCode() == null) aFile.setCourtCode(this.dto.getCourtCode());
+            if (aFile.getJusticeSegment() == null) aFile.setJusticeSegment(this.dto.getJusticeSegment());
+            if (aFile.getJurisdictionDegree() == null) aFile.setJurisdictionDegree(this.dto.getJurisdictionDegree());
+            if (aFile.getCourtUnit() == null) aFile.setCourtUnit(this.dto.getCourtUnit());
+            if (aFile.getComarca() == null) aFile.setComarca(this.dto.getComarca());
+            if (aFile.getJudicialSubsection() == null) aFile.setJudicialSubsection(this.dto.getJudicialSubsection());
+            if (aFile.getTpuClassCode() == null) aFile.setTpuClassCode(this.dto.getTpuClassCode());
+            if (aFile.getTpuClassName() == null) aFile.setTpuClassName(this.dto.getTpuClassName());
+            if (aFile.getTpuSubjectCodes() == null) aFile.setTpuSubjectCodes(this.dto.getTpuSubjectCodes());
+            if (aFile.getTpuSubjectNames() == null) aFile.setTpuSubjectNames(this.dto.getTpuSubjectNames());
+            if (aFile.getSecrecyLevel() == null) aFile.setSecrecyLevel(this.dto.getSecrecyLevel());
+            if (aFile.getDistributionDate() == null) aFile.setDistributionDate(this.dto.getDistributionDate());
+            if (aFile.getCaseStatusBr() == null) aFile.setCaseStatusBr(this.dto.getCaseStatusBr());
+            if (aFile.getProvenanceSystem() == null) aFile.setProvenanceSystem(this.dto.getProvenanceSystem());
+        }
+
         float claimValueFloat = 0f;
         try {
             claimValueFloat = ((Number) this.currencyFormat.parse(this.txtClaimValue.getText())).floatValue();
