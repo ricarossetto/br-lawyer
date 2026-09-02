@@ -742,7 +742,7 @@ public class PDFSplitDialog extends javax.swing.JDialog {
         txtKeyword = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("PDF-Dokument aufteilen");
+        setTitle("Dividir Documento PDF");
 
         lblFileName.setText("Dateiname.pdf");
 

@@ -764,11 +764,11 @@ public final class DueDaysSettings {
     public static String getEventTypeName(int eventType) {
         switch (eventType) {
             case EventTypes.EVENTTYPE_EVENT:
-                return "Termine";
+                return "Audiências";
             case EventTypes.EVENTTYPE_RESPITE:
-                return "Fristen";
+                return "Prazos";
             default:
-                return "Wiedervorlagen";
+                return "Lembretes";
         }
     }
 

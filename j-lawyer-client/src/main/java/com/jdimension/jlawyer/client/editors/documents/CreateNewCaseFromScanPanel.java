@@ -667,7 +667,7 @@ import themes.colors.DefaultColorTheme;
 
 /**
  * Sidebar entry offering to create a new case from the currently selected scan. It mirrors
- * the "neue Akte erstellen" entry of the mail inbox sidebar
+ * the "Cadastrar novo processo" entry of the mail inbox sidebar
  * (com.jdimension.jlawyer.client.mail.sidebar.CreateNewCasePanel) so that both inboxes
  * behave the same way.
  */
@@ -701,12 +701,12 @@ public class CreateNewCaseFromScanPanel extends javax.swing.JPanel {
 
         lblNewCase.setFont(lblNewCase.getFont().deriveFont(lblNewCase.getFont().getStyle() | java.awt.Font.BOLD));
         lblNewCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/vcard.png"))); // NOI18N
-        lblNewCase.setText("neue Akte erstellen");
+        lblNewCase.setText("Cadastrar novo processo");
         lblNewCase.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lblNewCase.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         cmdNewCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filesave.png"))); // NOI18N
-        cmdNewCase.setToolTipText("neue Akte aus diesem Scan anlegen");
+        cmdNewCase.setToolTipText("Criar novo processo a partir deste documento");
         cmdNewCase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdNewCaseActionPerformed(evt);

@@ -3156,7 +3156,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         splitNotes.setLeftComponent(jPanel2);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Notizen"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Anotações"));
 
         txtNoticePane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -3291,9 +3291,9 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 .add(jScrollPane8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 807, Short.MAX_VALUE))
         );
 
-        tabPaneArchiveFile.addTab("Beteiligte", new javax.swing.ImageIcon(getClass().getResource("/icons/vcard.png")), tabParties); // NOI18N
+        tabPaneArchiveFile.addTab("Envolvidos / Partes", new javax.swing.ImageIcon(getClass().getResource("/icons/vcard.png")), tabParties); // NOI18N
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Dokumente"));
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Documentos"));
 
         cmdNewDocument.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder_documents.png"))); // NOI18N
         cmdNewDocument.setText("Erstellen");
@@ -3483,7 +3483,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 .add(jPanel7, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tabPaneArchiveFile.addTab("Dokumente", new javax.swing.ImageIcon(getClass().getResource("/icons/folder_documents.png")), tabDocuments); // NOI18N
+        tabPaneArchiveFile.addTab("Documentos", new javax.swing.ImageIcon(getClass().getResource("/icons/folder_documents.png")), tabDocuments); // NOI18N
 
         subTabsFinance.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         subTabsFinance.setFont(subTabsFinance.getFont());
@@ -3881,7 +3881,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 .addContainerGap())
         );
 
-        subTabsFinance.addTab("Zahlungen", jPanel19);
+        subTabsFinance.addTab("Pagamentos", jPanel19);
 
         jLabel30.setFont(jLabel30.getFont().deriveFont(jLabel30.getFont().getStyle() | java.awt.Font.BOLD));
         jLabel30.setText("Forderungskonten:");
@@ -6261,7 +6261,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 }
                 sb.append("</ul>");
                 sb.append("</html>");
-                int response = JOptionPane.showConfirmDialog(this, sb.toString(), "Dokumente löschen", JOptionPane.YES_NO_OPTION);
+                int response = JOptionPane.showConfirmDialog(this, sb.toString(), "Excluir Documentos", JOptionPane.YES_NO_OPTION);
                 if (response != JOptionPane.YES_OPTION) {
                     return;
                 }
@@ -6902,7 +6902,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             int response = JOptionPane.showConfirmDialog(
                     EditorsRegistry.getInstance().getMainWindow(),
                     "Dokument ist bereits im PDF-Format. Soll es dupliziert werden?",
-                    "PDF bereits vorhanden",
+                    "PDF já existente",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE);
 
@@ -8022,9 +8022,9 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 return;
             }
 
-            String safeCase = (this.dto != null && this.dto.getFileNumber() != null ? this.dto.getFileNumber() : "Akte");
+            String safeCase = (this.dto != null && this.dto.getFileNumber() != null ? this.dto.getFileNumber() : "Processo");
             if (safeCase.isEmpty()) {
-                safeCase = "Akte";
+                safeCase = "Processo";
             }
             String fileName = "Historie-" + safeCase + "-" + new java.text.SimpleDateFormat("yyyyMMdd-HHmm").format(new java.util.Date()) + ".htm";
             fileName = FileUtils.sanitizeFileName(fileName);
@@ -8074,7 +8074,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         html.append(".help{display:none!important} .tipwrap{position:relative;display:inline-block} .tipwrap .tip{position:absolute;left:0;top:120%;z-index:1000;width:360px;max-width:90vw;background:#fff;border:1px solid #ddd;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.12);padding:10px 12px;opacity:0;pointer-events:none;transition:opacity .15s} .tipwrap:hover .tip{opacity:1;pointer-events:auto} .tiptitle{font-weight:bold;margin-bottom:6px} .tiplist{list-style:none;margin:6px 0 0;padding:0} .tiplist li{margin:6px 0;font-size:12px;line-height:1.4} .tiplist .kw{color:#555}\\n");
         html.append("</style></head><body>");
 
-        String caseTitle = this.lblPanelTitle != null ? this.lblPanelTitle.getText() : "Akte";
+        String caseTitle = this.lblPanelTitle != null ? this.lblPanelTitle.getText() : "Processo";
         String caseName = this.txtName != null ? this.txtName.getText() : null;
         String reason = this.txtReason != null ? this.txtReason.getText() : null;
         Object subjectObj = this.cmbSubjectField != null ? this.cmbSubjectField.getSelectedItem() : null;
@@ -8268,13 +8268,13 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             return new String[]{"cat-kal", "Kalendereintrag"};
         }
         if (containsAny(d, "wiedervorlage")) {
-            return new String[]{"cat-wvl", "Wiedervorlage"};
+            return new String[]{"cat-wvl", "Lembrete"};
         }
         if (containsAny(d, "frist")) {
-            return new String[]{"cat-frist", "Frist"};
+            return new String[]{"cat-frist", "Prazo"};
         }
         if (containsAny(d, "termin")) {
-            return new String[]{"cat-termin", "Termin"};
+            return new String[]{"cat-termin", "Audiência"};
         }
         // Etiketten (Case- or Document-Labels) → Etikett
         if (containsAny(d, "etikett", "akten-etikett", "dokument-etikett", "tag ", "schlagwort", "label")) {
@@ -8282,10 +8282,10 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         }
         // General categories (Rechnung vor Dokument)
         if (containsAny(d, "rechnung", "gebühr", "kosten", "honorar", "rvg", "beleg erstellt")) {
-            return new String[]{"cat-fin", "Rechnung"};
+            return new String[]{"cat-fin", "Fatura / Honorários"};
         }
         if (containsAny(d, "dokument", "doc ", "pdf", "hochgeladen", "erstellt", "vorlage")) {
-            return new String[]{"cat-doc", "Dokument"};
+            return new String[]{"cat-doc", "Documento"};
         }
         if (containsAny(d, "nachricht", "e-mail", "email", "mail", "bea", "epost", "sms")) {
             return new String[]{"cat-msg", "Nachricht"};
@@ -8294,11 +8294,11 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             return new String[]{"cat-time", "Kalender"};
         }
         if (containsAny(d, "notiz", "hinweis", "memo")) {
-            return new String[]{"cat-note", "Notiz"};
+            return new String[]{"cat-note", "Anotação"};
         }
         // (Rechnung wurde bereits vorgezogen)
         if (containsAny(d, "zahlung", "ausgleich", "überweisung", "zahlungseingang")) {
-            return new String[]{"cat-pay", "Zahlung"};
+            return new String[]{"cat-pay", "Pagamento"};
         }
         return new String[]{"cat-oth", "Sonstiges"};
     }

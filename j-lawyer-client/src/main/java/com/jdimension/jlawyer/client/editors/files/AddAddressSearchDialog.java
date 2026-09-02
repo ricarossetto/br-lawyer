@@ -874,7 +874,7 @@ public class AddAddressSearchDialog extends javax.swing.JDialog implements ListS
             }
         });
 
-        cmbRefType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mandant", "Gegner", "Dritte" }));
+        cmbRefType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mandant", "Parte Contrária", "Terceiros" }));
         cmbRefType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbRefTypeActionPerformed(evt);

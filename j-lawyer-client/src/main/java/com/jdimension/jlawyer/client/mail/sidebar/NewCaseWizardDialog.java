@@ -703,7 +703,7 @@ public class NewCaseWizardDialog extends javax.swing.JDialog {
         wizardMainPanel1 = new com.jdimension.jlawyer.client.wizard.WizardMainPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("neue Akte erstellen");
+        setTitle("Cadastrar novo processo");
         setModal(true);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {

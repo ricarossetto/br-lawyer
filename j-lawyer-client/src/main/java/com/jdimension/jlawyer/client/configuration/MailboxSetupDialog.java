@@ -1122,7 +1122,7 @@ public class MailboxSetupDialog extends javax.swing.JDialog {
 
         jLabel5.setFont(jLabel5.getFont().deriveFont(jLabel5.getFont().getStyle() | java.awt.Font.BOLD, jLabel5.getFont().getSize()-2));
         jLabel5.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel5.setText("Posteingang");
+        jLabel5.setText("Entrada / Recebidos");
 
         jLabel7.setText("Eingangsserver:");
 
@@ -1139,7 +1139,7 @@ public class MailboxSetupDialog extends javax.swing.JDialog {
 
         jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() | java.awt.Font.BOLD, jLabel4.getFont().getSize()-2));
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel4.setText("Postausgang");
+        jLabel4.setText("Saída / Enviados");
 
         jLabel8.setText("Ausgangsserver:");
 
@@ -1560,7 +1560,7 @@ public class MailboxSetupDialog extends javax.swing.JDialog {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("Posteingang", jPanel7);
+        jTabbedPane2.addTab("Entrada / Recebidos", jPanel7);
 
         taCustomConfigOut.setColumns(20);
         taCustomConfigOut.setRows(5);
@@ -1579,7 +1579,7 @@ public class MailboxSetupDialog extends javax.swing.JDialog {
             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("Postausgang", jPanel8);
+        jTabbedPane2.addTab("Saída / Enviados", jPanel8);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);

@@ -987,7 +987,7 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
                     .addContainerGap()))
         );
 
-        tabPlaceholders.addTab("Beteiligte", jPanel7);
+        tabPlaceholders.addTab("Envolvidos / Partes", jPanel7);
 
         tblPlaceHolders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -745,7 +745,7 @@ public class SystrayUtils {
 //            //defaultItem.addActionListener(exitListener);
 //            popup.add(mnuAddresses);
 //            
-//            MenuItem mnuArchiveFiles = new MenuItem("Akten");
+//            MenuItem mnuArchiveFiles = new MenuItem("Processos");
 //            //defaultItem.addActionListener(exitListener);
 //            popup.add(mnuArchiveFiles);
 

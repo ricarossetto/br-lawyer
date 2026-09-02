@@ -704,7 +704,7 @@ public class FoldersListPanel extends javax.swing.JPanel {
         gbc.gridwidth = GridBagConstraints.REMAINDER;
 
         this.pnlFolders.removeAll();
-        FolderListCell cell = new FolderListCell(this, 0, "Dokumente", this.readOnly);
+        FolderListCell cell = new FolderListCell(this, 0, "Documentos", this.readOnly);
         cell.setSelected(true, false);
         // no root folder known yet here; render as leaf for now
         cell.setExpanded(false, false);

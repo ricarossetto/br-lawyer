@@ -745,7 +745,7 @@ public class QuickArchiveFileSearchPanel extends javax.swing.JPanel implements T
             this.chkIncludeArchive.setSelected(true);
         }
 
-        String[] colNames = new String[]{"Aktenzeichen", "erstellt", "Kurzrubrum", "wegen", "archiviert", "", "Anwalt", "Sachbearbeiter", "Etiketten", "Sachgebiet"};
+        String[] colNames = new String[]{"Aktenzeichen", "erstellt", "Partes", "wegen", "archiviert", "", "Anwalt", "Sachbearbeiter", "Etiketten", "Ramo do Direito"};
         QuickArchiveFileSearchTableModel model = new QuickArchiveFileSearchTableModel(colNames, 0);
         this.tblResults.setModel(model);
 
@@ -782,7 +782,7 @@ public class QuickArchiveFileSearchPanel extends javax.swing.JPanel implements T
 
     public void clearInputs() {
         this.txtSearchString.setText("");
-        String[] colNames = new String[]{"Aktenzeichen", "Kurzrubrum", "wegen", "archiviert", "Anwalt", "Sachbearbeiter", "Etiketten", "Sachgebiet"};
+        String[] colNames = new String[]{"Aktenzeichen", "Partes", "wegen", "archiviert", "Anwalt", "Sachbearbeiter", "Etiketten", "Ramo do Direito"};
         QuickArchiveFileSearchTableModel model = new QuickArchiveFileSearchTableModel(colNames, 0);
         this.tblResults.setModel(model);
 

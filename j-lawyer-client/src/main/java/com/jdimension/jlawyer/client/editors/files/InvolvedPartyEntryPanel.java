@@ -1100,7 +1100,7 @@ public class InvolvedPartyEntryPanel extends javax.swing.JPanel implements Event
         });
 
         cmbRefType.setFont(cmbRefType.getFont().deriveFont(cmbRefType.getFont().getStyle() | java.awt.Font.BOLD));
-        cmbRefType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mandant", "Gegner", "Dritte" }));
+        cmbRefType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mandant", "Parte Contrária", "Terceiros" }));
         cmbRefType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbRefTypeActionPerformed(evt);

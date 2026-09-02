@@ -731,11 +731,11 @@ public class RestoreExecutor {
 
     public void validateEncoding(BackupProgressCallback progress) throws Exception {
         if (progress != null) {
-            progress.onProgress("Prüfe Kodierung...");
+            progress.onProgress("Verificando codificação...");
         }
         File metadataDir = new File(this.backupDirectory + File.separator + ".metadata");
         if (!metadataDir.exists()) {
-            throw new Exception("Datensicherungsinformationen (Metadaten) fehlen!");
+            throw new Exception("Informações de backup (metadados) ausentes!");
         }
 
         for (File meta : metadataDir.listFiles()) {
@@ -746,7 +746,7 @@ public class RestoreExecutor {
             }
         }
         if (this.filenameEncoding == null) {
-            throw new Exception("Datensicherungsinformationen (Metadaten) fehlen!");
+            throw new Exception("Informações de backup (metadados) ausentes!");
         }
 
     }
@@ -757,7 +757,7 @@ public class RestoreExecutor {
 
     private void validateDatabaseConnection(BackupProgressCallback progress) throws Exception {
         if (progress != null) {
-            progress.onProgress("Prüfe Datenbankverbindung...");
+            progress.onProgress("Verificando conexão com o banco de dados...");
         }
         Class.forName("com.mysql.cj.jdbc.Driver");
         boolean jlawyerdbFound = false;
@@ -772,14 +772,14 @@ public class RestoreExecutor {
             rs.close();
         }
         if (!jlawyerdbFound) {
-            throw new Exception("Datenbank '" + this.dbName + "' nicht gefunden!");
+            throw new Exception("Banco de dados '" + this.dbName + "' não encontrado!");
         }
 
     }
 
     private void validateDatabaseBinaries(BackupProgressCallback progress) throws Exception {
         if (progress != null) {
-            progress.onProgress("Prüfe Datenbankinstallation...");
+            progress.onProgress("Verificando instalação do banco de dados...");
         }
 
         String osName = System.getProperty("os.name").toLowerCase();
@@ -816,10 +816,10 @@ public class RestoreExecutor {
 
     private void validateEncryption(BackupProgressCallback progress) throws Exception {
         if (progress != null) {
-            progress.onProgress("Prüfe Verschlüsselung...");
+            progress.onProgress("Verificando criptografia...");
         }
         if (this.filenameEncoding == null) {
-            throw new Exception("Unbekannte Dateinamen-Codierung!");
+            throw new Exception("Codificação de nome de arquivo desconhecida!");
         }
 
         File dir = new File(this.backupDirectory + File.separator + "templates");
@@ -848,7 +848,7 @@ public class RestoreExecutor {
             for (File zip : dir.listFiles()) {
                 if (zip.isFile() && zip.getName().toLowerCase().endsWith(".zip")) {
                     if (progress != null) {
-                        progress.onProgress("Nicht verschlüsselt: " + zip.getName());
+                        progress.onProgress("Não criptografado: " + zip.getName());
                     }
                     // extract to a throwaway temp dir only to verify the archive is readable,
                     // then delete it immediately so the temp partition never has to hold more
@@ -865,7 +865,7 @@ public class RestoreExecutor {
             // with encryption
             for (File zip : dir.listFiles()) {
                 if (progress != null) {
-                    progress.onProgress("Prüfe Verschlüsselung: " + zip.getName());
+                    progress.onProgress("Verificando criptografia: " + zip.getName());
                 }
                 if (zip.isFile() && zip.getName().toLowerCase().endsWith(".zip")) {
                     // see comment above: validate, then free the temp space right away
@@ -922,7 +922,7 @@ public class RestoreExecutor {
                 t.printStackTrace();
                 fileFailures = fileFailures + 1;
                 if (fileFailures > 5) {
-                    System.out.println("Mehr als 5 Dateien aus " + source.getAbsolutePath() + " konnten nicht wiederhergestellt werden - Abbruch!");
+                    System.out.println("Mais de 5 arquivos de " + source.getAbsolutePath() + " não puderam ser restaurados - cancelando!");
                     // throw new Exception("Mehr als 5 Dateien aus " + source.getAbsolutePath() + " konnten nicht wiederhergestellt werden - Abbruch!");
                 }
             }
@@ -966,7 +966,7 @@ public class RestoreExecutor {
                         t.printStackTrace();
                         fileFailures = fileFailures + 1;
                         if (fileFailures > 5) {
-                            throw new Exception("Mehr als 5 Dateien konnten nicht wiederhergestellt werden - Abbruch!");
+                            throw new Exception("Mais de 5 arquivos não puderam ser restaurados - cancelando!");
                         }
                     }
                 }
@@ -980,19 +980,19 @@ public class RestoreExecutor {
     private void validateBackupDirectory(BackupProgressCallback progress) throws Exception {
         File dir = new File(this.backupDirectory);
         if (progress != null) {
-            progress.onProgress("Prüfe Datensicherungsverzeichnis " + dir.getAbsolutePath());
+            progress.onProgress("Verificando diretório de backup " + dir.getAbsolutePath());
         }
         ArrayList<String> subDirs = new ArrayList<>();
         if (!dir.exists()) {
-            throw new Exception("Verzeichnis '" + this.backupDirectory + "' existiert nicht!");
+            throw new Exception("O diretório '" + this.backupDirectory + "' não existe!");
         }
 
         if (!dir.isDirectory()) {
-            throw new Exception("'" + this.backupDirectory + "' ist kein Verzeichnis!");
+            throw new Exception("'" + this.backupDirectory + "' não é um diretório!");
         }
 
         if (!dir.canRead()) {
-            throw new Exception("Verzeichnis '" + this.backupDirectory + "' ist nicht lesbar!");
+            throw new Exception("O diretório '" + this.backupDirectory + "' não pode ser lido!");
         }
 
         boolean dumpExists = false;
@@ -1006,34 +1006,34 @@ public class RestoreExecutor {
             }
         }
         if (!subDirs.contains("archivefiles") || !subDirs.contains("templates") || !subDirs.contains("mastertemplates") || !subDirs.contains("emailtemplates") || !subDirs.contains(DIR_LETTERHEADS)) {
-            throw new Exception("Verzeichnis unvollständig - benötigt werden Unterverzeichnisse: archivefiles, templates, emailtemplates, mastertemplates, letterheads");
+            throw new Exception("Diretório incompleto - subdiretórios obrigatórios: archivefiles, templates, emailtemplates, mastertemplates, letterheads");
         }
 
         if (!dumpExists) {
-            throw new Exception("Datenbanksicherung 'jlawyerdb-dump.sql' fehlt!");
+            throw new Exception("Arquivo de backup do banco de dados 'jlawyerdb-dump.sql' ausente!");
         }
     }
 
     private void validateDataDirectory(BackupProgressCallback progress) throws Exception {
         File dir = new File(this.dataDirectory);
         if (progress != null) {
-            progress.onProgress("Prüfe Datenverzeichnis " + dir.getAbsolutePath());
+            progress.onProgress("Verificando diretório de dados " + dir.getAbsolutePath());
         }
         ArrayList<String> subDirs = new ArrayList<>();
         if (!dir.exists()) {
-            throw new Exception("Verzeichnis '" + this.dataDirectory + "' existiert nicht!");
+            throw new Exception("O diretório '" + this.dataDirectory + "' não existe!");
         }
 
         if (!dir.isDirectory()) {
-            throw new Exception("'" + this.dataDirectory + "' ist kein Verzeichnis!");
+            throw new Exception("'" + this.dataDirectory + "' não é um diretório!");
         }
 
         if (!dir.canRead()) {
-            throw new Exception("Verzeichnis '" + this.dataDirectory + "' ist nicht lesbar!");
+            throw new Exception("O diretório '" + this.dataDirectory + "' não pode ser lido!");
         }
 
         if (!dir.canWrite()) {
-            throw new Exception("Verzeichnis '" + this.dataDirectory + "' ist nicht schreibbar!");
+            throw new Exception("O diretório '" + this.dataDirectory + "' não possui permissão de escrita!");
         }
 
         boolean dumpExists = false;
@@ -1047,11 +1047,11 @@ public class RestoreExecutor {
             }
         }
         if (!subDirs.contains("archivefiles") || !subDirs.contains("templates") || !subDirs.contains("mastertemplates") || !subDirs.contains("emailtemplates") || !subDirs.contains(DIR_LETTERHEADS)) {
-            throw new Exception("Verzeichnis unvollständig - benötigt werden Unterverzeichnisse: archivefiles, templates, emailtemplates, mastertemplates, letterheads");
+            throw new Exception("Diretório incompleto - subdiretórios obrigatórios: archivefiles, templates, emailtemplates, mastertemplates, letterheads");
         }
 
         if (dumpExists) {
-            throw new Exception("Datenbanksicherung 'jlawyerdb-dump.sql' im Datenverzeichnis gefunden! Wurde aus Versehen das Backupverzeichnis gewählt?");
+            throw new Exception("Backup do banco de dados 'jlawyerdb-dump.sql' encontrado no diretório de dados! Foi selecionado o diretório de backup por engano?");
         }
     }
 
@@ -1065,7 +1065,7 @@ public class RestoreExecutor {
     private void restoreFiles(BackupProgressCallback progress) throws Exception {
         File dir = new File(this.backupDirectory);
         if (progress != null) {
-            progress.onProgress("Dateien wiederherstellen..." + dir.getAbsolutePath());
+            progress.onProgress("Restaurando arquivos..." + dir.getAbsolutePath());
         }
 
         String backup = this.backupDirectory;
@@ -1118,7 +1118,7 @@ public class RestoreExecutor {
             for (File zip : from.listFiles()) {
                 if (zip.isFile() && zip.getName().toLowerCase().endsWith(".zip")) {
                     if (progress != null) {
-                        progress.onProgress("Wiederherstellung: " + zip.getName());
+                        progress.onProgress("Restaurando: " + zip.getName());
                     }
                     this.unzip(zip, toDir);
                 }
@@ -1127,7 +1127,7 @@ public class RestoreExecutor {
             // with encryption
             for (File zip : from.listFiles()) {
                 if (progress != null) {
-                    progress.onProgress("Wiederherstellung: " + zip.getName());
+                    progress.onProgress("Restaurando: " + zip.getName());
                 }
                 if (zip.isFile() && zip.getName().toLowerCase().endsWith(".zip")) {
                     this.unzipWithPassword(zip, toDir, this.encryptionPassword);
@@ -1194,7 +1194,7 @@ public class RestoreExecutor {
             }
         }
         if (progress != null) {
-            progress.onProgress("Datenverzeichnis wird bereinigt: " + f.getName());
+            progress.onProgress("Limpando diretório de dados: " + f.getName());
         }
         if (!f.delete()) {
             throw new FileNotFoundException("Failed to delete file: " + f);
@@ -1208,7 +1208,7 @@ public class RestoreExecutor {
             }
         }
         if (progress != null) {
-            progress.onProgress("Datenverzeichnis wird bereinigt: " + f.getName());
+            progress.onProgress("Limpando diretório de dados: " + f.getName());
         }
         if (!f.delete()) {
             throw new FileNotFoundException("Failed to delete file: " + f);
@@ -1217,7 +1217,7 @@ public class RestoreExecutor {
 
     private void restoreDatabase(String password, BackupProgressCallback progress) throws Exception {
         if (progress != null) {
-            progress.onProgress("Wiederherstellung der Datenbank...");
+            progress.onProgress("Restaurando banco de dados...");
         }
 
         this.restoreFromTo(this.backupDirectory, this.backupDirectory, progress);
@@ -1279,7 +1279,7 @@ public class RestoreExecutor {
             t.printStackTrace();
         }
         if (process.exitValue() != 0) {
-            throw new Exception("Datenbankwiederherstellung fehlgeschlagen!");
+            throw new Exception("Falha na restauração do banco de dados!");
         }
     }
 

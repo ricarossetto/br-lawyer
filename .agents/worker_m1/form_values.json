@@ -1,0 +1,5382 @@
+{
+  "Vorschau der Komprimierung": {
+    "unescaped": "Vorschau der Komprimierung",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\iradraconis\\shrinkify\\ShrinkifyGui.form",
+        "line": 173,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Komprimieren und Speichern": {
+    "unescaped": "Komprimieren und Speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\iradraconis\\shrinkify\\ShrinkifyGui.form",
+        "line": 185,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Import: Gerichtsadressen": {
+    "unescaped": "Import: Gerichtsadressen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 71,
+        "property": "text"
+      }
+    ]
+  },
+  "Import / Export: Einstellungen": {
+    "unescaped": "Import / Export: Einstellungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 82,
+        "property": "text"
+      }
+    ]
+  },
+  "Export: Akten": {
+    "unescaped": "Export: Akten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 93,
+        "property": "text"
+      }
+    ]
+  },
+  "Exportieren von zur Synchronisation markierten Akten": {
+    "unescaped": "Exportieren von zur Synchronisation markierten Akten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 94,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Ansicht": {
+    "unescaped": "Ansicht",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 119,
+        "property": "text"
+      }
+    ]
+  },
+  "Beteiligtentypen": {
+    "unescaped": "Beteiligtentypen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 337,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\PartyTypesDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Akten-Etiketten": {
+    "unescaped": "Akten-Etiketten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 393,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 543,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Akten-Listenetiketten": {
+    "unescaped": "Akten-Listenetiketten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 404,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumentordner": {
+    "unescaped": "Dokumentordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 415,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentFolderTemplatesDialog.form",
+        "line": 49,
+        "property": "title"
+      }
+    ]
+  },
+  "Eigene Felder (Beteiligte)": {
+    "unescaped": "Eigene Felder (Beteiligte)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 476,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumentenvorschau": {
+    "unescaped": "Dokumentenvorschau",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 600,
+        "property": "text"
+      }
+    ]
+  },
+  "Ereignisvorlagen": {
+    "unescaped": "Ereignisvorlagen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 656,
+        "property": "text"
+      }
+    ]
+  },
+  "Belegpositionen (Vorlagen)": {
+    "unescaped": "Belegpositionen (Vorlagen)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 750,
+        "property": "text"
+      }
+    ]
+  },
+  "Zeiterfassungspositionen (Vorlagen)": {
+    "unescaped": "Zeiterfassungspositionen (Vorlagen)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 814,
+        "property": "text"
+      }
+    ]
+  },
+  "Buchen: Kontoauszug importieren": {
+    "unescaped": "Buchen: Kontoauszug importieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 962,
+        "property": "text"
+      }
+    ]
+  },
+  "Zahlungen verwalten": {
+    "unescaped": "Zahlungen verwalten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\JKanzleiGUI.form",
+        "line": 973,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ManagePaymentsFrame.form",
+        "line": 16,
+        "property": "title"
+      }
+    ]
+  },
+  "Passwort:": {
+    "unescaped": "Passwort:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\LoginDialog.form",
+        "line": 769,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\UserCredentialsDialog.form",
+        "line": 99,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantSetupDialog.form",
+        "line": 355,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.form",
+        "line": 202,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetPasswordDialog.form",
+        "line": 85,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 590,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 645,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\NextcloudConnectionPanel.form",
+        "line": 108,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SystemMailboxDialog.form",
+        "line": 179,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 1259,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 1586,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 194,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\WebHookSetupDialog.form",
+        "line": 362,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\encryption\\PDFEncryptionDialog.form",
+        "line": 136,
+        "property": "text"
+      }
+    ]
+  },
+  "Profil aus Zwischenablage importieren": {
+    "unescaped": "Profil aus Zwischenablage importieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\LoginDialog.form",
+        "line": 855,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "root-Passwort:": {
+    "unescaped": "root-Passwort:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\LoginDialog.form",
+        "line": 1027,
+        "property": "text"
+      }
+    ]
+  },
+  "j-lawyer.BOX Management Console &#xf6;ffnen": {
+    "unescaped": "j-lawyer.BOX Management Console öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\LoginDialog.form",
+        "line": 1152,
+        "property": "text"
+      }
+    ]
+  },
+  "j-lawyer.BOX suchen": {
+    "unescaped": "j-lawyer.BOX suchen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\LoginDialog.form",
+        "line": 1184,
+        "property": "text"
+      }
+    ]
+  },
+  "2. App starten und Profile-Dialog &#xf6;ffnen": {
+    "unescaped": "2. App starten und Profile-Dialog öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\LoginDialog.form",
+        "line": 1305,
+        "property": "text"
+      }
+    ]
+  },
+  "3. Profil durch scannen des QR-Codes &#xfc;bernehmen": {
+    "unescaped": "3. Profil durch scannen des QR-Codes übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\LoginDialog.form",
+        "line": 1319,
+        "property": "text"
+      }
+    ]
+  },
+  "Textauswahl kopieren": {
+    "unescaped": "Textauswahl kopieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AiChatMessageTextSelection.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "&#xdc;bernehmen": {
+    "unescaped": "Übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantChatDialog.form",
+        "line": 344,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantExtractDialog.form",
+        "line": 300,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantGenericDialog.form",
+        "line": 394,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantVisionDialog.form",
+        "line": 295,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\EebRejectDialog.form",
+        "line": 72,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SelectLegalAuthorityDialog.form",
+        "line": 101,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptSetupDialog.form",
+        "line": 242,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantReplacementSetupDialog.form",
+        "line": 213,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantSetupDialog.form",
+        "line": 305,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BankstatementCsvConfigDialog.form",
+        "line": 349,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.form",
+        "line": 275,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.form",
+        "line": 363,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentNameTemplatesSetupDialog.form",
+        "line": 273,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.form",
+        "line": 227,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetPasswordDialog.form",
+        "line": 133,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.form",
+        "line": 320,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePositionTemplatesSetupDialog.form",
+        "line": 272,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoiceTypesSetupDialog.form",
+        "line": 256,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 235,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MappingEntriesDialog.form",
+        "line": 104,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MappingTablesDialog.form",
+        "line": 261,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\PartyTypesDialog.form",
+        "line": 243,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TagRulesDialog.form",
+        "line": 292,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetPositionTemplatesSetupDialog.form",
+        "line": 265,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\WebHookSetupDialog.form",
+        "line": 297,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressFromClipboardDialog.form",
+        "line": 128,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.form",
+        "line": 103,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\NewDocumentNameDialog.form",
+        "line": 121,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\SearchAndAssignDialog.form",
+        "line": 139,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressSearchDialog.form",
+        "line": 155,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitEditDialog.form",
+        "line": 213,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetAllowedPositionsDialog.form",
+        "line": 110,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\massmail\\MultiAddressSearchDialog.form",
+        "line": 156,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.form",
+        "line": 154,
+        "property": "text"
+      }
+    ]
+  },
+  "neues Dokument": {
+    "unescaped": "neues Dokument",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantChatDialog.form",
+        "line": 355,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantGenerateDialog.form",
+        "line": 354,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantVisionDialog.form",
+        "line": 306,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\SoundplayerPanel.form",
+        "line": 189,
+        "property": "text"
+      }
+    ]
+  },
+  "in Prompt &#xfc;bernehmen": {
+    "unescaped": "in Prompt übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantExtractDialog.form",
+        "line": 13,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantGenericDialog.form",
+        "line": 13,
+        "property": "text"
+      }
+    ]
+  },
+  "Auswahl in Prompt &#xfc;bernehmen": {
+    "unescaped": "Auswahl in Prompt übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantExtractDialog.form",
+        "line": 21,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantGenericDialog.form",
+        "line": 21,
+        "property": "text"
+      }
+    ]
+  },
+  "Neues Dokument aus Vorlage erstellen und das Ergebnis dieses Dialogs &#xfc;bergeben. &#xa;Die Vorlage ben&#xf6;tigt den Platzhalter {{INGO_TEXT}}.": {
+    "unescaped": "Neues Dokument aus Vorlage erstellen und das Ergebnis dieses Dialogs übergeben. \nDie Vorlage benötigt den Platzhalter {{INGO_TEXT}}.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantGenerateDialog.form",
+        "line": 355,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\SoundplayerPanel.form",
+        "line": 190,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "beA-Teilnehmer suchen": {
+    "unescaped": "beA-Teilnehmer suchen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaIdentitySearchDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Vorname:": {
+    "unescaped": "Vorname:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaIdentitySearchDialog.form",
+        "line": 121,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 421,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.form",
+        "line": 270,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressDetailsStep.form",
+        "line": 249,
+        "property": "text"
+      }
+    ]
+  },
+  "Nachname:": {
+    "unescaped": "Nachname:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaIdentitySearchDialog.form",
+        "line": 169,
+        "property": "text"
+      }
+    ]
+  },
+  "neuer Ordner": {
+    "unescaped": "neuer Ordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 16,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentFolderTemplatesDialog.form",
+        "line": 16,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 16,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\TemplatesTreePanel.form",
+        "line": 16,
+        "property": "text"
+      }
+    ]
+  },
+  "Ordner l&#xf6;schen": {
+    "unescaped": "Ordner löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 27,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentFolderTemplatesDialog.form",
+        "line": 27,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 38,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\TemplatesTreePanel.form",
+        "line": 38,
+        "property": "text"
+      }
+    ]
+  },
+  "in Akte speichern...": {
+    "unescaped": "in Akte speichern...",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 81,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 111,
+        "property": "text"
+      }
+    ]
+  },
+  "in Akte speichern (ohne Anh&#xe4;nge)...": {
+    "unescaped": "in Akte speichern (ohne Anhänge)...",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 92,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 122,
+        "property": "text"
+      }
+    ]
+  },
+  "in Akte speichern (nur Anh&#xe4;nge)...": {
+    "unescaped": "in Akte speichern (nur Anhänge)...",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 103,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 133,
+        "property": "text"
+      }
+    ]
+  },
+  "neue Nachricht schreiben": {
+    "unescaped": "neue Nachricht schreiben",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 239,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Weiterleiten": {
+    "unescaped": "Weiterleiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 289,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\ViewBeaDialog.form",
+        "line": 102,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 513,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\ViewEmailFrame.form",
+        "line": 89,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "verschiebt die Nachricht nach Zuordnung in den Ordner &quot;in Akte importiert&quot;": {
+    "unescaped": "verschiebt die Nachricht nach Zuordnung in den Ordner \"in Akte importiert\"",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 505,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Hinweis: tempor&#xe4;re Dateien": {
+    "unescaped": "Hinweis: temporäre Dateien",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 519,
+        "property": "text"
+      }
+    ]
+  },
+  "Menge der angezeigten Nachrichten beschr&#xe4;nken": {
+    "unescaped": "Menge der angezeigten Nachrichten beschränken",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.form",
+        "line": 538,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "in Akte...": {
+    "unescaped": "in Akte...",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 24,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\MailContentUI.form",
+        "line": 24,
+        "property": "text"
+      }
+    ]
+  },
+  "Nachricht": {
+    "unescaped": "Nachricht",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 84,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "weitere": {
+    "unescaped": "weitere",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 410,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Nachricht als PDF anzeigen / drucken": {
+    "unescaped": "Nachricht als PDF anzeigen / drucken",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 453,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "eEB zurückweisen": {
+    "unescaped": "eEB zurückweisen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 560,
+        "property": "text"
+      }
+    ]
+  },
+  "elektronisches Empfangsbekenntnis zurückweisen": {
+    "unescaped": "elektronisches Empfangsbekenntnis zurückweisen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 561,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Nachrichtenjournal erneut aus dem Postfach laden": {
+    "unescaped": "Nachrichtenjournal erneut aus dem Postfach laden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 649,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.form",
+        "line": 725,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "PDF anzeigen / speichern": {
+    "unescaped": "PDF anzeigen / speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaSignaturesVerificationDialog.form",
+        "line": 241,
+        "property": "text"
+      }
+    ]
+  },
+  "Nachname, Vorname (Username)": {
+    "unescaped": "Nachname, Vorname (Username)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\IdentityPanel.form",
+        "line": 93,
+        "property": "text"
+      }
+    ]
+  },
+  "Keine ausw&#xe4;hlen": {
+    "unescaped": "Keine auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SelectLegalAuthorityDialog.form",
+        "line": 123,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseExportDialog.form",
+        "line": 129,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "suchen (Adressbuch)": {
+    "unescaped": "suchen (Adressbuch)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 16,
+        "property": "text"
+      }
+    ]
+  },
+  "suchen (beA-Verzeichnis)": {
+    "unescaped": "suchen (beA-Verzeichnis)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 27,
+        "property": "text"
+      }
+    ]
+  },
+  "entfernen": {
+    "unescaped": "entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 50,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 69,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 82,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 83,
+        "property": "text"
+      }
+    ]
+  },
+  "neue beA-Nachricht": {
+    "unescaped": "neue beA-Nachricht",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 80,
+        "property": "title"
+      }
+    ]
+  },
+  "in &quot;Entw&#xfc;rfe&quot; speichern und sp&#xe4;ter signieren/senden": {
+    "unescaped": "in \"Entwürfe\" speichern und später signieren/senden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 465,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "als Dokument speichern": {
+    "unescaped": "als Dokument speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 544,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 696,
+        "property": "text"
+      }
+    ]
+  },
+  "Gesendete Nachricht als Dokument zur Akte speichern": {
+    "unescaped": "Gesendete Nachricht als Dokument zur Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 545,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Doppelklick um heutiges Datum zu &#xfc;bernehmen": {
+    "unescaped": "Doppelklick um heutiges Datum zu übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 707,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.form",
+        "line": 289,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddNoteFrame.form",
+        "line": 335,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\NewEventPanel.form",
+        "line": 194,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\NewEventPanel.form",
+        "line": 287,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 879,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zielakte markieren:": {
+    "unescaped": "Zielakte markieren:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 745,
+        "property": "actionCommand"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 702,
+        "property": "actionCommand"
+      }
+    ]
+  },
+  "Allgemeine Nachricht": {
+    "unescaped": "Allgemeine Nachricht",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 808,
+        "property": "ComboBoxItem[0]"
+      }
+    ]
+  },
+  "Testnachricht": {
+    "unescaped": "Testnachricht",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 810,
+        "property": "ComboBoxItem[2]"
+      }
+    ]
+  },
+  "Nachricht wird nicht qualifiziert signiert": {
+    "unescaped": "Nachricht wird nicht qualifiziert signiert",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 823,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Vorlage:": {
+    "unescaped": "Vorlage:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.form",
+        "line": 904,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressDocumentFromTemplateDialog.form",
+        "line": 337,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.form",
+        "line": 561,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 964,
+        "property": "text"
+      }
+    ]
+  },
+  "Ordner:": {
+    "unescaped": "Ordner:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.form",
+        "line": 184,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\ShareInfoPanel.form",
+        "line": 249,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.form",
+        "line": 213,
+        "property": "text"
+      }
+    ]
+  },
+  "Beteiligte": {
+    "unescaped": "Beteiligte",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.form",
+        "line": 203,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressDocumentFromTemplateDialog.form",
+        "line": 134,
+        "property": "tabTitle"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.form",
+        "line": 335,
+        "property": "tabTitle"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 1399,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Beteiligte-Akte": {
+    "unescaped": "Beteiligte-Akte",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.form",
+        "line": 215,
+        "property": "text"
+      }
+    ]
+  },
+  "Akte-Beteiligte": {
+    "unescaped": "Akte-Beteiligte",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.form",
+        "line": 226,
+        "property": "text"
+      }
+    ]
+  },
+  "Hochladen und Bearbeiten": {
+    "unescaped": "Hochladen und Bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.form",
+        "line": 283,
+        "property": "text"
+      }
+    ]
+  },
+  "Passwortschutz:": {
+    "unescaped": "Passwortschutz:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.form",
+        "line": 291,
+        "property": "text"
+      }
+    ]
+  },
+  "Generiert ein neues zuf&#xe4;lliges Passwort": {
+    "unescaped": "Generiert ein neues zufälliges Passwort",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.form",
+        "line": 299,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "im Browser &#xf6;ffnen": {
+    "unescaped": "im Browser öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\ShareInfoPanel.form",
+        "line": 241,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\NextcloudTeaserPanel.form",
+        "line": 76,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1736,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostTeaserPanel.form",
+        "line": 105,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "OSCI-Nachrichtenansicht": {
+    "unescaped": "OSCI-Nachrichtenansicht",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\components\\GenericTextViewer.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Nachrichten-ID:": {
+    "unescaped": "Nachrichten-ID:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\components\\GenericTextViewer.form",
+        "line": 74,
+        "property": "text"
+      }
+    ]
+  },
+  "Datumsauswahl": {
+    "unescaped": "Datumsauswahl",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\components\\MultiCalDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Adressbuch-Synchronisation": {
+    "unescaped": "Adressbuch-Synchronisation",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AddressBookSetupDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Es werden die Platzhalter des Vorlagensystems unterst&#xfc;tzt.&#xa;Aktenbezogene Platzhalter (bspw. {{AKTE_ZEICHEN}}) werden nur dann ersetzt,&#xa;wenn der Prompt aus einer Akte heraus verwendet wird.": {
+    "unescaped": "Es werden die Platzhalter des Vorlagensystems unterstützt.\nAktenbezogene Platzhalter (bspw. {{AKTE_ZEICHEN}}) werden nur dann ersetzt,\nwenn der Prompt aus einer Akte heraus verwendet wird.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptSetupDialog.form",
+        "line": 308,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Verschl&#xfc;sselungspasswort:": {
+    "unescaped": "Verschlüsselungspasswort:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.form",
+        "line": 424,
+        "property": "text"
+      }
+    ]
+  },
+  "bei Angabe eines Passwortes wird die Datensicherung verschl&#xfc;sselt und passwortgesch&#xfc;tzt": {
+    "unescaped": "bei Angabe eines Passwortes wird die Datensicherung verschlüsselt und passwortgeschützt",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.form",
+        "line": 432,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zielordner:": {
+    "unescaped": "Zielordner:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.form",
+        "line": 580,
+        "property": "text"
+      }
+    ]
+  },
+  "Zielordner auf dem Server:": {
+    "unescaped": "Zielordner auf dem Server:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.form",
+        "line": 703,
+        "property": "text"
+      }
+    ]
+  },
+  "f&#xfc;r nicht vorhandene Spalten bitte &quot;-1&quot; w&#xe4;hlen": {
+    "unescaped": "für nicht vorhandene Spalten bitte \"-1\" wählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BankstatementCsvConfigDialog.form",
+        "line": 517,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Einstellungen beA-Schnittstelle": {
+    "unescaped": "Einstellungen beA-Schnittstelle",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BeaConfigurationDialog.form",
+        "line": 10,
+        "property": "title"
+      }
+    ]
+  },
+  "Vorlagen f&#xfc;r Wiedervorlagen, Fristen und Termine": {
+    "unescaped": "Vorlagen für Wiedervorlagen, Fristen und Termine",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "zweiter Eintrag - bspw. f&#xfc;r Vorfristen (optional)": {
+    "unescaped": "zweiter Eintrag - bspw. für Vorfristen (optional)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.form",
+        "line": 291,
+        "property": "text"
+      }
+    ]
+  },
+  "Vorlagen - Konfiguration": {
+    "unescaped": "Vorlagen - Konfiguration",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.form",
+        "line": 304,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;zeitlicher Versatz f&#xfc;r den zweiten Eintrag, als Anzahl an Tagen:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;negativer Wert: zweiter Eintrag liegt zeitlich vor dem Haupteintrag&lt;/li&gt;&lt;li&gt;positiver Wert: zweiter Eintrag liegt zeitlich nach dem Haupteintrag&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;": {
+    "unescaped": "<html>zeitlicher Versatz für den zweiten Eintrag, als Anzahl an Tagen:<br/><ul><li>negativer Wert: zweiter Eintrag liegt zeitlich vor dem Haupteintrag</li><li>positiver Wert: zweiter Eintrag liegt zeitlich nach dem Haupteintrag</li></ul></html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.form",
+        "line": 358,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Sofern ein Kalender mit einer Nextcloud synchronisiert wird, geschieht dies automatisch.&#xa;Eine zus&#xe4;tzliche Synchronisation in Intervallen ist nur in Ausnahmef&#xe4;llen sinnvoll, bspw. &#xa;wenn die Nextcloud nicht durchgehend erreichbar ist.&#xa;Auf Ger&#xe4;te mit iOS / macOS kann die Intervallsynchronisation zur doppelten Anzeige von&#xa;Terminen in den Kalender-Apps f&#xfc;hren.": {
+    "unescaped": "Sofern ein Kalender mit einer Nextcloud synchronisiert wird, geschieht dies automatisch.\nEine zusätzliche Synchronisation in Intervallen ist nur in Ausnahmefällen sinnvoll, bspw. \nwenn die Nextcloud nicht durchgehend erreichbar ist.\nAuf Geräte mit iOS / macOS kann die Intervallsynchronisation zur doppelten Anzeige von\nTerminen in den Kalender-Apps führen.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.form",
+        "line": 306,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "auf Terminkonflikte pr&#xfc;fen": {
+    "unescaped": "auf Terminkonflikte prüfen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.form",
+        "line": 312,
+        "property": "text"
+      }
+    ]
+  },
+  "Bei Erstellen und Bearbeiten von Kalendereintr&#xe4;gen wird auf &#xa;m&#xf6;gliche Terminkonflikte gepr&#xfc;ft und eine Warnung angezeigt.": {
+    "unescaped": "Bei Erstellen und Bearbeiten von Kalendereinträgen wird auf \nmögliche Terminkonflikte geprüft und eine Warnung angezeigt.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.form",
+        "line": 320,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "erledigte Termine aus Nextcloud l&#xf6;schen": {
+    "unescaped": "erledigte Termine aus Nextcloud löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.form",
+        "line": 459,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenzeichen-Einstellungen": {
+    "unescaped": "Aktenzeichen-Einstellungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.form",
+        "line": 10,
+        "property": "title"
+      }
+    ]
+  },
+  "Vorschau:": {
+    "unescaped": "Vorschau:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.form",
+        "line": 106,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.form",
+        "line": 457,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenzeichen um weitere Angaben erweitern": {
+    "unescaped": "Aktenzeichen um weitere Angaben erweitern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.form",
+        "line": 412,
+        "property": "text"
+      }
+    ]
+  },
+  "Erweiterung trennen durch:": {
+    "unescaped": "Erweiterung trennen durch:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.form",
+        "line": 420,
+        "property": "text"
+      }
+    ]
+  },
+  "Erweiterungsfelder trennen durch:": {
+    "unescaped": "Erweiterungsfelder trennen durch:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.form",
+        "line": 430,
+        "property": "text"
+      }
+    ]
+  },
+  "Hinweise": {
+    "unescaped": "Hinweise",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.form",
+        "line": 491,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;&#xa;&lt;b&gt;Hinweise:&lt;/b&gt;&#xa;Bei Aktivierung der AZ-Erweiterung &lt;b&gt;&lt;i&gt;m&amp;uuml;ssen&lt;/i&gt;&lt;/b&gt; die in der Erweiterung&lt;br/&gt;&#xa;gew&amp;uuml;nschten Daten zwingend vorhanden sein, um eine Akte anlegen oder speichern zu&lt;br/&gt;&#xa;k&#xf6;nnen. Stellen Sie also bspw. sicher, dass jeder Nutzer in der Nutzerverwaltung ein K&amp;uuml;rzel hat, &lt;br/&gt;&#xa;und dass neue und ver&#xe4;nderte Akten eine Eigent&#xfc;mergruppe haben.&#xa;&lt;/html&gt;": {
+    "unescaped": "<html>\n<b>Hinweise:</b>\nBei Aktivierung der AZ-Erweiterung <b><i>m&uuml;ssen</i></b> die in der Erweiterung<br/>\ngew&uuml;nschten Daten zwingend vorhanden sein, um eine Akte anlegen oder speichern zu<br/>\nkönnen. Stellen Sie also bspw. sicher, dass jeder Nutzer in der Nutzerverwaltung ein K&uuml;rzel hat, <br/>\nund dass neue und veränderte Akten eine Eigentümergruppe haben.\n</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.form",
+        "line": 492,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Gruppe ... wird in diesen Akten verwendet:": {
+    "unescaped": "Gruppe ... wird in diesen Akten verwendet:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.form",
+        "line": 77,
+        "property": "text"
+      }
+    ]
+  },
+  "Gruppe nicht entfernen": {
+    "unescaped": "Gruppe nicht entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.form",
+        "line": 100,
+        "property": "text"
+      }
+    ]
+  },
+  "Gruppen aktualisieren": {
+    "unescaped": "Gruppen aktualisieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.form",
+        "line": 111,
+        "property": "text"
+      }
+    ]
+  },
+  "Akten in zu dieser Gruppe transferieren:": {
+    "unescaped": "Akten in zu dieser Gruppe transferieren:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.form",
+        "line": 134,
+        "property": "text"
+      }
+    ]
+  },
+  "Standardprogramme werden durch Doppelklick auf ein Dokument ge&#xf6;ffnet,&#xa;Nicht-Standardprogramme sind &#xfc;ber das Kontextmen&#xfc; des Dokuments aufrufbar.": {
+    "unescaped": "Standardprogramme werden durch Doppelklick auf ein Dokument geöffnet,\nNicht-Standardprogramme sind über das Kontextmenü des Dokuments aufrufbar.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CustomLauncherOptionsDialog.form",
+        "line": 346,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Ordner umbenennen": {
+    "unescaped": "Ordner umbenennen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentFolderTemplatesDialog.form",
+        "line": 38,
+        "property": "text"
+      }
+    ]
+  },
+  "neue Ordnerstruktur anlegen": {
+    "unescaped": "neue Ordnerstruktur anlegen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentFolderTemplatesDialog.form",
+        "line": 160,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Rechnungsnummer bei Rechnungserstellung manuell editierbar machen": {
+    "unescaped": "Rechnungsnummer bei Rechnungserstellung manuell editierbar machen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentNameTemplatesSetupDialog.form",
+        "line": 315,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.form",
+        "line": 407,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "weitere Zeichen als fixe Bestandteile": {
+    "unescaped": "weitere Zeichen als fixe Bestandteile",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentNameTemplatesSetupDialog.form",
+        "line": 379,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.form",
+        "line": 520,
+        "property": "text"
+      }
+    ]
+  },
+  "Platzhalter, bspw. {{MANDANT_NAME}}": {
+    "unescaped": "Platzhalter, bspw. {{MANDANT_NAME}}",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentNameTemplatesSetupDialog.form",
+        "line": 394,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumentvorschau laden f&#xfc;r Dokumente bis": {
+    "unescaped": "Dokumentvorschau laden für Dokumente bis",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentPreviewConfigurationDialog.form",
+        "line": 89,
+        "property": "text"
+      }
+    ]
+  },
+  "Ausgew&#xe4;hlte Dokumente wiederherstellen": {
+    "unescaped": "Ausgewählte Dokumente wiederherstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentsBinDialog.form",
+        "line": 120,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Ausgew&#xe4;hlte Dokumente endg&#xfc;ltig l&#xf6;schen": {
+    "unescaped": "Ausgewählte Dokumente endgültig löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentsBinDialog.form",
+        "line": 132,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Papierkorb leeren und alle Dokumente endg&#xfc;ltig l&#xf6;schen": {
+    "unescaped": "Papierkorb leeren und alle Dokumente endgültig löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentsBinDialog.form",
+        "line": 143,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Windows- / SMB-Freigabeordner": {
+    "unescaped": "Windows- / SMB-Freigabeordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.form",
+        "line": 134,
+        "property": "text"
+      }
+    ]
+  },
+  "FTP-Ordner": {
+    "unescaped": "FTP-Ordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.form",
+        "line": 150,
+        "property": "text"
+      }
+    ]
+  },
+  "SFTP(SSH)-Ordner": {
+    "unescaped": "SFTP(SSH)-Ordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.form",
+        "line": 161,
+        "property": "text"
+      }
+    ]
+  },
+  "Lokaler Ordner": {
+    "unescaped": "Lokaler Ordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.form",
+        "line": 172,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;&#xa;&lt;strong&gt;Stark:&lt;/strong&gt;Grossbuchstaben, Kleinbuchstaben, Ziffern, Sonderzeichen, mindestens 8 Zeichen&lt;br/&gt;&#xa;&lt;strong&gt;Mittel:&lt;/strong&gt;Grossbuchstaben, Kleinbuchstaben, Ziffern, mindestens 8 Zeichen&lt;br/&gt;&#xa;&lt;strong&gt;Schwach:&lt;/strong&gt;alle weiteren&lt;br/&gt;&#xa;&lt;/html&gt;": {
+    "unescaped": "<html>\n<strong>Stark:</strong>Grossbuchstaben, Kleinbuchstaben, Ziffern, Sonderzeichen, mindestens 8 Zeichen<br/>\n<strong>Mittel:</strong>Grossbuchstaben, Kleinbuchstaben, Ziffern, mindestens 8 Zeichen<br/>\n<strong>Schwach:</strong>alle weiteren<br/>\n</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetPasswordDialog.form",
+        "line": 109,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Girocode-Einstellungen": {
+    "unescaped": "Girocode-Einstellungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GirocodeConfigurationDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Die aktuellen Daten werden aus dem besonderen elektronischen Anwaltspostfach beA heruntergeladen und importiert. Der Import wird mehrere Minuten in Anspruch nehmen. W&#xe4;hrenddessen kann ein zweiter j-lawyer.org Client ge&#xf6;ffnet werden, um weiterarbeiten zu k&#xf6;nnen.": {
+    "unescaped": "Die aktuellen Daten werden aus dem besonderen elektronischen Anwaltspostfach beA heruntergeladen und importiert. Der Import wird mehrere Minuten in Anspruch nehmen. Währenddessen kann ein zweiter j-lawyer.org Client geöffnet werden, um weiterarbeiten zu können.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportCourtsFromBeaDialog.form",
+        "line": 75,
+        "property": "text"
+      }
+    ]
+  },
+  "Import von Gerichtsadressen aus dem beA:": {
+    "unescaped": "Import von Gerichtsadressen aus dem beA:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportCourtsFromBeaDialog.form",
+        "line": 84,
+        "property": "text"
+      }
+    ]
+  },
+  "Einstellungen importieren": {
+    "unescaped": "Einstellungen importieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportFromSheetsDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Vorlage": {
+    "unescaped": "Vorlage",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportFromSheetsDialog.form",
+        "line": 136,
+        "property": "text"
+      }
+    ]
+  },
+  "Vorlage herunterladen": {
+    "unescaped": "Vorlage herunterladen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportFromSheetsDialog.form",
+        "line": 137,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zahlungsziel:": {
+    "unescaped": "Zahlungsziel:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.form",
+        "line": 551,
+        "property": "text"
+      }
+    ]
+  },
+  "Einstellungen Positionsvorlage": {
+    "unescaped": "Einstellungen Positionsvorlage",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePositionTemplatesSetupDialog.form",
+        "line": 288,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetPositionTemplatesSetupDialog.form",
+        "line": 281,
+        "property": "text"
+      }
+    ]
+  },
+  "Belegart - Einstellungen": {
+    "unescaped": "Belegart - Einstellungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoiceTypesSetupDialog.form",
+        "line": 272,
+        "property": "text"
+      }
+    ]
+  },
+  "Belege dieser Art in der Offene Posten-Liste anzeigen&#xa;(bspw. Rechnungen, Korrekturrechnungen, aber keine Angebote)": {
+    "unescaped": "Belege dieser Art in der Offene Posten-Liste anzeigen\n(bspw. Rechnungen, Korrekturrechnungen, aber keine Angebote)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoiceTypesSetupDialog.form",
+        "line": 295,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Verbindung": {
+    "unescaped": "Verbindung",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 343,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Mandanten-ID:": {
+    "unescaped": "Mandanten-ID:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 681,
+        "property": "text"
+      }
+    ]
+  },
+  "Einstellungen testen": {
+    "unescaped": "Einstellungen testen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 694,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SystemMailboxDialog.form",
+        "line": 217,
+        "property": "text"
+      }
+    ]
+  },
+  "Ablaufdatum - bei Eintragung wird eine Warnung vor Ablauf erscheinen": {
+    "unescaped": "Ablaufdatum - bei Eintragung wird eine Warnung vor Ablauf erscheinen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 734,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 739,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "eingehende Nachrichten automatisch zuordnen": {
+    "unescaped": "eingehende Nachrichten automatisch zuordnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 936,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;Hinweise:&#xa;&lt;ul&gt;&#xa;&lt;li&gt;Postfach wird &amp;uuml;berwacht&lt;/li&gt;&#xa;&lt;li&gt;&lt;b&gt;alle&lt;/b&gt; Nachrichten im Posteingang werden automatisch zur Akte gespeichert&lt;/li&gt;&#xa;&lt;li&gt;es wird ein optionales Etikett angebracht&lt;/li&gt;&#xa;&lt;li&gt;die Nachricht wird in einen Ordner &lt;b&gt;&amp;quot;in Akte importiert&amp;quot;&lt;/b&gt; verschoben&lt;/li&gt;&#xa;&lt;li&gt;ist eine Nachricht nicht eindeutig zuzuordnen, verbleibt sie im Posteingang&lt;br/&gt;oder kann einer Standardakte zugeordnet werden&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&#xa;&lt;/html&gt;": {
+    "unescaped": "<html>Hinweise:\n<ul>\n<li>Postfach wird &uuml;berwacht</li>\n<li><b>alle</b> Nachrichten im Posteingang werden automatisch zur Akte gespeichert</li>\n<li>es wird ein optionales Etikett angebracht</li>\n<li>die Nachricht wird in einen Ordner <b>&quot;in Akte importiert&quot;</b> verschoben</li>\n<li>ist eine Nachricht nicht eindeutig zuzuordnen, verbleibt sie im Posteingang<br/>oder kann einer Standardakte zugeordnet werden</li>\n</ul>\n\n</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 956,
+        "property": "text"
+      }
+    ]
+  },
+  "Nachrichten samt Anlagen nicht speichern wenn": {
+    "unescaped": "Nachrichten samt Anlagen nicht speichern wenn",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 996,
+        "property": "text"
+      }
+    ]
+  },
+  "Anlagen nicht speichern, die kleiner als .. KB sind:": {
+    "unescaped": "Anlagen nicht speichern, die kleiner als .. KB sind:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 1001,
+        "property": "text"
+      }
+    ]
+  },
+  "eingebettete Anlagen nicht speichern (bspw. Logo in Signatur)": {
+    "unescaped": "eingebettete Anlagen nicht speichern (bspw. Logo in Signatur)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 1006,
+        "property": "text"
+      }
+    ]
+  },
+  "Standardakte:": {
+    "unescaped": "Standardakte:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 1043,
+        "property": "text"
+      }
+    ]
+  },
+  "Erweitert": {
+    "unescaped": "Erweitert",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 1075,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "benutzerdefinierte Konfigurationsparameter:": {
+    "unescaped": "benutzerdefinierte Konfigurationsparameter:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.form",
+        "line": 1116,
+        "property": "text"
+      }
+    ]
+  },
+  "Tabelleneinstellungen": {
+    "unescaped": "Tabelleneinstellungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MappingTablesDialog.form",
+        "line": 277,
+        "property": "text"
+      }
+    ]
+  },
+  "Listenetiketten bearbeiten": {
+    "unescaped": "Listenetiketten bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MultiValueTagConfigurationDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Wert zur Auswahl hinzuf&#xfc;gen": {
+    "unescaped": "Wert zur Auswahl hinzufügen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MultiValueTagConfigurationDialog.form",
+        "line": 244,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Keine Lust auf Betrieb, Datensicherung und Updates?": {
+    "unescaped": "Keine Lust auf Betrieb, Datensicherung und Updates?",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\NextcloudTeaserPanel.form",
+        "line": 52,
+        "property": "text"
+      }
+    ]
+  },
+  "Steuern / Bankverbindung:": {
+    "unescaped": "Steuern / Bankverbindung:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ProfileDialog.form",
+        "line": 461,
+        "property": "text"
+      }
+    ]
+  },
+  "Start der Datensicherung durch Passworteingabe best&#xe4;tigen: ": {
+    "unescaped": "Start der Datensicherung durch Passworteingabe bestätigen: ",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\RequestPasswordOptionPanel.form",
+        "line": 89,
+        "property": "text"
+      }
+    ]
+  },
+  "Einstellungen Scannerintegration": {
+    "unescaped": "Einstellungen Scannerintegration",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ScanOptionsDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "&lt;html&gt;&#xa;Das hier angegebene Programm wird am &lt;b&gt;Server&lt;/b&gt; ausgef&amp;uuml;hrt, um OCR f&#xfc;r PDF-Dokumente auszuf&amp;uuml;hren. Es sollte der vollst&amp;auml;ndige Aufruf angegeben werden. Es m&amp;uuml;ssen zwei Platzhalter enthalten sein:&#xa;&lt;ul&gt;&#xa;&lt;li&gt;DATEIEIN - Datei, welche vom OCR-Programm verarbeitet werden soll&lt;/li&gt;&#xa;&lt;li&gt;DATEIAUS - Datei, welche vom OCR-Programm erstellt werden soll&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;Beispiel:&lt;br/&gt;&#xa;&lt;pre&gt;/usr/bin/ocrmypdf --skip-text DATEIEIN DATEIAUS&lt;/pre&gt;&#xa;&lt;/html&gt;": {
+    "unescaped": "<html>\nDas hier angegebene Programm wird am <b>Server</b> ausgef&uuml;hrt, um OCR für PDF-Dokumente auszuf&uuml;hren. Es sollte der vollst&auml;ndige Aufruf angegeben werden. Es m&uuml;ssen zwei Platzhalter enthalten sein:\n<ul>\n<li>DATEIEIN - Datei, welche vom OCR-Programm verarbeitet werden soll</li>\n<li>DATEIAUS - Datei, welche vom OCR-Programm erstellt werden soll</li>\n</ul>\nBeispiel:<br/>\n<pre>/usr/bin/ocrmypdf --skip-text DATEIEIN DATEIAUS</pre>\n</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ScanOptionsDialog.form",
+        "line": 116,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Einstellungen Dokumentensuche": {
+    "unescaped": "Einstellungen Dokumentensuche",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SearchIndexOptionsDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Dokumente insgesamt:": {
+    "unescaped": "Dokumente insgesamt:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SearchIndexOptionsDialog.form",
+        "line": 104,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumente im Suchindex:": {
+    "unescaped": "Dokumente im Suchindex:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SearchIndexOptionsDialog.form",
+        "line": 109,
+        "property": "text"
+      }
+    ]
+  },
+  "Sicherheitseinstellungen": {
+    "unescaped": "Sicherheitseinstellungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SecurityConfigurationDialog.form",
+        "line": 10,
+        "property": "title"
+      }
+    ]
+  },
+  "% Speichernutzung": {
+    "unescaped": "% Speichernutzung",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.form",
+        "line": 598,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.form",
+        "line": 603,
+        "property": "text"
+      }
+    ]
+  },
+  "Warnungen aktivieren": {
+    "unescaped": "Warnungen aktivieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.form",
+        "line": 680,
+        "property": "text"
+      }
+    ]
+  },
+  "bei erfolgreicher Datensicherung (Zusammenfassung)": {
+    "unescaped": "bei erfolgreicher Datensicherung (Zusammenfassung)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.form",
+        "line": 690,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;Stirling PDF ist ein flexibles Werkzeug f&#xfc;r die Arbeit mit PDF-Dokumenten.&lt;br/&gt;Es kann separat installiert und durch eine URL-Angabe angebunden werden,&lt;br/&gt; bspw. http://localhost:9080/&lt;/html&gt;": {
+    "unescaped": "<html>Stirling PDF ist ein flexibles Werkzeug für die Arbeit mit PDF-Dokumenten.<br/>Es kann separat installiert und durch eine URL-Angabe angebunden werden,<br/> bspw. http://localhost:9080/</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\StirlingPdfConfigurationDialog.form",
+        "line": 134,
+        "property": "text"
+      }
+    ]
+  },
+  "SMTP-Benutzer / Login:": {
+    "unescaped": "SMTP-Benutzer / Login:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SystemMailboxDialog.form",
+        "line": 184,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;Das hier angegebene Postfach wird zum Versand administrativer (bspw. Informationen zur Datensicherung) als auch fachlicher (bspw. Terminerinnerungen) Mitteilungen verwendet.&lt;/html&gt;": {
+    "unescaped": "<html>Das hier angegebene Postfach wird zum Versand administrativer (bspw. Informationen zur Datensicherung) als auch fachlicher (bspw. Terminerinnerungen) Mitteilungen verwendet.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SystemMailboxDialog.form",
+        "line": 231,
+        "property": "text"
+      }
+    ]
+  },
+  "bei Treffer keine weitere Regel anwenden": {
+    "unescaped": "bei Treffer keine weitere Regel anwenden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TagRulesDialog.form",
+        "line": 338,
+        "property": "text"
+      }
+    ]
+  },
+  "parallele Zeiterfassungen in verschiedenen Akten": {
+    "unescaped": "parallele Zeiterfassungen in verschiedenen Akten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetParallelConfigurationDialog.form",
+        "line": 100,
+        "property": "text"
+      }
+    ]
+  },
+  "R&#xfc;ckfrage mit Auswahl": {
+    "unescaped": "Rückfrage mit Auswahl",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetParallelConfigurationDialog.form",
+        "line": 141,
+        "property": "text"
+      }
+    ]
+  },
+  "Passwort &#xe4;ndern": {
+    "unescaped": "Passwort ändern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 27,
+        "property": "text"
+      }
+    ]
+  },
+  "PLZ:": {
+    "unescaped": "PLZ:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 463,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1391,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.form",
+        "line": 510,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressDetailsStep.form",
+        "line": 358,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterSendStep.form",
+        "line": 399,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterSendStep.form",
+        "line": 473,
+        "property": "text"
+      }
+    ]
+  },
+  "Daten aus Kanzleiprofil &#xfc;bernehmen": {
+    "unescaped": "Daten aus Kanzleiprofil übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 559,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "bspw. offene Posten, Aktenhistorien": {
+    "unescaped": "bspw. offene Posten, Aktenhistorien",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 931,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 980,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokumente bei Bearbeitung automatisch sperren": {
+    "unescaped": "Dokumente bei Bearbeitung automatisch sperren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 944,
+        "property": "text"
+      }
+    ]
+  },
+  "Erstellen eines neuen oder Zur&#xfc;cksetzen eines vorhandenen Passwortes.&#xa;Sie ben&#xf6;tigen Kundennnummer und das Mobiltelefon, &#xa;das Sie bei Anmeldung bei der Deutschen Post angegeben haben.": {
+    "unescaped": "Erstellen eines neuen oder Zurücksetzen eines vorhandenen Passwortes.\nSie benötigen Kundennnummer und das Mobiltelefon, \ndas Sie bei Anmeldung bei der Deutschen Post angegeben haben.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.form",
+        "line": 1620,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Benachrichtigungen": {
+    "unescaped": "Benachrichtigungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 214,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Benachrichtigung senden wenn": {
+    "unescaped": "Benachrichtigung senden wenn",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 279,
+        "property": "text"
+      }
+    ]
+  },
+  "ich in einer Sofortnachricht erw&#xe4;hnt wurde": {
+    "unescaped": "ich in einer Sofortnachricht erwähnt wurde",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 284,
+        "property": "text"
+      }
+    ]
+  },
+  "einer meiner Termine in K&#xfc;rze beginnt": {
+    "unescaped": "einer meiner Termine in Kürze beginnt",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 294,
+        "property": "text"
+      }
+    ]
+  },
+  "eine Rechnung in einer meiner Akten f&#xe4;llig ist": {
+    "unescaped": "eine Rechnung in einer meiner Akten fällig ist",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 300,
+        "property": "text"
+      }
+    ]
+  },
+  "eine von mir gesendete Sofortnachricht als erledigt markiert wurde": {
+    "unescaped": "eine von mir gesendete Sofortnachricht als erledigt markiert wurde",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 322,
+        "property": "text"
+      }
+    ]
+  },
+  "vor dem &#xd6;ffnen von E-Mails unbekannter Absender warnen": {
+    "unescaped": "vor dem Öffnen von E-Mails unbekannter Absender warnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 365,
+        "property": "text"
+      }
+    ]
+  },
+  "Neue Akten": {
+    "unescaped": "Neue Akten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 374,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Standardschriftart f&#xfc;r formatierte E-Mails und Notizen:": {
+    "unescaped": "Standardschriftart für formatierte E-Mails und Notizen:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.form",
+        "line": 528,
+        "property": "text"
+      }
+    ]
+  },
+  "Voice-over-IP - Einstellungen": {
+    "unescaped": "Voice-over-IP - Einstellungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\VoipSipgateConfigurationDialog.form",
+        "line": 6,
+        "property": "title"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\VoipSoftphoneConfigurationDialog.form",
+        "line": 10,
+        "property": "title"
+      }
+    ]
+  },
+  "Einstellungen werden nur f&#xfc;r diesen Arbeitsplatz gespeichert": {
+    "unescaped": "Einstellungen werden nur für diesen Arbeitsplatz gespeichert",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\VoipSoftphoneConfigurationDialog.form",
+        "line": 241,
+        "property": "text"
+      }
+    ]
+  },
+  "kompakte Darstellung ein/aus": {
+    "unescaped": "kompakte Darstellung ein/aus",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 248,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokument-Etiketten": {
+    "unescaped": "Dokument-Etiketten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 561,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "unbearbeitete Erw&#xe4;hnungen im Nachrichtencenter": {
+    "unescaped": "unbearbeitete Erwähnungen im Nachrichtencenter",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 848,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "0 Akten": {
+    "unescaped": "0 Akten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 948,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "0 Akten im Archiv": {
+    "unescaped": "0 Akten im Archiv",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 965,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "0 Adressbucheintr&#xe4;ge": {
+    "unescaped": "0 Adressbucheinträge",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 982,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "0 Dokumente": {
+    "unescaped": "0 Dokumente",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.form",
+        "line": 999,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "auf einen sp&#xe4;teren Termin verschieben": {
+    "unescaped": "auf einen späteren Termin verschieben",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\ReviewDueEntryPanelTransparent.form",
+        "line": 85,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "als PDF zum Kontakt speichern": {
+    "unescaped": "als PDF zum Kontakt speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 48,
+        "property": "text"
+      }
+    ]
+  },
+  "Informationen per Copy &amp; Paste-Assistent &#xfc;bernehmen": {
+    "unescaped": "Informationen per Copy & Paste-Assistent übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 447,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.form",
+        "line": 817,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neue Akte erstellen": {
+    "unescaped": "neue Akte erstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 458,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\CreateNewCaseFromScanPanel.form",
+        "line": 55,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateNewCasePanel.form",
+        "line": 55,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\NewCaseStep.form",
+        "line": 12,
+        "property": "name"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\NewCaseWizardDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Vorname(n):": {
+    "unescaped": "Vorname(n):",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 763,
+        "property": "text"
+      }
+    ]
+  },
+  "weitere Vornamen": {
+    "unescaped": "weitere Vornamen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1017,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Registergericht:": {
+    "unescaped": "Registergericht:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1179,
+        "property": "text"
+      }
+    ]
+  },
+  "Die Leitweg-ID ist ein Kennzeichen einer elektronischen Rechnung zur eindeutigen Adressierung von &#xf6;ffentlichen Auftraggebern in Deutschland.": {
+    "unescaped": "Die Leitweg-ID ist ein Kennzeichen einer elektronischen Rechnung zur eindeutigen Adressierung von öffentlichen Auftraggebern in Deutschland.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1234,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neues Fax senden": {
+    "unescaped": "neues Fax senden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1747,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\SendFaxDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Adressdaten aus beA &#xfc;bernehmen": {
+    "unescaped": "Adressdaten aus beA übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1849,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "beA-Nachricht senden": {
+    "unescaped": "beA-Nachricht senden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 1871,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Passwort per SMS senden": {
+    "unescaped": "Passwort per SMS senden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.form",
+        "line": 3075,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "&lt;html&gt;Akte xxx/yy&lt;br/&gt;Rubrum&lt;br/&gt;Zeichen&lt;/html&gt;": {
+    "unescaped": "<html>Akte xxx/yy<br/>Rubrum<br/>Zeichen</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\CaseForContactEntryPanel.form",
+        "line": 63,
+        "property": "text"
+      }
+    ]
+  },
+  "&#xf6;ffnen": {
+    "unescaped": "öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickAddressSearchPanel.form",
+        "line": 16,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 128,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 16,
+        "property": "text"
+      }
+    ]
+  },
+  "gew&#xe4;hlte Adresse &#xf6;ffnen": {
+    "unescaped": "gewählte Adresse öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickAddressSearchPanel.form",
+        "line": 17,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Liste nach LibreOffice exportieren": {
+    "unescaped": "Liste nach LibreOffice exportieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickAddressSearchPanel.form",
+        "line": 196,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.form",
+        "line": 476,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.form",
+        "line": 142,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsOverviewPanel.form",
+        "line": 142,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 277,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neuer Kontakt (Schnellerfassung)": {
+    "unescaped": "neuer Kontakt (Schnellerfassung)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.form",
+        "line": 10,
+        "property": "title"
+      }
+    ]
+  },
+  "Titel:": {
+    "unescaped": "Titel:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.form",
+        "line": 295,
+        "property": "text"
+      }
+    ]
+  },
+  "neue Akte aus diesem Scan anlegen": {
+    "unescaped": "neue Akte aus diesem Scan anlegen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\CreateNewCaseFromScanPanel.form",
+        "line": 67,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Das Dokument ist zu gro&#xdf; f&#xfc;r eine Vorschau.": {
+    "unescaped": "Das Dokument ist zu groß für eine Vorschau.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\DocumentPreviewTooLarge.form",
+        "line": 52,
+        "property": "text"
+      }
+    ]
+  },
+  "Einstellungen anpassen": {
+    "unescaped": "Einstellungen anpassen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\DocumentPreviewTooLarge.form",
+        "line": 60,
+        "property": "text"
+      }
+    ]
+  },
+  "Vorschau laden": {
+    "unescaped": "Vorschau laden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\DocumentPreviewTooLarge.form",
+        "line": 71,
+        "property": "text"
+      }
+    ]
+  },
+  "Scan zur Akte speichern": {
+    "unescaped": "Scan zur Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\GenericScanActionsPanel.form",
+        "line": 72,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\GenericScanActionsPanel.form",
+        "line": 83,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\SaveScanToCasePanel.form",
+        "line": 88,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Unterordner erstellen": {
+    "unescaped": "Unterordner erstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\NewDocumentNameDialog.form",
+        "line": 25,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\SearchAndAssignDialog.form",
+        "line": 25,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\FolderListCell.form",
+        "line": 37,
+        "property": "text"
+      }
+    ]
+  },
+  "Akte suchen": {
+    "unescaped": "Akte suchen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\NewDocumentNameDialog.form",
+        "line": 36,
+        "property": "title"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\SearchAndAssignDialog.form",
+        "line": 36,
+        "property": "title"
+      }
+    ]
+  },
+  "neuer Dokumentname:": {
+    "unescaped": "neuer Dokumentname:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\NewDocumentNameDialog.form",
+        "line": 144,
+        "property": "text"
+      }
+    ]
+  },
+  "PDF-Dokument aufteilen": {
+    "unescaped": "PDF-Dokument aufteilen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\PDFSplitDialog.form",
+        "line": 10,
+        "property": "title"
+      }
+    ]
+  },
+  "In Teildokumente mit maximal ... Seiten aufteilen.": {
+    "unescaped": "In Teildokumente mit maximal ... Seiten aufteilen.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\PDFSplitDialog.form",
+        "line": 210,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokument lokal speichern": {
+    "unescaped": "Dokument lokal speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\SaveDocumentsLocallyDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Akte suchen und zuordnen": {
+    "unescaped": "Akte suchen und zuordnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.form",
+        "line": 49,
+        "property": "text"
+      }
+    ]
+  },
+  "lokalen Eingangsordner ausw&#xe4;hlen": {
+    "unescaped": "lokalen Eingangsordner auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.form",
+        "line": 66,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "deaktiviert den lokalen Eingangsordner": {
+    "unescaped": "deaktiviert den lokalen Eingangsordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.form",
+        "line": 75,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Ordner auf diesem Ger&#xe4;t &#xfc;berwachen": {
+    "unescaped": "Ordner auf diesem Gerät überwachen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.form",
+        "line": 224,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokument nach &#xdc;bernahme in eine Akte aus dem Scaneingang l&#xf6;schen": {
+    "unescaped": "Dokument nach Übernahme in eine Akte aus dem Scaneingang löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.form",
+        "line": 249,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Notizdatei.html": {
+    "unescaped": "Notizdatei.html",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\HtmlPanel.form",
+        "line": 63,
+        "property": "text"
+      }
+    ]
+  },
+  "alle Seiten des Dokuments um 90&#xb0; nach rechts drehen": {
+    "unescaped": "alle Seiten des Dokuments um 90° nach rechts drehen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.form",
+        "line": 160,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "alle Seiten des Dokuments um 90&#xb0; nach links drehen": {
+    "unescaped": "alle Seiten des Dokuments um 90° nach links drehen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.form",
+        "line": 171,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "E-Rechnung (HTML)": {
+    "unescaped": "E-Rechnung (HTML)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.form",
+        "line": 262,
+        "property": "tabTitle"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\XRechnungPanel.form",
+        "line": 45,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "E-Rechnung (XML)": {
+    "unescaped": "E-Rechnung (XML)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.form",
+        "line": 297,
+        "property": "tabTitle"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\XRechnungPanel.form",
+        "line": 60,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Ausgew&#xe4;hlte Seite entfernen": {
+    "unescaped": "Ausgewählte Seite entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfPageImage.form",
+        "line": 94,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Memo durch weitere Spracheingabe weiterf&#xfc;hren": {
+    "unescaped": "Memo durch weitere Spracheingabe weiterführen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\SoundplayerPanel.form",
+        "line": 218,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "XJustiz-Viewer &#xf6;ffnen": {
+    "unescaped": "XJustiz-Viewer öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\XjustizPanel.form",
+        "line": 65,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Bearbeiten der Platzhalterwerte durch Doppelklick m&#xf6;glich": {
+    "unescaped": "Bearbeiten der Platzhalterwerte durch Doppelklick möglich",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressDocumentFromTemplateDialog.form",
+        "line": 215,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.form",
+        "line": 416,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Erstellen und &#xd6;ffnen": {
+    "unescaped": "Erstellen und Öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressDocumentFromTemplateDialog.form",
+        "line": 465,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.form",
+        "line": 732,
+        "property": "text"
+      }
+    ]
+  },
+  "Notiz:": {
+    "unescaped": "Notiz:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddNoteFrame.form",
+        "line": 155,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenetikett:": {
+    "unescaped": "Aktenetikett:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddNoteFrame.form",
+        "line": 419,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumentetikett:": {
+    "unescaped": "Dokumentetikett:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddNoteFrame.form",
+        "line": 439,
+        "property": "text"
+      }
+    ]
+  },
+  "Auswahl l&#xf6;schen": {
+    "unescaped": "Auswahl löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddVoiceMemoDialog.form",
+        "line": 168,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Aufnahme speichern": {
+    "unescaped": "Aufnahme speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddVoiceMemoDialog.form",
+        "line": 193,
+        "property": "text"
+      }
+    ]
+  },
+  "Akte archivieren - Pr&#xfc;fergebnis": {
+    "unescaped": "Akte archivieren - Prüfergebnis",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Akte archivieren": {
+    "unescaped": "Akte archivieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.form",
+        "line": 190,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenkonto: Fremdgeld nicht ausgeglichen": {
+    "unescaped": "Aktenkonto: Fremdgeld nicht ausgeglichen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.form",
+        "line": 253,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenkonto: Auslagen nicht ausgeglichen": {
+    "unescaped": "Aktenkonto: Auslagen nicht ausgeglichen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.form",
+        "line": 258,
+        "property": "text"
+      }
+    ]
+  },
+  "Nachrichten: unerledigte Erw&#xe4;hnungen": {
+    "unescaped": "Nachrichten: unerledigte Erwähnungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.form",
+        "line": 271,
+        "property": "text"
+      }
+    ]
+  },
+  "nicht abgeschlossene Zahlungen": {
+    "unescaped": "nicht abgeschlossene Zahlungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.form",
+        "line": 284,
+        "property": "text"
+      }
+    ]
+  },
+  "in andere Akte verschieben": {
+    "unescaped": "in andere Akte verschieben",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 60,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 212,
+        "property": "text"
+      }
+    ]
+  },
+  "bearbeiten": {
+    "unescaped": "bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 71,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\TemplatesTreePanel.form",
+        "line": 57,
+        "property": "text"
+      }
+    ]
+  },
+  "als PDF zur Akte speichern": {
+    "unescaped": "als PDF zur Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 101,
+        "property": "text"
+      }
+    ]
+  },
+  "&#xf6;ffnen mit...": {
+    "unescaped": "öffnen mit...",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 139,
+        "property": "text"
+      }
+    ]
+  },
+  "lokal speichern": {
+    "unescaped": "lokal speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 171,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\BugReportDialog.form",
+        "line": 331,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "in andere Akte kopieren": {
+    "unescaped": "in andere Akte kopieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 201,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.form",
+        "line": 246,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Favoritendokument an/aus": {
+    "unescaped": "Favoritendokument an/aus",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 275,
+        "property": "text"
+      }
+    ]
+  },
+  "Nachricht senden": {
+    "unescaped": "Nachricht senden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 286,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\SendInstantMessageDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "f&#xfc;hrt eine Texterkennung f&#xfc;r die selektieren Dokumente durch": {
+    "unescaped": "führt eine Texterkennung für die selektieren Dokumente durch",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 319,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "alle selektierten Dokumente in ein PDF exportieren": {
+    "unescaped": "alle selektierten Dokumente in ein PDF exportieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 331,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 378,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "als PDF lokal speichern": {
+    "unescaped": "als PDF lokal speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 354,
+        "property": "text"
+      }
+    ]
+  },
+  "verschl&#xfc;sseltes PDF exportieren": {
+    "unescaped": "verschlüsseltes PDF exportieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 388,
+        "property": "text"
+      }
+    ]
+  },
+  "im externen Mailprogramm &#xf6;ffnen": {
+    "unescaped": "im externen Mailprogramm öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 459,
+        "property": "text"
+      }
+    ]
+  },
+  "drucken (Standarddrucker)": {
+    "unescaped": "drucken (Standarddrucker)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 507,
+        "property": "text"
+      }
+    ]
+  },
+  "als Vorlage speichern": {
+    "unescaped": "als Vorlage speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 556,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenzeichen:": {
+    "unescaped": "Aktenzeichen:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 860,
+        "property": "text"
+      }
+    ]
+  },
+  "archivierte Akte": {
+    "unescaped": "archivierte Akte",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 914,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenzeichen in Zwischenablage kopieren": {
+    "unescaped": "Aktenzeichen in Zwischenablage kopieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 1181,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Aktenzeichen bearbeiten (nur f&#xfc;r Administratoren)": {
+    "unescaped": "Aktenzeichen bearbeiten (nur für Administratoren)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 1193,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neues Dokument aus Vorlage erstellen": {
+    "unescaped": "neues Dokument aus Vorlage erstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 1583,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "erstellte Rechnungen und Belege": {
+    "unescaped": "erstellte Rechnungen und Belege",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 1952,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenkonto": {
+    "unescaped": "Aktenkonto",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 1961,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Buchung bearbeiten": {
+    "unescaped": "Buchung bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2131,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Aktenkonto in Tabellenkalkulation exportieren": {
+    "unescaped": "Aktenkonto in Tabellenkalkulation exportieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2477,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neue Zahlung aus Buchung im Aktenkonto": {
+    "unescaped": "neue Zahlung aus Buchung im Aktenkonto",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2499,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zahlungen": {
+    "unescaped": "Zahlungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2511,
+        "property": "tabTitle"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1303,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Zahlungen:": {
+    "unescaped": "Zahlungen:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2560,
+        "property": "text"
+      }
+    ]
+  },
+  "ausgehende Zahlungen": {
+    "unescaped": "ausgehende Zahlungen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2604,
+        "property": "text"
+      }
+    ]
+  },
+  "ausgehende Zahlungen vorbereiten und &#xfc;ber &quot;Finanzen&quot; - &quot;Zahlungen verwalten&quot; eine Stapel&#xfc;berweisung vorbereiten": {
+    "unescaped": "ausgehende Zahlungen vorbereiten und über \"Finanzen\" - \"Zahlungen verwalten\" eine Stapelüberweisung vorbereiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2605,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neue Berechnung": {
+    "unescaped": "neue Berechnung",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 2719,
+        "property": "text"
+      }
+    ]
+  },
+  "Der hier eingegebene Wert wird den Vorlagenplatzhaltern in diesem Blatt vorangestellt. In der Regel kann die Voreinstellung ohne &#xc4;nderung &#xfc;bernommen werden.": {
+    "unescaped": "Der hier eingegebene Wert wird den Vorlagenplatzhaltern in diesem Blatt vorangestellt. In der Regel kann die Voreinstellung ohne Änderung übernommen werden.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3181,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3192,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "weitere Falldatenbl&#xe4;tter herunterladen": {
+    "unescaped": "weitere Falldatenblätter herunterladen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3207,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Historie im Browser &#xf6;ffnen": {
+    "unescaped": "Historie im Browser öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3457,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Historie als HTML-Dokument zur Akte speichern": {
+    "unescaped": "Historie als HTML-Dokument zur Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3468,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Deckblatt f&#xfc;r Handakte drucken": {
+    "unescaped": "Deckblatt für Handakte drucken",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3587,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "gesamte Akte als HTML exportieren": {
+    "unescaped": "gesamte Akte als HTML exportieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3613,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neue Notiz hinzuf&#xfc;gen": {
+    "unescaped": "neue Notiz hinzufügen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3637,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokument-Favoriten anzeigen": {
+    "unescaped": "Dokument-Favoriten anzeigen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3648,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Assistent Ingo - Chat &#xf6;ffnen": {
+    "unescaped": "Assistent Ingo - Chat öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.form",
+        "line": 3695,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Akte bearbeiten": {
+    "unescaped": "Akte bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.form",
+        "line": 16,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.form",
+        "line": 16,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsOverviewPanel.form",
+        "line": 16,
+        "property": "text"
+      }
+    ]
+  },
+  "gew&#xe4;hlte Akte bearbeiten": {
+    "unescaped": "gewählte Akte bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.form",
+        "line": 17,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.form",
+        "line": 17,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsOverviewPanel.form",
+        "line": 17,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zum Suchen &lt;Enter&gt; dr&#xfc;cken": {
+    "unescaped": "Zum Suchen <Enter> drücken",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.form",
+        "line": 378,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Wiedervorlagen, Fristen und Termine suchen": {
+    "unescaped": "Wiedervorlagen, Fristen und Termine suchen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.form",
+        "line": 424,
+        "property": "text"
+      }
+    ]
+  },
+  "Akten ohne offene Wiedervorlagen und Fristen": {
+    "unescaped": "Akten ohne offene Wiedervorlagen und Fristen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.form",
+        "line": 93,
+        "property": "text"
+      }
+    ]
+  },
+  "ohne Wiedervorlage / Frist / Termin": {
+    "unescaped": "ohne Wiedervorlage / Frist / Termin",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.form",
+        "line": 175,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "ohne Wiedervorlage": {
+    "unescaped": "ohne Wiedervorlage",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.form",
+        "line": 207,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "ohne Frist": {
+    "unescaped": "ohne Frist",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.form",
+        "line": 239,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Dateien zur Akte speichern": {
+    "unescaped": "Dateien zur Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 32,
+        "property": "title"
+      }
+    ]
+  },
+  "f&#xfc;r alle zum Speichern markierten Dateien &#xfc;bernehmen": {
+    "unescaped": "für alle zum Speichern markierten Dateien übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 213,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 234,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 401,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokumente &gt; Unterordner": {
+    "unescaped": "Dokumente > Unterordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 226,
+        "property": "text"
+      }
+    ]
+  },
+  "00123/22 eine Aktenbezeichnung": {
+    "unescaped": "00123/22 eine Aktenbezeichnung",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 271,
+        "property": "text"
+      }
+    ]
+  },
+  "aktentag": {
+    "unescaped": "aktentag",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 281,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenetikett ausw&#xe4;hlen": {
+    "unescaped": "Aktenetikett auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 289,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokumentetikett ausw&#xe4;hlen": {
+    "unescaped": "Dokumentetikett auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 300,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.form",
+        "line": 189,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Ordner ausw&#xe4;hlen": {
+    "unescaped": "Ordner auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 311,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.form",
+        "line": 200,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Auswahl nach Dateitypen:": {
+    "unescaped": "Auswahl nach Dateitypen:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.form",
+        "line": 377,
+        "property": "text"
+      }
+    ]
+  },
+  "Speichern aktivieren / deaktivieren": {
+    "unescaped": "Speichern aktivieren / deaktivieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.form",
+        "line": 122,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokumente &gt; Finanzen": {
+    "unescaped": "Dokumente > Finanzen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.form",
+        "line": 166,
+        "property": "text"
+      }
+    ]
+  },
+  "Buchung im Aktenkonto": {
+    "unescaped": "Buchung im Aktenkonto",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseAccountEntryDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Akten f&#xfc;r den Export ausw&#xe4;hlen": {
+    "unescaped": "Akten für den Export auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseExportDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Export von Akten, f&#xfc;r die Synchronisation mit der App aktiviert sind": {
+    "unescaped": "Export von Akten, für die Synchronisation mit der App aktiviert sind",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseExportDialog.form",
+        "line": 85,
+        "property": "text"
+      }
+    ]
+  },
+  "einsehen / bearbeiten": {
+    "unescaped": "einsehen / bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ClaimLedgerEntryPanel.form",
+        "line": 50,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.form",
+        "line": 159,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentEntryPanel.form",
+        "line": 115,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentMgmtEntryPanel.form",
+        "line": 130,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetEntryPanel.form",
+        "line": 66,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Pr&#xfc;fung auf m&#xf6;gliche Terminkonflikte": {
+    "unescaped": "Prüfung auf mögliche Terminkonflikte",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ConflictingEventsDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "unver&#xe4;ndert speichern": {
+    "unescaped": "unverändert speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ConflictingEventsDialog.form",
+        "line": 76,
+        "property": "text"
+      }
+    ]
+  },
+  "In folgenden Akten ist die Adresse in anderer Rolle gef&#xfc;hrt:": {
+    "unescaped": "In folgenden Akten ist die Adresse in anderer Rolle geführt:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ConflictOfInterestDialog.form",
+        "line": 68,
+        "property": "text"
+      }
+    ]
+  },
+  "Ereignis bearbeiten oder duplizieren": {
+    "unescaped": "Ereignis bearbeiten oder duplizieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\EditOrDuplicateEventDialog.form",
+        "line": 23,
+        "property": "title"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Alle ausgew&#xe4;hlten Dokumente werden in das PDF-Format konvertiert. Sie k&#xf6;nnen im n&#xe4;chsten Schritt die Reihenfolge der Dokumente festlegen.&lt;/html&gt;": {
+    "unescaped": "<html><p>Alle ausgewählten Dokumente werden in das PDF-Format konvertiert. Sie können im nächsten Schritt die Reihenfolge der Dokumente festlegen.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfConversionStep.form",
+        "line": 59,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfConversionStep.form",
+        "line": 53,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumente zusammenf&#xfc;hren": {
+    "unescaped": "Dokumente zusammenführen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.form",
+        "line": 5,
+        "property": "name"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfMergeStep.form",
+        "line": 5,
+        "property": "name"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Die Dokumente werden zusammengef&#xfc;hrt und k&#xf6;nnen kontrolliert werden.&lt;/html&gt;": {
+    "unescaped": "<html><p>Die Dokumente werden zusammengeführt und können kontrolliert werden.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.form",
+        "line": 73,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfMergeStep.form",
+        "line": 59,
+        "property": "text"
+      }
+    ]
+  },
+  "zur Akte": {
+    "unescaped": "zur Akte",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.form",
+        "line": 99,
+        "property": "text"
+      }
+    ]
+  },
+  "speichern:": {
+    "unescaped": "speichern:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.form",
+        "line": 110,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumente sortieren": {
+    "unescaped": "Dokumente sortieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.form",
+        "line": 5,
+        "property": "name"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.form",
+        "line": 5,
+        "property": "name"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Bringen Sie die Dokumente in die gew&#xfc;nschte Reihenfolge. Sie werden im n&#xe4;chsten Schritt zu einem Gesamtdokument zusammengef&#xfc;hrt.&lt;/html&gt;": {
+    "unescaped": "<html><p>Bringen Sie die Dokumente in die gewünschte Reihenfolge. Sie werden im nächsten Schritt zu einem Gesamtdokument zusammengeführt.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.form",
+        "line": 81,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.form",
+        "line": 75,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumente in der &#xdc;bersicht per Drag &amp; Drop sortieren": {
+    "unescaped": "Dokumente in der Übersicht per Drag & Drop sortieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.form",
+        "line": 169,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.form",
+        "line": 147,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Reihenfolge der Dokumente umkehren": {
+    "unescaped": "Reihenfolge der Dokumente umkehren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.form",
+        "line": 182,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.form",
+        "line": 159,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Typ oder Nummernkreis bearbeiten": {
+    "unescaped": "Typ oder Nummernkreis bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 548,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Anhand des Rechnungssenders bestimmen sich u.a. Absender und Zahlungsinformationen &#xa;f&#xfc;r die elektronische Rechnung. &#xa;Bitte sicherstellen, dass diese Informationen aktuell sind (Administration - Nutzerverwaltung).": {
+    "unescaped": "Anhand des Rechnungssenders bestimmen sich u.a. Absender und Zahlungsinformationen \nfür die elektronische Rechnung. \nBitte sicherstellen, dass diese Informationen aktuell sind (Administration - Nutzerverwaltung).",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 691,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zahlung:": {
+    "unescaped": "Zahlung:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 714,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentDialog.form",
+        "line": 237,
+        "property": "text"
+      }
+    ]
+  },
+  "Positionen aus Berechnungsplugin &#xfc;bernehmen": {
+    "unescaped": "Positionen aus Berechnungsplugin übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 875,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Positionsvorlage &#xfc;bernehmen": {
+    "unescaped": "Positionsvorlage übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 930,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Positionen aus Zeiterfassungsprojekten dieser Akte &#xfc;bernehmen": {
+    "unescaped": "Positionen aus Zeiterfassungsprojekten dieser Akte übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 941,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokument erzeugen": {
+    "unescaped": "Dokument erzeugen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1151,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokument zum Beleg laden": {
+    "unescaped": "Dokument zum Beleg laden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1179,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokument anzeigen": {
+    "unescaped": "Dokument anzeigen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1190,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "zum Dokument wechseln": {
+    "unescaped": "zum Dokument wechseln",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1201,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Rechnungsdokument": {
+    "unescaped": "Rechnungsdokument",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1214,
+        "property": "text"
+      }
+    ]
+  },
+  "rechnung.pdf": {
+    "unescaped": "rechnung.pdf",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1224,
+        "property": "text"
+      }
+    ]
+  },
+  "Leistungsnachweis in Dokument &#xfc;bertragen - Platzhalter {{ZE_TABELLE}} in einer 1x1-Tabelle einer Vorlage": {
+    "unescaped": "Leistungsnachweis in Dokument übertragen - Platzhalter {{ZE_TABELLE}} in einer 1x1-Tabelle einer Vorlage",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1289,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zahlungseingang:": {
+    "unescaped": "Zahlungseingang:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1376,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.form",
+        "line": 281,
+        "property": "text"
+      }
+    ]
+  },
+  "Rechnungssumme:": {
+    "unescaped": "Rechnungssumme:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.form",
+        "line": 1381,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;Rechnungsadresse&gt;": {
+    "unescaped": "<Rechnungsadresse>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.form",
+        "line": 206,
+        "property": "text"
+      }
+    ]
+  },
+  "in dieser Akte duplizieren": {
+    "unescaped": "in dieser Akte duplizieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.form",
+        "line": 235,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentEntryPanel.form",
+        "line": 191,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neue ausgehende Zahlung aus Beleg": {
+    "unescaped": "neue ausgehende Zahlung aus Beleg",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.form",
+        "line": 347,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Nachricht verfassen": {
+    "unescaped": "Nachricht verfassen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.form",
+        "line": 27,
+        "property": "text"
+      }
+    ]
+  },
+  "Karte zur Adresse im Browser &#xf6;ffnen": {
+    "unescaped": "Karte zur Adresse im Browser öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.form",
+        "line": 125,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.form",
+        "line": 140,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Route zur Adresse im Browser &#xf6;ffnen": {
+    "unescaped": "Route zur Adresse im Browser öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.form",
+        "line": 165,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.form",
+        "line": 177,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Akte &#xf6;ffnen": {
+    "unescaped": "Akte öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentMgmtEntryPanel.form",
+        "line": 249,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Fehler!": {
+    "unescaped": "Fehler!",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentMgmtEntryPanel.form",
+        "line": 275,
+        "property": "text"
+      }
+    ]
+  },
+  "Zahlungsverteilung manuell anpassen": {
+    "unescaped": "Zahlungsverteilung manuell anpassen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitEditDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Passen Sie die Verteilung der Zahlung auf die Komponenten an:": {
+    "unescaped": "Passen Sie die Verteilung der Zahlung auf die Komponenten an:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitEditDialog.form",
+        "line": 98,
+        "property": "text"
+      }
+    ]
+  },
+  "Zahlungsverteilung - Vorschau": {
+    "unescaped": "Zahlungsverteilung - Vorschau",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitPreviewDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Gesamtzahlung: 0,00 &#x20ac; vom 01.01.2025": {
+    "unescaped": "Gesamtzahlung: 0,00 € vom 01.01.2025",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitPreviewDialog.form",
+        "line": 99,
+        "property": "text"
+      }
+    ]
+  },
+  "gew&#xe4;hlte Akten l&#xf6;schen": {
+    "unescaped": "gewählte Akten löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 17,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 53,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "gew&#xe4;hlte Akten duplizieren": {
+    "unescaped": "gewählte Akten duplizieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 29,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "gew&#xe4;hlte Akten und deren Falldaten duplizieren": {
+    "unescaped": "gewählte Akten und deren Falldaten duplizieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 41,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "gew&#xe4;hlte Akten in der App bereitstellen": {
+    "unescaped": "gewählte Akten in der App bereitstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 65,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "aus der App entfernen": {
+    "unescaped": "aus der App entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 76,
+        "property": "text"
+      }
+    ]
+  },
+  "gew&#xe4;hlte Akten aus der App entfernen": {
+    "unescaped": "gewählte Akten aus der App entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 77,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Gruppen und Berechtigungen bearbeiten": {
+    "unescaped": "Gruppen und Berechtigungen bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 88,
+        "property": "text"
+      }
+    ]
+  },
+  "nach Akten-Etiketten filtern": {
+    "unescaped": "nach Akten-Etiketten filtern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 183,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "nach Dokument-Etiketten filtern": {
+    "unescaped": "nach Dokument-Etiketten filtern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.form",
+        "line": 290,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zahlungen aus Aktenkontobuchung erstellen": {
+    "unescaped": "Zahlungen aus Aktenkontobuchung erstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\SplitPaymentDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Zahlung(en)": {
+    "unescaped": "Zahlung(en)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\SplitPaymentDialog.form",
+        "line": 140,
+        "property": "text"
+      }
+    ]
+  },
+  "in Rechnung &#xfc;bernehmen": {
+    "unescaped": "in Rechnung übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetBillingDialog.form",
+        "line": 113,
+        "property": "text"
+      }
+    ]
+  },
+  "keine ausw&#xe4;hlen": {
+    "unescaped": "keine auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetBillingDialog.form",
+        "line": 163,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Optional k&#xf6;nnen f&#xfc;r das Projekt die zu nutzenden Positionsvorlagen eingeschr&#xe4;nkt werden, um bspw. nur bestimmte Stundens&#xe4;tze zuzulassen.": {
+    "unescaped": "Optional können für das Projekt die zu nutzenden Positionsvorlagen eingeschränkt werden, um bspw. nur bestimmte Stundensätze zuzulassen.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetDialog.form",
+        "line": 469,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Name und Beschreibung speichern": {
+    "unescaped": "Name und Beschreibung speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetLogEntryPanel.form",
+        "line": 220,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "bestehenden Eintrag bearbeiten": {
+    "unescaped": "bestehenden Eintrag bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetLogEntryPanel.form",
+        "line": 256,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Kontoauszug importieren und buchen": {
+    "unescaped": "Kontoauszug importieren und buchen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.form",
+        "line": 22,
+        "property": "title"
+      }
+    ]
+  },
+  "Rechnung als bezahlt markieren": {
+    "unescaped": "Rechnung als bezahlt markieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.form",
+        "line": 287,
+        "property": "text"
+      }
+    ]
+  },
+  "Buchung im Aktenkonto erstellen": {
+    "unescaped": "Buchung im Aktenkonto erstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.form",
+        "line": 297,
+        "property": "text"
+      }
+    ]
+  },
+  "Aktenetiketten:": {
+    "unescaped": "Aktenetiketten:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.form",
+        "line": 407,
+        "property": "text"
+      }
+    ]
+  },
+  "Posteingang, Rechnung offen": {
+    "unescaped": "Posteingang, Rechnung offen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.form",
+        "line": 495,
+        "property": "text"
+      }
+    ]
+  },
+  "Zahlung als ausgef&#xfc;hrt markieren": {
+    "unescaped": "Zahlung als ausgeführt markieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.form",
+        "line": 583,
+        "property": "text"
+      }
+    ]
+  },
+  "Zahlungen f&#xfc;r Import im Banking bereitstellen": {
+    "unescaped": "Zahlungen für Import im Banking bereitstellen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ManagePaymentsFrame.form",
+        "line": 84,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Zahlungen vor Export pr&#xfc;fen": {
+    "unescaped": "Zahlungen vor Export prüfen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ManagePaymentsFrame.form",
+        "line": 132,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Daten exportieren": {
+    "unescaped": "Daten exportieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\reporting\\DynamicTablePanel.form",
+        "line": 53,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Report ist nur mit erweiterten Rechten ausf&#xfc;hrbar": {
+    "unescaped": "Report ist nur mit erweiterten Rechten ausführbar",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\reporting\\ReportEntryPanel.form",
+        "line": 127,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Treffertitel": {
+    "unescaped": "Treffertitel",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\research\\urteilegesetze\\UgHitPanel.form",
+        "line": 70,
+        "property": "text"
+      }
+    ]
+  },
+  "Dokumentensuche": {
+    "unescaped": "Dokumentensuche",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.form",
+        "line": 104,
+        "property": "text"
+      }
+    ]
+  },
+  "maximale Anzahl Dokumente im Ergebnis": {
+    "unescaped": "maximale Anzahl Dokumente im Ergebnis",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.form",
+        "line": 149,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;b&gt;Volltextsuche&lt;/b&gt; im Dokumentinhalt.&lt;br/&gt;Feld optional &#xfc;ber das Dropdown w&#xe4;hlen&lt;br/&gt;(Dateiname / Aktenname / Aktenzeichen).&lt;br/&gt;Platzhalter &lt;code&gt;*&lt;/code&gt;/&lt;code&gt;?&lt;/code&gt; nur in Feldsuchen.&lt;br/&gt;&lt;i&gt;Klicken f&#xfc;r Details.&lt;/i&gt;&lt;/html&gt;": {
+    "unescaped": "<html><b>Volltextsuche</b> im Dokumentinhalt.<br/>Feld optional über das Dropdown wählen<br/>(Dateiname / Aktenname / Aktenzeichen).<br/>Platzhalter <code>*</code>/<code>?</code> nur in Feldsuchen.<br/><i>Klicken für Details.</i></html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.form",
+        "line": 165,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Aktenname": {
+    "unescaped": "Aktenname",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.form",
+        "line": 174,
+        "property": "ComboBoxItem[2]"
+      }
+    ]
+  },
+  "Dokumentname und Icon": {
+    "unescaped": "Dokumentname und Icon",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\HitPanel.form",
+        "line": 60,
+        "property": "text"
+      }
+    ]
+  },
+  "zur Akte springen (bearbeiten)": {
+    "unescaped": "zur Akte springen (bearbeiten)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\HitPanel.form",
+        "line": 89,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokument verschl&#xfc;sseln": {
+    "unescaped": "Dokument verschlüsseln",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\encryption\\PDFEncryptionDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "neues Passwort generieren": {
+    "unescaped": "neues Passwort generieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\encryption\\PDFEncryptionDialog.form",
+        "line": 144,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dokumentmonitor": {
+    "unescaped": "Dokumentmonitor",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\launcher\\DocumentMonitorDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "Ordner ausblenden": {
+    "unescaped": "Ordner ausblenden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 49,
+        "property": "text"
+      }
+    ]
+  },
+  "Ordner einblenden": {
+    "unescaped": "Ordner einblenden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 60,
+        "property": "text"
+      }
+    ]
+  },
+  "in Akte speichern (Nachricht und Anh&#xe4;nge separat)...": {
+    "unescaped": "in Akte speichern (Nachricht und Anhänge separat)...",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 144,
+        "property": "text"
+      }
+    ]
+  },
+  "in externem Mailprogramm &#xf6;ffnen": {
+    "unescaped": "in externem Mailprogramm öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 155,
+        "property": "text"
+      }
+    ]
+  },
+  "E-Mail nach &#xdc;bernahme in eine Akte aus dem Posteingang l&#xf6;schen": {
+    "unescaped": "E-Mail nach Übernahme in eine Akte aus dem Posteingang löschen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.form",
+        "line": 565,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "E-Mail- und beA- Vorlagen": {
+    "unescaped": "E-Mail- und beA- Vorlagen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailTemplatesPanel.form",
+        "line": 72,
+        "property": "text"
+      }
+    ]
+  },
+  "Anhang entfernen": {
+    "unescaped": "Anhang entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\MailContentUI.form",
+        "line": 48,
+        "property": "text"
+      }
+    ]
+  },
+  "suchen": {
+    "unescaped": "suchen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 16,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 39,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 60,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;als Entwurf im Postfach speichern&lt;br/&gt;(in der Akte wird die Nachricht automatisch als Entwurf gespeichert, bis sie gesendet oder verworfen wird)&lt;/html&gt;": {
+    "unescaped": "<html>als Entwurf im Postfach speichern<br/>(in der Akte wird die Nachricht automatisch als Entwurf gespeichert, bis sie gesendet oder verworfen wird)</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 422,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Vorlagen suchen": {
+    "unescaped": "Vorlagen suchen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.form",
+        "line": 985,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Wiedervorlage erstellen&lt;/html&gt;": {
+    "unescaped": "<html><p>Wiedervorlage erstellen</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\AddCalendarEventStep.form",
+        "line": 78,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Akte, Adresse, Beteiligte und Kalendereintrag werden wie gew&amp;uuml;nscht erstellt - Sie k&amp;ouml;nnen den Status hier kontrollieren und den Assistenten dann schlie&amp;szlig;en.&lt;/html&gt;": {
+    "unescaped": "<html><p>Akte, Adresse, Beteiligte und Kalendereintrag werden wie gew&uuml;nscht erstellt - Sie k&ouml;nnen den Status hier kontrollieren und den Assistenten dann schlie&szlig;en.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\ConfirmationStep.form",
+        "line": 53,
+        "property": "text"
+      }
+    ]
+  },
+  "Beteiligte vervollst&#xe4;ndigen": {
+    "unescaped": "Beteiligte vervollständigen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressDetailsStep.form",
+        "line": 5,
+        "property": "name"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Optionale Erstellung einer Adresse aus dem Text eines Dokuments, z.B. einer Signatur.&lt;br/&gt;Die relevante Textpassage wird so angepasst, dass jedes Attribut auf einer eigenen Zeile steht.&lt;br/&gt;Anschlie&amp;szlig;end die relevanten Zeilen markieren und im rechten Teil des Dialogs eine Zuordnung vornehmen.&lt;br/&gt;Die Daten k&amp;ouml;nnen im n&#xe4;chsten Schritt vervollst&amp;auml;ndigt werden.&lt;/html&gt;": {
+    "unescaped": "<html><p>Optionale Erstellung einer Adresse aus dem Text eines Dokuments, z.B. einer Signatur.<br/>Die relevante Textpassage wird so angepasst, dass jedes Attribut auf einer eigenen Zeile steht.<br/>Anschlie&szlig;end die relevanten Zeilen markieren und im rechten Teil des Dialogs eine Zuordnung vornehmen.<br/>Die Daten k&ouml;nnen im nächsten Schritt vervollst&auml;ndigt werden.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressStep.form",
+        "line": 64,
+        "property": "text"
+      }
+    ]
+  },
+  "Adresse aus Nachricht extrahieren": {
+    "unescaped": "Adresse aus Nachricht extrahieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressStep.form",
+        "line": 129,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Die wichtigsten Kopfdaten zur Aktenerstellung k&amp;ouml;nnen hier direkt eingegeben werden. Nach Erstellung sollte eine Detaillierung (bspw. Berechtigungen) separat erfolgen.&lt;/html&gt;": {
+    "unescaped": "<html><p>Die wichtigsten Kopfdaten zur Aktenerstellung k&ouml;nnen hier direkt eingegeben werden. Nach Erstellung sollte eine Detaillierung (bspw. Berechtigungen) separat erfolgen.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\NewCaseStep.form",
+        "line": 126,
+        "property": "text"
+      }
+    ]
+  },
+  "vollst&#xe4;ndige Nachricht in Akte speichern": {
+    "unescaped": "vollständige Nachricht in Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.form",
+        "line": 105,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Nachricht ohne Anh&#xe4;nge in Akte speichern": {
+    "unescaped": "Nachricht ohne Anhänge in Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.form",
+        "line": 116,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Nachricht und Anh&#xe4;nge werden beide separat in die Akte &#xfc;bernommen": {
+    "unescaped": "Nachricht und Anhänge werden beide separat in die Akte übernommen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.form",
+        "line": 127,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "nur Anh&#xe4;nge in Akte speichern": {
+    "unescaped": "nur Anhänge in Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.form",
+        "line": 138,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Beteiligte ausw&#xe4;hlen": {
+    "unescaped": "Beteiligte auswählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.form",
+        "line": 5,
+        "property": "name"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Beteiligte ausw&#xe4;hlen oder erstellen. Bereits erfasste Beteiligte werden unten aufgelistet und k&#xf6;nnen dort bearbeitet oder entfernt werden.&lt;/p&gt;&lt;/html&gt;": {
+    "unescaped": "<html><p>Beteiligte auswählen oder erstellen. Bereits erfasste Beteiligte werden unten aufgelistet und können dort bearbeitet oder entfernt werden.</p></html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.form",
+        "line": 90,
+        "property": "text"
+      }
+    ]
+  },
+  "Beteiligte:": {
+    "unescaped": "Beteiligte:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.form",
+        "line": 106,
+        "property": "text"
+      }
+    ]
+  },
+  "Beteiligten &#xfc;bernehmen": {
+    "unescaped": "Beteiligten übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.form",
+        "line": 124,
+        "property": "text"
+      }
+    ]
+  },
+  "Weitere Beteiligte aus Dokument extrahieren": {
+    "unescaped": "Weitere Beteiligte aus Dokument extrahieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.form",
+        "line": 161,
+        "property": "text"
+      }
+    ]
+  },
+  "Ausgew&#xe4;hlte Beteiligte:": {
+    "unescaped": "Ausgewählte Beteiligte:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.form",
+        "line": 174,
+        "property": "text"
+      }
+    ]
+  },
+  "aus Serie entfernen": {
+    "unescaped": "aus Serie entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\massmail\\MassMailPanel.form",
+        "line": 16,
+        "property": "text"
+      }
+    ]
+  },
+  "neues Serienschreiben": {
+    "unescaped": "neues Serienschreiben",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\massmail\\MassMailPanel.form",
+        "line": 196,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Nachrichten": {
+    "unescaped": "Nachrichten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.form",
+        "line": 103,
+        "property": "text"
+      }
+    ]
+  },
+  "Anzahl an Tagen, f&#xfc;r welche Nachrichten geladen werden": {
+    "unescaped": "Anzahl an Tagen, für welche Nachrichten geladen werden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.form",
+        "line": 125,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Nachrichten in separatem Fenster &#xf6;ffnen": {
+    "unescaped": "Nachrichten in separatem Fenster öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.form",
+        "line": 341,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "&#xf6;ffentliche Nachrichten anderer Nutzer einsehen (bspw. Vertretungsfall)": {
+    "unescaped": "öffentliche Nachrichten anderer Nutzer einsehen (bspw. Vertretungsfall)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.form",
+        "line": 356,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Vorlagen": {
+    "unescaped": "Vorlagen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\modulebar\\ModuleBar.form",
+        "line": 53,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\TemplatesTreePanel.form",
+        "line": 193,
+        "property": "text"
+      }
+    ]
+  },
+  "zur Akte laden": {
+    "unescaped": "zur Akte laden",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\plugins\\form\\FormFileDownloadDialog.form",
+        "line": 76,
+        "property": "text"
+      }
+    ]
+  },
+  "Falldaten als Dokument zur Akte speichern": {
+    "unescaped": "Falldaten als Dokument zur Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\plugins\\form\\FormInstancePanel.form",
+        "line": 124,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Einstellungen des Falldatenblattes bearbeiten": {
+    "unescaped": "Einstellungen des Falldatenblattes bearbeiten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\plugins\\form\\FormPluginEntryPanel.form",
+        "line": 183,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Dateiname ohne Verzeichnis und Erweiterung:": {
+    "unescaped": "Dateiname ohne Verzeichnis und Erweiterung:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\NewTemplateDialog.form",
+        "line": 75,
+        "property": "text"
+      }
+    ]
+  },
+  "Kopie von existierender Vorlage:": {
+    "unescaped": "Kopie von existierender Vorlage:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\NewTemplateDialog.form",
+        "line": 93,
+        "property": "text"
+      }
+    ]
+  },
+  "Vorlagenordner w&#xe4;hlen": {
+    "unescaped": "Vorlagenordner wählen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\SelectTemplateFolderDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  },
+  "&#xfc;bermittelt das Dokument f&#xfc;r eine Layoutpr&#xfc;fung an die E-POST-Schnittstelle": {
+    "unescaped": "übermittelt das Dokument für eine Layoutprüfung an die E-POST-Schnittstelle",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\TemplatesTreePanel.form",
+        "line": 102,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Fehlerprotokoll (Server)": {
+    "unescaped": "Fehlerprotokoll (Server)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\BugReportDialog.form",
+        "line": 115,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "Fehlerprotokoll (Client)": {
+    "unescaped": "Fehlerprotokoll (Client)",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\BugReportDialog.form",
+        "line": 208,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "neuer Dateiname:": {
+    "unescaped": "neuer Dateiname:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\NewFilenameOptionPanel.form",
+        "line": 80,
+        "property": "text"
+      }
+    ]
+  },
+  "aus der Akte": {
+    "unescaped": "aus der Akte",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\SelectAttachmentDialog.form",
+        "line": 86,
+        "property": "tabTitle"
+      }
+    ]
+  },
+  "&#xd6;ffnen": {
+    "unescaped": "Öffnen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\SelectAttachmentDialog.form",
+        "line": 169,
+        "property": "text"
+      }
+    ]
+  },
+  "Anmerkungen entfernen": {
+    "unescaped": "Anmerkungen entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfAnonymizerDialog.form",
+        "line": 228,
+        "property": "text"
+      }
+    ]
+  },
+  "Autor, Titel, Betreff, Datumsangaben etc.": {
+    "unescaped": "Autor, Titel, Betreff, Datumsangaben etc.",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfAnonymizerDialog.form",
+        "line": 240,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "zur Akte speichern": {
+    "unescaped": "zur Akte speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfAnonymizerDialog.form",
+        "line": 336,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfPageReorderDialog.form",
+        "line": 242,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfStamperDialog.form",
+        "line": 372,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Das Dokument wird zwecks Versand an die E-POST-Schnittstelle &#xfc;bertragen. Der Status ist &#xfc;ber &amp;quot;Brief / Fax&amp;quot; in der Hauptnavigation nachvollziehbar.&lt;/html&gt;": {
+    "unescaped": "<html><p>Das Dokument wird zwecks Versand an die E-POST-Schnittstelle übertragen. Der Status ist über &quot;Brief / Fax&quot; in der Hauptnavigation nachvollziehbar.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterSendStatus.form",
+        "line": 56,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterSendStep.form",
+        "line": 168,
+        "property": "text"
+      }
+    ]
+  },
+  "&lt;html&gt;&lt;p&gt;Das Dokument wird an die E-POST-Schnittstelle &#xfc;bertragen, auf Layoutfehler gepr&#xfc;ft und das Ergebnis hier dargestellt. Rot markierte Bereiche kennzeichnen Verletzungen des geforderten Layout.&lt;br/&gt; Eine Zustellung des Ergebnisses per E-Mails ist optional m&#xf6;glich.&lt;/html&gt;": {
+    "unescaped": "<html><p>Das Dokument wird an die E-POST-Schnittstelle übertragen, auf Layoutfehler geprüft und das Ergebnis hier dargestellt. Rot markierte Bereiche kennzeichnen Verletzungen des geforderten Layout.<br/> Eine Zustellung des Ergebnisses per E-Mails ist optional möglich.</html>",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterValidationStep.form",
+        "line": 104,
+        "property": "text"
+      }
+    ]
+  },
+  "PDF Datei entfernen": {
+    "unescaped": "PDF Datei entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfPanel.form",
+        "line": 162,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "2. Passwort setzen / zur&#xfc;cksetzen": {
+    "unescaped": "2. Passwort setzen / zurücksetzen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.form",
+        "line": 121,
+        "property": "text"
+      }
+    ]
+  },
+  "neues Passwort:": {
+    "unescaped": "neues Passwort:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.form",
+        "line": 131,
+        "property": "text"
+      }
+    ]
+  },
+  "gew&#xfc;nschtes neues Passwort": {
+    "unescaped": "gewünschtes neues Passwort",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.form",
+        "line": 136,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "3. Passwort setzen und in die Einstellungen &#xfc;bernehmen": {
+    "unescaped": "3. Passwort setzen und in die Einstellungen übernehmen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.form",
+        "line": 149,
+        "property": "text"
+      }
+    ]
+  },
+  "Akte:": {
+    "unescaped": "Akte:",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\MailingStatusPanel.form",
+        "line": 258,
+        "property": "text"
+      }
+    ]
+  },
+  "Bericht speichern": {
+    "unescaped": "Bericht speichern",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\MailingStatusPanel.form",
+        "line": 302,
+        "property": "text"
+      }
+    ]
+  },
+  "Textnachrichten / SMS": {
+    "unescaped": "Textnachrichten / SMS",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\PlaceCallDialog.form",
+        "line": 189,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\SendFaxDialog.form",
+        "line": 205,
+        "property": "text"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\SendSmsDialog.form",
+        "line": 222,
+        "property": "text"
+      }
+    ]
+  },
+  "Beteiligter": {
+    "unescaped": "Beteiligter",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\PartyPanelRenderer.form",
+        "line": 50,
+        "property": "text"
+      }
+    ]
+  },
+  "Zeichen des Beteiligten": {
+    "unescaped": "Zeichen des Beteiligten",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\PartyPanelRenderer.form",
+        "line": 61,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Beteiligten entfernen": {
+    "unescaped": "Beteiligten entfernen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\PartyPanelRenderer.form",
+        "line": 69,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Weiter &gt;": {
+    "unescaped": "Weiter >",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\WizardMainPanel.form",
+        "line": 155,
+        "property": "text"
+      }
+    ]
+  },
+  "Fertig": {
+    "unescaped": "Fertig",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\WizardMainPanel.form",
+        "line": 171,
+        "property": "text"
+      }
+    ]
+  },
+  "Ordnervorlagen": {
+    "unescaped": "Ordnervorlagen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 108,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Auswahl aufheben": {
+    "unescaped": "Auswahl aufheben",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 136,
+        "property": "toolTipText"
+      },
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 341,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "alle Ordner ab Ebene 1 ausklappen": {
+    "unescaped": "alle Ordner ab Ebene 1 ausklappen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 153,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "alle Ordner ab Ebene 1 einklappen": {
+    "unescaped": "alle Ordner ab Ebene 1 einklappen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 170,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Ordner": {
+    "unescaped": "Ordner",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 300,
+        "property": "text"
+      }
+    ]
+  },
+  "nach Ordnernamen sortieren": {
+    "unescaped": "nach Ordnernamen sortieren",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 301,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "in Ordner verschieben": {
+    "unescaped": "in Ordner verschieben",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.form",
+        "line": 313,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "Ordneraktionen": {
+    "unescaped": "Ordneraktionen",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\FolderListCell.form",
+        "line": 105,
+        "property": "toolTipText"
+      }
+    ]
+  },
+  "neues Ereignis": {
+    "unescaped": "neues Ereignis",
+    "occurrences": [
+      {
+        "file": "j-lawyer-client\\src\\main\\java\\de\\costache\\calendar\\NewEventEntryDialog.form",
+        "line": 6,
+        "property": "title"
+      }
+    ]
+  }
+}

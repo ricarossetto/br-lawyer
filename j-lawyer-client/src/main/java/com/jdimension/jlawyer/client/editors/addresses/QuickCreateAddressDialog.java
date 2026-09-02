@@ -1168,7 +1168,7 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder("Notizen"));
+        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder("Anotações"));
 
         txtNoticePane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 

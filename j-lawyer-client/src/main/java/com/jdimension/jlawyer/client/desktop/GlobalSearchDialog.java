@@ -105,7 +105,7 @@ public class GlobalSearchDialog extends JDialog {
         filterPanel.setOpaque(false);
 
         UserSettings userSettings = UserSettings.getInstance();
-        btnCases = createFilterButton("Akten", userSettings.getSettingAsBoolean(SETTING_FILTER_CASES, true));
+        btnCases = createFilterButton("Processos", userSettings.getSettingAsBoolean(SETTING_FILTER_CASES, true));
         btnCalendar = createFilterButton("Kalender", userSettings.getSettingAsBoolean(SETTING_FILTER_CALENDAR, true));
         btnAddresses = createFilterButton("Adressen", userSettings.getSettingAsBoolean(SETTING_FILTER_ADDRESSES, true));
         btnArchivedCases = createFilterButton("Archiviert", userSettings.getSettingAsBoolean(SETTING_FILTER_ARCHIVED, true));

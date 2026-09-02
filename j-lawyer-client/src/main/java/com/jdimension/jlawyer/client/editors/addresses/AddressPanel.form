@@ -215,7 +215,7 @@
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Notizen"/>
+                        <TitledBorder title="Anotações"/>
                       </Border>
                     </Property>
                   </Properties>
@@ -455,7 +455,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/icons/folder.png"/>
                         </Property>
-                        <Property name="toolTipText" type="java.lang.String" value="neue Akte erstellen"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Cadastrar novo processo"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdNewCaseActionPerformed"/>
@@ -1185,7 +1185,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="elektronische Rechnung"/>
+                    <TitledBorder title="Fatura Eletrônica"/>
                   </Border>
                 </Property>
               </Properties>
@@ -1881,8 +1881,8 @@
         <Container class="javax.swing.JPanel" name="jPanel8">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Bank / Versicherung">
-                <Property name="tabTitle" type="java.lang.String" value="Bank / Versicherung"/>
+              <JTabbedPaneConstraints tabName="Dados Bancários / Seguradora">
+                <Property name="tabTitle" type="java.lang.String" value="Dados Bancários / Seguradora"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/money.png"/>
                 </Property>
@@ -1931,7 +1931,7 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder>
                       <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="allgemeiner Rechtsschutz"/>
+                        <TitledBorder title="Assistência Jurídica / Seguro"/>
                       </Border>
                     </TitledBorder>
                   </Border>
@@ -2495,7 +2495,7 @@
         <Container class="javax.swing.JPanel" name="pnlDocuments">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Dokumente">
+              <JTabbedPaneConstraints tabName="Documentos">
                 <Property name="tabTitle" type="java.lang.String" value="Documentos"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/folder_documents.png"/>
@@ -2622,7 +2622,7 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder>
                       <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Dokumente"/>
+                        <TitledBorder title="Documentos"/>
                       </Border>
                     </TitledBorder>
                   </Border>
@@ -2821,7 +2821,7 @@
         <Container class="javax.swing.JPanel" name="jPanel10">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Akten">
+              <JTabbedPaneConstraints tabName="Processos">
                 <Property name="tabTitle" type="java.lang.String" value="Processos"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/folder.png"/>

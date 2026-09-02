@@ -52,7 +52,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/vcard.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="neue Akte erstellen"/>
+        <Property name="text" type="java.lang.String" value="Cadastrar novo processo"/>
         <Property name="verticalAlignment" type="int" value="1"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Handcursor"/>
@@ -64,7 +64,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/filesave.png"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="neue Akte aus diesem Scan anlegen"/>
+        <Property name="toolTipText" type="java.lang.String" value="Criar novo processo a partir deste documento"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdNewCaseActionPerformed"/>

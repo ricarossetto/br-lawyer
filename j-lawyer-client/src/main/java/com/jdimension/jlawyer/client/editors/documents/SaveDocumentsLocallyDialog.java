@@ -722,7 +722,7 @@ public class SaveDocumentsLocallyDialog extends javax.swing.JDialog {
         cmdSave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Dokument lokal speichern");
+        setTitle("Salvar Documento Localmente");
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
                 formComponentResized(evt);
@@ -896,7 +896,7 @@ public class SaveDocumentsLocallyDialog extends javax.swing.JDialog {
             this.dispose();
         } catch (Throwable t) {
             log.error("error saving documents", t);
-            JOptionPane.showMessageDialog(this, "Erro ao salvar der Dokumente!", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_WARNING, JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar os documentos!", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_WARNING, JOptionPane.WARNING_MESSAGE);
         }
 
 

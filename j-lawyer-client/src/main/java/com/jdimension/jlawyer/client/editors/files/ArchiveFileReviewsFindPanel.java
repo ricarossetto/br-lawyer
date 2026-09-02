@@ -719,7 +719,7 @@ public class ArchiveFileReviewsFindPanel extends javax.swing.JPanel implements T
             this.detailsEditorClass = ViewArchiveFileDetailsPanel.class.getName();
         }
         
-        String[] colNames=new String[] {"Datum / Zeit" , "Typ", "Aktenzeichen", "Kurzrubrum", "Grund", "Beschreibung", "erledigt", "Anwalt", "verantwortlich", "Kalender"};
+        String[] colNames=new String[] {"Datum / Zeit" , "Typ", "Aktenzeichen", "Partes", "Grund", "Beschreibung", "erledigt", "Anwalt", "verantwortlich", "Kalender"};
         QuickArchiveFileSearchTableModel model=new QuickArchiveFileSearchTableModel(colNames, 0);
         this.tblResults.setModel(model);
 
@@ -1363,11 +1363,11 @@ public class ArchiveFileReviewsFindPanel extends javax.swing.JPanel implements T
         }
         String typeString="alle";
         if(this.rdTypeRespite.isSelected())
-            typeString="Fristen";
+            typeString="Prazos";
         if(this.rdTypeReview.isSelected())
-            typeString="Wiedervorlagen";
+            typeString="Lembretes";
         if(this.rdTypeEvent.isSelected())
-            typeString="Termine";
+            typeString="Audiências";
         critBuffer.append("  Typen: ").append(typeString);
         
         String statusString="alle";

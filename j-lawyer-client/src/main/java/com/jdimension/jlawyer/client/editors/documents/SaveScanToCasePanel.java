@@ -769,7 +769,7 @@ public class SaveScanToCasePanel extends javax.swing.JPanel {
         lblRole.setText("user");
 
         cmdSaveMessageAttachmentsOnly.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/attach.png"))); // NOI18N
-        cmdSaveMessageAttachmentsOnly.setToolTipText("Scan zur Akte speichern");
+        cmdSaveMessageAttachmentsOnly.setToolTipText("Salvar digitalização no processo");
         cmdSaveMessageAttachmentsOnly.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveMessageAttachmentsOnlyActionPerformed(evt);

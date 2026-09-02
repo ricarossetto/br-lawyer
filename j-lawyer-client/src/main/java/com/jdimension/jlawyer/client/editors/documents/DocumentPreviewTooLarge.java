@@ -714,7 +714,7 @@ public class DocumentPreviewTooLarge extends javax.swing.JPanel {
         cmdPreviewSettings = new javax.swing.JButton();
         cmdForcePreview = new javax.swing.JButton();
 
-        lblHint.setText("Das Dokument ist zu groß für eine Vorschau.");
+        lblHint.setText("O documento é muito grande para exibição.");
 
         cmdPreviewSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/package_system.png"))); // NOI18N
         cmdPreviewSettings.setText("Einstellungen anpassen");

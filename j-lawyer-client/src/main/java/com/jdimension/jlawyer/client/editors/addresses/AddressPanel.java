@@ -1837,7 +1837,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         jPanel22.add(jPanel14);
 
-        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder("Notizen"));
+        jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder("Anotações"));
 
         txtNoticePane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -1903,7 +1903,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         });
 
         cmdNewCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder.png"))); // NOI18N
-        cmdNewCase.setToolTipText("neue Akte erstellen");
+        cmdNewCase.setToolTipText("Cadastrar novo processo");
         cmdNewCase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdNewCaseActionPerformed(evt);
@@ -2342,7 +2342,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
                 .addContainerGap())
         );
 
-        jPanel25.setBorder(javax.swing.BorderFactory.createTitledBorder("elektronische Rechnung"));
+        jPanel25.setBorder(javax.swing.BorderFactory.createTitledBorder("Fatura Eletrônica"));
 
         jLabel53.setText("Leitweg-ID:");
 
@@ -2775,7 +2775,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         jTabbedPane1.addTab("Kontakt", new javax.swing.ImageIcon(getClass().getResource("/icons16/baseline_home_black_48dp.png")), jPanel18); // NOI18N
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("allgemeiner Rechtsschutz")));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Assistência Jurídica / Seguro")));
 
         jLabel15.setText("Versicherungsschein:");
 
@@ -3100,7 +3100,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Bank / Versicherung", new javax.swing.ImageIcon(getClass().getResource("/icons/money.png")), jPanel8); // NOI18N
+        jTabbedPane1.addTab("Dados Bancários / Seguradora", new javax.swing.ImageIcon(getClass().getResource("/icons/money.png")), jPanel8); // NOI18N
 
         cmdAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder_new.png"))); // NOI18N
         cmdAdd.setText("Adicionar");
@@ -3158,9 +3158,9 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Dokumente", new javax.swing.ImageIcon(getClass().getResource("/icons/folder_documents.png")), pnlDocuments); // NOI18N
+        jTabbedPane1.addTab("Documentos", new javax.swing.ImageIcon(getClass().getResource("/icons/folder_documents.png")), pnlDocuments); // NOI18N
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Dokumente")));
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Documentos")));
 
         jLabel16.setText("Begrüßung:");
 
@@ -3302,7 +3302,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Akten", new javax.swing.ImageIcon(getClass().getResource("/icons/folder.png")), jPanel10); // NOI18N
+        jTabbedPane1.addTab("Processos", new javax.swing.ImageIcon(getClass().getResource("/icons/folder.png")), jPanel10); // NOI18N
 
         lblHeaderInfo.setFont(lblHeaderInfo.getFont().deriveFont(lblHeaderInfo.getFont().getStyle() | java.awt.Font.BOLD, lblHeaderInfo.getFont().getSize()+2));
         lblHeaderInfo.setForeground(new java.awt.Color(255, 255, 255));
@@ -3636,7 +3636,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
                 this.fillCasesForContactPanel(col, partyTypes);
             } catch (Exception ex) {
                 log.error("Error getting archive files for address", ex);
-                JOptionPane.showMessageDialog(this, "Erro ao carregar der Akten zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar os processos do contato: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
             }
         }
@@ -3868,14 +3868,14 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         } else {
             this.lblEncryption.setText("unverschlüsselt");
             this.cmdNewSmsWithEncryptionPassword.setEnabled(false);
-            this.chkEncryption.setToolTipText("Dokumente werden ohne Schutz versandt");
+            this.chkEncryption.setToolTipText("Os documentos serão enviados sem criptografia");
         }
     }//GEN-LAST:event_chkEncryptionStateChanged
 
     private void cmdNewSmsWithEncryptionPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdNewSmsWithEncryptionPasswordActionPerformed
         if (UserSettings.getInstance().getCurrentUser().isVoipEnabled()) {
 
-            String smsText = "Passwort zum Entsperren empfangener Dokumente: " + this.encryptionPwd;
+            String smsText = "Senha para desbloqueio dos documentos recebidos: " + this.encryptionPwd;
             SendSmsDialog dlg = new SendSmsDialog(EditorsRegistry.getInstance().getMainWindow(), true, this.dto, smsText);
             FrameUtils.centerDialog(dlg, EditorsRegistry.getInstance().getMainWindow());
             dlg.setVisible(true);
@@ -3995,7 +3995,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
             String reason = (String) JOptionPane.showInputDialog(
                 this,
                 "Wegen:",
-                "Neue Akte anlegen",
+                "Cadastrar Novo Processo",
                 JOptionPane.QUESTION_MESSAGE,
                 null,
                 null,
@@ -4094,7 +4094,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
             log.error("Error creating new case from address", ex);
             JOptionPane.showMessageDialog(
                 this,
-                "Fehler beim Anlegen der Akte: " + ex.getMessage(),
+                "Erro ao criar o processo: " + ex.getMessage(),
                 com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR,
                 JOptionPane.ERROR_MESSAGE
             );
@@ -4215,7 +4215,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
             byte[] pdfContent;
             String newName;
             if (name.toLowerCase().endsWith(".pdf")) {
-                int response = JOptionPane.showConfirmDialog(this, "Dokument '" + name + "' ist bereits im PDF-Format. Soll es dupliziert werden?", "PDF bereits vorhanden", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                int response = JOptionPane.showConfirmDialog(this, "Dokument '" + name + "' ist bereits im PDF-Format. Soll es dupliziert werden?", "PDF já existente", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
                 if (response != JOptionPane.YES_OPTION) {
                     return;
                 }
@@ -4280,7 +4280,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         this.mnuDeleteDocument.setText("Excluir");
 
         this.tblContents.setModel(new DefaultTableModel(
-                new Object[][]{}, new String[]{"Dokument", "Datum", "Größe"}) {
+                new Object[][]{}, new String[]{"Documento", "Datum", "Größe"}) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -4353,7 +4353,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
      */
     private void loadAddressDocuments() {
         DefaultTableModel model = new DefaultTableModel(
-                new Object[][]{}, new String[]{"Dokument", "Datum", "Größe"}) {
+                new Object[][]{}, new String[]{"Documento", "Datum", "Größe"}) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -4499,7 +4499,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
             }
         } catch (Exception ex) {
             log.error("Could not add documents to address " + this.dto.getId(), ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Hinzufügen der Dokumente: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao adicionar documentos: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         } finally {
             this.loadAddressDocuments();
         }
@@ -4530,7 +4530,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         if (toDelete.isEmpty()) {
             return;
         }
-        if (JOptionPane.showConfirmDialog(this, "Sollen die markierten Dokumente (" + toDelete.size() + ") gelöscht werden?", "Dokumente löschen", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
+        if (JOptionPane.showConfirmDialog(this, "Sollen die markierten Dokumente (" + toDelete.size() + ") gelöscht werden?", "Excluir Documentos", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
             return;
         }
         ClientSettings settings = ClientSettings.getInstance();
@@ -4547,7 +4547,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
             }
         } catch (Exception ex) {
             log.error("Could not delete address documents", ex);
-            JOptionPane.showMessageDialog(this, "Erro ao excluir der Dokumente: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao excluir os documentos: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         } finally {
             this.loadAddressDocuments();
         }
@@ -4561,7 +4561,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
      */
     private boolean ensureAddressSaved() {
         if (this.dto == null || this.dto.getId() == null || this.dto.getId().trim().length() == 0) {
-            JOptionPane.showMessageDialog(this, "Bitte speichern Sie den Kontakt zuerst, bevor Sie Dokumente hinzufügen.", "Hinweis", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Por favor, salve o contato antes de adicionar documentos.", "Hinweis", JOptionPane.INFORMATION_MESSAGE);
             return false;
         }
         return true;
@@ -4730,7 +4730,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         StringBuilder html = new StringBuilder();
         html.append("<html><body>");
         if (!partyFiles.isEmpty()) {
-            html.append("Der Kontakt ist Beteiligte(r) in<br/><ul>");
+            html.append("O contato está vinculado como parte nos processos:<br/><ul>");
             for (ArchiveFileBean af : partyFiles) {
                 html.append("<li>");
                 html.append(af.getFileNumber());

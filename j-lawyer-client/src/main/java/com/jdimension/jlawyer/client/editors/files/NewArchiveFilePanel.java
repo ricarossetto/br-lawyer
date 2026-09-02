@@ -678,7 +678,7 @@ public class NewArchiveFilePanel extends ArchiveFilePanel implements ResetOnDisp
      */
     public NewArchiveFilePanel() {
         super();
-        this.lblPanelTitle.setText("neue Akte anlegen");
+        this.lblPanelTitle.setText("Cadastrar novo processo");
         this.lblArchivedSince.setText("");
     }
 

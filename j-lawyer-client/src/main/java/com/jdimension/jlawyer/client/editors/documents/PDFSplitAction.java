@@ -745,7 +745,7 @@ public class PDFSplitAction extends ProgressableAction {
         for (PDFSplitRequest req : this.splitRequests) {
             this.max = 3;
             this.indicator.setMax(3);
-            this.progress("Lade Dokument...");
+            this.progress("Carregando documento...");
             byte[] data = svc.getObservedFile(req.getFileName());
             if (this.isCancelled()) {
                 break;
@@ -754,7 +754,7 @@ public class PDFSplitAction extends ProgressableAction {
             PDDocument document = PDDocument.load(data);
 
             if (req.getSplitType() == PDFSplitRequest.SPLITTYPE_PAGECOUNT) {
-                this.progress("Splitte Dokument...");
+                this.progress("Dividindo documento...");
                 Splitter splitter = new Splitter();
                 splitter.setSplitAtPage(req.getSplitAfterPages());
                 List<PDDocument> splittedList = splitter.split(document);

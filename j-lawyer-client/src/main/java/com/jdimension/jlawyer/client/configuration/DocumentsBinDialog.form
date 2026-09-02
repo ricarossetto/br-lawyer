@@ -92,7 +92,7 @@
                 <Column editable="true" title="gel&#xf6;scht" type="java.lang.Object"/>
                 <Column editable="true" title="von" type="java.lang.Object"/>
                 <Column editable="true" title="Dateiname" type="java.lang.Object"/>
-                <Column editable="true" title="Akte" type="java.lang.Object"/>
+                <Column editable="true" title="Processo" type="java.lang.Object"/>
                 <Column editable="true" title="Adresse" type="java.lang.Object"/>
               </Table>
             </Property>

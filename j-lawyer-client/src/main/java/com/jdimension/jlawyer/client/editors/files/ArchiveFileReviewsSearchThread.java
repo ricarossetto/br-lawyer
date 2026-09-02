@@ -720,7 +720,7 @@ public class ArchiveFileReviewsSearchThread implements Runnable {
             return;
         }
 
-        String[] colNames = new String[]{"Datum / Zeit", "Typ", "Aktenzeichen", "Kurzrubrum", "Grund", "Beschreibung", "Anwalt", "verantwortlich", "Kalender"};
+        String[] colNames = new String[]{"Datum / Zeit", "Typ", "Aktenzeichen", "Partes", "Grund", "Beschreibung", "Anwalt", "verantwortlich", "Kalender"};
         DefaultTableModel model = new DefaultTableModel(colNames, 0) {
 
             @Override

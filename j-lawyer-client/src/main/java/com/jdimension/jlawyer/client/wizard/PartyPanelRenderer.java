@@ -768,7 +768,7 @@ public class PartyPanelRenderer extends javax.swing.JPanel {
      */
     private void updateUiFromEntry() {
         if (this.partyEntry == null) {
-            this.lblName.setText("Beteiligter");
+            this.lblName.setText("Envolvido / Parte");
             this.txtReference.setText("");
             this.cmbRole.setSelectedIndex(0);
             return;
@@ -910,7 +910,7 @@ public class PartyPanelRenderer extends javax.swing.JPanel {
         txtReference = new javax.swing.JTextField();
         cmdRemove = new javax.swing.JButton();
 
-        lblName.setText("Beteiligter");
+        lblName.setText("Envolvido / Parte");
 
         txtReference.setColumns(10);
         txtReference.setToolTipText("Zeichen des Beteiligten");

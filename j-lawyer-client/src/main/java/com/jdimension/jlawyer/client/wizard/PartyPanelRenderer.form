@@ -47,7 +47,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lblName">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Beteiligter"/>
+        <Property name="text" type="java.lang.String" value="Envolvido / Parte"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="cmbRole">

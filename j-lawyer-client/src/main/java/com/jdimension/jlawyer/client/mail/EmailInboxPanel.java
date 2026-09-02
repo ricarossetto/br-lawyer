@@ -1650,7 +1650,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
 
         lblPanelTitle.setFont(lblPanelTitle.getFont().deriveFont(lblPanelTitle.getFont().getStyle() | java.awt.Font.BOLD, lblPanelTitle.getFont().getSize()+12));
         lblPanelTitle.setForeground(new java.awt.Color(255, 255, 255));
-        lblPanelTitle.setText("Posteingang");
+        lblPanelTitle.setText("Entrada / Recebidos");
 
         treeFolders.setDropMode(javax.swing.DropMode.ON);
         treeFolders.addTreeExpansionListener(new javax.swing.event.TreeExpansionListener() {
@@ -3443,7 +3443,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
             cce.setFileNumber(null);
             cce.setId(null);
             cce.setRole("");
-            cce.setName("Akte suchen und zuordnen");
+            cce.setName("Pesquisar processo e vincular");
             cce.setReason(StringUtils.nonEmpty(null));
             cce.setArchived(false);
             sp.setEntry(cce, this);
@@ -3641,7 +3641,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
                 cce.setFileNumber(null);
                 cce.setId(null);
                 cce.setRole("");
-                cce.setName("Akte suchen und zuordnen");
+                cce.setName("Pesquisar processo e vincular");
                 cce.setReason(StringUtils.nonEmpty(null));
                 cce.setArchived(false);
                 sp.setEntry(cce, this);
@@ -3727,7 +3727,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
                 cce.setFileNumber(null);
                 cce.setId(null);
                 cce.setRole("");
-                cce.setName("Akte suchen und zuordnen");
+                cce.setName("Pesquisar processo e vincular");
                 cce.setReason(StringUtils.nonEmpty(null));
                 cce.setArchived(false);
                 sp.setEntry(cce, this);

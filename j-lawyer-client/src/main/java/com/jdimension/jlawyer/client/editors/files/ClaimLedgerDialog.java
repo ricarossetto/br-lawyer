@@ -1428,7 +1428,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Buchungen", jPanel2);
+        jTabbedPane1.addTab("Lançamentos", jPanel2);
 
         jLabel3.setFont(jLabel3.getFont());
         jLabel3.setText("Hauptforderungen:");
@@ -2182,7 +2182,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
     private void cmdCopySummaryToClipboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCopySummaryToClipboardActionPerformed
         StyledCalculationTable ct = new StyledCalculationTable();
-        ct.addHeaders("Datum", "Bezeichnung", "Zahlung", "unverz. Kosten", "verz. Kosten", "Zinsen", "Forderung");
+        ct.addHeaders("Datum", "Bezeichnung", "Pagamento", "unverz. Kosten", "verz. Kosten", "Zinsen", "Forderung");
 
         for (int r = 0; r < this.tblSummary.getRowCount(); r++) {
             String datum = tblSummary.getValueAt(r, 0) != null ? tblSummary.getValueAt(r, 0).toString() : "";
@@ -2575,7 +2575,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
         private final String[] columns = {
             "Datum",
             "Bezeichnung",
-            "Zahlung",
+            "Pagamento",
             "unverz. Kosten",
             "verz. Kosten",
             "Zinsen",

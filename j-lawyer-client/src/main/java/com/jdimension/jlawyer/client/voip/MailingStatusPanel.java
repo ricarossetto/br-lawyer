@@ -802,7 +802,7 @@ public class MailingStatusPanel extends javax.swing.JPanel implements ThemeableE
     }
 
     private DefaultTableModel buildTable(List<MailingQueueEntry> list) {
-        DefaultTableModel tm = new DefaultTableModel(new String[]{"Gesendet", "von", "an", "Datei", "aktueller Status", "Akte"}, 0);
+        DefaultTableModel tm = new DefaultTableModel(new String[]{"Gesendet", "von", "an", "Datei", "aktueller Status", "Processo"}, 0);
         for (MailingQueueEntry mqe : list) {
             String aFile = "";
             if (mqe.getCase() != null) {

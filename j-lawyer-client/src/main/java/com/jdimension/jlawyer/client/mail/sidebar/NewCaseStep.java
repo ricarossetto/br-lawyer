@@ -980,7 +980,7 @@ public class NewCaseStep extends javax.swing.JPanel implements WizardStepInterfa
 
         jLabel7.setText("jLabel7");
 
-        setName("neue Akte erstellen"); // NOI18N
+        setName("Cadastrar novo processo"); // NOI18N
 
         jLabel1.setBackground(new java.awt.Color(153, 153, 153));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

@@ -764,7 +764,7 @@ public class GenericScanActionsPanel extends javax.swing.JPanel {
         });
 
         cmdRename.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder_documents.png"))); // NOI18N
-        cmdRename.setToolTipText("Scan zur Akte speichern");
+        cmdRename.setToolTipText("Salvar digitalização no processo");
         cmdRename.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdRenameActionPerformed(evt);
@@ -772,7 +772,7 @@ public class GenericScanActionsPanel extends javax.swing.JPanel {
         });
 
         cmdDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        cmdDelete.setToolTipText("Scan zur Akte speichern");
+        cmdDelete.setToolTipText("Salvar digitalização no processo");
         cmdDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdDeleteActionPerformed(evt);

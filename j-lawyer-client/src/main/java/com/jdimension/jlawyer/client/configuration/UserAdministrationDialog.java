@@ -1360,7 +1360,7 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
                 .add(chkRemoveAddress))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Akten"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Processos"));
         jPanel3.setName(""); // NOI18N
 
         chkReadFile.setText("einsehen");

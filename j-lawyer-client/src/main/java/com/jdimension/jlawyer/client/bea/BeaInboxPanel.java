@@ -2639,7 +2639,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                     cce.setFileNumber(null);
                     cce.setId(null);
                     cce.setRole("");
-                    cce.setName("Akte suchen und zuordnen");
+                    cce.setName("Pesquisar processo e vincular");
                     cce.setReason(StringUtils.nonEmpty(null));
                     cce.setArchived(false);
                     sp.setEntry(cce, BeaInboxPanel.this);

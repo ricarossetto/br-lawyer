@@ -1959,7 +1959,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
                 .addGap(422, 422, 422))
         );
 
-        jTabbedPane1.addTab("Dokumente", jPanel1);
+        jTabbedPane1.addTab("Documentos", jPanel1);
 
         tblPayments.setAutoCreateRowSorter(true);
         tblPayments.setModel(new javax.swing.table.DefaultTableModel(
@@ -2033,7 +2033,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Zahlungen", jPanel3);
+        jTabbedPane1.addTab("Pagamentos", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

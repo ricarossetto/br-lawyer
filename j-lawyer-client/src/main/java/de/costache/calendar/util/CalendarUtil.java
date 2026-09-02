@@ -60,10 +60,10 @@ public class CalendarUtil {
                 return 0;
             if (o1.getType().getUniqueKey().equals(o2.getType().getUniqueKey())) {
                 return 0;
-            } else if ("Termin".equals(o1.getType().getUniqueKey())) {
+            } else if ("Audiência".equals(o1.getType().getUniqueKey())) {
                 return -1;
-            } else if ("Frist".equals(o1.getType().getUniqueKey())
-                    && !"Termin".equals(o2.getType().getUniqueKey())) {
+            } else if ("Prazo".equals(o1.getType().getUniqueKey())
+                    && !"Audiência".equals(o2.getType().getUniqueKey())) {
                 return -1;
             } else {
                 return 1;

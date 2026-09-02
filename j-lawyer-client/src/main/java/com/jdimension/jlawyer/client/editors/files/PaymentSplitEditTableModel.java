@@ -26,7 +26,7 @@ public class PaymentSplitEditTableModel extends AbstractTableModel {
     private static final String[] COLUMN_NAMES = {
         "Komponente",
         "Offen",
-        "Zahlung"
+        "Pagamento"
     };
 
     private List<PaymentAllocation> allocations = new ArrayList<>();
@@ -80,7 +80,7 @@ public class PaymentSplitEditTableModel extends AbstractTableModel {
 
     @Override
     public boolean isCellEditable(int rowIndex, int columnIndex) {
-        // Only "Zahlung" column is editable
+        // Only "Pagamento" column is editable
         return columnIndex == 2;
     }
 

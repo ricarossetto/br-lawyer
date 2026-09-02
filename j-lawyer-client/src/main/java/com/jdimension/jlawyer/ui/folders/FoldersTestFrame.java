@@ -682,7 +682,7 @@ public class FoldersTestFrame extends javax.swing.JFrame {
     public FoldersTestFrame() {
         initComponents();
         
-        DefaultMutableTreeNode root=new DefaultMutableTreeNode("Dokumente");
+        DefaultMutableTreeNode root=new DefaultMutableTreeNode("Documentos");
         DefaultMutableTreeNode sub1=new DefaultMutableTreeNode("Unterordner 1");
         root.add(sub1);
         sub1.add(new DefaultMutableTreeNode("UUordner 1"));

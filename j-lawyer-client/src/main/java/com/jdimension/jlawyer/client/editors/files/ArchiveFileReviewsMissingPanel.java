@@ -701,7 +701,7 @@ public class ArchiveFileReviewsMissingPanel extends javax.swing.JPanel implement
         } else {
             this.detailsEditorClass = ViewArchiveFileDetailsPanel.class.getName();
         }
-        String[] colNames=new String[] {"Aktenzeichen", "Kurzrubrum", "wegen", "Anwalt"};
+        String[] colNames=new String[] {"Aktenzeichen", "Partes", "wegen", "Anwalt"};
         QuickArchiveFileSearchTableModel model=new QuickArchiveFileSearchTableModel(colNames, 0);
         this.tblResultsAny.setModel(model);
         

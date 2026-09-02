@@ -844,7 +844,7 @@ public class SearchAndAssignDialog extends javax.swing.JDialog implements Progre
 
             ArchiveFileServiceRemote fileService = locator.lookupArchiveFileServiceRemote();
             List<ArchiveFileBean> lastChanged = fileService.getLastChanged(150);
-            String[] colNames = new String[]{"Aktenzeichen", "erstellt", "Kurzrubrum", "wegen", "archiviert", "", "Anwalt", "Sachbearbeiter"};
+            String[] colNames = new String[]{"Aktenzeichen", "erstellt", "Partes", "wegen", "archiviert", "", "Anwalt", "Sachbearbeiter"};
             QuickArchiveFileSearchTableModel model = new QuickArchiveFileSearchTableModel(colNames, 0);
             this.tblResults.setModel(model);
 
@@ -982,7 +982,7 @@ public class SearchAndAssignDialog extends javax.swing.JDialog implements Progre
         popFolders.add(mnuNewFolder);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Akte suchen");
+        setTitle("Pesquisar Processo");
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
                 formComponentResized(evt);

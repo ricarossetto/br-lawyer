@@ -775,7 +775,7 @@ public class QuickArchiveFileSearchThread implements Runnable {
         // reset cursor
         ThreadUtils.setDefaultCursor(this.owner);
 
-        String[] colNames = new String[]{"Aktenzeichen", "erstellt", "Kurzrubrum", "wegen", "archiviert","","", "Anwalt", "Sachbearbeiter", "Etiketten", "Sachgebiet"};
+        String[] colNames = new String[]{"Aktenzeichen", "erstellt", "Partes", "wegen", "archiviert","","", "Anwalt", "Sachbearbeiter", "Etiketten", "Ramo do Direito"};
         QuickArchiveFileSearchTableModel model = new QuickArchiveFileSearchTableModel(colNames, 0);
 
         for (ArchiveFileBean dto : dtos) {

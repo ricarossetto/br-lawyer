@@ -713,7 +713,7 @@ public class FolderContainer {
     private Map<Long, Message> cachedMessages = new HashMap<>();
 
     static {
-        folderNameMapping.put(CommonMailUtils.INBOX, "Posteingang");
+        folderNameMapping.put(CommonMailUtils.INBOX, "Entrada / Recebidos");
         folderNameMapping.put(CommonMailUtils.SENT, "Gesendet");
         folderNameMapping.put(CommonMailUtils.TRASH, "Papierkorb");
         folderNameMapping.put(CommonMailUtils.DRAFTS, "Entwürfe");

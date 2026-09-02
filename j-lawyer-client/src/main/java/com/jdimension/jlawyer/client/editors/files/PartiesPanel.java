@@ -754,7 +754,7 @@ public class PartiesPanel extends javax.swing.JPanel {
             Collections.sort(columnNames);
             ArrayList<String> allColumnNames = new ArrayList<>();
             allColumnNames.addAll(columnNames);
-            allColumnNames.add("Beteiligte");
+            allColumnNames.add("Envolvidos / Partes");
             String[] colNames = allColumnNames.toArray(new String[0]);
             PartiesPanelTableModel model = new PartiesPanelTableModel(colNames, 0);
 

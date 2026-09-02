@@ -85,7 +85,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/attach.png"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Scan zur Akte speichern"/>
+        <Property name="toolTipText" type="java.lang.String" value="Salvar digitalização no processo"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdSaveMessageAttachmentsOnlyActionPerformed"/>

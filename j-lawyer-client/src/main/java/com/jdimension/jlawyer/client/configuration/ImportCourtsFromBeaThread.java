@@ -806,7 +806,7 @@ public class ImportCourtsFromBeaThread implements Runnable {
                                 }
                                 AddressTagsBean atb = new AddressTagsBean();
                                 atb.setAddressKey(newCourt);
-                                atb.setTagName("Gericht");
+                                atb.setTagName("Tribunal / Juízo");
                                 adr.setTag(newCourt.getId(), atb, true);
 
                             }

@@ -877,7 +877,7 @@ public class CreateCloudShare extends javax.swing.JDialog {
         });
 
         grpFolder.add(rdFolderParty);
-        rdFolderParty.setText("Beteiligte");
+        rdFolderParty.setText("Envolvidos / Partes");
         rdFolderParty.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdFolderPartyActionPerformed(evt);

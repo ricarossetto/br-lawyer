@@ -731,7 +731,7 @@ public class CaseMissingCalendarEntriesSearchThread implements Runnable {
             return;
         }
         
-        String[] colNames=new String[] {"Aktenzeichen", "Kurzrubrum", "wegen", "Anwalt"};
+        String[] colNames=new String[] {"Aktenzeichen", "Partes", "wegen", "Anwalt"};
         DefaultTableModel model = new DefaultTableModel(colNames, 0) {
 
             @Override

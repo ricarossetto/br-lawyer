@@ -676,7 +676,7 @@ public class EditArchiveFilePanel extends QuickArchiveFileSearchPanel {
         super();
         //super(EditArchiveFileDetailsPanel.class.getName());
         //this.lblPanelTitle.setText("Akte suchen und bearbeiten");
-        this.lblPanelTitle.setText("Akte suchen");
+        this.lblPanelTitle.setText("Pesquisar Processo");
     }
     
 }

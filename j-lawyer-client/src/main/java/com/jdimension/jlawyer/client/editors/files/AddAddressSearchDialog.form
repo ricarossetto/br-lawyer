@@ -185,7 +185,7 @@
           <StringArray count="3">
             <StringItem index="0" value="Cliente"/>
             <StringItem index="1" value="Parte Contrária"/>
-            <StringItem index="2" value="Dritte"/>
+            <StringItem index="2" value="Terceiros"/>
           </StringArray>
         </Property>
       </Properties>

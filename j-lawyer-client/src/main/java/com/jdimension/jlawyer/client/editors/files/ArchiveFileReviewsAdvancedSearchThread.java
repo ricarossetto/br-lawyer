@@ -783,7 +783,7 @@ public class ArchiveFileReviewsAdvancedSearchThread implements Runnable {
             return;
         }
 
-        String[] colNames = new String[]{"Datum / Zeit", "Typ", "Aktenzeichen", "Kurzrubrum", "Grund", "Beschreibung", "erledigt", "Anwalt", "verantwortlich", "Kalender"};
+        String[] colNames = new String[]{"Datum / Zeit", "Typ", "Aktenzeichen", "Partes", "Grund", "Beschreibung", "erledigt", "Anwalt", "verantwortlich", "Kalender"};
         ArchiveFileReviewsFindTableModel model = new ArchiveFileReviewsFindTableModel(colNames, 0);
         // adding the model and then adding rows is problematic - addRow on a table with model causes issues when addRow is not performed in the EDT
         for (ArchiveFileReviewsBean b : filteredDtos) {

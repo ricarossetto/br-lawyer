@@ -751,7 +751,7 @@ public class DocumentsBinDialog extends javax.swing.JDialog {
             };
             this.tblBinDocuments.setDefaultRenderer(Object.class, r);
 
-            DefaultTableModel tm = new DefaultTableModel(new String[]{"gelöscht", "von", "Dateiname", "Akte", "Adresse"}, 0);
+            DefaultTableModel tm = new DefaultTableModel(new String[]{"gelöscht", "von", "Dateiname", "Processo", "Adresse"}, 0);
             this.tblBinDocuments.setModel(tm);
 
             TableRowSorter<TableModel> sorter = new TableRowSorter<>(tm);
@@ -855,7 +855,7 @@ public class DocumentsBinDialog extends javax.swing.JDialog {
 
             },
             new String [] {
-                "gelöscht", "von", "Dateiname", "Akte", "Adresse"
+                "gelöscht", "von", "Dateiname", "Processo", "Adresse"
             }
         ));
         jScrollPane1.setViewportView(tblBinDocuments);

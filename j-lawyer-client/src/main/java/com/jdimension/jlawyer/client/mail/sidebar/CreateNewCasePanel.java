@@ -725,7 +725,7 @@ public class CreateNewCasePanel extends javax.swing.JPanel {
 
         lblAddress.setFont(lblAddress.getFont().deriveFont(lblAddress.getFont().getStyle() | java.awt.Font.BOLD));
         lblAddress.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/vcard.png"))); // NOI18N
-        lblAddress.setText("neue Akte erstellen");
+        lblAddress.setText("Cadastrar novo processo");
         lblAddress.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lblAddress.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 

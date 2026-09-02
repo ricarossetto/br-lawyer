@@ -785,7 +785,7 @@ public class NewDocumentNameDialog extends javax.swing.JDialog {
         popFolders.add(mnuNewFolder);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Akte suchen");
+        setTitle("Pesquisar Processo");
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
                 formComponentResized(evt);

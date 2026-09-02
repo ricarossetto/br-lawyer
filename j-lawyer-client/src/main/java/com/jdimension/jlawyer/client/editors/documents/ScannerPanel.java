@@ -1435,7 +1435,7 @@ public class ScannerPanel extends javax.swing.JPanel implements ThemeableEditor,
             }
 
             if (extractedFiles.isEmpty()) {
-                ThreadUtils.showErrorDialog(this, "Das ZIP-Archiv enthält keine Dokumente.", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(this, "O arquivo ZIP não contém documentos.", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
                 return false;
             }
 
@@ -1678,7 +1678,7 @@ public class ScannerPanel extends javax.swing.JPanel implements ThemeableEditor,
         popActions.add(mnuRename);
 
         mnuSaveToCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder.png"))); // NOI18N
-        mnuSaveToCase.setText("Akte suchen und zuordnen");
+        mnuSaveToCase.setText("Pesquisar processo e vincular");
         mnuSaveToCase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSaveToCaseActionPerformed(evt);
@@ -1931,7 +1931,7 @@ public class ScannerPanel extends javax.swing.JPanel implements ThemeableEditor,
             cce.setFileNumber(null);
             cce.setId(null);
             cce.setRole("");
-            cce.setName("Akte suchen und zuordnen");
+            cce.setName("Pesquisar processo e vincular");
             cce.setReason(StringUtils.nonEmpty(null));
             cce.setArchived(false);
             sp.setEntry(cce, this);

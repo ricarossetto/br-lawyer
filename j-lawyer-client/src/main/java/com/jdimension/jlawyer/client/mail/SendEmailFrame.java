@@ -1585,7 +1585,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
         if (enable) {
             if (!this.chkEncryption.isEnabled()) {
                 this.lblEncryption.setText(LABEL_SEND_UNENCRYPTED);
-                this.chkEncryption.setToolTipText("Dokumente werden ohne Schutz versandt");
+                this.chkEncryption.setToolTipText("Os documentos serão enviados sem criptografia");
                 this.chkEncryption.setEnabled(true);
             }
         } else {
@@ -3299,7 +3299,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
             this.chkEncryption.setToolTipText("<html>Dokumente werden verschlüsselt versandt</html>");
         } else {
             this.lblEncryption.setText(LABEL_SEND_UNENCRYPTED);
-            this.chkEncryption.setToolTipText("Dokumente werden ohne Schutz versandt");
+            this.chkEncryption.setToolTipText("Os documentos serão enviados sem criptografia");
         }
     }//GEN-LAST:event_chkEncryptionStateChanged
 

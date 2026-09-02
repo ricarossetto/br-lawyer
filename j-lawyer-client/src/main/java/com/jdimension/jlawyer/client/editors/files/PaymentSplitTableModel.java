@@ -27,7 +27,7 @@ public class PaymentSplitTableModel extends AbstractTableModel {
         "Komponente",
         "Zinsen offen",
         "Forderungsbetrag offen",
-        "Zahlung",
+        "Pagamento",
         "Rest",
         "Status"
     };

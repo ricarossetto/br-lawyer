@@ -3237,13 +3237,13 @@ public class JKanzleiGUI extends javax.swing.JFrame implements com.jdimension.jl
     }//GEN-LAST:event_mnuAddressTagsMVActionPerformed
 
     private void mnuDocumentTagsMVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuDocumentTagsMVActionPerformed
-        MultiValueTagConfigurationDialog dlg = new MultiValueTagConfigurationDialog(this, true, OptionConstants.OPTIONGROUP_DOCUMENTTAGS_MV_PREFIX, "Dokument");
+        MultiValueTagConfigurationDialog dlg = new MultiValueTagConfigurationDialog(this, true, OptionConstants.OPTIONGROUP_DOCUMENTTAGS_MV_PREFIX, "Documento");
         FrameUtils.centerDialog(dlg, this);
         dlg.setVisible(true);
     }//GEN-LAST:event_mnuDocumentTagsMVActionPerformed
 
     private void mnuArchiveFileTagsMVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuArchiveFileTagsMVActionPerformed
-        MultiValueTagConfigurationDialog dlg = new MultiValueTagConfigurationDialog(this, true, OptionConstants.OPTIONGROUP_ARCHIVEFILETAGS_MV_PREFIX, "Akten");
+        MultiValueTagConfigurationDialog dlg = new MultiValueTagConfigurationDialog(this, true, OptionConstants.OPTIONGROUP_ARCHIVEFILETAGS_MV_PREFIX, "Processos");
         FrameUtils.centerDialog(dlg, this);
         dlg.setVisible(true);
     }//GEN-LAST:event_mnuArchiveFileTagsMVActionPerformed
