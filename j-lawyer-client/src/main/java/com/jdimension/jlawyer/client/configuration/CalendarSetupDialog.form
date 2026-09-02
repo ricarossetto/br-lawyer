@@ -327,7 +327,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/cancel.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Schliessen"/>
+        <Property name="text" type="java.lang.String" value="Fechar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdCloseActionPerformed"/>
@@ -434,7 +434,7 @@
           <ComponentRef name="rdEventType"/>
         </Property>
         <Property name="selected" type="boolean" value="true"/>
-        <Property name="text" type="java.lang.String" value="Wiedervorlagen"/>
+        <Property name="text" type="java.lang.String" value="Lembretes / Revisões"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdRespites">
@@ -442,7 +442,7 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="rdEventType"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Fristen"/>
+        <Property name="text" type="java.lang.String" value="Prazos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdEvents">
@@ -450,7 +450,7 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="rdEventType"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Termine"/>
+        <Property name="text" type="java.lang.String" value="Audiências / Compromissos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="chkDeleteDone">

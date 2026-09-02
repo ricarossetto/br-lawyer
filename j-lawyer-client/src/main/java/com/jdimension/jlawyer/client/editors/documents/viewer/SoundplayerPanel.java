@@ -827,7 +827,7 @@ public class SoundplayerPanel extends javax.swing.JPanel implements PreviewPanel
         });
 
         cmdCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/editpaste.png"))); // NOI18N
-        cmdCopy.setText("Kopieren");
+        cmdCopy.setText("Copiar");
         cmdCopy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCopyActionPerformed(evt);
@@ -1074,7 +1074,7 @@ public class SoundplayerPanel extends javax.swing.JPanel implements PreviewPanel
                     this.content = newWav;
                 } catch (Throwable t) {
                     log.error("Error saving document with id " + this.documentId, t);
-                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
 
                 }
             }
@@ -1161,7 +1161,7 @@ public class SoundplayerPanel extends javax.swing.JPanel implements PreviewPanel
             showStatus("Audio-Hardware unterstützt dieses Format nicht: " + lue.getMessage());
         } catch (IOException ex) {
             log.error("IO Exception when loading audio", ex);
-            showStatus("Fehler beim Laden der Audiodatei: " + ex.getMessage());
+            showStatus("Erro ao carregar der Audiodatei: " + ex.getMessage());
         } catch (Exception ex) {
             log.error("Unexpected error when loading audio", ex);
             showStatus("Unerwarteter Fehler: " + ex.getMessage());

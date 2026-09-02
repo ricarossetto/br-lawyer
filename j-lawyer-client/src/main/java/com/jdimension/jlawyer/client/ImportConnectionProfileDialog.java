@@ -705,7 +705,7 @@ public class ImportConnectionProfileDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(jTextArea1);
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -713,7 +713,7 @@ public class ImportConnectionProfileDialog extends javax.swing.JDialog {
         });
 
         cmdImport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdImport.setText("Importieren");
+        cmdImport.setText("Importar");
         cmdImport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdImportActionPerformed(evt);

@@ -879,7 +879,7 @@ public class PaymentMgmtEntryPanel extends javax.swing.JPanel {
 
         lblCase.setFont(lblCase.getFont().deriveFont(lblCase.getFont().getStyle() | java.awt.Font.BOLD));
         lblCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder.png"))); // NOI18N
-        lblCase.setText("Akte");
+        lblCase.setText("Processo");
         lblCase.setToolTipText("Akte öffnen");
         lblCase.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblCase.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1007,7 +1007,7 @@ public class PaymentMgmtEntryPanel extends javax.swing.JPanel {
 
         } catch (Exception ex) {
             log.error("error saving payment", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Zahlung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Zahlung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
     
@@ -1063,7 +1063,7 @@ public class PaymentMgmtEntryPanel extends javax.swing.JPanel {
                 aFile = fileService.getArchiveFile(this.payment.getArchiveFileKey().getId());
             } catch (Exception ex) {
                 log.error("Error loading archive file from server", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Akte: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Akte: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             if (aFile == null) {
@@ -1074,7 +1074,7 @@ public class PaymentMgmtEntryPanel extends javax.swing.JPanel {
             EditorsRegistry.getInstance().setMainEditorsPaneView((Component) editor);
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.getClass().getName(), ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_lblCaseMouseClicked
 

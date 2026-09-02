@@ -738,7 +738,7 @@ public class ManagePaymentsFrame extends javax.swing.JFrame {
 
             } catch (Exception ex) {
                 log.error("Error connecting to server", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Zahlungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Zahlungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
             this.pnlPayments.revalidate();
             this.pnlPayments.repaint();
@@ -961,7 +961,7 @@ public class ManagePaymentsFrame extends javax.swing.JFrame {
 
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Zahlungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Zahlungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_cmdGenerateSepaXmlActionPerformed

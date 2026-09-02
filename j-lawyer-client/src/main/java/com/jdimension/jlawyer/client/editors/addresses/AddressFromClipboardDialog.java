@@ -896,7 +896,7 @@ public class AddressFromClipboardDialog extends javax.swing.JDialog {
         jSplitPane1.setRightComponent(jScrollPane2);
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Abbrechen");
+        cmdClose.setText("Cancelar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -904,7 +904,7 @@ public class AddressFromClipboardDialog extends javax.swing.JDialog {
         });
 
         cmdConfirm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdConfirm.setText("Übernehmen");
+        cmdConfirm.setText("Aplicar");
         cmdConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdConfirmActionPerformed(evt);

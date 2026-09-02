@@ -738,7 +738,7 @@ public class BugReportDialog extends javax.swing.JDialog {
             
         } catch (Exception ex) {
             log.error("Error loading client.log", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Fehlerprotokolle des Clients: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Fehlerprotokolle des Clients: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         } 
     }
     
@@ -751,7 +751,7 @@ public class BugReportDialog extends javax.swing.JDialog {
             });
         } catch (Exception ex) {
             log.error("Error loading server.log", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Fehlerprotokolle des Servers: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Fehlerprotokolle des Servers: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
             
     }
@@ -1040,7 +1040,7 @@ public class BugReportDialog extends javax.swing.JDialog {
         jTabbedPane1.addTab("Fehlerprotokoll (Client)", jPanel3);
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);

@@ -841,7 +841,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="btGroupReviews"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Wiedervorlage"/>
+                    <Property name="text" type="java.lang.String" value="Lembrete / Revisão"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioReviewTypeFollowUpActionPerformed"/>
@@ -852,7 +852,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="btGroupReviews"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Frist"/>
+                    <Property name="text" type="java.lang.String" value="Prazo"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioReviewTypeRespiteActionPerformed"/>

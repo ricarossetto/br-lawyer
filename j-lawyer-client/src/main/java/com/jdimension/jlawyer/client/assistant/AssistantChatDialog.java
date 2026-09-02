@@ -851,7 +851,7 @@ public class AssistantChatDialog extends javax.swing.JDialog {
 
             } catch (Exception ex) {
                 log.error("Error getting data for case " + selectedCase.getId(), ex);
-                ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Akteninformationen", "Akteninformationen laden");
+                ThreadUtils.showErrorDialog(this, "Erro ao carregar der Akteninformationen", "Akteninformationen laden");
             }
         }
 
@@ -1015,7 +1015,7 @@ public class AssistantChatDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(taPrompt);
 
         cmdCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/editpaste.png"))); // NOI18N
-        cmdCopy.setText("Kopieren");
+        cmdCopy.setText("Copiar");
         cmdCopy.setToolTipText("Text in Zwischenablage kopieren");
         cmdCopy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1024,7 +1024,7 @@ public class AssistantChatDialog extends javax.swing.JDialog {
         });
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -1150,7 +1150,7 @@ public class AssistantChatDialog extends javax.swing.JDialog {
         splitInputOutput.setRightComponent(scrollMessages);
 
         cmdProcessOutput.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdProcessOutput.setText("Übernehmen");
+        cmdProcessOutput.setText("Aplicar");
         cmdProcessOutput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdProcessOutputActionPerformed(evt);
@@ -1598,7 +1598,7 @@ public class AssistantChatDialog extends javax.swing.JDialog {
             this.popAssistant.show(this.cmdPrompt, evt.getX(), evt.getY());
         } catch (Exception ex) {
             log.error("Error loading custom prompts", ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der eigenen Prompts: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der eigenen Prompts: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
         }
     }//GEN-LAST:event_cmdPromptMouseReleased
 

@@ -103,7 +103,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/find.png"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Suchen"/>
+        <Property name="toolTipText" type="java.lang.String" value="Pesquisar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdQuickSearchActionPerformed"/>
@@ -141,7 +141,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/cancel.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Schliessen"/>
+        <Property name="text" type="java.lang.String" value="Fechar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdCancelActionPerformed"/>
@@ -183,8 +183,8 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
-            <StringItem index="0" value="Mandant"/>
-            <StringItem index="1" value="Gegner"/>
+            <StringItem index="0" value="Cliente"/>
+            <StringItem index="1" value="Parte Contrária"/>
             <StringItem index="2" value="Dritte"/>
           </StringArray>
         </Property>

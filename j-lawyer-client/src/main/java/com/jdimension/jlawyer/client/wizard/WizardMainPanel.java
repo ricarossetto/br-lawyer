@@ -782,7 +782,7 @@ public class WizardMainPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

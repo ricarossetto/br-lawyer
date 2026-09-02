@@ -1081,7 +1081,7 @@ public class TimesheetPositionEntryPanel extends javax.swing.JPanel {
                 }
             } catch (Exception ex) {
                 log.error("Error removing timsheet position", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Löschen der Zeiterfassungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao excluir der Zeiterfassungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
 

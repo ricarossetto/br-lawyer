@@ -710,7 +710,7 @@ public class NewTemplateDialog extends javax.swing.JDialog {
             
         } catch (Exception ex) {
             log.error(ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
 
         }
 
@@ -719,7 +719,7 @@ public class NewTemplateDialog extends javax.swing.JDialog {
                 this.cmbTemplates.addItem(o);
             }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
 
         }
         
@@ -761,7 +761,7 @@ public class NewTemplateDialog extends javax.swing.JDialog {
         jLabel1.setText("Dateiname ohne Verzeichnis und Erweiterung:");
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        jButton1.setText("Abbrechen");
+        jButton1.setText("Cancelar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

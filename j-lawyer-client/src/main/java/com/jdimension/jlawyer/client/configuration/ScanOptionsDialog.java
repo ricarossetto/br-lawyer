@@ -715,7 +715,7 @@ public class ScanOptionsDialog extends javax.swing.JDialog {
         setTitle("Einstellungen Scannerintegration");
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -723,7 +723,7 @@ public class ScanOptionsDialog extends javax.swing.JDialog {
         });
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filesave.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -796,7 +796,7 @@ public class ScanOptionsDialog extends javax.swing.JDialog {
                 }
         } catch (Exception ex) {
             log.error("error validating scanner options", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return;
         }
         

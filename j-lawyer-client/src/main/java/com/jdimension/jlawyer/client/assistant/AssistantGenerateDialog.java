@@ -811,7 +811,7 @@ public class AssistantGenerateDialog extends javax.swing.JDialog implements Assi
 
             } catch (Exception ex) {
                 log.error("Error getting data for case " + selectedCase.getId(), ex);
-                ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Akteninformationen", "Akteninformationen laden");
+                ThreadUtils.showErrorDialog(this, "Erro ao carregar der Akteninformationen", "Akteninformationen laden");
             }
         }
 
@@ -959,7 +959,7 @@ public class AssistantGenerateDialog extends javax.swing.JDialog implements Assi
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Schliessen");
+        cmdCancel.setText("Fechar");
         cmdCancel.setToolTipText("");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -968,7 +968,7 @@ public class AssistantGenerateDialog extends javax.swing.JDialog implements Assi
         });
 
         cmdCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdCopy.setText("Kopieren");
+        cmdCopy.setText("Copiar");
         cmdCopy.setToolTipText("");
         cmdCopy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

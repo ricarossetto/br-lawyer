@@ -750,7 +750,7 @@ public class PdfStampConfigurationDialog extends javax.swing.JDialog {
             }
         } catch (Exception ex) {
             log.error("unable to load PDF stamps", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der PDF-Stempel: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der PDF-Stempel: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -789,7 +789,7 @@ public class PdfStampConfigurationDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tblStamps);
 
         cmdAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        cmdAdd.setText("Hinzufügen");
+        cmdAdd.setText("Adicionar");
         cmdAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAddActionPerformed(evt);
@@ -797,7 +797,7 @@ public class PdfStampConfigurationDialog extends javax.swing.JDialog {
         });
 
         cmdRemove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        cmdRemove.setText("Entfernen");
+        cmdRemove.setText("Remover");
         cmdRemove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdRemoveActionPerformed(evt);
@@ -805,7 +805,7 @@ public class PdfStampConfigurationDialog extends javax.swing.JDialog {
         });
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -813,7 +813,7 @@ public class PdfStampConfigurationDialog extends javax.swing.JDialog {
         });
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schließen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -951,7 +951,7 @@ public class PdfStampConfigurationDialog extends javax.swing.JDialog {
             }
         } catch (Exception ex) {
             log.error("unable to save PDF stamps", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der PDF-Stempel: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der PDF-Stempel: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return;
         }
 

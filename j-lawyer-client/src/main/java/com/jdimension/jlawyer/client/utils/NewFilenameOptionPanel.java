@@ -762,7 +762,7 @@ public class NewFilenameOptionPanel extends javax.swing.JPanel {
 
             } catch (Exception ex) {
                 log.error("Error getting docments for case " + selectedCase.getId(), ex);
-                ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Dokumente der Akte", "Dokumente speichern");
+                ThreadUtils.showErrorDialog(this, "Erro ao carregar der Dokumente der Akte", "Dokumente speichern");
             }
         }
     }
@@ -787,7 +787,7 @@ public class NewFilenameOptionPanel extends javax.swing.JPanel {
             this.nameTemplate = defaultNameTemplate;
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Dateinamenvorlagen", "Dateinamen");
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Dateinamenvorlagen", "Dateinamen");
         }
     }
 
@@ -927,7 +927,7 @@ public class NewFilenameOptionPanel extends javax.swing.JPanel {
             }
         });
 
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

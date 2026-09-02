@@ -1188,8 +1188,8 @@ public class SplashThread implements Runnable {
                             }
                             log.info("fully initialized module " + editorClass + ": " + (System.currentTimeMillis()-start));
                         } catch (Exception ex) {
-                            log.error("Fehler beim Laden des Moduls " + editorClass, ex);
-                            ThreadUtils.showErrorDialog(owner, "Fehler beim Laden des Moduls " + editorClass + ": " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                            log.error("Erro ao carregar des Moduls " + editorClass, ex);
+                            ThreadUtils.showErrorDialog(owner, "Erro ao carregar des Moduls " + editorClass + ": " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
                         }
                     });
 

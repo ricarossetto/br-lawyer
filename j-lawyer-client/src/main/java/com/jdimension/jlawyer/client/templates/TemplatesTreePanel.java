@@ -811,7 +811,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 
@@ -839,7 +839,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 
@@ -1008,7 +1008,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
         });
 
         cmdAddExisting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        cmdAddExisting.setText("Hinzufügen");
+        cmdAddExisting.setText("Adicionar");
         cmdAddExisting.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAddExistingActionPerformed(evt);
@@ -1218,7 +1218,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
 
             } catch (Exception ioe) {
                 log.error("Error uploading document", ioe);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_cmdAddExistingActionPerformed
@@ -1353,7 +1353,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
             JLawyerServiceLocator locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
             content = locator.lookupSystemManagementRemote().getTemplateData(this.templateType, folder, this.lstTemplates.getSelectedValue().toString());
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -1439,7 +1439,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
                     locator.lookupSystemManagementRemote().deleteTemplate(this.templateType, folder, delTempl.toString());
                 }
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Fehler beim Löschen des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao excluir des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
         }

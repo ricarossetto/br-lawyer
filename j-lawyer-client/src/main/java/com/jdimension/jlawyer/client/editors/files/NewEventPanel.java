@@ -823,7 +823,7 @@ public class NewEventPanel extends javax.swing.JPanel implements QuickDateSelect
 
         btGrpReviewType.add(radioEventTypeFollowUp);
         radioEventTypeFollowUp.setSelected(true);
-        radioEventTypeFollowUp.setText("Wiedervorlage");
+        radioEventTypeFollowUp.setText("Lembrete / Revisão");
         radioEventTypeFollowUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioEventTypeFollowUpActionPerformed(evt);
@@ -831,7 +831,7 @@ public class NewEventPanel extends javax.swing.JPanel implements QuickDateSelect
         });
 
         btGrpReviewType.add(radioEventTypeRespite);
-        radioEventTypeRespite.setText("Frist");
+        radioEventTypeRespite.setText("Prazo");
         radioEventTypeRespite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioEventTypeRespiteActionPerformed(evt);
@@ -839,7 +839,7 @@ public class NewEventPanel extends javax.swing.JPanel implements QuickDateSelect
         });
 
         btGrpReviewType.add(radioEventTypeEvent);
-        radioEventTypeEvent.setText("Termin");
+        radioEventTypeEvent.setText("Audiência / Compromisso");
         radioEventTypeEvent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioEventTypeEventActionPerformed(evt);
@@ -907,7 +907,7 @@ public class NewEventPanel extends javax.swing.JPanel implements QuickDateSelect
         cmbReviewAssignee.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         cmdNewReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdNewReview.setText("Hinzufügen");
+        cmdNewReview.setText("Adicionar");
         cmdNewReview.setToolTipText("");
         cmdNewReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1307,7 +1307,7 @@ public class NewEventPanel extends javax.swing.JPanel implements QuickDateSelect
 
             } catch (Exception ex) {
                 log.error("Error adding review", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
                 return;
             }

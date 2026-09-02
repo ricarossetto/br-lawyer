@@ -1262,7 +1262,7 @@ public class SelectAddressStep extends javax.swing.JPanel implements WizardStepI
                     }
                     setText(text.length() == 0 ? "Adresse" : text.toString());
                 } else {
-                    setText("Adresse");
+                    setText("Endereço");
                 }
             }
             return this;

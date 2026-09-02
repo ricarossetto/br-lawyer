@@ -152,7 +152,7 @@ public class ArchiveFileFormsLoadAction extends ProgressableAction {
                     log.error("Error loading form plugin", t);
                     final String errorMsg = t.getMessage();
                     SwingUtilities.invokeLater(() -> {
-                        JOptionPane.showMessageDialog(this.owner, "Fehler beim Laden des Falldatenblattes: " + errorMsg, com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(this.owner, "Erro ao carregar des Falldatenblattes: " + errorMsg, com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     });
                 }
             }
@@ -169,7 +169,7 @@ public class ArchiveFileFormsLoadAction extends ProgressableAction {
             executor.shutdownNow();
             final String errorMsg = ex.getMessage();
             SwingUtilities.invokeLater(() -> {
-                JOptionPane.showMessageDialog(this.owner, "Fehler beim Laden der Falldaten: " + errorMsg, com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this.owner, "Erro ao carregar der Falldaten: " + errorMsg, com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             });
             return false;
         }

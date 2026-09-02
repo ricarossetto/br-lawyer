@@ -838,7 +838,7 @@ public class ExportAsPdfMergeStep extends javax.swing.JPanel implements WizardSt
                     }
                 } catch (Exception ioe) {
                     // Log and keep wizard open so user can retry; WizardMainPanel will display the error
-                    log.error("Fehler beim Speichern in die Akte", ioe);
+                    log.error("Erro ao salvar in die Akte", ioe);
                     throw new RuntimeException(ioe);
                 }
             }

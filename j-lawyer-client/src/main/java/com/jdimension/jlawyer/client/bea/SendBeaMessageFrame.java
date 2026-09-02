@@ -905,7 +905,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
             }
         } catch (Exception ex) {
             log.error(ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Nachrichtenvorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Nachrichtenvorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         try {
@@ -1716,14 +1716,14 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
         jLabel10.setText("Datum:");
         jLabel10.setEnabled(false);
 
-        radioReviewTypeFollowUp.setText("Wiedervorlage");
+        radioReviewTypeFollowUp.setText("Lembrete / Revisão");
         radioReviewTypeFollowUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeFollowUpActionPerformed(evt);
             }
         });
 
-        radioReviewTypeRespite.setText("Frist");
+        radioReviewTypeRespite.setText("Prazo");
         radioReviewTypeRespite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeRespiteActionPerformed(evt);
@@ -2265,7 +2265,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
                     CalendarUtils.getInstance().storeCalendarEntry(reviewDto, this.contextArchiveFile, (CalendarEntryTemplate) this.cmbReviewReason.getItemAt(this.cmbReviewReason.getSelectedIndex()), this);
                 } catch (Exception ex) {
                     log.error("Error adding review", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
             }
@@ -2298,7 +2298,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
                         header.setId(msgid);
                         bea.moveMessageToTrash(safeid, header);
                     } catch (Exception ex) {
-                        log.error("Fehler beim Löschen des Entwurfs", ex);
+                        log.error("Erro ao excluir des Entwurfs", ex);
                         JOptionPane.showMessageDialog(
                             EditorsRegistry.getInstance().getMainWindow(),
                             "Entwurf konnte nicht gelöscht werden: " + ex.getMessage(),
@@ -2344,7 +2344,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
 
         } catch (Exception ioe) {
             log.error("Error attaching document", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdAttachActionPerformed
 
@@ -2454,7 +2454,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
                     CalendarUtils.getInstance().storeCalendarEntry(reviewDto, this.contextArchiveFile, (CalendarEntryTemplate) this.cmbReviewReason.getItemAt(this.cmbReviewReason.getSelectedIndex()), this);
                 } catch (Exception ex) {
                     log.error("Error adding review", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
             }
 
@@ -2586,7 +2586,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
 
             } catch (Exception ex) {
                 log.error("Error applying template", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Nachrichtenvorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Nachrichtenvorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_cmbTemplatesActionPerformed

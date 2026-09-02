@@ -1272,7 +1272,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
             // Could not toggle (would hide last panel)
             menuItem.setSelected(true);
             JOptionPane.showMessageDialog(this,
-                    "Mindestens ein Bereich muss sichtbar sein.",
+                    "Pelo menos uma área deve permanecer visível.",
                     "Hinweis",
                     JOptionPane.WARNING_MESSAGE);
             return;
@@ -1672,7 +1672,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         jScrollPane1.setViewportView(pnlRevDue);
 
-        tabPaneDue.addTab("alle", jScrollPane1);
+        tabPaneDue.addTab("Todos", jScrollPane1);
 
         lblUserFilterCount.setFont(lblUserFilterCount.getFont().deriveFont(lblUserFilterCount.getFont().getStyle() | java.awt.Font.BOLD, lblUserFilterCount.getFont().getSize()+2));
         lblUserFilterCount.setForeground(java.awt.Color.white);
@@ -1921,7 +1921,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         jScrollPane4.setViewportView(pnlTagged);
 
-        tabPaneTagged.addTab("alle", jScrollPane4);
+        tabPaneTagged.addTab("Todos", jScrollPane4);
 
         org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -2411,7 +2411,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
             }
 
             if (toolCapabilities.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Es sind keine Chat-Aktionen mit Tool-Unterstützung konfiguriert.", "Ingo", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Nenhuma ação de chat com suporte a ferramentas está configurada.", "Ingo", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
 
@@ -2428,7 +2428,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         } catch (Exception ex) {
             log.error("Error loading Ingo chat capabilities", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Ingo-Aktionen: " + ex.getMessage(), "Ingo", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar as ações do assistente Ingo: " + ex.getMessage(), "Ingo", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdIngoChatActionPerformed
 
@@ -2836,7 +2836,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
             this.repaint();
         } else if (e instanceof MailingFailedEvent) {
             MailingQueueEntry mqe = ((MailingFailedEvent) e).getEntry();
-            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), mqe.getFailedObjectDescription() + " konnte nicht gesendet werden!", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), mqe.getFailedObjectDescription() + " não pôde ser enviado!", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         } else if (e instanceof MailingStatusEvent) {
 
             this.lblMailingStatus.setText(" " + ((MailingStatusEvent) e).getMailingList().size());

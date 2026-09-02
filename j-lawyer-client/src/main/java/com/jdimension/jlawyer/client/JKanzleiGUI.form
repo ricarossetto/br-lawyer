@@ -155,7 +155,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/package_system.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Adressen"/>
+                <Property name="text" type="java.lang.String" value="Endereços / Contatos"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="mnuAddressOptionsSalutation">
@@ -369,7 +369,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/package_system.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Akten"/>
+                <Property name="text" type="java.lang.String" value="Processos"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="mnuArchiveFileOptionsSubjectFields">
@@ -486,7 +486,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/package_system.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Dokumente"/>
+                <Property name="text" type="java.lang.String" value="Documentos"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="mnuWordProcessor">

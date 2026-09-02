@@ -729,7 +729,7 @@ public class TimesheetAllowedPositionsDialog extends javax.swing.JDialog {
 
         } catch (Exception ex) {
             log.error("Error determining allowed timesheet positions", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -772,7 +772,7 @@ public class TimesheetAllowedPositionsDialog extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -780,7 +780,7 @@ public class TimesheetAllowedPositionsDialog extends javax.swing.JDialog {
         });
 
         cmdApply.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdApply.setText("Übernehmen");
+        cmdApply.setText("Aplicar");
         cmdApply.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdApplyActionPerformed(evt);

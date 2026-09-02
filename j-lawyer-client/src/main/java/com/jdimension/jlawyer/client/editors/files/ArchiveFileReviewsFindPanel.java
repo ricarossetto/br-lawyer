@@ -916,7 +916,7 @@ public class ArchiveFileReviewsFindPanel extends javax.swing.JPanel implements T
         });
 
         grpType.add(rdTypeRespite);
-        rdTypeRespite.setText("Fristen");
+        rdTypeRespite.setText("Prazos");
         rdTypeRespite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdTypeRespiteActionPerformed(evt);
@@ -924,7 +924,7 @@ public class ArchiveFileReviewsFindPanel extends javax.swing.JPanel implements T
         });
 
         grpType.add(rdTypeReview);
-        rdTypeReview.setText("Wiedervorlagen");
+        rdTypeReview.setText("Lembretes / Revisões");
         rdTypeReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdTypeReviewActionPerformed(evt);
@@ -941,7 +941,7 @@ public class ArchiveFileReviewsFindPanel extends javax.swing.JPanel implements T
         });
 
         grpType.add(rdTypeEvent);
-        rdTypeEvent.setText("Termine");
+        rdTypeEvent.setText("Audiências / Compromissos");
         rdTypeEvent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdTypeEventActionPerformed(evt);
@@ -1174,7 +1174,7 @@ public class ArchiveFileReviewsFindPanel extends javax.swing.JPanel implements T
                 
             } catch (Exception ex) {
                 log.error("Error creating editor from class " + this.detailsEditorClass, ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
     }//GEN-LAST:event_mnuOpenArchiveFileActionPerformed
 
@@ -1199,7 +1199,7 @@ public class ArchiveFileReviewsFindPanel extends javax.swing.JPanel implements T
                 
             } catch (Exception ex) {
                 log.error("Error creating editor from class " + this.detailsEditorClass, ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
                 
         } else if(evt.getClickCount()==1 && evt.getButton()==MouseEvent.BUTTON3) {

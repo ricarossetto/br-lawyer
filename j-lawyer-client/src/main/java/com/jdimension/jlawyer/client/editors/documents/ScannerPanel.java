@@ -2542,7 +2542,7 @@ public class ScannerPanel extends javax.swing.JPanel implements ThemeableEditor,
 
                 } catch (Exception ex) {
                     log.error(ex);
-                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern des Scans: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
+                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar des Scans: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
                 }
             }
 
@@ -2622,7 +2622,7 @@ public class ScannerPanel extends javax.swing.JPanel implements ThemeableEditor,
                     is = locator.lookupIntegrationServiceRemote();
                 } catch (Exception ex) {
                     log.error(ex);
-                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Löschen des Scans: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
+                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao excluir des Scans: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
                     return false;
                 }
 
@@ -2639,7 +2639,7 @@ public class ScannerPanel extends javax.swing.JPanel implements ThemeableEditor,
 
                     } catch (Exception ex) {
                         log.error(ex);
-                        ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Löschen des Scans: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
+                        ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao excluir des Scans: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
                     }
                 }
                 if (removedCount > 0) {

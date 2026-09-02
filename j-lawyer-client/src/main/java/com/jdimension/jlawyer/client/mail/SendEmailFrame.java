@@ -2550,7 +2550,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
         jLabel10.setEnabled(false);
 
         btGroupReviews.add(radioReviewTypeFollowUp);
-        radioReviewTypeFollowUp.setText("Wiedervorlage");
+        radioReviewTypeFollowUp.setText("Lembrete / Revisão");
         radioReviewTypeFollowUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeFollowUpActionPerformed(evt);
@@ -2558,7 +2558,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
         });
 
         btGroupReviews.add(radioReviewTypeRespite);
-        radioReviewTypeRespite.setText("Frist");
+        radioReviewTypeRespite.setText("Prazo");
         radioReviewTypeRespite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeRespiteActionPerformed(evt);
@@ -2940,7 +2940,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
                     CalendarUtils.getInstance().storeCalendarEntry(reviewDto, this.contextArchiveFile, (CalendarEntryTemplate) this.cmbReviewReason.getItemAt(this.cmbReviewReason.getSelectedIndex()), this);
                 } catch (Exception ex) {
                     log.error("Error adding review", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
             }
 
@@ -3051,7 +3051,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
 
         } catch (Exception ioe) {
             log.error("Error attaching document", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdAttachActionPerformed
 

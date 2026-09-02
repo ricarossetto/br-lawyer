@@ -736,7 +736,7 @@ public class GetPasswordDialog extends javax.swing.JDialog {
         lblComplexity.setText("Schwach");
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -744,7 +744,7 @@ public class GetPasswordDialog extends javax.swing.JDialog {
         });
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Übernehmen");
+        cmdSave.setText("Aplicar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);

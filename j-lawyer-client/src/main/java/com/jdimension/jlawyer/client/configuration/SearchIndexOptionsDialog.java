@@ -710,7 +710,7 @@ public class SearchIndexOptionsDialog extends javax.swing.JDialog {
         setTitle("Einstellungen Dokumentensuche");
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -801,7 +801,7 @@ public class SearchIndexOptionsDialog extends javax.swing.JDialog {
             
         } catch (Exception ex) {
             log.error("error triggering reindexall", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return;
         }
         

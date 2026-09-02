@@ -757,7 +757,7 @@ public class ReportEntryPanel extends javax.swing.JPanel {
         lblConfidential = new javax.swing.JLabel();
 
         lblCategory.setFont(lblCategory.getFont().deriveFont(lblCategory.getFont().getStyle() | java.awt.Font.BOLD, lblCategory.getFont().getSize()+2));
-        lblCategory.setText("Kategorie");
+        lblCategory.setText("Categoria");
         lblCategory.setOpaque(true);
 
         lblName.setFont(lblName.getFont().deriveFont(lblName.getFont().getStyle() | java.awt.Font.BOLD));
@@ -835,7 +835,7 @@ public class ReportEntryPanel extends javax.swing.JPanel {
                 ((ReportResultPanel)reportComponent).initialize(this.entry.getName(), this.entry.getReportId(), this.entry.getDefaultBeginDate(), this.entry.getDefaultEndDate(), this.entry.getDateSelectionLabel());
         } catch (Exception ex) {
             log.error("Error creating report from class " + this.entry.getClassName(), ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Reports: " + ex.getMessage(), java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/JKanzleiGUI").getString("msg.title.error"), JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Reports: " + ex.getMessage(), java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/JKanzleiGUI").getString("msg.title.error"), JOptionPane.ERROR_MESSAGE);
         }
         
         this.reportPane.addTab(this.entry.getName(), reportComponent);

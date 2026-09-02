@@ -834,7 +834,7 @@ public class LoadDocumentPreviewThread implements Runnable {
                     preview = DocumentViewerFactory.getDocumentViewer(this.caseDto, this.docDto.getId(), this.docDto.getName(), readOnly, new CaseDocumentPreviewProvider(afs, this.docDto.getId()), data, panelWidth, panelHeight, this.saveCallback);
                 } catch (Exception ex) {
                     log.error("Could not get document preview for " + this.docDto.getName() + "[" + this.docDto.getId() + "]", ex);
-                    preview = new JLabel("Fehler beim Laden der Dokumentvorschau: " + ex.getMessage());
+                    preview = new JLabel("Erro ao carregar der Dokumentvorschau: " + ex.getMessage());
                 }
             }
 

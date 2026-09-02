@@ -943,7 +943,7 @@ public class HtmlPanel extends javax.swing.JPanel implements PreviewPanel, Assis
                 }
             } catch (Throwable t) {
                 log.error("Error saving document with id " + this.id, t);
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
             }
         } else {
             log.debug("HtmlPanel.removeNotify(): skipping save - id=" + this.id + ", readOnly=" + this.readOnly);

@@ -163,7 +163,7 @@ public class DesktopGridLayoutDialog extends JDialog {
         btnApply.addActionListener(e -> applyChanges());
         rightButtonPanel.add(btnApply);
 
-        JButton btnCancel = new JButton("Abbrechen");
+        JButton btnCancel = new JButton("Cancelar");
         btnCancel.setIcon(new ImageIcon(getClass().getResource("/icons/cancel.png")));
         btnCancel.addActionListener(e -> cancelChanges());
         rightButtonPanel.add(btnCancel);

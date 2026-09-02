@@ -827,7 +827,7 @@ public class NewEventEntryDialog extends javax.swing.JDialog implements NewEvent
                 ev = CalendarUtils.getInstance().storeCalendarEntry(ev, this.eventCase, template, this);
         } catch (Exception ex) {
             log.error("Error adding review", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return;
         }
 

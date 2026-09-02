@@ -7,6 +7,11 @@ Write-Host "========================================================" -Foregroun
 Write-Host "  BR-LAWYER Desktop Client - Inicializacao (pt-BR)" -ForegroundColor Cyan
 Write-Host "========================================================" -ForegroundColor Cyan
 
+if (-not $env:JAVA_HOME -and (Test-Path "C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot")) {
+    $env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot"
+    $env:Path = "$env:JAVA_HOME\bin;$env:Path"
+}
+
 if (-not (Test-Path $JarPath)) {
     Write-Error "O arquivo $JarPath nao foi encontrado. Execute o build Maven primeiro."
     exit 1

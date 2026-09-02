@@ -735,7 +735,7 @@ public class PdfStamperDialog extends javax.swing.JDialog {
                 this.cmbStampText.addItem(config.getText());
             }
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der PDF-Stempel: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der PDF-Stempel: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
         this.cmbStampText.setSelectedItem("");
 
@@ -841,7 +841,7 @@ public class PdfStamperDialog extends javax.swing.JDialog {
 
         cmdCancel.setFont(cmdCancel.getFont());
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

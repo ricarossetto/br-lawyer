@@ -867,7 +867,7 @@ public class AssistantExtractDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(taPrompt);
 
         cmdCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/editpaste.png"))); // NOI18N
-        cmdCopy.setText("Kopieren");
+        cmdCopy.setText("Copiar");
         cmdCopy.setToolTipText("Text in Zwischenablage kopieren");
         cmdCopy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -876,7 +876,7 @@ public class AssistantExtractDialog extends javax.swing.JDialog {
         });
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -982,7 +982,7 @@ public class AssistantExtractDialog extends javax.swing.JDialog {
         splitInputOutput.setRightComponent(scrollMessages);
 
         cmdProcessOutput.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdProcessOutput.setText("Übernehmen");
+        cmdProcessOutput.setText("Aplicar");
         cmdProcessOutput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdProcessOutputActionPerformed(evt);

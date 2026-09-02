@@ -1212,7 +1212,7 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
 
         } catch (Exception ex) {
             log.error("Error getting contents of Outlook message", ex);
-            this.setErrorMessage("Fehler beim Laden der Outlook-Nachricht: " + ex.getMessage());
+            this.setErrorMessage("Erro ao carregar der Outlook-Nachricht: " + ex.getMessage());
             this.lblBCC.setText("");
             this.lblBCC.setToolTipText(null);
             this.lblCC.setText("");
@@ -1282,7 +1282,7 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
 
         } catch (Exception ex) {
             log.error("Error getting contents of IMAP message", ex);
-            this.setErrorMessage("Fehler beim Laden der Nachricht: " + ex.getMessage());
+            this.setErrorMessage("Erro ao carregar der Nachricht: " + ex.getMessage());
             this.lblBCC.setText("");
             this.lblBCC.setToolTipText(null);
             this.lblCC.setText("");
@@ -1877,7 +1877,7 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
         lblCalendarEntry = new javax.swing.JLabel();
 
         mnuSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filesave.png"))); // NOI18N
-        mnuSave.setText("Speichern");
+        mnuSave.setText("Salvar");
 
         mnuSearchSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
         mnuSearchSave.setText("in Akte...");
@@ -1925,7 +1925,7 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
 
         lblSentDate.setFont(lblSentDate.getFont());
         lblSentDate.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblSentDate.setText("Datum");
+        lblSentDate.setText("Data");
 
         lblSubject.setText(" ");
         lblSubject.setToolTipText("Klicken, um in Zwischenablage zu kopieren");
@@ -2239,7 +2239,7 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
 
         } catch (Exception ex) {
             log.error("Error saving attachment", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Anhangs: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar des Anhangs: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
 
         }
     }//GEN-LAST:event_mnuSaveAsFileActionPerformed
@@ -2314,7 +2314,7 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
 
             } catch (Exception ex) {
                 log.error(ex);
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
             }
         }
     }//GEN-LAST:event_mnuSearchSaveActionPerformed
@@ -2450,9 +2450,9 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
                     eb.publishEvent(new DocumentAddedEvent(newDoc));
 
                 } catch (Exception e) {
-                    log.error("Fehler beim Speichern in der Akte", e);
+                    log.error("Erro ao salvar in der Akte", e);
                     JOptionPane.showMessageDialog(this,
-                            "Fehler beim Speichern in der Akte: " + e.getMessage(),
+                            "Erro ao salvar in der Akte: " + e.getMessage(),
                             "Fehler", JOptionPane.ERROR_MESSAGE);
                 }
             } else {

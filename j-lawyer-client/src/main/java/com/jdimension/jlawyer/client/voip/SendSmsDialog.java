@@ -798,7 +798,7 @@ public class SendSmsDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(txtBody);
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -806,7 +806,7 @@ public class SendSmsDialog extends javax.swing.JDialog {
         });
 
         cmdSend.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/sms_protocol.png"))); // NOI18N
-        cmdSend.setText("Senden");
+        cmdSend.setText("Enviar");
         cmdSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSendActionPerformed(evt);

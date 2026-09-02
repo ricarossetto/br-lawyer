@@ -749,7 +749,7 @@ public class IdentityPanel extends javax.swing.JPanel {
 
         lblFax.setText("Fax:");
 
-        lblEmail.setText("E-Mail");
+        lblEmail.setText("E-mail");
 
         lblOrganisation.setText("Organisation:");
 

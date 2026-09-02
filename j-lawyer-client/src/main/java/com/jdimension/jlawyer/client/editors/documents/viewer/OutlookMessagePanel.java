@@ -745,7 +745,7 @@ public class OutlookMessagePanel extends javax.swing.JPanel implements PreviewPa
             message.setFlag(Flag.SEEN, true);
             this.setMessage(documentId, null);
         } catch (Throwable t) {
-            this.showStatus("Fehler beim Laden der Vorschau.");
+            this.showStatus("Erro ao carregar der Vorschau.");
         }
     }
 

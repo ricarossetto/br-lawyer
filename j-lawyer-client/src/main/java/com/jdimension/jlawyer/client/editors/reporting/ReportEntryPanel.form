@@ -69,7 +69,7 @@
             <Font bold="true" component="lblCategory" property="font" relativeSize="true" size="2"/>
           </FontInfo>
         </Property>
-        <Property name="text" type="java.lang.String" value="Kategorie"/>
+        <Property name="text" type="java.lang.String" value="Categoria"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>

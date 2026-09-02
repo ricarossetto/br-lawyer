@@ -280,7 +280,7 @@ public class AssistantChatPanel extends JDialog {
 
             } catch (Exception ex) {
                 log.error("Error getting data for case " + selectedCase.getId(), ex);
-                ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Akteninformationen", "Akteninformationen laden");
+                ThreadUtils.showErrorDialog(this, "Erro ao carregar der Akteninformationen", "Akteninformationen laden");
             }
         }
 
@@ -674,7 +674,7 @@ public class AssistantChatPanel extends JDialog {
         JPanel actionBar = new JPanel(new BorderLayout());
         actionBar.setBorder(BorderFactory.createEmptyBorder(4, 8, 6, 8));
 
-        cmdClose = new JButton("Schliessen");
+        cmdClose = new JButton("Fechar");
         cmdClose.setIcon(new ImageIcon(getClass().getResource("/icons/cancel.png")));
         cmdClose.addActionListener(e -> cmdCloseActionPerformed(e));
         actionBar.add(cmdClose, BorderLayout.WEST);
@@ -1369,7 +1369,7 @@ public class AssistantChatPanel extends JDialog {
             this.popAssistant.show(this.cmdPrompt, evt.getX(), evt.getY());
         } catch (Exception ex) {
             log.error("Error loading custom prompts", ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der eigenen Prompts: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der eigenen Prompts: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 

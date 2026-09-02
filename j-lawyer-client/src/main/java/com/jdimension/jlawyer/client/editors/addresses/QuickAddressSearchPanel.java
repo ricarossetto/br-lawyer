@@ -1053,7 +1053,7 @@ public class QuickAddressSearchPanel extends javax.swing.JPanel implements Theme
 
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.detailsEditorClass, ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -1080,7 +1080,7 @@ public class QuickAddressSearchPanel extends javax.swing.JPanel implements Theme
                     this.fillCasesForContactPanel(col);
                 } catch (Exception ex) {
                     log.error("Error getting archive files for address", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden der Akten zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar der Akten zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     EditorsRegistry.getInstance().clearStatus();
                 }
             } else {
@@ -1120,7 +1120,7 @@ public class QuickAddressSearchPanel extends javax.swing.JPanel implements Theme
                 this.fillCasesForContactPanel(col);
             } catch (Exception ex) {
                 log.error("Error getting archive files for address", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Akten zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Akten zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
             }
         } else {

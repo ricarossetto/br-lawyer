@@ -728,7 +728,7 @@ public class CaseDocumentStore extends ObservedDocumentStore {
                 }
 
             } catch (Exception ex) {
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
             }
         }
     }
@@ -762,7 +762,7 @@ public class CaseDocumentStore extends ObservedDocumentStore {
                 }
 
             } catch (Exception ex) {
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
             }
         }
 

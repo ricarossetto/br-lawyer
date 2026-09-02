@@ -766,7 +766,7 @@ public class SelectLegalAuthorityDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(lstAuthorities);
 
         cmdOK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdOK.setText("Übernehmen");
+        cmdOK.setText("Aplicar");
         cmdOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdOKActionPerformed(evt);
@@ -774,7 +774,7 @@ public class SelectLegalAuthorityDialog extends javax.swing.JDialog {
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

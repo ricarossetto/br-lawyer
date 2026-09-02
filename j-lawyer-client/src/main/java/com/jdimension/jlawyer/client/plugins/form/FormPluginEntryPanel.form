@@ -142,7 +142,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblDescription">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Beschreibung"/>
+        <Property name="text" type="java.lang.String" value="Descrição"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblVersionAvailable">

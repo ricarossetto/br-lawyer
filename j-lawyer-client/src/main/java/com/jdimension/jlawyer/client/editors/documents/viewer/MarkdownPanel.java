@@ -1913,7 +1913,7 @@ public class MarkdownPanel extends javax.swing.JPanel implements PreviewPanel {
                     locator.lookupArchiveFileServiceRemote().setDocumentContent(this.id, currentBytes);
                 } catch (Throwable t) {
                     log.error("Error saving document with id " + this.id, t);
-                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                    ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
 
                 }
             }

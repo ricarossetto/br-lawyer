@@ -672,7 +672,7 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="radioReviewTypeFollowUp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Wiedervorlage"/>
+                    <Property name="text" type="java.lang.String" value="Lembrete / Revisão"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioReviewTypeFollowUpActionPerformed"/>
@@ -680,7 +680,7 @@
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="radioReviewTypeRespite">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Frist"/>
+                    <Property name="text" type="java.lang.String" value="Prazo"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radioReviewTypeRespiteActionPerformed"/>

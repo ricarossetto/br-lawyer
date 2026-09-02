@@ -834,7 +834,7 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Schliessen");
+        cmdCancel.setText("Fechar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -842,7 +842,7 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
         });
 
         cmdUseSelection.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdUseSelection.setText("Übernehmen");
+        cmdUseSelection.setText("Aplicar");
         cmdUseSelection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdUseSelectionActionPerformed(evt);
@@ -1370,7 +1370,7 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
 
         } catch (Exception ex) {
             log.error("Error saving address", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
             return;
         }

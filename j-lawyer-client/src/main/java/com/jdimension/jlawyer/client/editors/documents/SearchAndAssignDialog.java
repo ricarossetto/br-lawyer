@@ -1004,7 +1004,7 @@ public class SearchAndAssignDialog extends javax.swing.JDialog implements Progre
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Schliessen");
+        cmdCancel.setText("Fechar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -1012,7 +1012,7 @@ public class SearchAndAssignDialog extends javax.swing.JDialog implements Progre
         });
 
         cmdUseSelection.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdUseSelection.setText("Übernehmen");
+        cmdUseSelection.setText("Aplicar");
         cmdUseSelection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdUseSelectionActionPerformed(evt);

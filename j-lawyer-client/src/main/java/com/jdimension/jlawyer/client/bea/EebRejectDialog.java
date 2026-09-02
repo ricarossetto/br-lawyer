@@ -718,7 +718,7 @@ public class EebRejectDialog extends javax.swing.JDialog {
         setTitle("eEB-Anforderung ablehnen");
 
         cmdOK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdOK.setText("Übernehmen");
+        cmdOK.setText("Aplicar");
         cmdOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdOKActionPerformed(evt);
@@ -726,7 +726,7 @@ public class EebRejectDialog extends javax.swing.JDialog {
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

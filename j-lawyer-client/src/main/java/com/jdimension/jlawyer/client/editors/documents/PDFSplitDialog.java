@@ -773,7 +773,7 @@ public class PDFSplitDialog extends javax.swing.JDialog {
         jLabel6.setText("Leere werden als Trennseiten erkannt. Seiten nur mit Kopf-/Fußzeile oder wenig Inhalt werden als leer gewertet.");
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

@@ -923,10 +923,10 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
             this.treeFolders.setSelectionRow(0);
         } catch (CompletionException ex) {
             log.error(ex.getCause());
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
 
         FrameUtils.fitDialogToScreen(this, 85f);
@@ -950,7 +950,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
             this.formPlaceHolderValues = formPlaceHolderValuesFuture.join();
         } catch (CompletionException ex) {
             log.error("Error getting all party types", ex.getCause());
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Beteiligtentypen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Beteiligtentypen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
         }
 
@@ -988,7 +988,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
             this.nameTemplate = defaultNameTemplate;
         } catch (CompletionException ex) {
             log.error("Error connecting to server", ex.getCause());
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Dateinamenvorlagen", "Dateinamen");
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Dateinamenvorlagen", "Dateinamen");
         }
         
         this.popMoveToFolder.removeAll();
@@ -1100,7 +1100,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.setToolTipText("");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1132,7 +1132,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
         jLabel8.setEnabled(false);
 
         btGrpReviews.add(radioReviewTypeFollowUp);
-        radioReviewTypeFollowUp.setText("Wiedervorlage");
+        radioReviewTypeFollowUp.setText("Lembrete / Revisão");
         radioReviewTypeFollowUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeFollowUpActionPerformed(evt);
@@ -1140,7 +1140,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
         });
 
         btGrpReviews.add(radioReviewTypeRespite);
-        radioReviewTypeRespite.setText("Frist");
+        radioReviewTypeRespite.setText("Prazo");
         radioReviewTypeRespite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeRespiteActionPerformed(evt);
@@ -1647,7 +1647,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
                     CalendarUtils.getInstance().storeCalendarEntry(reviewDto, this.aFile, (CalendarEntryTemplate) this.cmbReviewReason.getItemAt(this.cmbReviewReason.getSelectedIndex()), this);
                 } catch (Exception ex) {
                     log.error("Error adding review", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
             }
@@ -2054,7 +2054,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 
@@ -2087,7 +2087,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 

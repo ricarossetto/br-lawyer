@@ -1015,7 +1015,7 @@ public class FolderListCell extends javax.swing.JPanel implements DropTargetList
 
         } catch (Exception ex) {
             log.error("could not delete document folder", ex);
-            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Löschen des Ordners: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao excluir des Ordners: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_mnuDeleteActionPerformed
 
@@ -1104,7 +1104,7 @@ public class FolderListCell extends javax.swing.JPanel implements DropTargetList
                     log.warn("Folder is null when setting folder list cell selected");
                 }
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern der Ordnereinstellungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar der Ordnereinstellungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
 

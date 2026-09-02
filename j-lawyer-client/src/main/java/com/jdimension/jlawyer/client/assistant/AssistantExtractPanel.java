@@ -472,7 +472,7 @@ public class AssistantExtractPanel extends JDialog {
         JPanel actionBar = new JPanel(new BorderLayout());
         actionBar.setBorder(BorderFactory.createEmptyBorder(4, 8, 6, 8));
 
-        cmdClose = new JButton("Schliessen");
+        cmdClose = new JButton("Fechar");
         cmdClose.setIcon(new ImageIcon(getClass().getResource("/icons/cancel.png")));
         cmdClose.addActionListener(e -> cmdCloseActionPerformed(e));
         actionBar.add(cmdClose, BorderLayout.WEST);

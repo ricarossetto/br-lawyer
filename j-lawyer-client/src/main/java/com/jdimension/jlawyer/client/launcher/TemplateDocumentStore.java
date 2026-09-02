@@ -699,7 +699,7 @@ public class TemplateDocumentStore extends ObservedDocumentStore {
                 locator.lookupSystemManagementRemote().setTemplateData(this.templateType, this.folder, this.getFileName(), newContent);
 
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 return;
             }
         }

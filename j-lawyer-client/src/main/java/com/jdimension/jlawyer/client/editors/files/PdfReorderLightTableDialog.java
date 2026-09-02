@@ -121,12 +121,12 @@ public class PdfReorderLightTableDialog extends JDialog {
         scroll.setPreferredSize(new Dimension(approxW - 40, approxH - 120));
 
         // Buttons
-        JButton btnAccept = new JButton("Übernehmen");
+        JButton btnAccept = new JButton("Aplicar");
         btnAccept.addActionListener(e -> {
             accepted = true;
             dispose();
         });
-        JButton btnCancel = new JButton("Abbrechen");
+        JButton btnCancel = new JButton("Cancelar");
         btnCancel.addActionListener(e -> {
             accepted = false;
             dispose();

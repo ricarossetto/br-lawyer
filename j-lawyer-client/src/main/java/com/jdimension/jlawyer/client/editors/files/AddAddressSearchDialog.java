@@ -844,7 +844,7 @@ public class AddAddressSearchDialog extends javax.swing.JDialog implements ListS
         jScrollPane1.setViewportView(tblResults);
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Schliessen");
+        cmdCancel.setText("Fechar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -852,7 +852,7 @@ public class AddAddressSearchDialog extends javax.swing.JDialog implements ListS
         });
 
         cmdUseSelection.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdUseSelection.setText("Übernehmen");
+        cmdUseSelection.setText("Aplicar");
         cmdUseSelection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdUseSelectionActionPerformed(evt);

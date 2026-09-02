@@ -744,7 +744,7 @@ public class OptionGroupConfigurationDialog extends javax.swing.JDialog {
         txtOption = new javax.swing.JTextField();
 
         mnuRename.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit.png"))); // NOI18N
-        mnuRename.setText("Bearbeiten");
+        mnuRename.setText("Editar");
         mnuRename.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRenameActionPerformed(evt);

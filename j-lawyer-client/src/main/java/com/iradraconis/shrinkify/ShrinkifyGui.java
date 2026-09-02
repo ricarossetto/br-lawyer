@@ -853,8 +853,8 @@ public class ShrinkifyGui extends javax.swing.JFrame {
         });
 
         testButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/preview_24dp_0E72B5.png"))); // NOI18N
-        testButton.setText("Vorschau");
-        testButton.setToolTipText("Vorschau der Komprimierung");
+        testButton.setText("Visualizar");
+        testButton.setToolTipText("Pré-visualização da compactação");
         testButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 testButtonActionPerformed(evt);
@@ -863,7 +863,7 @@ public class ShrinkifyGui extends javax.swing.JFrame {
 
         saveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/compress_24dp_0E72B5.png"))); // NOI18N
         saveButton.setText("Komprimieren");
-        saveButton.setToolTipText("Komprimieren und Speichern");
+        saveButton.setToolTipText("Compactar e Salvar");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveButtonActionPerformed(evt);
@@ -871,7 +871,7 @@ public class ShrinkifyGui extends javax.swing.JFrame {
         });
 
         closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        closeButton.setText("Schließen");
+        closeButton.setText("Fechar");
         closeButton.setEnabled(false);
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1149,12 +1149,12 @@ public class ShrinkifyGui extends javax.swing.JFrame {
                     if (Desktop.isDesktopSupported()) {
                         Desktop.getDesktop().open(tempFile);
                     } else {
-                        JOptionPane.showMessageDialog(this, "Vorschau nicht unterstützt auf diesem System.");
+                        JOptionPane.showMessageDialog(this, "Pré-visualização não suportada neste sistema.");
                     }
     
                 } catch (IOException ex) {
                     log.error("Unable to generate compressed PDF preview", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Erstellen der Vorschau für Datei: " + inputFile.getName());
+                    JOptionPane.showMessageDialog(this, "Erro ao gerar pré-visualização para o arquivo: " + inputFile.getName());
                 }
             }
             compressionInfoTextArea.setText(compressionInfo.toString());

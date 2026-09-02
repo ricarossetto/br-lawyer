@@ -844,7 +844,7 @@ public class ClaimComponentEditorDialog extends javax.swing.JDialog {
         jLabel4.setText("Betrag:");
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -852,7 +852,7 @@ public class ClaimComponentEditorDialog extends javax.swing.JDialog {
         });
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -876,7 +876,7 @@ public class ClaimComponentEditorDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tblInterestRules);
 
         cmdAddInterestRule.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        cmdAddInterestRule.setText("Hinzufügen");
+        cmdAddInterestRule.setText("Adicionar");
         cmdAddInterestRule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAddInterestRuleActionPerformed(evt);

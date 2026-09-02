@@ -817,7 +817,7 @@ public class AddVoiceMemoDialog extends javax.swing.JDialog {
 
         btGrpModes.add(rdoInsert);
         rdoInsert.setSelected(true);
-        rdoInsert.setText("Einfügen");
+        rdoInsert.setText("Colar");
         rdoInsert.setToolTipText("Einfügen an markierter Position");
 
         btGrpModes.add(rdoOverwrite);
@@ -1712,7 +1712,7 @@ public class AddVoiceMemoDialog extends javax.swing.JDialog {
         } catch (Exception ex) {
             log.error("Error deleting selection", ex);
             JOptionPane.showMessageDialog(this,
-                    "Fehler beim Löschen der Auswahl: " + ex.getMessage(),
+                    "Erro ao excluir der Auswahl: " + ex.getMessage(),
                     com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR,
                     JOptionPane.ERROR_MESSAGE);
         }
@@ -1908,7 +1908,7 @@ public class AddVoiceMemoDialog extends javax.swing.JDialog {
         } catch (Exception e) {
             log.error("Error setting existing audio", e);
             JOptionPane.showMessageDialog(this, 
-                "Fehler beim Laden der bestehenden Audiodatei: " + e.getMessage(),
+                "Erro ao carregar der bestehenden Audiodatei: " + e.getMessage(),
                 com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, 
                 JOptionPane.ERROR_MESSAGE);
         }

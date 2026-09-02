@@ -905,7 +905,7 @@ public class SaveBeaMessageAction extends ProgressableAction {
         }
 
         if (storeException != null) {
-            throw new Exception("Fehler beim Speichern: " + storeException.getMessage());
+            throw new Exception("Erro ao salvar: " + storeException.getMessage());
         }
 
         return true;

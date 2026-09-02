@@ -790,7 +790,7 @@ public class FormInstancePanel extends javax.swing.JPanel implements AssistantFl
 
         } catch (Throwable t) {
             log.error("Error removing form", t);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -908,7 +908,7 @@ public class FormInstancePanel extends javax.swing.JPanel implements AssistantFl
                 this.container.remove(this);
             } catch (Throwable t) {
                 log.error("Error removing form", t);
-                JOptionPane.showMessageDialog(this, "Fehler beim Löschen des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao excluir des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
 
@@ -959,7 +959,7 @@ public class FormInstancePanel extends javax.swing.JPanel implements AssistantFl
 
         } catch (Exception ioe) {
             log.error("Error saving form data as file", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Falldaten: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Falldaten: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdSaveAsDocumentActionPerformed
 
@@ -1076,7 +1076,7 @@ public class FormInstancePanel extends javax.swing.JPanel implements AssistantFl
                 log.info("finished saving " + formEntries.size() + " form entries");
             } catch (Throwable t) {
                 log.error("Error saving form entries", t);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         } else {
             log.info("form " + form.getId() + " has not been changed - skip saving");

@@ -751,7 +751,7 @@ public class SaveDocumentsLocallyDialog extends javax.swing.JDialog {
         });
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filesave.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -896,7 +896,7 @@ public class SaveDocumentsLocallyDialog extends javax.swing.JDialog {
             this.dispose();
         } catch (Throwable t) {
             log.error("error saving documents", t);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Dokumente!", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_WARNING, JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Dokumente!", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_WARNING, JOptionPane.WARNING_MESSAGE);
         }
 
 

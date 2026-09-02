@@ -148,7 +148,7 @@
               </FontInfo>
             </Property>
             <Property name="text" type="java.lang.String" value="assistant"/>
-            <Property name="toolTipText" type="java.lang.String" value="Sachbearbeiter"/>
+            <Property name="toolTipText" type="java.lang.String" value="Responsável"/>
           </Properties>
         </Component>
       </SubComponents>

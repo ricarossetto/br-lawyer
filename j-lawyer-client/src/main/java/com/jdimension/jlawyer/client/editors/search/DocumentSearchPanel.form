@@ -85,7 +85,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/find.png"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Suchen"/>
+        <Property name="toolTipText" type="java.lang.String" value="Pesquisar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdQuickSearchActionPerformed"/>
@@ -172,7 +172,7 @@
             <StringItem index="0" value="Inhalt"/>
             <StringItem index="1" value="Dateiname"/>
             <StringItem index="2" value="Aktenname"/>
-            <StringItem index="3" value="Aktenzeichen"/>
+            <StringItem index="3" value="Número do Processo"/>
           </StringArray>
         </Property>
       </Properties>

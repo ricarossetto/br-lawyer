@@ -746,7 +746,7 @@ public class EmailPanel extends javax.swing.JPanel implements PreviewPanel {
             message.setFlag(Flag.SEEN, true);
             this.setMessage(documentId, new MessageContainer(message, message.getSubject(), true), this.mailboxSetup);
         } catch (Throwable t) {
-            this.showStatus("Fehler beim Laden der Vorschau.");
+            this.showStatus("Erro ao carregar der Vorschau.");
         }
     }
 

@@ -176,7 +176,7 @@ public class PaymentSplitEditDialog extends javax.swing.JDialog {
         lblLegalWarning.setText(" ");
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -184,7 +184,7 @@ public class PaymentSplitEditDialog extends javax.swing.JDialog {
         });
 
         cmdOk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdOk.setText("Übernehmen");
+        cmdOk.setText("Aplicar");
         cmdOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdOkActionPerformed(evt);

@@ -987,7 +987,7 @@ public class SendEncryptedAction extends ProgressableAction {
             }
 
             if (storeException != null) {
-                throw new Exception("Fehler beim Speichern: " + storeException.getMessage());
+                throw new Exception("Erro ao salvar: " + storeException.getMessage());
             }
 
         } catch (Exception mex) {

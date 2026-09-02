@@ -769,7 +769,7 @@ public class GenerateMassMailDocumentsDialog extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.setToolTipText("");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -949,7 +949,7 @@ public class GenerateMassMailDocumentsDialog extends javax.swing.JDialog {
             this.progress.setStringPainted(true);
             this.cmdAddDocument.setEnabled(false);
             this.cmdCancel.setEnabled(false);
-            this.cmdCancel.setText("Schliessen");
+            this.cmdCancel.setText("Fechar");
             new Thread(() -> {
                 DefaultMutableTreeNode tn = (DefaultMutableTreeNode) treeFolders.getSelectionPath().getLastPathComponent();
                 GenericNode gn = (GenericNode) tn.getUserObject();
@@ -1184,7 +1184,7 @@ public class GenerateMassMailDocumentsDialog extends javax.swing.JDialog {
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 
@@ -1217,7 +1217,7 @@ public class GenerateMassMailDocumentsDialog extends javax.swing.JDialog {
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 

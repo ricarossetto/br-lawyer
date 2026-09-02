@@ -991,7 +991,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
             } catch (Exception ex) {
                 log.error("Error updating invoice position", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Rechnungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar der Rechnungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             this.updateTotals();
@@ -1043,7 +1043,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
         } catch (Exception ex) {
             log.error("Error loading base interest rates", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Basiszinssätze: " + ex.getMessage(),
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Basiszinssätze: " + ex.getMessage(),
                     com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -1121,7 +1121,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
         cmdCancel.setFont(cmdCancel.getFont());
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -1130,7 +1130,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
         cmdSave.setFont(cmdSave.getFont());
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -1602,7 +1602,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
         jScrollPane4.setViewportView(tblBaseInterest);
 
         cmdUpdateBaseInterestRates.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/reload.png"))); // NOI18N
-        cmdUpdateBaseInterestRates.setText("Aktualisieren");
+        cmdUpdateBaseInterestRates.setText("Atualizar");
         cmdUpdateBaseInterestRates.setToolTipText("Online auf Änderungen prüfen und ggf. abgleichen");
         cmdUpdateBaseInterestRates.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1717,7 +1717,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 //
 //                } catch (Exception ex) {
 //                    log.error("Error updating invoice position", ex);
-//                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Rechnungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+//                    JOptionPane.showMessageDialog(this, "Erro ao salvar der Rechnungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
 //                }
 //                positionIndex = positionIndex + 1;
 //            }
@@ -1730,7 +1730,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
             locator.lookupArchiveFileServiceRemote().updateClaimLedger(this.caseDto.getId(), this.currentEntry);
         } catch (Exception ex) {
             log.error("error saving claim ledger", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Forderungskontos: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar des Forderungskontos: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -1804,7 +1804,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
             } catch (Exception ex) {
                 log.error("error saving claim component", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Forderungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar des Forderungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             ComponentUtils.autoSizeColumns(this.tblComponents);
@@ -1829,7 +1829,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
             existingRules = locator.lookupArchiveFileServiceRemote().getClaimComponentInterestRules(cmp.getId());
         } catch (Exception ex) {
             log.error("error getting interest rules", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Zinsregeln: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Zinsregeln: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         ClaimComponentEditorDialog dlg = new ClaimComponentEditorDialog(this.currentEntry, cmp, existingRules, this, true);
@@ -1844,7 +1844,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
                 ((ComponentTableModel) this.tblComponents.getModel()).setComponentAt(this.tblComponents.convertRowIndexToModel(this.tblComponents.getSelectedRow()), cmp);
             } catch (Exception ex) {
                 log.error("error saving claim component", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Forderungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar der Forderungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             ComponentUtils.autoSizeColumns(this.tblComponents);
@@ -1913,7 +1913,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
                     }
                 } catch (Exception ex) {
                     log.error("error saving claim ledger entry", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Buchung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar der Buchung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
 
                 ComponentUtils.autoSizeColumns(this.tblLedger);
@@ -2021,7 +2021,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
                 log.error("Error deleting claim ledger entry", ex);
                 JOptionPane.showMessageDialog(this,
-                        "Fehler beim Löschen der Buchung: " + ex.getMessage(),
+                        "Erro ao excluir der Buchung: " + ex.getMessage(),
                         com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR,
                         JOptionPane.ERROR_MESSAGE);
                 break; // Stop processing on error

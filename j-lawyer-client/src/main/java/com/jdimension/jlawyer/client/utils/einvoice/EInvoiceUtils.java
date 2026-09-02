@@ -796,7 +796,7 @@ public class EInvoiceUtils {
             positions = locator.lookupArchiveFileServiceRemote().getInvoicePositions(caseInvoice.getId());
         } catch (Exception ex) {
             log.error("error getting invoice positions", ex);
-            throw new Exception("Fehler beim Laden der Rechnungspositionen: " + ex.getMessage());
+            throw new Exception("Erro ao carregar der Rechnungspositionen: " + ex.getMessage());
         }
 
         // line items

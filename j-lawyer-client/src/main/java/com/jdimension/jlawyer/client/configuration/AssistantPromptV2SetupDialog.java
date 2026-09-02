@@ -480,7 +480,7 @@ public class AssistantPromptV2SetupDialog extends javax.swing.JDialog {
         // === Right side detail widgets ===
         cmdClose = new JButton();
         cmdClose.setIcon(new ImageIcon(getClass().getResource("/icons/cancel.png")));
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(e -> cmdCloseActionPerformed(e));
 
         JLabel jLabel1 = new JLabel("Name:");
@@ -956,7 +956,7 @@ public class AssistantPromptV2SetupDialog extends javax.swing.JDialog {
 
         } catch (Exception ex) {
             log.error("Error importing prompt from JSON", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Importieren: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao importar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 

@@ -2496,7 +2496,7 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Dokumente">
-                <Property name="tabTitle" type="java.lang.String" value="Dokumente"/>
+                <Property name="tabTitle" type="java.lang.String" value="Documentos"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/folder_documents.png"/>
                 </Property>
@@ -2822,7 +2822,7 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Akten">
-                <Property name="tabTitle" type="java.lang.String" value="Akten"/>
+                <Property name="tabTitle" type="java.lang.String" value="Processos"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/folder.png"/>
                 </Property>
@@ -3029,7 +3029,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/edit.png"/>
                 </Property>
-                <Property name="toolTipText" type="java.lang.String" value="Bearbeiten"/>
+                <Property name="toolTipText" type="java.lang.String" value="Editar"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -3044,7 +3044,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/filesave.png"/>
                 </Property>
-                <Property name="toolTipText" type="java.lang.String" value="Speichern"/>
+                <Property name="toolTipText" type="java.lang.String" value="Salvar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdSaveActionPerformed"/>

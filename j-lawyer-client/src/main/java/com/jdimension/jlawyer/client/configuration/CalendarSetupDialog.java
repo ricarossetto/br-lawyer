@@ -903,7 +903,7 @@ public class CalendarSetupDialog extends javax.swing.JDialog {
         );
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -922,7 +922,7 @@ public class CalendarSetupDialog extends javax.swing.JDialog {
         });
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Übernehmen");
+        cmdSave.setText("Aplicar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -950,13 +950,13 @@ public class CalendarSetupDialog extends javax.swing.JDialog {
 
         rdEventType.add(rdFollowups);
         rdFollowups.setSelected(true);
-        rdFollowups.setText("Wiedervorlagen");
+        rdFollowups.setText("Lembretes / Revisões");
 
         rdEventType.add(rdRespites);
-        rdRespites.setText("Fristen");
+        rdRespites.setText("Prazos");
 
         rdEventType.add(rdEvents);
-        rdEvents.setText("Termine");
+        rdEvents.setText("Audiências / Compromissos");
 
         chkDeleteDone.setSelected(true);
         chkDeleteDone.setText("erledigte Termine aus Nextcloud löschen");

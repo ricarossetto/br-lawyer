@@ -704,7 +704,7 @@ public class RequestPasswordOptionPanel extends javax.swing.JPanel {
 
         lblIcon.setText(" ");
 
-        lblCancel.setText("Abbrechen");
+        lblCancel.setText("Cancelar");
         lblCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lblCancelActionPerformed(evt);

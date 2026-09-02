@@ -788,7 +788,7 @@ public class ImportBankStatementFrame extends javax.swing.JFrame {
 
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden Kontoauszugs-Einstellungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar Kontoauszugs-Einstellungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         this.initializeOptions();
@@ -1497,7 +1497,7 @@ public class ImportBankStatementFrame extends javax.swing.JFrame {
 
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Aktenetiketten", "Aktenetiketten");
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Aktenetiketten", "Aktenetiketten");
         }
     }
 
@@ -1514,7 +1514,7 @@ public class ImportBankStatementFrame extends javax.swing.JFrame {
                 }
             } catch (Exception ex) {
                 log.error("Error connecting to server", ex);
-                ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Aktenetiketten", "Aktenetiketten");
+                ThreadUtils.showErrorDialog(this, "Erro ao carregar der Aktenetiketten", "Aktenetiketten");
             }
         }
 
@@ -1618,7 +1618,7 @@ public class ImportBankStatementFrame extends javax.swing.JFrame {
             }
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Zahlungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Zahlungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
         try {
             JLawyerServiceLocator locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
@@ -1638,7 +1638,7 @@ public class ImportBankStatementFrame extends javax.swing.JFrame {
             }
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Rechnungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Rechnungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         this.lblCase.setText(targetCase.getFileNumber() + " " + targetCase.getName());

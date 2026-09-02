@@ -149,7 +149,7 @@ public class PaymentSplitPreviewDialog extends javax.swing.JDialog {
         jScrollPane2.setViewportView(txtSummary);
 
         cmdBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdBack.setText("Zurück");
+        cmdBack.setText("Voltar");
         cmdBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdBackActionPerformed(evt);

@@ -708,7 +708,7 @@ public class AiChatMessageTextSelection extends javax.swing.JDialog {
         jScrollPane1.setViewportView(taText);
 
         cmdCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/editpaste.png"))); // NOI18N
-        cmdCopy.setText("Kopieren");
+        cmdCopy.setText("Copiar");
         cmdCopy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCopyActionPerformed(evt);

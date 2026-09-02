@@ -1017,7 +1017,7 @@ public class AddNoteFrame extends javax.swing.JFrame implements AssistantFlowAda
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.setToolTipText("");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1097,7 +1097,7 @@ public class AddNoteFrame extends javax.swing.JFrame implements AssistantFlowAda
         jLabel8.setEnabled(false);
 
         btGrpReviews.add(radioReviewTypeFollowUp);
-        radioReviewTypeFollowUp.setText("Wiedervorlage");
+        radioReviewTypeFollowUp.setText("Lembrete / Revisão");
         radioReviewTypeFollowUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeFollowUpActionPerformed(evt);
@@ -1105,7 +1105,7 @@ public class AddNoteFrame extends javax.swing.JFrame implements AssistantFlowAda
         });
 
         btGrpReviews.add(radioReviewTypeRespite);
-        radioReviewTypeRespite.setText("Frist");
+        radioReviewTypeRespite.setText("Prazo");
         radioReviewTypeRespite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioReviewTypeRespiteActionPerformed(evt);
@@ -1378,7 +1378,7 @@ public class AddNoteFrame extends javax.swing.JFrame implements AssistantFlowAda
                     CalendarUtils.getInstance().storeCalendarEntry(reviewDto, this.aFile, (CalendarEntryTemplate) this.cmbReviewReason.getItemAt(this.cmbReviewReason.getSelectedIndex()), this);
                 } catch (Exception ex) {
                     log.error("Error adding review", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
             }
 

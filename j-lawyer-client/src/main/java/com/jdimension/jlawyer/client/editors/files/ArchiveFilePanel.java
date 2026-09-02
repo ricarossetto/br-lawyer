@@ -1248,7 +1248,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             }
         } catch (Exception ex) {
             log.error("Error determining invoice pools", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Belegnummernkreise: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Belegnummernkreise: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         JComboBox<InvoicePool> cmbInvoicePool = new JComboBox<>();
@@ -1280,7 +1280,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             }
         } catch (Exception ex) {
             log.error("Error determining invoice pools", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Belegnummernkreise: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Belegnummernkreise: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -1306,7 +1306,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ex) {
             log.error("error saving payment", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Zahlung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Zahlung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -1514,7 +1514,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                     }
                 } catch (Throwable t) {
                     log.error("Could not read document tags for selection", t);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden der Dokumentetiketten: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar der Dokumentetiketten: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
 
                 StringUtils.sortIgnoreCase(allTags);
@@ -1637,7 +1637,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                             Launcher launcher = LauncherFactory.getLauncher(db.getName(), content, store, EditorsRegistry.getInstance().getMainWindow());
                             launcher.launch(false);
                         } catch (Exception ex) {
-                            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Laden des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao carregar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                         }
                     }
                 };
@@ -3305,7 +3305,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         });
 
         cmdUploadDocument.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder_new.png"))); // NOI18N
-        cmdUploadDocument.setText("Hinzufügen");
+        cmdUploadDocument.setText("Adicionar");
         cmdUploadDocument.setToolTipText("vorhandene Datei hinzuladen");
         cmdUploadDocument.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3331,7 +3331,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         });
 
         cmdAddNote.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/easymoblog.png"))); // NOI18N
-        cmdAddNote.setText("Notiz");
+        cmdAddNote.setText("Nota / Anotação");
         cmdAddNote.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAddNoteActionPerformed(evt);
@@ -4159,7 +4159,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         tabPaneForms.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
         cmdAddForm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        cmdAddForm.setText("Hinzufügen");
+        cmdAddForm.setText("Adicionar");
         cmdAddForm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAddFormActionPerformed(evt);
@@ -4302,7 +4302,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         });
 
         cmdAddHistory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdAddHistory.setText("Hinzufügen");
+        cmdAddHistory.setText("Adicionar");
         cmdAddHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAddHistoryActionPerformed(evt);
@@ -4673,7 +4673,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
         } catch (Exception ex) {
             log.error("Error removing review", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Löschen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao excluir: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
             return;
         }
@@ -4695,7 +4695,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
             } catch (Exception ex) {
                 log.error("Error removing review", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Löschen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao excluir: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
                 return;
             }
@@ -4722,7 +4722,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
         } catch (Exception ex) {
             log.error("Error updating review", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
             return;
         }
@@ -4746,7 +4746,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
                 } catch (Exception ex) {
                     log.error("Error removing review", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     EditorsRegistry.getInstance().clearStatus();
                     return;
                 }
@@ -4772,7 +4772,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
         } catch (Exception ex) {
             log.error("Error updating review", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
             return;
         }
@@ -4821,7 +4821,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
             } catch (Exception ex) {
                 log.error("Error removing review", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
                 return;
             }
@@ -5746,7 +5746,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
                 } catch (Exception ex) {
                     log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
 
                 EventBroker eb = EventBroker.getInstance();
@@ -5756,7 +5756,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 return true;
             } catch (Exception ex) {
                 log.error("Error saving archivefile", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
                 return false;
             }
@@ -5854,7 +5854,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ex) {
             log.error("Error loading account entries", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Aktenkontos: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Aktenkontos: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -5915,7 +5915,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             EditorsRegistry.getInstance().setMainEditorsPaneView((Component) editor);
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdToEditModeActionPerformed
 
@@ -5926,7 +5926,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdBackToSearchActionPerformed
 
@@ -6191,7 +6191,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             dlgPrint.setVisible(true);
         } catch (Exception ex) {
             log.error("Error displaying print dialgo", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Handakte: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Handakte: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_cmdPrintActionPerformed
@@ -6236,7 +6236,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
             } catch (Exception ioe) {
                 log.error("Error uploading document", ioe);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Datei: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
             return true;
         } else {
@@ -6279,7 +6279,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ioe) {
             log.error("Error removing document", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Löschen des Dokuments: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao excluir des Dokuments: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_mnuRemoveDocumentActionPerformed
 
@@ -6362,7 +6362,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                     eb.publishEvent(new ReviewUpdatedEvent(null, null, reviewDto));
                 } catch (Exception ex) {
                     log.error("Error updating review", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     EditorsRegistry.getInstance().clearStatus();
                     return;
                 }
@@ -6596,7 +6596,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                     JLawyerServiceLocator locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
                     content = locator.lookupArchiveFileServiceRemote().getDocumentContent(value.getId());
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -6734,7 +6734,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
             } catch (Exception ex) {
                 log.error("Error adding history entry", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
                 return;
             }
@@ -7142,7 +7142,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
         } catch (Exception ex) {
             log.error("Error updating review", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
             return;
         }
@@ -7187,7 +7187,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
             } catch (Exception ex) {
                 log.error("Error removing review", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
                 return;
             }
@@ -7360,7 +7360,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                     JLawyerServiceLocator locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
                     content = locator.lookupArchiveFileServiceRemote().getDocumentContent(value.getId());
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -7416,7 +7416,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ioe) {
             log.error("Error setting document date", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
 
@@ -7600,7 +7600,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
                 if (error != null) {
                     JOptionPane.showMessageDialog(ArchiveFilePanel.this,
-                        "Fehler beim Laden der Dokumentetiketten: " + error.getMessage(),
+                        "Erro ao carregar der Dokumentetiketten: " + error.getMessage(),
                         com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR,
                         JOptionPane.ERROR_MESSAGE);
                 } else {
@@ -7634,7 +7634,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ioe) {
             log.error("Error setting document date", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_mnuToggleFavoriteActionPerformed
 
@@ -7775,7 +7775,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             tabPaneForms.insertTab("<html><b>" + ftb.getName() + "</b><br/>" + df.format(affb.getCreationDate()) + "<br/>" + affb.getPlaceHolder() + "</html>", null, formInstance, null, tabPaneForms.getTabCount() - 1);
         } catch (Throwable t) {
             log.error("Error loading form plugin", t);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Falldatenblattes: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
 
@@ -7847,7 +7847,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                     JLawyerServiceLocator locator = JLawyerServiceLocator.getInstance(settings.getLookupProperties());
                     content = locator.lookupArchiveFileServiceRemote().getDocumentContent(value.getId());
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -7953,7 +7953,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ioe) {
             log.error("Error saving documents locally", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Dokumente: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Dokumente: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -8745,7 +8745,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ioe) {
             log.error("Error saving voice memo", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Sprachmemos: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar des Sprachmemos: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_cmdAddVoiceMemoActionPerformed
@@ -9479,7 +9479,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             }
 
             if (toolCapabilities.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Es sind keine Chat-Aktionen mit Tool-Unterstützung konfiguriert.", "Ingo", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Nenhuma ação de chat com suporte a ferramentas está configurada.", "Ingo", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
 
@@ -9503,7 +9503,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Exception ex) {
             log.error("Error loading Ingo chat capabilities", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Ingo-Aktionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar as ações do assistente Ingo: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdIngoChatActionPerformed
 
@@ -9676,7 +9676,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 selection = adService.getAddress(selection.getId());
             } catch (Exception ex) {
                 log.error("Error loading archive file from server", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Akte: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Akte: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             if (editor instanceof ThemeableEditor) {
@@ -9695,7 +9695,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
             EditorsRegistry.getInstance().setMainEditorsPaneView((Component) editor);
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.getClass().getName(), ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -10818,7 +10818,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
             } catch (Exception ex) {
                 log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             if (id == null) {
@@ -10833,7 +10833,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         } catch (Throwable ex) {
             log.error("Error saving archivefile", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
             return false;
         }

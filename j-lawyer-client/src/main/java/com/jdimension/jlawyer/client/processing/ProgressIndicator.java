@@ -818,7 +818,7 @@ public class ProgressIndicator extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

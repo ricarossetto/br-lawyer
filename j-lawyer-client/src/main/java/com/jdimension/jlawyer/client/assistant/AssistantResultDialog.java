@@ -714,7 +714,7 @@ public class AssistantResultDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(taString);
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdClose.setText("Schließen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);

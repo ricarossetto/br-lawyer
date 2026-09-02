@@ -837,7 +837,7 @@ public class MailingStatusPanel extends javax.swing.JPanel implements ThemeableE
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden des VoIP-Status: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar des VoIP-Status: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 
@@ -1246,7 +1246,7 @@ public class MailingStatusPanel extends javax.swing.JPanel implements ThemeableE
                 locator.lookupVoipServiceRemote().deleteEpostQueueEntries(epostEntries);
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Löschen des Eintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao excluir des Eintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
 
         }
         this.clearDetails();

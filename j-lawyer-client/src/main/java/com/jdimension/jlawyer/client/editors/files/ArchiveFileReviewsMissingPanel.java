@@ -949,7 +949,7 @@ public class ArchiveFileReviewsMissingPanel extends javax.swing.JPanel implement
                 
             } catch (Exception ex) {
                 log.error("Error creating editor from class " + this.detailsEditorClass, ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
     }//GEN-LAST:event_mnuOpenArchiveFileActionPerformed
 
@@ -978,7 +978,7 @@ public class ArchiveFileReviewsMissingPanel extends javax.swing.JPanel implement
                 
             } catch (Exception ex) {
                 log.error("Error creating editor from class " + this.detailsEditorClass, ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
                 
         } else if(evt.getClickCount()==1 && evt.getButton()==MouseEvent.BUTTON3) {

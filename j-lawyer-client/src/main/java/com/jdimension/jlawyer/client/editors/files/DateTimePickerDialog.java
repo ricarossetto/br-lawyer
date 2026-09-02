@@ -726,7 +726,7 @@ public class DateTimePickerDialog extends javax.swing.JDialog {
         setTitle("Zeitpunkt wählen...");
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Abbrechen");
+        cmdClose.setText("Cancelar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);

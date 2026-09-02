@@ -803,7 +803,7 @@ public class BulkEditCasePermissions extends javax.swing.JDialog {
         jLabel4.setText("Berechtigte:");
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -1074,7 +1074,7 @@ public class BulkEditCasePermissions extends javax.swing.JDialog {
                 ((DefaultComboBoxModel) this.cmbGroup.getModel()).addElement(g);
             }
         } catch (Exception ex) {
-            log.error("Fehler beim Laden der Gruppen", ex);
+            log.error("Erro ao carregar der Gruppen", ex);
         }
         this.cmbGroup.setSelectedIndex(0);
     }
@@ -1093,7 +1093,7 @@ public class BulkEditCasePermissions extends javax.swing.JDialog {
 
             ComponentUtils.autoSizeColumns(tblGroups);
         } catch (Exception ex) {
-            log.error("Fehler beim Laden der Gruppen-Tabelle", ex);
+            log.error("Erro ao carregar der Gruppen-Tabelle", ex);
         }
     }
 

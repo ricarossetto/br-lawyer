@@ -1282,7 +1282,7 @@ public class TimesheetLogEntryPanel extends javax.swing.JPanel {
             }
         } catch (Exception ex) {
             log.error("Error updating timesheet position", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Zeiterfassungseintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar des Zeiterfassungseintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
 

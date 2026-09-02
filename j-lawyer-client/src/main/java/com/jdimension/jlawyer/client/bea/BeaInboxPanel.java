@@ -1595,7 +1595,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                 msg = BeaAccess.getInstance().getMessage(msgC.getId(), safeId);
             } catch (Exception ex) {
                 log.error(ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
@@ -1854,7 +1854,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                 EditorsRegistry.getInstance().clearStatus();
 
                 if (error != null) {
-                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Fehler beim Löschen: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Erro ao excluir: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
 
                 try {
@@ -2020,7 +2020,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                 }
 
                 if (error != null) {
-                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Fehler beim Laden der Nachricht: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Erro ao carregar der Nachricht: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -2146,7 +2146,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                 }
 
                 if (error != null) {
-                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Fehler beim Laden der Nachricht: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Erro ao carregar der Nachricht: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -2259,7 +2259,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                 }
 
                 if (error != null) {
-                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Fehler beim Laden der Nachricht: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(BeaInboxPanel.this, "Erro ao carregar der Nachricht: " + error.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -2970,7 +2970,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                         needsReset = false;
                     } else if (error != null) {
                         JOptionPane.showMessageDialog(BeaInboxPanel.this,
-                            "Fehler beim Laden der beA - Ordner: " + error.getMessage(),
+                            "Erro ao carregar der beA - Ordner: " + error.getMessage(),
                             com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     }
                 } catch (Exception ex) {
@@ -3241,7 +3241,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
 
             } catch (Exception ex) {
                 log.error(ex);
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern der beA-Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar der beA-Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
             }
         }
         return false;

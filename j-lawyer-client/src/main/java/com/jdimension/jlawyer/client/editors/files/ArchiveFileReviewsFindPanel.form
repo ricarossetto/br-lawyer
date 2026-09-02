@@ -316,7 +316,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="grpType"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Fristen"/>
+            <Property name="text" type="java.lang.String" value="Prazos"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdTypeRespiteActionPerformed"/>
@@ -327,7 +327,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="grpType"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Wiedervorlagen"/>
+            <Property name="text" type="java.lang.String" value="Lembretes / Revisões"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdTypeReviewActionPerformed"/>
@@ -353,7 +353,7 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="grpType"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Termine"/>
+            <Property name="text" type="java.lang.String" value="Audiências / Compromissos"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rdTypeEventActionPerformed"/>
@@ -484,7 +484,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/reload.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Aktualisieren"/>
+            <Property name="toolTipText" type="java.lang.String" value="Atualizar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdRefreshActionPerformed"/>
@@ -495,7 +495,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/printer.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Drucken"/>
+            <Property name="toolTipText" type="java.lang.String" value="Imprimir"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdPrintActionPerformed"/>

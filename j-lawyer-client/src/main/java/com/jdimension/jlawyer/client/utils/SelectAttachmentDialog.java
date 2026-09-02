@@ -854,9 +854,9 @@ public class SelectAttachmentDialog extends javax.swing.JDialog {
             }
         });
 
-        JButton open = new JButton("Öffnen");
+        JButton open = new JButton("Abrir");
         open.addActionListener((java.awt.event.ActionEvent e) -> selectAddressDocuments(list));
-        JButton cancel = new JButton("Abbrechen");
+        JButton cancel = new JButton("Cancelar");
         cancel.addActionListener((java.awt.event.ActionEvent e) -> {
             this.selectedFiles = new File[0];
             this.selectedDocuments = new ArchiveFileDocumentsBean[0];
@@ -979,14 +979,14 @@ public class SelectAttachmentDialog extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(lstCaseDocuments);
 
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
             }
         });
 
-        cmdSelect.setText("Öffnen");
+        cmdSelect.setText("Abrir");
         cmdSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSelectActionPerformed(evt);

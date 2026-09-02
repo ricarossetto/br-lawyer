@@ -835,7 +835,7 @@ public class TimesheetEntryPanel extends javax.swing.JPanel {
                 parent.repaint();
             } catch (Exception ex) {
                 log.error("Error deleting invoice", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Löschen des Projektes: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao excluir des Projektes: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_cmdDeleteActionPerformed

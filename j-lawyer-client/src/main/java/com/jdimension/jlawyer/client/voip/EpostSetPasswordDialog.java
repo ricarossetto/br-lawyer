@@ -740,7 +740,7 @@ public class EpostSetPasswordDialog extends javax.swing.JDialog {
 
         jLabel5.setText("3. Passwort setzen und in die Einstellungen übernehmen");
 
-        cmdConfirm.setText("Übernehmen");
+        cmdConfirm.setText("Aplicar");
         cmdConfirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdConfirmActionPerformed(evt);

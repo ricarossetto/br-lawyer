@@ -55,7 +55,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="cmdClose">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Schliessen"/>
+        <Property name="text" type="java.lang.String" value="Fechar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdCloseActionPerformed"/>

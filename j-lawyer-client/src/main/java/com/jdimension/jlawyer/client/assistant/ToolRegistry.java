@@ -131,30 +131,30 @@ public class ToolRegistry {
 
     static {
         // Existing tools
-        TOOLS.add(new ToolDefinition("search_cases", "Sucht nach Akten anhand eines Suchbegriffs. Gibt eine Liste von Akten mit Aktenzeichen, Kurzrubrum und Sachgebiet zurück.",
+        TOOLS.add(new ToolDefinition("search_cases", "Pesquisa processos por termo de busca. Retorna uma lista com número do processo, partes e ramo do direito.",
                 Arrays.asList(new ToolParameter("query", "string", "Suchbegriff für die Aktensuche", true))));
 
         TOOLS.add(new ToolDefinition("get_case", "Ruft Details einer Akte ab, einschließlich Beteiligte und Aktennotiz.",
-                Arrays.asList(new ToolParameter("fileNumber", "string", "Aktenzeichen der Akte", true))));
+                Arrays.asList(new ToolParameter("fileNumber", "string", "Número do processo", true))));
 
         TOOLS.add(new ToolDefinition("search_contacts", "Sucht nach Kontakten/Adressen anhand eines Suchbegriffs.",
                 Arrays.asList(new ToolParameter("query", "string", "Suchbegriff für die Kontaktsuche", true))));
 
         TOOLS.add(new ToolDefinition("list_case_documents", "Listet Dokumente einer Akte seitenweise auf (20 pro Seite). Gibt totalDocuments, page, totalPages und hasMore zurück.",
                 Arrays.asList(
-                        new ToolParameter("fileNumber", "string", "Aktenzeichen der Akte", true),
+                        new ToolParameter("fileNumber", "string", "Número do processo", true),
                         new ToolParameter("page", "integer", "Seitennummer (1-basiert, Standard: 1)", false))));
 
         TOOLS.add(new ToolDefinition("list_case_documents_by_date",
                 "Listet Dokumente einer Akte, die innerhalb eines Zeitraums erstellt wurden. Gibt die Dokumente sortiert nach Erstellungsdatum (neueste zuerst) zurück.",
                 Arrays.asList(
-                        new ToolParameter("fileNumber", "string", "Aktenzeichen der Akte", true),
+                        new ToolParameter("fileNumber", "string", "Número do processo", true),
                         new ToolParameter("fromDate", "string", "Startdatum im Format yyyy-MM-dd", true),
                         new ToolParameter("toDate", "string", "Enddatum im Format yyyy-MM-dd", true))));
 
         TOOLS.add(new ToolDefinition("search_case_documents", "Durchsucht Dokumente einer Akte anhand des Dateinamens (case-insensitive, Teilübereinstimmung). Ergebnisse sind seitenweise (20 pro Seite).",
                 Arrays.asList(
-                        new ToolParameter("fileNumber", "string", "Aktenzeichen der Akte", true),
+                        new ToolParameter("fileNumber", "string", "Número do processo", true),
                         new ToolParameter("query", "string", "Suchbegriff für den Dateinamen", true),
                         new ToolParameter("page", "integer", "Seitennummer (1-basiert, Standard: 1)", false))));
 
@@ -173,7 +173,7 @@ public class ToolRegistry {
         TOOLS.add(new ToolDefinition("get_history_for_case", "Gibt die Änderungshistorie einer Akte zurück.",
                 Arrays.asList(new ToolParameter("caseId", "string", "Interne ID der Akte", true))));
 
-        TOOLS.add(new ToolDefinition("get_events_for_case", "Gibt alle Kalenderereignisse (Wiedervorlagen, Fristen, Termine) einer Akte zurück.",
+        TOOLS.add(new ToolDefinition("get_events_for_case", "Retorna todos os eventos de calendário (lembretes, prazos, audiências) de um processo.",
                 Arrays.asList(new ToolParameter("caseId", "string", "Interne ID der Akte", true))));
 
         TOOLS.add(new ToolDefinition("get_parties_for_case", "Gibt alle Beteiligten einer Akte mit vollständigen Kontaktdaten zurück.",
@@ -181,14 +181,14 @@ public class ToolRegistry {
 
         TOOLS.add(new ToolDefinition("get_all_open_events", "Gibt alle offenen Kalenderereignisse zurück. Optional nach Typ und/oder Verantwortlichem filterbar.",
                 Arrays.asList(
-                        new ToolParameter("eventType", "string", "Ereignistyp zum Filtern: Wiedervorlage, Frist oder Termin (optional, Standard: alle)", false),
+                        new ToolParameter("eventType", "string", "Tipo de evento para filtrar: Lembrete, Prazo ou Audiência (opcional, padrão: todos)", false),
                         new ToolParameter("assignee", "string", "Benutzername des Verantwortlichen zum Filtern (optional, Standard: alle)", false))));
 
         TOOLS.add(new ToolDefinition("get_all_open_events_between_dates", "Gibt alle offenen Kalenderereignisse zwischen zwei Daten zurück. Optional nach Typ und/oder Verantwortlichem filterbar.",
                 Arrays.asList(
                         new ToolParameter("fromDate", "string", "Startdatum im ISO-8601-Format (z.B. 2025-03-01T00:00:00)", true),
                         new ToolParameter("toDate", "string", "Enddatum im ISO-8601-Format (z.B. 2025-03-31T23:59:59)", true),
-                        new ToolParameter("eventType", "string", "Ereignistyp zum Filtern: Wiedervorlage, Frist oder Termin (optional, Standard: alle)", false),
+                        new ToolParameter("eventType", "string", "Tipo de evento para filtrar: Lembrete, Prazo ou Audiência (opcional, padrão: todos)", false),
                         new ToolParameter("assignee", "string", "Benutzername des Verantwortlichen zum Filtern (optional, Standard: alle)", false))));
 
         TOOLS.add(new ToolDefinition("list_event_types",
@@ -240,11 +240,11 @@ public class ToolRegistry {
                 Arrays.asList()));
 
         // New write tools
-        TOOLS.add(new ToolDefinition("create_event", "Erstellt ein Kalenderereignis (Wiedervorlage, Frist oder Termin) in einer Akte.",
+        TOOLS.add(new ToolDefinition("create_event", "Cria um evento de calendário (lembrete, prazo ou audiência) em um processo.",
                 Arrays.asList(
                         new ToolParameter("caseId", "string", "Interne ID der Akte", true),
                         new ToolParameter("summary", "string", "Zusammenfassung/Betreff des Ereignisses", true),
-                        new ToolParameter("type", "string", "Typ: Wiedervorlage, Frist oder Termin", true),
+                        new ToolParameter("type", "string", "Tipo: Lembrete, Prazo ou Audiência", true),
                         new ToolParameter("beginDate", "string", "Startdatum im ISO-8601-Format", true),
                         new ToolParameter("endDate", "string", "Enddatum im ISO-8601-Format", true),
                         new ToolParameter("calendar", "string", "Name des Kalenders", true),
@@ -325,7 +325,7 @@ public class ToolRegistry {
                         new ToolParameter("recipient", "string", "Benutzername des Empfängers (optional, wird als @Erwähnung hinzugefügt)", false)),
                 ToolDefinition.RISK_MEDIUM));
 
-        TOOLS.add(new ToolDefinition("create_case", "Erstellt eine neue Akte. Das Aktenzeichen wird automatisch vom Server vergeben.",
+        TOOLS.add(new ToolDefinition("create_case", "Cria um novo processo. O número do processo é gerado automaticamente pelo servidor.",
                 Arrays.asList(
                         new ToolParameter("name", "string", "Kurzrubrum / Bezeichnung der Akte", true),
                         new ToolParameter("reason", "string", "Grund/Gegenstand (optional)", false),
@@ -1790,7 +1790,7 @@ public class ToolRegistry {
     private String executeGetCase(JsonObject args) throws Exception {
         String fileNumber = (String) args.get("fileNumber");
         if (fileNumber == null || fileNumber.trim().isEmpty()) {
-            return ToolJsonUtils.error("Aktenzeichen fehlt");
+            return ToolJsonUtils.error("Número do processo ausente");
         }
 
         JLawyerServiceLocator locator = ToolJsonUtils.getLocator();
@@ -1841,7 +1841,7 @@ public class ToolRegistry {
     private String executeListCaseDocuments(JsonObject args) throws Exception {
         String fileNumber = (String) args.get("fileNumber");
         if (fileNumber == null || fileNumber.trim().isEmpty()) {
-            return ToolJsonUtils.error("Aktenzeichen fehlt");
+            return ToolJsonUtils.error("Número do processo ausente");
         }
 
         int page = 1;
@@ -1931,7 +1931,7 @@ public class ToolRegistry {
     private String executeListCaseDocumentsByDate(JsonObject args) throws Exception {
         String fileNumber = (String) args.get("fileNumber");
         if (fileNumber == null || fileNumber.trim().isEmpty()) {
-            return ToolJsonUtils.error("Aktenzeichen fehlt");
+            return ToolJsonUtils.error("Número do processo ausente");
         }
 
         String fromDateStr = (String) args.get("fromDate");
@@ -2030,7 +2030,7 @@ public class ToolRegistry {
     private String executeSearchCaseDocuments(JsonObject args) throws Exception {
         String fileNumber = (String) args.get("fileNumber");
         if (fileNumber == null || fileNumber.trim().isEmpty()) {
-            return ToolJsonUtils.error("Aktenzeichen fehlt");
+            return ToolJsonUtils.error("Número do processo ausente");
         }
 
         String query = (String) args.get("query");
@@ -2371,7 +2371,7 @@ public class ToolRegistry {
         String eventTypeStr = (String) args.get("eventType");
         int eventTypeFilter = parseEventType(eventTypeStr);
         if (eventTypeFilter == -2) {
-            return ToolJsonUtils.error("Unbekannter Ereignistyp: " + eventTypeStr + ". Erlaubt: Wiedervorlage, Frist, Termin");
+            return ToolJsonUtils.error("Tipo de evento desconhecido: " + eventTypeStr + ". Erlaubt: Wiedervorlage, Frist, Termin");
         }
 
         String assigneeFilter = (String) args.get("assignee");
@@ -2419,7 +2419,7 @@ public class ToolRegistry {
         String eventTypeStr = (String) args.get("eventType");
         int eventTypeFilter = parseEventType(eventTypeStr);
         if (eventTypeFilter == -2) {
-            return ToolJsonUtils.error("Unbekannter Ereignistyp: " + eventTypeStr + ". Erlaubt: Wiedervorlage, Frist, Termin");
+            return ToolJsonUtils.error("Tipo de evento desconhecido: " + eventTypeStr + ". Erlaubt: Wiedervorlage, Frist, Termin");
         }
 
         String assigneeFilter = (String) args.get("assignee");
@@ -2760,7 +2760,7 @@ public class ToolRegistry {
             return ToolJsonUtils.error("Zusammenfassung fehlt");
         }
         if (typeStr == null || typeStr.trim().isEmpty()) {
-            return ToolJsonUtils.error("Ereignistyp fehlt (Wiedervorlage, Frist oder Termin)");
+            return ToolJsonUtils.error("Tipo de evento ausente (Lembrete, Prazo ou Audiência)");
         }
         if (beginDateStr == null || beginDateStr.trim().isEmpty()) {
             return ToolJsonUtils.error("Startdatum fehlt");
@@ -2785,7 +2785,7 @@ public class ToolRegistry {
                 eventType = EventTypes.EVENTTYPE_EVENT;
                 break;
             default:
-                return ToolJsonUtils.error("Unbekannter Ereignistyp: " + typeStr + ". Erlaubt: Wiedervorlage, Frist, Termin");
+                return ToolJsonUtils.error("Tipo de evento desconhecido: " + typeStr + ". Erlaubt: Wiedervorlage, Frist, Termin");
         }
 
         // Parse dates
@@ -3490,7 +3490,7 @@ public class ToolRegistry {
                     }
                     userNames.append(u.getPrincipalId());
                 }
-                return ToolJsonUtils.error("Sachbearbeiter nicht gefunden: " + assistant + ". Verfügbare Benutzer: " + userNames.toString());
+                return ToolJsonUtils.error("Responsável não encontrado: " + assistant + ". Verfügbare Benutzer: " + userNames.toString());
             }
         }
 
@@ -3745,7 +3745,7 @@ public class ToolRegistry {
                     }
                     userNames.append(u.getPrincipalId());
                 }
-                return ToolJsonUtils.error("Sachbearbeiter nicht gefunden: " + assistant + ". Verfügbare Benutzer: " + userNames.toString());
+                return ToolJsonUtils.error("Responsável não encontrado: " + assistant + ". Verfügbare Benutzer: " + userNames.toString());
             }
         }
 
@@ -4288,7 +4288,7 @@ public class ToolRegistry {
         } catch (SocketTimeoutException ex) {
             return ToolJsonUtils.error("Zeitüberschreitung beim Laden von: " + url);
         } catch (SSLException ex) {
-            return ToolJsonUtils.error("SSL-Fehler beim Laden von: " + url + " - " + ex.getMessage());
+            return ToolJsonUtils.error("SSL-Erro ao carregar von: " + url + " - " + ex.getMessage());
         } catch (IllegalArgumentException ex) {
             return ToolJsonUtils.error("Ungültige URL: " + url);
         } catch (IOException ex) {

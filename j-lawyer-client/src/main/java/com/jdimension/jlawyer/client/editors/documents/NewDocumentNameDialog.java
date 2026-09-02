@@ -793,7 +793,7 @@ public class NewDocumentNameDialog extends javax.swing.JDialog {
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Schliessen");
+        cmdCancel.setText("Fechar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -801,7 +801,7 @@ public class NewDocumentNameDialog extends javax.swing.JDialog {
         });
 
         cmdUseSelection.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdUseSelection.setText("Übernehmen");
+        cmdUseSelection.setText("Aplicar");
         cmdUseSelection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdUseSelectionActionPerformed(evt);
@@ -823,7 +823,7 @@ public class NewDocumentNameDialog extends javax.swing.JDialog {
         jTextField1.setText("jTextField1");
 
         lblCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_folder_blue_36dp.png"))); // NOI18N
-        lblCase.setText("Akte");
+        lblCase.setText("Processo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

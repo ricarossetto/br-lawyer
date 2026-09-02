@@ -1109,7 +1109,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         cmdShowProcessCard = new javax.swing.JButton();
 
         mnuSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filesave.png"))); // NOI18N
-        mnuSave.setText("Speichern");
+        mnuSave.setText("Salvar");
 
         mnuSearchSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
         mnuSearchSave.setText("in Akte...");
@@ -1146,7 +1146,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
 
         lblSentDate.setFont(lblSentDate.getFont());
         lblSentDate.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblSentDate.setText("Datum");
+        lblSentDate.setText("Data");
 
         lblSubject.setText(" ");
 
@@ -1608,7 +1608,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
 
         } catch (Exception ex) {
             log.error("Error saving attachment", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Anhangs (fehlende Berechtigungen oder unzulässige Zeichen im Namen): " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar des Anhangs (fehlende Berechtigungen oder unzulässige Zeichen im Namen): " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
 
         }
     }//GEN-LAST:event_mnuSaveAsFileActionPerformed
@@ -1678,7 +1678,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
 
             } catch (Exception ex) {
                 log.error(ex);
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar des Dokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
             }
         }
     }//GEN-LAST:event_mnuSearchSaveActionPerformed
@@ -1706,14 +1706,14 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
                     JLawyerServiceLocator locator = JLawyerServiceLocator.getInstance(ClientSettings.getInstance().getLookupProperties());
                     locator.lookupArchiveFileServiceRemote().setDocumentContent(this.documentId, mex.getContent());
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern der beA-Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar der beA-Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
             }
             this.setMessage(this.msgContainer, this.documentId);
 
         } catch (Throwable t) {
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden des Journals: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar des Journals: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }//GEN-LAST:event_cmdRefreshJournalActionPerformed
 
@@ -1741,14 +1741,14 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
                     JLawyerServiceLocator locator = JLawyerServiceLocator.getInstance(ClientSettings.getInstance().getLookupProperties());
                     locator.lookupArchiveFileServiceRemote().setDocumentContent(this.documentId, mex.getContent());
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern der beA-Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar der beA-Nachricht: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     return;
                 }
             }
             this.setMessage(this.msgContainer, this.documentId);
 
         } catch (Throwable t) {
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden des Journals: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar des Journals: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }//GEN-LAST:event_cmdRefreshProcessCardActionPerformed
 
@@ -2085,7 +2085,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
 
         } catch (Exception ioe) {
             log.error("Error saving eEb response", ioe);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der eEb-Antwort: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der eEb-Antwort: " + ioe.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
     }

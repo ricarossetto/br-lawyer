@@ -743,7 +743,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
             }
         } catch (Exception ex) {
             log.error("Error getting all party types", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Beteiligtentypen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Beteiligtentypen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
         }
 
@@ -785,7 +785,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der E-Mail - Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der E-Mail - Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 
@@ -862,7 +862,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
         jSplitPane2.setResizeWeight(0.5);
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filesave.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -882,7 +882,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
         jScrollPane1.setViewportView(lstMailTemplates);
 
         cmdNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        cmdNew.setText("Neu");
+        cmdNew.setText("Novo");
         cmdNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdNewActionPerformed(evt);
@@ -890,7 +890,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
         });
 
         cmdDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        cmdDelete.setText("Löschen");
+        cmdDelete.setText("Excluir");
         cmdDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdDeleteActionPerformed(evt);
@@ -1161,7 +1161,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
             tpl.setBcc(this.txtBcc.getText());
             locator.lookupIntegrationServiceRemote().saveEmailTemplate(tpl, true);
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Vorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Vorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
 
@@ -1191,7 +1191,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
             this.txtBcc.setText(tpl.getBcc());
 
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Vorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Vorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_lstMailTemplatesMouseClicked
 
@@ -1244,7 +1244,7 @@ public class EmailTemplatesPanel extends javax.swing.JPanel implements Themeable
                 }
 
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Fehler beim Löschen der Vorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao excluir der Vorlage: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
         }

@@ -152,7 +152,7 @@ public class GlobalSearchDialog extends JDialog {
         lblStatus.setForeground(Color.GRAY);
 
         // Cancel button
-        cmdCancel = new JButton("Abbrechen");
+        cmdCancel = new JButton("Cancelar");
         cmdCancel.setIcon(new ImageIcon(getClass().getResource("/icons/cancel.png")));
         cmdCancel.addActionListener(e -> closeDialog());
 

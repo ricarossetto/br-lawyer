@@ -819,7 +819,7 @@ public class ConfirmationStep extends javax.swing.JPanel implements WizardStepIn
 
         } catch (Throwable t) {
             log.error("Unable to process wizard", t);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         this.pnlStatus.revalidate();
@@ -963,7 +963,7 @@ public class ConfirmationStep extends javax.swing.JPanel implements WizardStepIn
                 CalendarUtils.getInstance().storeCalendarEntry(newEvent, newCase, newEventTpl, WindowUtils.findWindow(this));
             } catch (Exception ex) {
                 log.error("Error adding review", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar des Kalendereintrages: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
     }

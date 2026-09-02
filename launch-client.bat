@@ -15,5 +15,14 @@ if not exist "%JAR_PATH%" (
     exit /b 1
 )
 
-cd /d "%TARGET_DIR%"
-java -Xms256m -Xmx2048m -Dfile.encoding=UTF-8 -Duser.language=pt -Duser.country=BR --add-exports=jdk.crypto.cryptoki/sun.security.pkcs11=ALL-UNNAMED -jar j-lawyer-client.jar %*
+set "JAVA_CMD=java"
+if defined JAVA_HOME (
+    if exist "%JAVA_HOME%\bin\java.exe" set "JAVA_CMD=%JAVA_HOME%\bin\java.exe"
+)
+if not defined JAVA_HOME (
+    if exist "C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot\bin\java.exe" (
+        set "JAVA_CMD=C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot\bin\java.exe"
+    )
+)
+
+"%JAVA_CMD%" -Xms256m -Xmx2048m -Dfile.encoding=UTF-8 -Duser.language=pt -Duser.country=BR --add-exports=jdk.crypto.cryptoki/sun.security.pkcs11=ALL-UNNAMED -jar j-lawyer-client.jar %*

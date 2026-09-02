@@ -820,7 +820,7 @@ public class PdfAnonymizerDialog extends javax.swing.JDialog implements Assistan
 
         cmdCancel.setFont(cmdCancel.getFont());
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);

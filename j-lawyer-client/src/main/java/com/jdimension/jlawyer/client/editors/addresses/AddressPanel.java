@@ -1190,7 +1190,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
             tagPanel.updateUI();
         } catch (Exception ex) {
             log.error("Error getting tags for address", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Tags zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Tags zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
         }
 
@@ -1214,7 +1214,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         } catch (Exception ex) {
             log.error("Error getting invoices for address", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Rechnungsbeträge: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Rechnungsbeträge: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
         }
 
@@ -1351,14 +1351,14 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
                 } catch (Exception ex) {
                     log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
 
                 EditorsRegistry.getInstance().updateStatus("Adresse gespeichert.", 5000);
                 return true;
             } catch (Exception ex) {
                 log.error("Error saving address", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
                 return false;
             }
@@ -3103,7 +3103,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         jTabbedPane1.addTab("Bank / Versicherung", new javax.swing.ImageIcon(getClass().getResource("/icons/money.png")), jPanel8); // NOI18N
 
         cmdAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder_new.png"))); // NOI18N
-        cmdAdd.setText("Hinzufügen");
+        cmdAdd.setText("Adicionar");
         cmdAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdAddActionPerformed(evt);
@@ -3558,7 +3558,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
             EditorsRegistry.getInstance().setMainEditorsPaneView((Component) editor);
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdToEditModeActionPerformed
 
@@ -3574,7 +3574,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdBackToSearchActionPerformed
 
@@ -3636,7 +3636,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
                 this.fillCasesForContactPanel(col, partyTypes);
             } catch (Exception ex) {
                 log.error("Error getting archive files for address", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Akten zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Akten zur Adresse: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 EditorsRegistry.getInstance().clearStatus();
             }
         }
@@ -4277,7 +4277,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
      * double-click-to-open behaviour and drag and drop of files into the table.
      */
     private void initDocumentsUI() {
-        this.mnuDeleteDocument.setText("Löschen");
+        this.mnuDeleteDocument.setText("Excluir");
 
         this.tblContents.setModel(new DefaultTableModel(
                 new Object[][]{}, new String[]{"Dokument", "Datum", "Größe"}) {
@@ -4542,12 +4542,12 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
                     ads.removeDocument(doc.getId());
                 } catch (Exception ex) {
                     log.error("Could not delete address document " + doc.getId(), ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Löschen von '" + doc.getName() + "': " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao excluir von '" + doc.getName() + "': " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
             }
         } catch (Exception ex) {
             log.error("Could not delete address documents", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Löschen der Dokumente: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao excluir der Dokumente: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         } finally {
             this.loadAddressDocuments();
         }
@@ -5473,7 +5473,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
             } catch (Exception ex) {
                 log.error("Error creating editor from class " + this.openedFromEditorClass, ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             if (id == null) {
@@ -5485,7 +5485,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         } catch (Exception ex) {
             log.error("Error saving address", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
             return false;
         }

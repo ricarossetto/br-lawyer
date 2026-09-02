@@ -825,7 +825,7 @@ public class BulkSaveDialog extends javax.swing.JDialog implements NewEventEntry
 
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Aktenetiketten", "Aktenetiketten");
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Aktenetiketten", "Aktenetiketten");
         }
 
         try {
@@ -856,7 +856,7 @@ public class BulkSaveDialog extends javax.swing.JDialog implements NewEventEntry
             this.lblCommonNameTemplate.setText(this.nameTemplate.getDisplayName());
         } catch (Exception ex) {
             log.error("Error connecting to server", ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Dateinamenvorlagen", "Dateinamen");
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Dateinamenvorlagen", "Dateinamen");
         }
     }
 
@@ -1128,7 +1128,7 @@ public class BulkSaveDialog extends javax.swing.JDialog implements NewEventEntry
         jScrollPane2.setViewportView(extensionsPanel);
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -1136,7 +1136,7 @@ public class BulkSaveDialog extends javax.swing.JDialog implements NewEventEntry
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -1406,7 +1406,7 @@ public class BulkSaveDialog extends javax.swing.JDialog implements NewEventEntry
                 eb.publishEvent(new CasesChangedEvent());
             } catch (Exception ex) {
                 log.error("Unable to save document", ex);
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Speichern der E-Mail / Anlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao salvar der E-Mail / Anlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
             }
         });
         worker.start();
@@ -1691,7 +1691,7 @@ public class BulkSaveDialog extends javax.swing.JDialog implements NewEventEntry
 
         } catch (Exception ex) {
             log.error("Error getting docments for case " + selectedCase.getId(), ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Dokumente der Akte", "Dokumente speichern");
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Dokumente der Akte", "Dokumente speichern");
         }
     }
 

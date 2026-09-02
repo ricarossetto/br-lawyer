@@ -112,7 +112,7 @@
             <Font component="jLabel2" property="font" relativeSize="true" size="0"/>
           </FontInfo>
         </Property>
-        <Property name="text" type="java.lang.String" value="Mobil"/>
+        <Property name="text" type="java.lang.String" value="Celular"/>
       </Properties>
     </Component>
   </SubComponents>

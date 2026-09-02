@@ -1382,7 +1382,7 @@ public class MultiValueTagConfigurationDialog extends javax.swing.JDialog {
         jSplitPane1.setRightComponent(jPanel2);
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

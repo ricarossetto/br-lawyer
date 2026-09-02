@@ -943,7 +943,7 @@ public class EpostLetterSendStatus extends javax.swing.JPanel implements WizardS
 
                         } catch (Throwable t) {
                             log.error(t);
-                            JOptionPane.showMessageDialog(this, "Fehler beim Speichern zur Akte: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(this, "Erro ao salvar zur Akte: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                         }
 
                     });

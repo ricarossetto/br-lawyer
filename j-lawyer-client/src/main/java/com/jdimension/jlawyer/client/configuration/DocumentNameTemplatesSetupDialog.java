@@ -843,7 +843,7 @@ public class DocumentNameTemplatesSetupDialog extends javax.swing.JDialog {
 
         cmdClose.setFont(cmdClose.getFont());
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -855,7 +855,7 @@ public class DocumentNameTemplatesSetupDialog extends javax.swing.JDialog {
 
         cmdSave.setFont(cmdSave.getFont());
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Übernehmen");
+        cmdSave.setText("Aplicar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);

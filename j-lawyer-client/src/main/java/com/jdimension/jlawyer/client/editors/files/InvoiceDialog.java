@@ -809,7 +809,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
         } catch (Exception ex) {
             log.error("Error determining invoice pools", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Belegnummernkreise: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Belegnummernkreise: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         DefaultComboBoxModel<String> dmCurrencies = new DefaultComboBoxModel<>();
@@ -823,7 +823,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
         } catch (Exception ex) {
             log.error("Error determining invoice currencies", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Währungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Währungen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
         String lastCurrency = UserSettings.getInstance().getSetting(UserSettings.INVOICE_LASTUSEDCURRENCY, "EUR");
         this.cmbCurrency.setSelectedItem(lastCurrency);
@@ -836,7 +836,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
             }
         } catch (Exception ex) {
             log.error("Error determining tax rates", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Steuersätze: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Steuersätze: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         DefaultComboBoxModel dmTypes = new DefaultComboBoxModel();
@@ -850,7 +850,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
         } catch (Exception ex) {
             log.error("Error determining invoice types", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Belegtypen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Belegtypen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
         String lastUsedType = UserSettings.getInstance().getSetting(UserSettings.INVOICE_LASTUSEDTYPE, null);
         if (lastUsedType != null) {
@@ -915,7 +915,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
         } catch (Exception ex) {
             log.error("Error determining invoice position templates", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         this.tblPayments.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
@@ -1160,7 +1160,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
             } catch (Exception ex) {
                 log.error("Error determining invoice positions", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Rechnungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Rechnungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             try {
@@ -1177,7 +1177,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
                 ComponentUtils.autoSizeColumns(tblPayments);
             } catch (Exception ex) {
                 log.error("Error determining invoice positions", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Rechnungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Rechnungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
         }
@@ -1295,7 +1295,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -1303,7 +1303,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
         });
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -2202,7 +2202,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
                 } catch (Exception ex) {
                     log.error("Error updating invoice position", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Rechnungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar der Rechnungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
                 positionIndex = positionIndex + 1;
             }
@@ -2218,7 +2218,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
         } catch (Exception ex) {
             log.error("error saving invoice", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Rechnung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Rechnung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -2844,7 +2844,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
                     timesheetSummaryTable = this.getTimesheetSummaryAsTable(times, this.cmbTableHeadersLanguage.getSelectedItem().toString());
                 } catch (Exception ex) {
                     log.error("error getting timesheet positions table", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
 
                 byte[] giroCode = null;
@@ -2871,7 +2871,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
                         this.lblInvoiceDocumentCreated.setText(df.format(doc.getCreationDate()));
                     } catch (Exception ex) {
                         log.error("error loading invoice document", ex);
-                        JOptionPane.showMessageDialog(this, "Fehler beim Laden des Belegdokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "Erro ao carregar des Belegdokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                     }
                     this.cmdViewDocument.setEnabled(true);
                     this.cmdNavigateToDocument.setEnabled(true);
@@ -2923,7 +2923,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
 
                 } catch (Exception ex) {
                     log.error("Error storing XRechnung document", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Speichern der elektronischen Rechnung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao salvar der elektronischen Rechnung: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
             }
         }
@@ -3026,7 +3026,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
                     this.lblInvoiceDocumentCreated.setText(df.format(doc.getCreationDate()));
                 } catch (Exception ex) {
                     log.error("error loading invoice document", ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden des Belegdokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar des Belegdokuments: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
                 this.cmdViewDocument.setEnabled(true);
                 this.cmdNavigateToDocument.setEnabled(true);
@@ -3073,7 +3073,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
             }
         } catch (Exception ex) {
             log.error("error getting timesheet positions for invoice " + this.currentEntry.getId(), ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return;
         }
 
@@ -3163,7 +3163,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
                 timesheetSummaryTable = this.getTimesheetSummaryAsTable(times, this.cmbTableHeadersLanguage.getSelectedItem().toString());
             } catch (Exception ex) {
                 log.error("error getting timesheet positions table", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
             ArchiveFileDocumentsBean timesheetDoc = this.caseView.newDocumentDialog(null, currentEntry, false, senderUser, this.getInvoicePositionsAsTable(this.cmbTableHeadersLanguage.getSelectedItem().toString()), timesheetPosTable, timesheetSummaryTable, null, null);

@@ -1001,7 +1001,7 @@ public class DocumentSearchPanel extends javax.swing.JPanel implements Themeable
                         "Fehler bei der Suche: " + error.getMessage(),
                         com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR,
                         JOptionPane.ERROR_MESSAGE);
-                    lblResultCount.setText("Fehler");
+                    lblResultCount.setText("Erro");
                     return;
                 }
 

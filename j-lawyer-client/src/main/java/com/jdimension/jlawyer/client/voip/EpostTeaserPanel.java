@@ -734,7 +734,7 @@ public class EpostTeaserPanel extends javax.swing.JPanel {
         lblEpostOrder1.setFont(lblEpostOrder1.getFont().deriveFont(lblEpostOrder1.getFont().getStyle() | java.awt.Font.BOLD, lblEpostOrder1.getFont().getSize()+2));
         lblEpostOrder1.setText("Freischaltung erhalten? Hier eintragen:");
 
-        cmdOK.setText("Speichern");
+        cmdOK.setText("Salvar");
         cmdOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdOKActionPerformed(evt);

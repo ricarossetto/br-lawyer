@@ -1118,7 +1118,7 @@ public class QuickArchiveFileSearchPanel extends javax.swing.JPanel implements T
 
         } catch (Exception ex) {
             log.error("Error deleting archive files", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Löschen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao excluir: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus(false);
         } finally {
             ThreadUtils.setDefaultCursor(this, false);
@@ -1147,7 +1147,7 @@ public class QuickArchiveFileSearchPanel extends javax.swing.JPanel implements T
 
         } catch (Exception ex) {
             log.error("Error creating editor from class " + this.detailsEditorClass, ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 

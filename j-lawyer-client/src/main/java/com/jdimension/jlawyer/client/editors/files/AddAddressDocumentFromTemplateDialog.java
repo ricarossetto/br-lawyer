@@ -846,10 +846,10 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
             this.treeFolders.setSelectionRow(0);
         } catch (CompletionException ex) {
             log.error(ex.getCause());
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
 
         FrameUtils.fitDialogToScreen(this, 85f);
@@ -871,7 +871,7 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
             headTemplates = headTemplatesFuture.join();
         } catch (CompletionException ex) {
             log.error("Error getting all party types", ex.getCause());
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Beteiligtentypen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Beteiligtentypen: " + ex.getCause().getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             EditorsRegistry.getInstance().clearStatus();
         }
 
@@ -899,7 +899,7 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
             this.nameTemplate = defaultNameTemplate;
         } catch (CompletionException ex) {
             log.error("Error connecting to server", ex.getCause());
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Dateinamenvorlagen", "Dateinamen");
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Dateinamenvorlagen", "Dateinamen");
         }
         
 
@@ -950,7 +950,7 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.setToolTipText("");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1594,7 +1594,7 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 
@@ -1627,7 +1627,7 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
     }
 

@@ -105,7 +105,7 @@ public class CaseExportDialog extends javax.swing.JDialog {
         });
 
         cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cancelButton.setText("Abbrechen");
+        cancelButton.setText("Cancelar");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelButtonActionPerformed(evt);
@@ -206,8 +206,8 @@ public class CaseExportDialog extends javax.swing.JDialog {
             caseListPanel.revalidate();
             caseListPanel.repaint();
         } catch (Exception e) {
-            log.error("Fehler beim Laden der synchronisierten Akten", e);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der synchronisierten Akten: " + e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
+            log.error("Erro ao carregar der synchronisierten Akten", e);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der synchronisierten Akten: " + e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -397,7 +397,7 @@ public class CaseExportDialog extends javax.swing.JDialog {
 
             } catch (Throwable t) {
                 log.error("Could not unzip exported case", t);
-                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Exportieren der Akte: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+                ThreadUtils.showErrorDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao exportar der Akte: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
                 EditorsRegistry.getInstance().clearStatus(true);
                 ThreadUtils.setDefaultCursor(this.owner);
             }

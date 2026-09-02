@@ -937,7 +937,7 @@ public class CalendarPanel extends javax.swing.JPanel implements NewEventEntryCa
 
                 } catch (Exception ex) {
                     log.error("Error creating editor from class " + this.detailsEditorClass, ex);
-                    JOptionPane.showMessageDialog(this, "Fehler beim Laden des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Erro ao carregar des Editors: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -1054,7 +1054,7 @@ public class CalendarPanel extends javax.swing.JPanel implements NewEventEntryCa
                         }
                     } catch (Exception ex) {
                         log.error("Error updating review", ex);
-                        JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                         EditorsRegistry.getInstance().clearStatus();
                         return;
                     }
@@ -1134,7 +1134,7 @@ public class CalendarPanel extends javax.swing.JPanel implements NewEventEntryCa
                         removeById(this.doneEvents, ce.getEventId());
                     } catch (Exception ex) {
                         log.error("Error updating review", ex);
-                        JOptionPane.showMessageDialog(this, "Fehler beim Speichern: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "Erro ao salvar: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
                         EditorsRegistry.getInstance().clearStatus();
                         return;
                     }

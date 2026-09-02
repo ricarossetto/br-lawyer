@@ -1641,7 +1641,7 @@ public class LoginDialog extends javax.swing.JFrame {
 
         cmdSaveProfile.setForeground(new java.awt.Color(255, 255, 255));
         cmdSaveProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSaveProfile.setText("Speichern");
+        cmdSaveProfile.setText("Salvar");
         cmdSaveProfile.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true));
         cmdSaveProfile.setBorderPainted(false);
         cmdSaveProfile.setContentAreaFilled(false);

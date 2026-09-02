@@ -761,7 +761,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
             }
         } catch (Exception ex) {
             log.error("Error determining tax rates", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der Steuersätze: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der Steuersätze: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
 
         this.cmbTimesheetInterval.removeAllItems();
@@ -806,7 +806,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
             } catch (Exception ex) {
                 this.lblAllowedPositions.setText("0");
                 log.error("Error determining position templates for timesheet", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der erlaubten Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der erlaubten Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         }
 
@@ -870,7 +870,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
 
             } catch (Exception ex) {
                 log.error("Error determining timesheet positions", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Zeiterfassungspositionen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
 
         }
@@ -1183,7 +1183,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
         jLabel11.setText("USt:");
 
         cmdSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdSave.setText("Speichern");
+        cmdSave.setText("Salvar");
         cmdSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdSaveActionPerformed(evt);
@@ -1191,7 +1191,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
         });
 
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
@@ -1336,7 +1336,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
 
         } catch (Exception ex) {
             log.error("Error updating timesheet position", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern der Zeiterfassungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar der Zeiterfassungsposition: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
@@ -1348,7 +1348,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
 
         } catch (Exception ex) {
             log.error("error saving timesheet", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Speichern des Projekts: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao salvar des Projekts: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             return false;
         }
 
@@ -1673,7 +1673,7 @@ public class TimesheetDialog extends javax.swing.JDialog implements NewEventEntr
         } catch (Exception ex) {
             this.lblAllowedPositions.setText("0");
             log.error("Error determining position templates for timesheet", ex);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden der erlaubten Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar der erlaubten Positionsvorlagen: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 

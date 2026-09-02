@@ -805,7 +805,7 @@ public class FormPluginEntryPanel extends javax.swing.JPanel {
             }
         });
 
-        lblDescription.setText("Beschreibung");
+        lblDescription.setText("Descrição");
 
         lblVersionAvailable.setText("Version");
 
@@ -952,7 +952,7 @@ public class FormPluginEntryPanel extends javax.swing.JPanel {
             this.plugin.setState(FormPlugin.STATE_INSTALLED);
             this.setEntry(this.plugin);
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Fehler beim Laden des Plugins: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(EditorsRegistry.getInstance().getMainWindow(), "Erro ao carregar des Plugins: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
     

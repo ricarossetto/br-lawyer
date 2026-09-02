@@ -740,7 +740,7 @@ public class BeaPanel extends javax.swing.JPanel implements PreviewPanel {
             this.setMessage(msg);
         } catch (Throwable t) {
             log.error(t);
-            this.showStatus("Fehler beim Laden der Vorschau.");
+            this.showStatus("Erro ao carregar der Vorschau.");
         }
     }
 

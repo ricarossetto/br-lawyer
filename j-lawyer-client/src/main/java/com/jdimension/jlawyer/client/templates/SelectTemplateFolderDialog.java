@@ -721,7 +721,7 @@ public class SelectTemplateFolderDialog extends javax.swing.JDialog {
 
         } catch (Exception ex) {
             log.error(ex);
-            ThreadUtils.showErrorDialog(this, "Fehler beim Laden der Vorlagenordner: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
+            ThreadUtils.showErrorDialog(this, "Erro ao carregar der Vorlagenordner: " + ex.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR);
         }
 
     }
@@ -766,7 +766,7 @@ public class SelectTemplateFolderDialog extends javax.swing.JDialog {
         setTitle("Vorlagenordner wählen");
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        jButton1.setText("Abbrechen");
+        jButton1.setText("Cancelar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

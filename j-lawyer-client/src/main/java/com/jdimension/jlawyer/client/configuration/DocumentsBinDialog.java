@@ -795,7 +795,7 @@ public class DocumentsBinDialog extends javax.swing.JDialog {
 
         } catch (Throwable t) {
             log.error("Could not load documents bin", t);
-            JOptionPane.showMessageDialog(this, "Fehler beim Laden des Papierkorbs: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao carregar des Papierkorbs: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -861,7 +861,7 @@ public class DocumentsBinDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tblBinDocuments);
 
         cmdClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdClose.setText("Schliessen");
+        cmdClose.setText("Fechar");
         cmdClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCloseActionPerformed(evt);
@@ -878,7 +878,7 @@ public class DocumentsBinDialog extends javax.swing.JDialog {
         });
 
         cmdDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        cmdDelete.setText("Löschen");
+        cmdDelete.setText("Excluir");
         cmdDelete.setToolTipText("Ausgewählte Dokumente endgültig löschen");
         cmdDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -977,7 +977,7 @@ public class DocumentsBinDialog extends javax.swing.JDialog {
 
         } catch (Throwable t) {
             log.error("Could not remove documents from bin", t);
-            JOptionPane.showMessageDialog(this, "Fehler beim Löschen aus dem Papierkorbs: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao excluir aus dem Papierkorbs: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdDeleteActionPerformed
 
@@ -1019,7 +1019,7 @@ public class DocumentsBinDialog extends javax.swing.JDialog {
 
         } catch (Throwable t) {
             log.error("Could not remove documents from bin", t);
-            JOptionPane.showMessageDialog(this, "Fehler beim Löschen aus dem Papierkorbs: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Erro ao excluir aus dem Papierkorbs: " + t.getMessage(), com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_cmdEmptyBinActionPerformed
 

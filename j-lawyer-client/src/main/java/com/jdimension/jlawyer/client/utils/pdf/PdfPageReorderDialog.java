@@ -731,7 +731,7 @@ public class PdfPageReorderDialog extends javax.swing.JDialog {
                 configureList();
             } catch (Exception ex) {
                 log.error("Unable to initialize page list", ex);
-                JOptionPane.showMessageDialog(this, "Fehler beim Laden der Seiten: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Erro ao carregar der Seiten: " + ex.getMessage(), DesktopUtils.POPUP_TITLE_ERROR, JOptionPane.ERROR_MESSAGE);
             }
         });
     }
@@ -1028,7 +1028,7 @@ public class PdfPageReorderDialog extends javax.swing.JDialog {
 
         cmdCancel.setFont(cmdCancel.getFont());
         cmdCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdCancel.setText("Abbrechen");
+        cmdCancel.setText("Cancelar");
         cmdCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCancelActionPerformed(evt);
