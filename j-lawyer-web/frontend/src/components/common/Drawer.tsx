@@ -42,26 +42,26 @@ export const Drawer: React.FC<DrawerProps> = ({
     <div className="fixed inset-0 z-40 overflow-hidden">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-black/80 transition-opacity"
         onClick={onClose}
       />
 
       <div className="fixed inset-y-0 right-0 flex pl-10 max-w-full">
         <div
           className={cn(
-            'w-screen bg-[#0F1115] border-l border-white/10 shadow-[0_0_50px_-10px_rgba(247,147,26,0.15)] flex flex-col animate-drawer-in',
+            'w-screen bg-[#0F0F0F] border-l border-[#262626] flex flex-col animate-drawer-in rounded-none',
             widthStyles[width]
           )}
         >
           {/* Header */}
-          <div className="px-6 py-4 border-b border-white/10 flex items-start justify-between bg-[#030304]/80 backdrop-blur shrink-0">
+          <div className="px-6 py-4 border-b border-[#262626] flex items-start justify-between bg-[#0A0A0A] shrink-0">
             <div>
-              <h3 className="text-sm font-semibold text-slate-100 font-heading">{title}</h3>
-              {subtitle && <p className="text-xs text-slate-400 font-mono mt-0.5">{subtitle}</p>}
+              <h3 className="text-sm font-bold text-[#FAFAFA] font-heading tracking-tight">{title}</h3>
+              {subtitle && <p className="text-xs text-[#737373] font-mono mt-0.5 tracking-wider">{subtitle}</p>}
             </div>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-full text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
+              className="p-1.5 rounded-none text-[#737373] hover:text-[#FAFAFA] hover:bg-[#1A1A1A] transition-colors"
               title="Fechar (Esc)"
             >
               <X className="h-4 w-4" />

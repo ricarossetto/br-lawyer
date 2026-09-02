@@ -142,17 +142,17 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
             onDragOver={(e) => handleDragOver(e, col.status)}
             onDragLeave={(e) => handleDragLeave(e, col.status)}
             onDrop={(e) => handleDrop(e, col.status)}
-            className={`bg-[#0F1115] border rounded-2xl flex flex-col max-h-[calc(100vh-220px)] transition-all duration-200 shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] ${
+            className={`bg-[#0F0F0F] border rounded-none flex flex-col max-h-[calc(100vh-220px)] transition-colors duration-150 ${
               isColumnDragOver
-                ? 'border-[#F7931A] bg-[#0F1115] shadow-lg shadow-[#F7931A]/15 ring-2 ring-[#F7931A]/30'
-                : 'border-white/10'
+                ? 'border-[#FF3D00] bg-[#141414]'
+                : 'border-[#262626]'
             }`}
           >
             {/* Column Header */}
-            <div className="p-4 border-b border-white/10 bg-[#030304]/80 rounded-t-2xl flex items-center justify-between">
+            <div className="p-4 border-b border-[#262626] bg-[#0A0A0A] rounded-none flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-xs text-slate-100 font-heading">{col.title}</span>
-                <span className="px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-400 font-mono text-[10px] font-bold">
+                <span className="font-bold text-xs text-[#FAFAFA] font-heading tracking-tight">{col.title}</span>
+                <span className="px-2 py-0.5 rounded-none bg-[#141414] border border-[#262626] text-[#FAFAFA] font-mono text-[9px] font-bold">
                   {tasks.length}
                 </span>
               </div>
@@ -160,7 +160,7 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
               {col.status === 'TODO' && onNewTask && (
                 <button
                   onClick={onNewTask}
-                  className="p-1 rounded-full text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
+                  className="p-1 rounded-none text-[#737373] hover:text-[#FAFAFA] hover:bg-[#1A1A1A] transition-colors"
                   title="Criar tarefa nesta coluna"
                 >
                   <Plus className="h-3.5 w-3.5" />
@@ -171,8 +171,8 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
             {/* Column Cards Container */}
             <div className="p-3 space-y-3 overflow-y-auto flex-1 min-h-[140px]">
               {tasks.length === 0 ? (
-                <div className="p-6 text-center text-slate-500 text-[11px] border border-dashed border-white/10 rounded-xl">
-                  Nenhuma tarefa nesta coluna
+                <div className="p-6 text-center text-[#737373] text-[11px] font-mono border border-dashed border-[#262626] rounded-none">
+                  NENHUMA TAREFA
                 </div>
               ) : (
                 tasks.map((task) => {
@@ -184,40 +184,40 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
                       draggable
                       onDragStart={(e) => handleDragStart(e, task.id)}
                       onClick={() => onSelectTask(task.id)}
-                      className={`p-3.5 bg-[#030304] border rounded-xl hover:border-[#F7931A]/50 hover:shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)] hover:-translate-y-0.5 cursor-grab active:cursor-grabbing transition-all duration-200 group space-y-2.5 ${
-                        isDragging ? 'opacity-40 scale-98 border-[#F7931A]' : 'border-white/10'
+                      className={`p-3.5 bg-[#0A0A0A] border rounded-none hover:border-[#737373] cursor-grab active:cursor-grabbing transition-colors duration-150 group space-y-2.5 ${
+                        isDragging ? 'opacity-40 border-[#FF3D00]' : 'border-[#262626]'
                       }`}
                     >
                       {/* Card Top: Priority & Category */}
                       <div className="flex items-center justify-between gap-1">
                         <div className="flex items-center gap-1.5">
                           {getPriorityBadge(task.priority)}
-                          <span className="text-[10px] uppercase font-mono text-slate-400 truncate max-w-[100px]">
+                          <span className="text-[9px] uppercase font-mono text-[#737373] tracking-wider truncate max-w-[100px]">
                             {task.category || 'TAREFA'}
                           </span>
                         </div>
 
                         {task.overdue && (
-                          <span className="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[9px] font-bold uppercase font-mono">
+                          <span className="px-1.5 py-0.2 rounded-none bg-rose-950/40 text-rose-400 border border-rose-600/40 text-[9px] font-bold uppercase font-mono">
                             Atrasada
                           </span>
                         )}
                         {task.dueToday && !task.overdue && (
-                          <span className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[9px] font-bold uppercase font-mono">
+                          <span className="px-1.5 py-0.2 rounded-none bg-[#141414] text-[#FF3D00] border border-[#FF3D00]/40 text-[9px] font-bold uppercase font-mono">
                             Hoje
                           </span>
                         )}
                       </div>
 
                       {/* Card Title */}
-                      <div className="font-semibold text-xs text-slate-100 group-hover:text-[#FFD600] transition-colors leading-snug">
+                      <div className="font-bold text-xs text-[#FAFAFA] group-hover:text-[#FF3D00] transition-colors leading-snug">
                         {task.title}
                       </div>
 
                       {/* Linked Process (if any) */}
                       {(task.caseFileNumber || task.cnjNumber) && (
                         <div
-                          className="flex items-center gap-1.5 text-[10px] text-slate-400 truncate hover:text-[#FFD600] transition-colors"
+                          className="flex items-center gap-1.5 text-[10px] text-[#737373] truncate hover:text-[#FAFAFA] transition-colors"
                           onClick={(e) => {
                             if (task.processId && onSelectCase) {
                               e.stopPropagation();
@@ -225,7 +225,7 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
                             }
                           }}
                         >
-                          <Briefcase className="h-3 w-3 text-[#F7931A] shrink-0" />
+                          <Briefcase className="h-3 w-3 text-[#737373] shrink-0" />
                           <span className="font-mono truncate">
                             {task.caseFileNumber || task.cnjNumber}
                           </span>
@@ -233,7 +233,7 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
                       )}
 
                       {/* Card Footer: Due Date, User, Counters */}
-                      <div className="pt-2 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-400">
+                      <div className="pt-2 border-t border-[#262626] flex items-center justify-between text-[10px] text-[#737373]">
                         {/* Due Date */}
                         <div className="flex items-center gap-1">
                           <Calendar
@@ -241,8 +241,8 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
                               task.overdue
                                 ? 'text-rose-400'
                                 : task.dueToday
-                                ? 'text-amber-400'
-                                : 'text-slate-500'
+                                ? 'text-[#FF3D00]'
+                                : 'text-[#737373]'
                             }`}
                           />
                           <span
@@ -250,8 +250,8 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
                               task.overdue
                                 ? 'text-rose-400 font-bold'
                                 : task.dueToday
-                                ? 'text-amber-400 font-bold'
-                                : 'text-slate-400'
+                                ? 'text-[#FF3D00] font-bold'
+                                : 'text-[#737373]'
                             }`}
                           >
                             {task.dueDate ? format(new Date(task.dueDate), 'dd/MM') : '—'}
@@ -262,7 +262,7 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
                         <div className="flex items-center gap-2">
                           {task.checklistTotalCount > 0 && (
                             <div className="flex items-center gap-0.5" title="Itens do checklist">
-                              <CheckSquare className="h-3 w-3 text-slate-500" />
+                              <CheckSquare className="h-3 w-3 text-[#737373]" />
                               <span className="font-mono">
                                 {task.checklistDoneCount}/{task.checklistTotalCount}
                               </span>
@@ -271,14 +271,14 @@ export const TasksKanban: React.FC<TasksKanbanProps> = ({
 
                           {task.commentCount > 0 && (
                             <div className="flex items-center gap-0.5" title="Comentários">
-                              <MessageSquare className="h-3 w-3 text-slate-500" />
+                              <MessageSquare className="h-3 w-3 text-[#737373]" />
                               <span className="font-mono">{task.commentCount}</span>
                             </div>
                           )}
 
                           {/* Assigned User Initials */}
                           <div
-                            className="h-5 w-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[9px] text-slate-300 font-bold font-mono"
+                            className="h-5 w-5 rounded-none bg-[#141414] border border-[#262626] flex items-center justify-center text-[9px] text-[#FAFAFA] font-bold font-mono"
                             title={`Responsável: ${task.assignedUser || 'Não atribuído'}`}
                           >
                             {task.assignedUser ? task.assignedUser.slice(0, 2).toUpperCase() : '??'}

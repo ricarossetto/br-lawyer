@@ -26,11 +26,7 @@ export const Shell: React.FC<ShellProps> = ({
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-[#030304] text-slate-100 selection:bg-[#F7931A]/30 selection:text-white relative font-sans">
-      {/* Ambient background glows */}
-      <div className="pointer-events-none fixed -top-24 right-1/4 w-96 h-96 bg-[#EA580C]/5 rounded-full blur-3xl animate-glow-pulse" />
-      <div className="pointer-events-none fixed -bottom-24 left-1/3 w-80 h-80 bg-[#F7931A]/5 rounded-full blur-3xl animate-glow-pulse" />
-
+    <div className="flex h-screen w-screen overflow-hidden bg-[#0A0A0A] text-[#FAFAFA] selection:bg-[#FF3D00] selection:text-[#0A0A0A] relative font-sans">
       {/* Sidebar */}
       <Sidebar
         currentView={currentView}
@@ -46,7 +42,7 @@ export const Shell: React.FC<ShellProps> = ({
           subtitle={subtitle}
           onOpenSearch={() => setIsSearchOpen(true)}
         />
-        <main className="flex-1 overflow-y-auto p-6 bg-[#030304] bg-grid-pattern relative">
+        <main className="flex-1 overflow-y-auto p-6 lg:p-8 bg-[#0A0A0A]">
           {children}
         </main>
       </div>

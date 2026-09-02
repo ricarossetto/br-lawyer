@@ -158,60 +158,60 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
       />
 
       {/* Minha Fila de Trabalho / Daily Work Queue */}
-      <div className="bg-[#0F1115] border border-white/10 rounded-2xl overflow-hidden shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)] space-y-3 p-5 text-xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
+      <div className="bg-[#0F0F0F] border border-[#262626] rounded-none space-y-4 p-6 text-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#262626] pb-4">
           <div className="flex items-center gap-2.5">
-            <div className="h-8 w-8 rounded-xl bg-[#EA580C]/15 border border-[#F7931A]/40 flex items-center justify-center text-[#F7931A] shadow-[0_0_12px_rgba(247,147,26,0.25)]">
+            <div className="h-8 w-8 bg-[#141414] border border-[#262626] flex items-center justify-center text-[#FAFAFA]">
               <ListTodo className="h-4 w-4" />
             </div>
             <div>
-              <h2 className="font-semibold text-slate-100 text-sm font-heading">Minha Fila de Trabalho Prioritária</h2>
-              <p className="text-[11px] text-slate-400 font-sans">
+              <h2 className="font-bold text-[#FAFAFA] text-sm font-heading tracking-tight">Fila de Trabalho Prioritária</h2>
+              <p className="text-[11px] text-[#737373] font-sans">
                 Ações imediatas selecionadas pelo motor de workflow para o dia de hoje
               </p>
             </div>
           </div>
 
           {/* Queue Filter Tabs */}
-          <div className="flex items-center gap-1 bg-[#030304] p-1 border border-white/10 rounded-full">
+          <div className="flex items-center gap-1 bg-[#0A0A0A] p-1 border border-[#262626] rounded-none">
             <button
               onClick={() => setActiveQueueTab('URGENT_TASKS')}
-              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-none text-[10px] font-mono uppercase tracking-wider transition-colors flex items-center gap-1.5 ${
                 activeQueueTab === 'URGENT_TASKS'
-                  ? 'bg-rose-600/30 text-rose-200 border border-rose-500/40 shadow-[0_0_10px_rgba(244,63,94,0.25)]'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1A1A1A] text-rose-400 border border-rose-600/40 font-bold'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               <span>Atrasadas & Urgentes</span>
-              <span className="px-1.5 py-0.2 rounded-full bg-rose-500/30 text-rose-200 font-mono text-[10px] font-bold">
+              <span className="px-1.5 py-0.2 rounded-none bg-rose-950/40 text-rose-400 font-mono text-[9px] font-bold">
                 {urgentTasks.length}
               </span>
             </button>
 
             <button
               onClick={() => setActiveQueueTab('TODAY_TASKS')}
-              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-none text-[10px] font-mono uppercase tracking-wider transition-colors flex items-center gap-1.5 ${
                 activeQueueTab === 'TODAY_TASKS'
-                  ? 'bg-amber-600/30 text-amber-200 border border-amber-500/40 shadow-[0_0_10px_rgba(245,158,11,0.25)]'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1A1A1A] text-[#FF3D00] border border-[#FF3D00]/40 font-bold'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               <span>Vencem Hoje</span>
-              <span className="px-1.5 py-0.2 rounded-full bg-amber-500/30 text-amber-200 font-mono text-[10px] font-bold">
+              <span className="px-1.5 py-0.2 rounded-none bg-[#141414] text-[#FF3D00] font-mono text-[9px] font-bold border border-[#262626]">
                 {todayTasks.length}
               </span>
             </button>
 
             <button
               onClick={() => setActiveQueueTab('PENDING_PUBS')}
-              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-none text-[10px] font-mono uppercase tracking-wider transition-colors flex items-center gap-1.5 ${
                 activeQueueTab === 'PENDING_PUBS'
-                  ? 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               <span>Publicações Pendentes</span>
-              <span className="px-1.5 py-0.2 rounded-full bg-[#F7931A]/30 text-[#F7931A] font-mono text-[10px] font-bold">
+              <span className="px-1.5 py-0.2 rounded-none bg-[#141414] text-[#FAFAFA] font-mono text-[9px] font-bold border border-[#262626]">
                 {urgentPubs.length}
               </span>
             </button>
@@ -222,17 +222,17 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
         {activeQueueTab === 'URGENT_TASKS' && (
           <div className="space-y-2">
             {urgentTasks.length === 0 ? (
-              <div className="p-8 text-center text-slate-500 space-y-1">
+              <div className="p-8 text-center text-[#737373] space-y-1">
                 <CheckCircle2 className="h-6 w-6 text-emerald-400 mx-auto" />
-                <div className="font-semibold text-slate-300">Nenhuma tarefa atrasada ou urgente!</div>
-                <p className="text-[11px] text-slate-500">Todas as providências prioritárias estão em dia.</p>
+                <div className="font-semibold text-[#FAFAFA]">Nenhuma tarefa atrasada ou urgente!</div>
+                <p className="text-[11px] text-[#737373]">Todas as providências prioritárias estão em dia.</p>
               </div>
             ) : (
               urgentTasks.map((t) => (
                 <div
                   key={t.id}
                   onClick={() => setSelectedTaskId(t.id)}
-                  className="p-3.5 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all duration-200 hover:shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)] group"
+                  className="p-3.5 bg-[#0A0A0A] border border-[#262626] hover:border-[#737373] rounded-none flex items-center justify-between gap-3 cursor-pointer transition-colors duration-150 group"
                 >
                   <div className="flex items-center gap-3 truncate">
                     <button
@@ -240,19 +240,19 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                         e.stopPropagation();
                         changeStatusMutation.mutate({ id: t.id, req: { newStatus: 'DONE', syncCalendar: true } });
                       }}
-                      className="p-1 text-slate-500 hover:text-emerald-400 transition-colors"
+                      className="p-1 text-[#737373] hover:text-emerald-400 transition-colors"
                       title="Marcar como concluída"
                     >
                       <Square className="h-4 w-4" />
                     </button>
 
                     <div className="truncate">
-                      <div className="font-semibold text-slate-100 group-hover:text-[#FFD600] transition-colors truncate">
+                      <div className="font-semibold text-[#FAFAFA] group-hover:text-[#FF3D00] transition-colors truncate">
                         {t.title}
                       </div>
-                      <div className="flex items-center gap-2 mt-0.5 text-[10px] text-slate-400">
+                      <div className="flex items-center gap-2 mt-0.5 text-[10px] text-[#737373] font-mono">
                         {t.caseFileNumber && (
-                          <span className="font-mono text-[#FFD600]">{t.caseFileNumber}</span>
+                          <span className="text-[#FAFAFA]">{t.caseFileNumber}</span>
                         )}
                         <span>•</span>
                         <span className="uppercase">{t.category}</span>
@@ -268,17 +268,17 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
 
                   <div className="flex items-center gap-3 shrink-0">
                     <div className="text-right font-mono">
-                      <span className="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold">
+                      <span className="px-2 py-0.5 rounded-none bg-rose-950/30 text-rose-400 border border-rose-600/40 text-[10px] font-bold uppercase tracking-wider">
                         {t.overdue ? 'ATRASADA' : 'URGENTE'}
                       </span>
                       {t.dueDate && (
-                        <div className="text-[10px] text-slate-400 mt-0.5">
+                        <div className="text-[10px] text-[#737373] mt-0.5">
                           {format(new Date(t.dueDate), 'dd/MM/yyyy')}
                         </div>
                       )}
                     </div>
 
-                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-[#F7931A] transition-colors" />
+                    <ChevronRight className="h-4 w-4 text-[#525252] group-hover:text-[#FAFAFA] transition-colors" />
                   </div>
                 </div>
               ))
@@ -290,17 +290,17 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
         {activeQueueTab === 'TODAY_TASKS' && (
           <div className="space-y-2">
             {todayTasks.length === 0 ? (
-              <div className="p-8 text-center text-slate-500 space-y-1">
-                <Calendar className="h-6 w-6 text-slate-500 mx-auto" />
-                <div className="font-semibold text-slate-300">Nenhuma tarefa agendada para hoje.</div>
-                <p className="text-[11px] text-slate-500">Confira a agenda para os próximos dias.</p>
+              <div className="p-8 text-center text-[#737373] space-y-1">
+                <Calendar className="h-6 w-6 text-[#525252] mx-auto" />
+                <div className="font-semibold text-[#FAFAFA]">Nenhuma tarefa agendada para hoje.</div>
+                <p className="text-[11px] text-[#737373]">Confira a agenda para os próximos dias.</p>
               </div>
             ) : (
               todayTasks.map((t) => (
                 <div
                   key={t.id}
                   onClick={() => setSelectedTaskId(t.id)}
-                  className="p-3.5 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all duration-200 hover:shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)] group"
+                  className="p-3.5 bg-[#0A0A0A] border border-[#262626] hover:border-[#737373] rounded-none flex items-center justify-between gap-3 cursor-pointer transition-colors duration-150 group"
                 >
                   <div className="flex items-center gap-3 truncate">
                     <button
@@ -308,19 +308,19 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                         e.stopPropagation();
                         changeStatusMutation.mutate({ id: t.id, req: { newStatus: 'DONE', syncCalendar: true } });
                       }}
-                      className="p-1 text-slate-500 hover:text-emerald-400 transition-colors"
+                      className="p-1 text-[#737373] hover:text-emerald-400 transition-colors"
                       title="Marcar como concluída"
                     >
                       <Square className="h-4 w-4" />
                     </button>
 
                     <div className="truncate">
-                      <div className="font-semibold text-slate-100 group-hover:text-[#FFD600] transition-colors truncate">
+                      <div className="font-semibold text-[#FAFAFA] group-hover:text-[#FF3D00] transition-colors truncate">
                         {t.title}
                       </div>
-                      <div className="flex items-center gap-2 mt-0.5 text-[10px] text-slate-400">
+                      <div className="flex items-center gap-2 mt-0.5 text-[10px] text-[#737373] font-mono">
                         {t.caseFileNumber && (
-                          <span className="font-mono text-[#FFD600]">{t.caseFileNumber}</span>
+                          <span className="text-[#FAFAFA]">{t.caseFileNumber}</span>
                         )}
                         <span>•</span>
                         <span className="uppercase">{t.category}</span>
@@ -329,10 +329,10 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                   </div>
 
                   <div className="flex items-center gap-3 shrink-0">
-                    <span className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">
+                    <span className="px-2 py-0.5 rounded-none bg-[#1A1A1A] text-[#FF3D00] border border-[#FF3D00]/40 text-[10px] font-mono font-bold uppercase tracking-wider">
                       HOJE {t.dueTime ? `(${t.dueTime})` : ''}
                     </span>
-                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-[#F7931A] transition-colors" />
+                    <ChevronRight className="h-4 w-4 text-[#525252] group-hover:text-[#FAFAFA] transition-colors" />
                   </div>
                 </div>
               ))
@@ -344,28 +344,28 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
         {activeQueueTab === 'PENDING_PUBS' && (
           <div className="space-y-2">
             {urgentPubs.length === 0 ? (
-              <div className="p-8 text-center text-slate-500 space-y-1">
+              <div className="p-8 text-center text-[#737373] space-y-1">
                 <CheckCircle2 className="h-6 w-6 text-emerald-400 mx-auto" />
-                <div className="font-semibold text-slate-300">Todas as publicações foram triadas!</div>
-                <p className="text-[11px] text-slate-500">Nenhuma intimação pendente de análise.</p>
+                <div className="font-semibold text-[#FAFAFA]">Todas as publicações foram triadas!</div>
+                <p className="text-[11px] text-[#737373]">Nenhuma intimação pendente de análise.</p>
               </div>
             ) : (
               urgentPubs.map((pub) => (
                 <div
                   key={pub.id}
                   onClick={() => setSelectedPubId(pub.id)}
-                  className="p-3.5 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all duration-200 hover:shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)] group"
+                  className="p-3.5 bg-[#0A0A0A] border border-[#262626] hover:border-[#737373] rounded-none flex items-center justify-between gap-3 cursor-pointer transition-colors duration-150 group"
                 >
                   <div className="flex items-center gap-3 truncate">
-                    <div className="p-2 rounded-lg bg-[#EA580C]/15 border border-[#F7931A]/30 text-[#F7931A] shrink-0 font-bold text-[10px] shadow-[0_0_8px_rgba(247,147,26,0.2)]">
+                    <div className="p-1.5 bg-[#141414] border border-[#262626] text-[#FAFAFA] shrink-0 font-mono font-bold text-[10px] uppercase">
                       {pub.courtCode || 'DJ'}
                     </div>
 
                     <div className="truncate">
-                      <div className="font-semibold text-slate-100 group-hover:text-[#FFD600] transition-colors truncate">
+                      <div className="font-semibold text-[#FAFAFA] group-hover:text-[#FF3D00] transition-colors truncate">
                         {pub.cnjNumber || pub.recipient || 'Publicação Judicial'}
                       </div>
-                      <p className="text-[11px] text-slate-400 truncate line-clamp-1 mt-0.5">
+                      <p className="text-[11px] text-[#737373] truncate line-clamp-1 mt-0.5 font-sans">
                         {pub.snippet || 'Sem resumo disponível'}
                       </p>
                     </div>
@@ -374,13 +374,13 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                   <div className="flex items-center gap-2 shrink-0" onClick={(e) => e.stopPropagation()}>
                     <button
                       onClick={() => setQuickTreatPub(pub)}
-                      className="px-3 py-1 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-[11px] flex items-center gap-1.5 shadow-[0_0_12px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.03]"
+                      className="px-3 py-1 bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] font-bold text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <CheckCircle2 className="h-3.5 w-3.5" />
                       <span>Tratar</span>
                     </button>
 
-                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-[#F7931A] transition-colors" />
+                    <ChevronRight className="h-4 w-4 text-[#525252] group-hover:text-[#FAFAFA] transition-colors" />
                   </div>
                 </div>
               ))

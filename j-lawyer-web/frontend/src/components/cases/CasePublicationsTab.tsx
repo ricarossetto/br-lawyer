@@ -73,11 +73,11 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
     <div className="space-y-4 text-xs">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-slate-100 font-heading">
+          <span className="text-[10px] font-bold uppercase font-mono tracking-wider text-[#737373]">
             Publicações Judiciais ({publications.length})
           </span>
           {cnjNumber && (
-            <span className="text-[10px] text-[#FFD600] font-mono">CNJ: {cnjNumber}</span>
+            <span className="text-[10px] text-[#FAFAFA] font-mono font-bold">CNJ: {cnjNumber}</span>
           )}
         </div>
       </div>
@@ -91,8 +91,8 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
             <div
               key={pub.id}
               onClick={() => setSelectedPubId(pub.id)}
-              className={`p-4 bg-[#0F1115] border rounded-2xl hover:border-[#F7931A]/40 cursor-pointer transition-all duration-200 space-y-2.5 group shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] ${
-                isUnread ? 'border-[#F7931A]/40 bg-[#F7931A]/5 shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)]' : 'border-white/10'
+              className={`p-4 bg-[#0A0A0A] border rounded-none hover:border-[#737373] cursor-pointer transition-colors space-y-2.5 group ${
+                isUnread ? 'border-[#FF3D00] bg-[#141414]' : 'border-[#262626]'
               }`}
             >
               <div className="flex items-center justify-between">
@@ -100,7 +100,7 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
                   <Badge variant={pub.courtCode ? 'active' : 'neutral'}>
                     {pub.courtCode || 'DJ'}
                   </Badge>
-                  <span className="font-mono text-slate-400 text-[11px]">
+                  <span className="font-mono text-[#737373] text-[10px]">
                     {pub.availabilityDate
                       ? format(new Date(pub.availabilityDate), 'dd/MM/yyyy')
                       : 'Data recente'}
@@ -112,7 +112,7 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
                 <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
                   <button
                     onClick={() => setQuickTreatPub(pub)}
-                    className="px-3 py-1 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-[11px] flex items-center gap-1 shadow-[0_0_10px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.03]"
+                    className="px-3 py-1 bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] font-bold text-[10px] font-mono uppercase tracking-wider flex items-center gap-1 transition-colors cursor-pointer"
                   >
                     <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Tratar</span>
@@ -120,12 +120,12 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
                 </div>
               </div>
 
-              <p className="text-slate-200 text-xs line-clamp-2 leading-relaxed font-sans">
+              <p className="text-[#FAFAFA] text-xs line-clamp-2 leading-relaxed font-sans">
                 {pub.snippet || 'Sem resumo disponível'}
               </p>
 
               {pub.suggestedDueDate && (
-                <div className="text-[10px] text-[#FFD600] flex items-center gap-1 font-mono pt-1.5 border-t border-white/5 font-semibold">
+                <div className="text-[10px] text-[#FF3D00] flex items-center gap-1 font-mono pt-1.5 border-t border-[#262626] font-bold">
                   <Clock className="h-3 w-3" />
                   <span>
                     Prazo Heurístico:{' '}

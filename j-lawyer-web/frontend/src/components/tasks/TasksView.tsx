@@ -215,26 +215,26 @@ export const TasksView: React.FC<TasksViewProps> = ({
   return (
     <div className="space-y-4">
       {/* Top Header & Mode Toggle Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#0F1115] border border-white/10 p-5 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#0F0F0F] border border-[#262626] p-6 rounded-none">
         <div>
-          <h1 className="text-sm font-semibold text-slate-100 flex items-center gap-2 font-heading">
-            <ListTodo className="h-4 w-4 text-[#F7931A]" />
+          <h1 className="text-sm font-bold text-[#FAFAFA] flex items-center gap-2 font-heading tracking-tight">
+            <ListTodo className="h-4 w-4 text-[#FAFAFA]" />
             Gestão de Tarefas & Providências Jurídicas
           </h1>
-          <p className="text-[11px] text-slate-400 mt-0.5 font-sans">
+          <p className="text-xs text-[#737373] mt-0.5 font-sans">
             Acompanhamento operacional, prazos fatais e fluxo visual de trabalho
           </p>
         </div>
 
         <div className="flex items-center gap-2.5">
           {/* View Mode Switcher */}
-          <div className="p-1 bg-[#030304] border border-white/10 rounded-full flex items-center gap-1">
+          <div className="p-1 bg-[#0A0A0A] border border-[#262626] rounded-none flex items-center gap-1">
             <button
               onClick={() => setViewMode('KANBAN')}
-              className={`px-3.5 py-1 rounded-full text-xs font-medium flex items-center gap-1.5 transition-all ${
+              className={`px-3.5 py-1.5 rounded-none text-[10px] font-mono uppercase tracking-wider font-bold flex items-center gap-1.5 transition-colors ${
                 viewMode === 'KANBAN'
-                  ? 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626]'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               <Columns className="h-3.5 w-3.5" />
@@ -242,10 +242,10 @@ export const TasksView: React.FC<TasksViewProps> = ({
             </button>
             <button
               onClick={() => setViewMode('LIST')}
-              className={`px-3.5 py-1 rounded-full text-xs font-medium flex items-center gap-1.5 transition-all ${
+              className={`px-3.5 py-1.5 rounded-none text-[10px] font-mono uppercase tracking-wider font-bold flex items-center gap-1.5 transition-colors ${
                 viewMode === 'LIST'
-                  ? 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626]'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               <List className="h-3.5 w-3.5" />
@@ -256,10 +256,10 @@ export const TasksView: React.FC<TasksViewProps> = ({
           <button
             onClick={() => (viewMode === 'KANBAN' ? refetchKanban() : refetchList())}
             disabled={isFetching}
-            className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors disabled:opacity-50 hover:border-[#F7931A]/40"
+            className="p-2 rounded-none bg-[#1A1A1A] hover:bg-[#262626] text-[#FAFAFA] border border-[#262626] transition-colors disabled:opacity-50 cursor-pointer"
             title="Atualizar tarefas"
           >
-            <RotateCw className={`h-3.5 w-3.5 ${isFetching ? 'animate-spin text-[#F7931A]' : ''}`} />
+            <RotateCw className={`h-3.5 w-3.5 ${isFetching ? 'animate-spin text-[#FF3D00]' : ''}`} />
           </button>
 
           <button
@@ -267,7 +267,7 @@ export const TasksView: React.FC<TasksViewProps> = ({
               setEditingTask(null);
               setIsNewTaskModalOpen(true);
             }}
-            className="px-4 py-2 rounded-full bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white text-xs font-semibold shadow-[0_0_20px_-5px_rgba(234,88,12,0.5)] flex items-center gap-1.5 transition-all hover:scale-[1.02]"
+            className="px-5 py-2 rounded-none bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] text-xs font-mono uppercase tracking-wider font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
           >
             <Plus className="h-3.5 w-3.5" />
             <span>Nova Tarefa</span>
@@ -276,11 +276,11 @@ export const TasksView: React.FC<TasksViewProps> = ({
       </div>
 
       {/* Filter Ribbon */}
-      <div className="bg-[#0F1115] border border-white/10 rounded-2xl p-4 space-y-3 shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] text-xs">
+      <div className="bg-[#0F0F0F] border border-[#262626] rounded-none p-5 space-y-3 text-xs">
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
           {/* Search */}
           <div className="relative">
-            <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-500" />
+            <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-[#737373]" />
             <input
               type="text"
               value={searchText}
@@ -289,13 +289,13 @@ export const TasksView: React.FC<TasksViewProps> = ({
                 setPage(0);
               }}
               placeholder="Buscar título, processo ou CNJ..."
-              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
+              className="w-full pl-9 pr-3 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors text-xs"
             />
           </div>
 
           {/* User */}
           <div className="relative">
-            <User className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-500" />
+            <User className="absolute left-3 top-2.5 h-3.5 w-3.5 text-[#737373]" />
             <input
               type="text"
               value={assignedUser}
@@ -304,7 +304,7 @@ export const TasksView: React.FC<TasksViewProps> = ({
                 setPage(0);
               }}
               placeholder="Filtrar por Responsável..."
-              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
+              className="w-full pl-9 pr-3 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors text-xs"
             />
           </div>
 
@@ -315,7 +315,7 @@ export const TasksView: React.FC<TasksViewProps> = ({
               setSelectedStatus(e.target.value);
               setPage(0);
             }}
-            className="w-full px-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 focus:outline-none focus:border-[#F7931A] transition-colors text-xs"
+            className="w-full px-3 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] focus:outline-none focus:border-[#FF3D00] transition-colors text-xs font-mono"
           >
             <option value="">Todos os Status</option>
             <option value="TODO">A Fazer</option>
@@ -326,33 +326,33 @@ export const TasksView: React.FC<TasksViewProps> = ({
           </select>
 
           {/* Quick Urgency / Due Date */}
-          <div className="flex items-center gap-1.5 bg-[#030304] p-1 border border-white/10 rounded-full">
+          <div className="flex items-center gap-1.5 bg-[#0A0A0A] p-1 border border-[#262626] rounded-none">
             <button
               onClick={() => { setQuickDeadline('ALL'); setPage(0); }}
-              className={`flex-1 py-1 rounded-full font-medium text-[11px] transition-all ${
+              className={`flex-1 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
                 quickDeadline === 'ALL'
-                  ? 'bg-white/10 text-white font-semibold'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               Todas
             </button>
             <button
               onClick={() => { setQuickDeadline('TODAY'); setPage(0); }}
-              className={`flex-1 py-1 rounded-full font-medium text-[11px] transition-all ${
+              className={`flex-1 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
                 quickDeadline === 'TODAY'
-                  ? 'bg-amber-600/30 text-amber-200 border border-amber-500/40 shadow-[0_0_10px_rgba(245,158,11,0.25)] font-semibold'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-[#1A1A1A] text-[#FF3D00] border border-[#FF3D00]/40 font-bold'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               Hoje
             </button>
             <button
               onClick={() => { setQuickDeadline('OVERDUE'); setPage(0); }}
-              className={`flex-1 py-1 rounded-full font-medium text-[11px] transition-all ${
+              className={`flex-1 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
                 quickDeadline === 'OVERDUE'
-                  ? 'bg-rose-600/30 text-rose-200 border border-rose-500/40 shadow-[0_0_10px_rgba(244,63,94,0.25)] font-semibold'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-rose-950/40 text-rose-400 border border-rose-600/40 font-bold'
+                  : 'text-[#737373] hover:text-[#FAFAFA]'
               }`}
             >
               Atrasadas

@@ -61,14 +61,14 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
   return (
     <div className="space-y-4">
       {/* Control Ribbon (Search, Filters, New Case Button) */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-[#0F1115] border border-white/10 p-4 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)]">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-[#0F0F0F] border border-[#262626] p-5 rounded-none">
         {/* Filter Tabs */}
-        <div className="flex items-center gap-1.5 bg-[#030304] p-1 rounded-full border border-white/10">
+        <div className="flex items-center gap-1.5 bg-[#0A0A0A] p-1 rounded-none border border-[#262626]">
           <button
             onClick={() => { setFilter('open'); setOffset(0); }}
             className={cn(
-              'px-3.5 py-1 text-xs font-medium rounded-full transition-all cursor-pointer',
-              filter === 'open' ? 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold' : 'text-slate-400 hover:text-slate-200'
+              'px-3.5 py-1.5 text-[10px] font-mono uppercase tracking-wider rounded-none transition-colors cursor-pointer',
+              filter === 'open' ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold' : 'text-[#737373] hover:text-[#FAFAFA]'
             )}
           >
             Em Andamento
@@ -76,8 +76,8 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
           <button
             onClick={() => { setFilter('all'); setOffset(0); }}
             className={cn(
-              'px-3.5 py-1 text-xs font-medium rounded-full transition-all cursor-pointer',
-              filter === 'all' ? 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold' : 'text-slate-400 hover:text-slate-200'
+              'px-3.5 py-1.5 text-[10px] font-mono uppercase tracking-wider rounded-none transition-colors cursor-pointer',
+              filter === 'all' ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold' : 'text-[#737373] hover:text-[#FAFAFA]'
             )}
           >
             Todos os Processos
@@ -85,8 +85,8 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
           <button
             onClick={() => { setFilter('closed'); setOffset(0); }}
             className={cn(
-              'px-3.5 py-1 text-xs font-medium rounded-full transition-all cursor-pointer',
-              filter === 'closed' ? 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold' : 'text-slate-400 hover:text-slate-200'
+              'px-3.5 py-1.5 text-[10px] font-mono uppercase tracking-wider rounded-none transition-colors cursor-pointer',
+              filter === 'closed' ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold' : 'text-[#737373] hover:text-[#FAFAFA]'
             )}
           >
             Arquivados
@@ -110,11 +110,11 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
       </div>
 
       {/* Dense Table */}
-      <div className="bg-[#0F1115] border border-white/10 rounded-2xl overflow-hidden shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)]">
+      <div className="bg-[#0F0F0F] border border-[#262626] rounded-none overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-white/10 text-[11px] font-semibold text-slate-400 uppercase tracking-wider bg-[#030304]/60 font-mono select-none">
+              <tr className="border-b border-[#262626] text-[10px] font-bold text-[#737373] uppercase tracking-wider bg-[#0A0A0A] font-mono select-none">
                 <th className="py-2.5 px-4">Número CNJ / Pasta</th>
                 <th className="py-2.5 px-4">Ação / Título</th>
                 <th className="py-2.5 px-4">Área</th>
@@ -125,20 +125,20 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
                 <th className="py-2.5 px-4 text-right">Ação</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5 text-xs">
+            <tbody className="divide-y divide-[#262626] text-xs">
               {isLoading ? (
                 <tr>
-                  <td colSpan={8} className="py-8 text-center text-slate-500">
-                    <svg className="animate-spin h-5 w-5 text-[#F7931A] mx-auto mb-2" viewBox="0 0 24 24" fill="none">
+                  <td colSpan={8} className="py-8 text-center text-[#737373]">
+                    <svg className="animate-spin h-5 w-5 text-[#FF3D00] mx-auto mb-2" viewBox="0 0 24 24" fill="none">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
                     </svg>
-                    <span>Carregando processos do servidor WildFly...</span>
+                    <span className="font-mono text-xs">Carregando processos do servidor WildFly...</span>
                   </td>
                 </tr>
               ) : cases.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="py-8 text-center text-slate-500">
+                  <td colSpan={8} className="py-8 text-center text-[#737373] font-mono text-xs">
                     Nenhum processo encontrado com os filtros selecionados.
                   </td>
                 </tr>
@@ -150,26 +150,26 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
                       key={c.id}
                       onClick={() => setSelectedCaseForDrawer(c)}
                       className={cn(
-                        'dense-table-row cursor-pointer group hover:bg-white/5 transition-colors',
+                        'dense-table-row cursor-pointer group hover:bg-[#141414] transition-colors',
                         isSelected && 'selected'
                       )}
                     >
-                      <td className="py-3 px-4 font-mono font-medium text-slate-200 group-hover:text-[#FFD600] whitespace-nowrap">
+                      <td className="py-3 px-4 font-mono font-bold text-[#FAFAFA] group-hover:text-[#FF3D00] whitespace-nowrap">
                         {formatCNJ(c.fileNumber)}
                       </td>
-                      <td className="py-3 px-4 font-medium text-slate-100 max-w-sm truncate">
+                      <td className="py-3 px-4 font-bold text-[#FAFAFA] max-w-sm truncate">
                         {c.name}
                       </td>
-                      <td className="py-3 px-4 text-slate-400 whitespace-nowrap">
+                      <td className="py-3 px-4 text-[#737373] whitespace-nowrap">
                         <Badge variant="mono" size="sm">
                           {c.subjectField || 'Geral'}
                         </Badge>
                       </td>
-                      <td className="py-3 px-4 text-slate-300 flex items-center gap-1.5 whitespace-nowrap">
-                        <User className="h-3 w-3 text-slate-500" />
-                        <span>{c.lawyer || '—'}</span>
+                      <td className="py-3 px-4 text-[#FAFAFA] flex items-center gap-1.5 whitespace-nowrap">
+                        <User className="h-3 w-3 text-[#737373]" />
+                        <span className="font-mono text-[11px]">{c.lawyer || '—'}</span>
                       </td>
-                      <td className="py-3 px-4 font-mono font-bold text-[#FFD600] whitespace-nowrap">
+                      <td className="py-3 px-4 font-mono font-bold text-[#FAFAFA] whitespace-nowrap">
                         {formatBRL(c.claimValue)}
                       </td>
                       <td className="py-3 px-4 whitespace-nowrap">
@@ -177,7 +177,7 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
                           {c.archived ? 'Arquivado' : 'Ativo'}
                         </Badge>
                       </td>
-                      <td className="py-3 px-4 text-slate-400 font-mono whitespace-nowrap">
+                      <td className="py-3 px-4 text-[#737373] font-mono whitespace-nowrap text-[11px]">
                         {formatDate(c.dateChanged)}
                       </td>
                       <td className="py-3 px-4 text-right whitespace-nowrap">
@@ -201,10 +201,10 @@ export const CasesList: React.FC<CasesListProps> = ({ onSelectCase }) => {
         </div>
 
         {/* Pagination Footer */}
-        <div className="px-5 py-3 border-t border-white/10 bg-[#030304]/40 flex items-center justify-between text-xs text-slate-400 font-mono">
+        <div className="px-6 py-3 border-t border-[#262626] bg-[#0A0A0A] flex items-center justify-between text-xs text-[#737373] font-mono">
           <span>
-            Mostrando <span className="font-mono font-medium text-slate-200">{cases.length}</span> de{' '}
-            <span className="font-mono font-medium text-slate-200">{total}</span> processos
+            Mostrando <span className="font-mono font-bold text-[#FAFAFA]">{cases.length}</span> de{' '}
+            <span className="font-mono font-bold text-[#FAFAFA]">{total}</span> processos
           </span>
           <div className="flex items-center gap-2">
             <Button

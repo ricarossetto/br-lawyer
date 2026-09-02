@@ -29,29 +29,29 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variantStyles: Record<BadgeVariant, string> = {
-    urgent: 'bg-rose-500/10 text-rose-400 border border-rose-500/30',
-    red: 'bg-rose-500/10 text-rose-400 border border-rose-500/30',
-    warning: 'bg-amber-500/10 text-amber-400 border border-amber-500/30',
-    yellow: 'bg-amber-500/10 text-amber-400 border border-amber-500/30',
-    active: 'bg-[#F7931A]/10 text-[#F7931A] border border-[#F7931A]/30',
-    blue: 'bg-sky-500/10 text-sky-400 border border-sky-500/30',
-    success: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30',
-    green: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30',
-    neutral: 'bg-slate-500/10 text-slate-400 border border-slate-500/30',
-    gray: 'bg-slate-800 text-slate-400 border border-slate-700/60',
-    purple: 'bg-[#F7931A]/10 text-[#F7931A] border border-[#F7931A]/30',
-    mono: 'bg-[#0F1115] text-slate-300 font-mono text-[10px] border border-white/10',
+    urgent: 'bg-rose-950/30 text-rose-400 border border-rose-600/40',
+    red: 'bg-rose-950/30 text-rose-400 border border-rose-600/40',
+    warning: 'bg-amber-950/30 text-amber-400 border border-amber-600/40',
+    yellow: 'bg-amber-950/30 text-amber-400 border border-amber-600/40',
+    active: 'bg-[#FF3D00]/15 text-[#FF3D00] border border-[#FF3D00]/40',
+    blue: 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626]',
+    success: 'bg-emerald-950/30 text-emerald-400 border border-emerald-600/40',
+    green: 'bg-emerald-950/30 text-emerald-400 border border-emerald-600/40',
+    neutral: 'bg-[#141414] text-[#737373] border border-[#262626]',
+    gray: 'bg-[#141414] text-[#737373] border border-[#262626]',
+    purple: 'bg-[#FF3D00]/15 text-[#FF3D00] border border-[#FF3D00]/40',
+    mono: 'bg-[#141414] text-[#FAFAFA] border border-[#262626]',
   };
 
   const sizeStyles = {
-    sm: 'text-[10px] px-2 py-0.5 rounded',
-    md: 'text-xs px-2.5 py-1 rounded-md font-medium',
+    sm: 'text-[10px] px-2 py-0.5 rounded-none font-mono tracking-wider uppercase',
+    md: 'text-xs px-2.5 py-1 rounded-none font-mono tracking-wider uppercase font-semibold',
   };
 
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-1 font-medium select-none whitespace-nowrap',
+        'inline-flex items-center gap-1 select-none whitespace-nowrap',
         variantStyles[variant] || variantStyles.neutral,
         sizeStyles[size],
         className

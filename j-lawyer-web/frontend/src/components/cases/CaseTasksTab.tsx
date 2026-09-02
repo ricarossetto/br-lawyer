@@ -93,7 +93,7 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
     <div className="space-y-4 text-xs">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-slate-100 font-heading">
+          <span className="text-[10px] font-bold uppercase font-mono tracking-wider text-[#737373]">
             Tarefas & Providências ({tasks?.length || 0})
           </span>
         </div>
@@ -103,7 +103,7 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
             setEditingTask(null);
             setIsNewTaskModalOpen(true);
           }}
-          className="px-4 py-2 rounded-full bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white font-semibold flex items-center gap-1.5 transition-all shadow-[0_0_20px_-5px_rgba(234,88,12,0.5)] hover:scale-[1.02]"
+          className="px-4 py-2 rounded-none bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] font-bold font-mono text-[10px] uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer"
         >
           <Plus className="h-3.5 w-3.5" />
           <span>Nova Tarefa</span>
@@ -111,10 +111,10 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
       </div>
 
       {!tasks || tasks.length === 0 ? (
-        <div className="p-12 text-center text-slate-400 space-y-2 bg-[#0F1115] border border-white/10 rounded-2xl">
-          <ListTodo className="h-8 w-8 mx-auto text-slate-600" />
-          <div className="text-xs font-medium text-slate-300">Nenhuma tarefa cadastrada</div>
-          <p className="text-[11px] text-slate-500 max-w-sm mx-auto font-sans">
+        <div className="p-12 text-center text-[#737373] space-y-2 bg-[#0A0A0A] border border-[#262626] rounded-none">
+          <ListTodo className="h-8 w-8 mx-auto text-[#525252]" />
+          <div className="text-xs font-bold text-[#FAFAFA]">Nenhuma tarefa cadastrada</div>
+          <p className="text-[11px] text-[#737373] max-w-sm mx-auto font-sans">
             Crie tarefas ou providências judiciais diretamente para este processo.
           </p>
         </div>
@@ -127,8 +127,8 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
               <div
                 key={task.id}
                 onClick={() => setSelectedTaskId(task.id)}
-                className={`p-4 bg-[#0F1115] border rounded-2xl hover:border-[#F7931A]/40 cursor-pointer transition-all duration-200 space-y-2 group shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] ${
-                  isDone ? 'border-white/5 opacity-60' : 'border-white/10'
+                className={`p-4 bg-[#0A0A0A] border rounded-none hover:border-[#737373] cursor-pointer transition-colors space-y-2 group ${
+                  isDone ? 'border-[#262626] opacity-60' : 'border-[#262626]'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -141,20 +141,20 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
                           req: { newStatus: isDone ? 'TODO' : 'DONE', syncCalendar: true },
                         });
                       }}
-                      className="text-slate-500 hover:text-emerald-400 transition-colors"
+                      className="text-[#737373] hover:text-[#FAFAFA] transition-colors cursor-pointer"
                     >
                       {isDone ? (
-                        <CheckSquare className="h-4 w-4 text-emerald-400" />
+                        <CheckSquare className="h-4 w-4 text-[#FAFAFA]" />
                       ) : (
-                        <Square className="h-4 w-4 text-slate-600 group-hover:text-slate-400" />
+                        <Square className="h-4 w-4 text-[#525252] group-hover:text-[#FAFAFA]" />
                       )}
                     </button>
 
                     {getPriorityBadge(task.priority)}
 
                     <span
-                      className={`font-semibold text-slate-200 text-xs ${
-                        isDone ? 'line-through text-slate-500' : ''
+                      className={`font-bold text-[#FAFAFA] text-xs ${
+                        isDone ? 'line-through text-[#737373]' : ''
                       }`}
                     >
                       {task.title}
@@ -166,10 +166,10 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
                       <span
                         className={`${
                           task.overdue
-                            ? 'text-rose-400 font-bold'
+                            ? 'text-[#FF3D00] font-bold'
                             : task.dueToday
                             ? 'text-amber-400 font-bold'
-                            : 'text-slate-400'
+                            : 'text-[#737373]'
                         }`}
                       >
                         {format(new Date(task.dueDate), 'dd/MM/yyyy')}
@@ -190,9 +190,9 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-slate-800/60">
+                <div className="flex items-center justify-between text-[11px] text-[#737373] pt-1 border-t border-[#262626]">
                   <span className="uppercase font-mono text-[10px]">{task.category || 'GERAL'}</span>
-                  <span>Responsável: {task.assignedUser || 'Não atribuído'}</span>
+                  <span className="font-mono text-[10px]">Responsável: {task.assignedUser || 'Não atribuído'}</span>
                 </div>
               </div>
             );

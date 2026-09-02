@@ -106,18 +106,18 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
       {/* Top Back Button */}
       <button
         onClick={onBack}
-        className="flex items-center gap-2 text-xs font-medium text-slate-400 hover:text-[#F7931A] transition-colors cursor-pointer"
+        className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider font-bold text-[#737373] hover:text-[#FAFAFA] transition-colors cursor-pointer"
       >
         <ArrowLeft className="h-4 w-4" />
         <span>Voltar para a Lista de Processos</span>
       </button>
 
       {/* Case Header Card */}
-      <div className="bg-[#0F1115] border border-white/10 rounded-2xl p-6 shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)]">
+      <div className="bg-[#0F0F0F] border border-[#262626] rounded-none p-6">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-3 flex-wrap">
-              <span className="font-mono text-sm font-semibold text-[#FFD600] tracking-tight bg-[#FFD600]/10 px-3 py-1 rounded-full border border-[#FFD600]/30 shadow-[0_0_12px_rgba(255,214,0,0.2)]">
+              <span className="font-mono text-sm font-bold text-[#FAFAFA] bg-[#141414] px-3 py-1 rounded-none border border-[#262626]">
                 {formatCNJ(caseData?.fileNumber)}
               </span>
               <Badge variant={caseData?.archived ? 'neutral' : 'active'}>
@@ -125,9 +125,9 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
               </Badge>
               <Badge variant="mono">{caseData?.subjectField || 'Cível Geral'}</Badge>
             </div>
-            <h2 className="text-xl font-bold text-white mt-2.5 font-heading">{caseData?.name}</h2>
+            <h2 className="text-xl font-bold text-[#FAFAFA] mt-3 font-heading tracking-tight">{caseData?.name}</h2>
             {caseData?.notice && (
-              <p className="text-xs text-slate-400 mt-1 italic font-sans">{caseData.notice}</p>
+              <p className="text-xs text-[#737373] mt-1 italic font-sans">{caseData.notice}</p>
             )}
           </div>
 
@@ -139,33 +139,33 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
         </div>
 
         {/* Metadata Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-white/10 text-xs">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-[#262626] text-xs">
           <div>
-            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Advogado Responsável</span>
-            <div className="flex items-center gap-1.5 mt-1 text-slate-200 font-medium">
-              <User className="h-3.5 w-3.5 text-slate-400" />
+            <span className="text-[#737373] block text-[10px] font-mono uppercase tracking-wider font-bold">Advogado Responsável</span>
+            <div className="flex items-center gap-1.5 mt-1 text-[#FAFAFA] font-mono">
+              <User className="h-3.5 w-3.5 text-[#737373]" />
               <span>{caseData?.lawyer || 'Não informado'}</span>
             </div>
           </div>
           <div>
-            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Valor da Causa</span>
-            <span className="font-mono font-bold text-[#FFD600] mt-1 block">
+            <span className="text-[#737373] block text-[10px] font-mono uppercase tracking-wider font-bold">Valor da Causa</span>
+            <span className="font-mono font-bold text-[#FAFAFA] mt-1 block">
               {formatBRL(caseData?.claimValue)}
             </span>
           </div>
           <div>
-            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Assistente</span>
-            <span className="text-slate-200 mt-1 block">{caseData?.assistant || 'Gabinete'}</span>
+            <span className="text-[#737373] block text-[10px] font-mono uppercase tracking-wider font-bold">Assistente</span>
+            <span className="text-[#FAFAFA] mt-1 block font-mono">{caseData?.assistant || 'Gabinete'}</span>
           </div>
           <div>
-            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Número da Pasta</span>
-            <span className="font-mono text-slate-200 mt-1 block">{caseData?.claimNumber || caseData?.id || '—'}</span>
+            <span className="text-[#737373] block text-[10px] font-mono uppercase tracking-wider font-bold">Número da Pasta</span>
+            <span className="font-mono text-[#FAFAFA] mt-1 block">{caseData?.claimNumber || caseData?.id || '—'}</span>
           </div>
         </div>
       </div>
 
       {/* Tabs Navigation */}
-      <div className="flex items-center gap-1 border-b border-white/10 select-none overflow-x-auto">
+      <div className="flex items-center gap-1 border-b border-[#262626] select-none overflow-x-auto">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.key;
@@ -174,16 +174,16 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
               className={cn(
-                'flex items-center gap-2 px-4 py-3 text-xs font-medium border-b-2 transition-all cursor-pointer whitespace-nowrap',
+                'flex items-center gap-2 px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 transition-colors cursor-pointer whitespace-nowrap rounded-none',
                 isActive
-                  ? 'border-[#F7931A] text-[#F7931A] bg-[#0F1115] shadow-[0_0_12px_rgba(247,147,26,0.15)] font-semibold'
-                  : 'border-transparent text-slate-400 hover:text-slate-200 hover:border-white/20'
+                  ? 'border-[#FF3D00] text-[#FAFAFA] bg-[#141414] font-bold'
+                  : 'border-transparent text-[#737373] hover:text-[#FAFAFA] hover:border-[#737373]'
               )}
             >
-              <Icon className="h-4 w-4" />
+              <Icon className="h-3.5 w-3.5" />
               <span>{tab.label}</span>
               {tab.count !== undefined && (
-                <span className="px-2 py-0.2 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">
+                <span className="px-1.5 py-0.2 rounded-none bg-[#1A1A1A] border border-[#262626] text-[9px] font-mono text-[#FAFAFA]">
                   {tab.count}
                 </span>
               )}

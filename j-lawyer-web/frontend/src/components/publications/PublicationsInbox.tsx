@@ -138,13 +138,13 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
   return (
     <div className="space-y-4">
       {/* Top Header & Metrics Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#0F1115] border border-white/10 p-5 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#0F0F0F] border border-[#262626] p-6 rounded-none">
         <div>
-          <h1 className="text-sm font-semibold text-slate-100 flex items-center gap-2 font-heading">
-            <Scale className="h-4 w-4 text-[#F7931A]" />
+          <h1 className="text-sm font-bold text-[#FAFAFA] flex items-center gap-2 font-heading tracking-tight">
+            <Scale className="h-4 w-4 text-[#FAFAFA]" />
             Inbox de Publicações & Intimações Judiciais
           </h1>
-          <p className="text-[11px] text-slate-400 mt-0.5 font-sans">
+          <p className="text-xs text-[#737373] mt-0.5 font-sans">
             Triagem operacional de comunicações processuais, diários de justiça e intimações
           </p>
         </div>
@@ -153,78 +153,78 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
           <button
             onClick={() => refetch()}
             disabled={isFetching}
-            className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-medium border border-white/10 flex items-center gap-1.5 transition-all disabled:opacity-50 hover:border-[#F7931A]/40"
+            className="px-4 py-2 rounded-none bg-[#1A1A1A] hover:bg-[#262626] text-[#FAFAFA] text-[10px] font-mono uppercase tracking-wider font-bold border border-[#262626] flex items-center gap-1.5 transition-colors disabled:opacity-50 cursor-pointer"
             title="Atualizar lista de publicações"
           >
-            <RotateCw className={`h-3.5 w-3.5 ${isFetching ? 'animate-spin text-[#F7931A]' : ''}`} />
+            <RotateCw className={`h-3.5 w-3.5 ${isFetching ? 'animate-spin text-[#FF3D00]' : ''}`} />
             <span>Atualizar</span>
           </button>
         </div>
       </div>
 
       {/* Filter Ribbon & Tab Switcher */}
-      <div className="bg-[#0F1115] border border-white/10 rounded-2xl p-4 space-y-3 shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)]">
+      <div className="bg-[#0F0F0F] border border-[#262626] rounded-none p-5 space-y-4">
         {/* Status Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs border-b border-white/10">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs border-b border-[#262626]">
           <button
             onClick={() => { setActiveTab('ALL'); setPage(0); }}
-            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`px-3.5 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
               activeTab === 'ALL'
-                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold'
+                : 'text-[#737373] hover:text-[#FAFAFA]'
             }`}
           >
             Todas
           </button>
           <button
             onClick={() => { setActiveTab('NEW'); setPage(0); }}
-            className={`px-3.5 py-1.5 rounded-full font-medium transition-all flex items-center gap-1.5 ${
+            className={`px-3.5 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors flex items-center gap-1.5 ${
               activeTab === 'NEW'
-                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                ? 'bg-[#1A1A1A] text-[#FF3D00] border border-[#FF3D00]/40 font-bold'
+                : 'text-[#737373] hover:text-[#FAFAFA]'
             }`}
           >
             <span>Novas</span>
-            <span className="px-1.5 py-0.2 rounded-full bg-[#F7931A]/30 text-[#F7931A] text-[10px] font-mono font-bold">
+            <span className="px-1.5 py-0.2 rounded-none bg-[#141414] text-[#FF3D00] text-[9px] font-mono font-bold border border-[#262626]">
               Recentes
             </span>
           </button>
           <button
             onClick={() => { setActiveTab('UNREAD'); setPage(0); }}
-            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`px-3.5 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
               activeTab === 'UNREAD'
-                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                ? 'bg-[#1A1A1A] text-[#FF3D00] border border-[#FF3D00]/40 font-bold'
+                : 'text-[#737373] hover:text-[#FAFAFA]'
             }`}
           >
             Não Lidas
           </button>
           <button
             onClick={() => { setActiveTab('ANALYZING'); setPage(0); }}
-            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`px-3.5 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
               activeTab === 'ANALYZING'
-                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold'
+                : 'text-[#737373] hover:text-[#FAFAFA]'
             }`}
           >
             Em Análise
           </button>
           <button
             onClick={() => { setActiveTab('TREATED'); setPage(0); }}
-            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`px-3.5 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
               activeTab === 'TREATED'
-                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                ? 'bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-bold'
+                : 'text-[#737373] hover:text-[#FAFAFA]'
             }`}
           >
             Tratadas
           </button>
           <button
             onClick={() => { setActiveTab('ARCHIVED'); setPage(0); }}
-            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
+            className={`px-3.5 py-1.5 rounded-none font-mono text-[10px] uppercase tracking-wider transition-colors ${
               activeTab === 'ARCHIVED'
-                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                ? 'bg-[#1A1A1A] text-[#737373] border border-[#262626] font-bold'
+                : 'text-[#737373] hover:text-[#FAFAFA]'
             }`}
           >
             Arquivadas
@@ -235,44 +235,44 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
           {/* Search Input */}
           <div className="relative">
-            <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-500" />
+            <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-[#737373]" />
             <input
               type="text"
               value={searchText}
               onChange={(e) => { setSearchText(e.target.value); setPage(0); }}
               placeholder="Buscar por teor, CNJ, advogado, destinatário..."
-              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
+              className="w-full pl-9 pr-3 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors text-xs"
             />
           </div>
 
           {/* Court Filter */}
           <div className="relative">
-            <Building className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-500" />
+            <Building className="absolute left-3 top-2.5 h-3.5 w-3.5 text-[#737373]" />
             <input
               type="text"
               value={courtCode}
               onChange={(e) => { setCourtCode(e.target.value); setPage(0); }}
               placeholder="Filtrar por Tribunal (ex: STJ, TJSP, TRF3)..."
-              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs uppercase font-mono"
+              className="w-full pl-9 pr-3 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors text-xs uppercase font-mono"
             />
           </div>
 
           {/* Assigned User Filter */}
           <div className="relative">
-            <User className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-500" />
+            <User className="absolute left-3 top-2.5 h-3.5 w-3.5 text-[#737373]" />
             <input
               type="text"
               value={assignedUser}
               onChange={(e) => { setAssignedUser(e.target.value); setPage(0); }}
               placeholder="Filtrar por Responsável..."
-              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
+              className="w-full pl-9 pr-3 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors text-xs"
             />
           </div>
         </div>
       </div>
 
       {/* Publications Table Card */}
-      <div className="bg-[#0F1115] border border-white/10 rounded-2xl overflow-hidden shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)]">
+      <div className="bg-[#0F0F0F] border border-[#262626] rounded-none">
         {isLoading ? (
           <div className="p-12 flex flex-col items-center justify-center text-slate-400 space-y-3">
             <div className="h-6 w-6 border-2 border-[#F7931A] border-t-transparent rounded-full animate-spin" />
@@ -290,7 +290,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="border-b border-white/10 bg-[#030304]/70 text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-mono">
+                <tr className="border-b border-[#262626] bg-[#0A0A0A] text-[10px] font-bold text-[#737373] uppercase tracking-wider font-mono">
                   <th className="py-2.5 px-3">Data</th>
                   <th className="py-2.5 px-3">Tribunal</th>
                   <th className="py-2.5 px-3">Processo / CNJ</th>
@@ -301,7 +301,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                   <th className="py-2.5 px-3 text-right">Ações</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
+              <tbody className="divide-y divide-[#262626]">
                 {pageData.items.map((pub) => {
                   const isUnread = pub.readStatus === 'UNREAD';
                   const isTreated = pub.treatmentStatus === 'TREATED';
@@ -310,19 +310,19 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                     <tr
                       key={pub.id}
                       onClick={() => handleRowClick(pub)}
-                      className={`group hover:bg-white/5 cursor-pointer transition-colors ${
-                        isUnread ? 'bg-[#F7931A]/5 font-medium' : ''
+                      className={`group hover:bg-[#141414] cursor-pointer transition-colors ${
+                        isUnread ? 'bg-[#141414] font-medium' : ''
                       }`}
                     >
                       {/* Date */}
-                      <td className="py-2.5 px-3 whitespace-nowrap text-slate-300 font-mono text-[11px]">
+                      <td className="py-2.5 px-3 whitespace-nowrap text-[#FAFAFA] font-mono text-[11px]">
                         <div>
                           {pub.availabilityDate
                             ? format(new Date(pub.availabilityDate), 'dd/MM/yyyy')
                             : '—'}
                         </div>
                         {pub.suggestedDueDate && (
-                          <div className="text-[10px] text-[#FFD600] flex items-center gap-1 font-semibold">
+                          <div className="text-[10px] text-[#FF3D00] flex items-center gap-1 font-mono font-bold">
                             <Clock className="h-3 w-3" />
                             Prazo: {format(new Date(pub.suggestedDueDate), 'dd/MM')}
                           </div>
@@ -338,45 +338,45 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
 
                       {/* Process / CNJ */}
                       <td className="py-2.5 px-3">
-                        <div className="font-mono text-slate-200 text-[11px] group-hover:text-[#FFD600] transition-colors">
+                        <div className="font-mono font-bold text-[#FAFAFA] text-[11px] group-hover:text-[#FF3D00] transition-colors">
                           {pub.cnjNumber || 'Sem NPU'}
                         </div>
                         {pub.processId ? (
-                          <div className="text-[10px] text-[#FFD600] flex items-center gap-1">
+                          <div className="text-[10px] text-[#737373] font-mono flex items-center gap-1">
                             <Briefcase className="h-3 w-3" />
                             <span>{pub.caseFileNumber || 'Vinculado'}</span>
                           </div>
                         ) : (
-                          <span className="text-[10px] text-slate-500 italic">Não vinculado</span>
+                          <span className="text-[10px] text-[#525252] italic font-mono">Não vinculado</span>
                         )}
                       </td>
 
                       {/* Recipient / Lawyer */}
                       <td className="py-2.5 px-3">
-                        <div className="text-slate-200 truncate max-w-[140px]">
+                        <div className="text-[#FAFAFA] font-medium truncate max-w-[140px]">
                           {pub.recipient || '—'}
                         </div>
-                        <div className="text-[10px] text-slate-400 truncate max-w-[140px]">
+                        <div className="text-[10px] text-[#737373] truncate max-w-[140px] font-mono">
                           {pub.lawyerName || '—'}{' '}
                           {pub.lawyerOab ? `(${pub.lawyerOab})` : ''}
                         </div>
                       </td>
 
                       {/* Snippet */}
-                      <td className="py-2.5 px-3 text-slate-400 text-[11px]">
-                        <p className="line-clamp-2 leading-tight">
+                      <td className="py-2.5 px-3 text-[#737373] text-[11px]">
+                        <p className="line-clamp-2 leading-tight font-sans">
                           {pub.snippet || 'Sem resumo disponível'}
                         </p>
                       </td>
 
                       {/* Assigned User */}
-                      <td className="py-2.5 px-3 whitespace-nowrap text-slate-300">
+                      <td className="py-2.5 px-3 whitespace-nowrap text-[#FAFAFA]">
                         {pub.assignedUser ? (
-                          <span className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono">
+                          <span className="px-2 py-0.5 rounded-none bg-[#141414] border border-[#262626] text-[10px] font-mono">
                             {pub.assignedUser}
                           </span>
                         ) : (
-                          <span className="text-slate-600 text-[11px]">—</span>
+                          <span className="text-[#525252] text-[11px]">—</span>
                         )}
                       </td>
 
@@ -401,7 +401,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                                 read: isUnread ? true : false,
                               })
                             }
-                            className="p-1 rounded-md text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
+                            className="p-1.5 rounded-none text-[#737373] hover:text-[#FAFAFA] hover:bg-[#1A1A1A] transition-colors"
                             title={isUnread ? 'Marcar como lida' : 'Marcar como não lida'}
                           >
                             {isUnread ? <Eye className="h-3.5 w-3.5" /> : <EyeOff className="h-3.5 w-3.5" />}
@@ -409,7 +409,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
 
                           <button
                             onClick={() => setQuickTreatPub(pub)}
-                            className="px-3 py-1 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-[11px] flex items-center gap-1 shadow-[0_0_10px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.03]"
+                            className="px-3 py-1 bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] font-bold text-[10px] font-mono uppercase tracking-wider flex items-center gap-1 transition-colors cursor-pointer"
                           >
                             <CheckCircle2 className="h-3 w-3" />
                             <span>Tratar</span>
@@ -426,26 +426,26 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
 
         {/* Pagination Footer */}
         {pageData && pageData.total > 0 && (
-          <div className="px-4 py-3 border-t border-white/10 bg-[#030304]/40 flex items-center justify-between text-xs text-slate-400">
+          <div className="px-6 py-3 border-t border-[#262626] bg-[#0A0A0A] flex items-center justify-between text-xs text-[#737373]">
             <div>
               Mostrando{' '}
-              <span className="font-semibold text-slate-200">
+              <span className="font-mono font-bold text-[#FAFAFA]">
                 {page * pageSize + 1}–{Math.min((page + 1) * pageSize, pageData.total)}
               </span>{' '}
-              de <span className="font-semibold text-slate-200">{pageData.total}</span> publicações
+              de <span className="font-mono font-bold text-[#FAFAFA]">{pageData.total}</span> publicações
             </div>
 
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setPage((p) => Math.max(0, p - 1))}
                 disabled={page === 0}
-                className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 disabled:opacity-40 transition-colors"
+                className="p-1 rounded-none bg-[#1A1A1A] hover:bg-[#262626] text-[#FAFAFA] border border-[#262626] disabled:opacity-40 transition-colors"
                 title="Página anterior"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
 
-              <span className="font-mono text-[11px]">
+              <span className="font-mono text-[11px] text-[#FAFAFA]">
                 {page + 1} / {Math.max(1, totalPages)}
               </span>
 

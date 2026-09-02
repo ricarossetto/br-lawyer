@@ -80,17 +80,17 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
 
   return (
     <>
-      <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity" onClick={onClose} />
-      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-xl bg-[#0F1115] border-l border-white/10 shadow-[0_0_50px_-10px_rgba(247,147,26,0.15)] flex flex-col animate-drawer-in text-xs">
+      <div className="fixed inset-0 z-40 bg-black/80 transition-opacity" onClick={onClose} />
+      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-xl bg-[#0F0F0F] border-l border-[#262626] flex flex-col animate-drawer-in text-xs rounded-none">
         {/* Header */}
-        <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#030304]/80 shrink-0">
+        <div className="px-6 py-4 border-b border-[#262626] flex items-center justify-between bg-[#0A0A0A] shrink-0">
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="h-8 w-8 rounded-xl bg-[#EA580C]/15 border border-[#F7931A]/40 flex items-center justify-center text-[#F7931A] shrink-0 shadow-[0_0_12px_rgba(247,147,26,0.25)]">
+            <div className="h-7 w-7 bg-[#141414] border border-[#262626] flex items-center justify-center text-[#FAFAFA] shrink-0">
               <Scale className="h-4 w-4" />
             </div>
             <div className="flex flex-col truncate">
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-slate-100 truncate font-heading">
+                <span className="font-bold text-[#FAFAFA] truncate font-heading tracking-tight">
                   {publication.courtCode || 'Tribunal'}
                 </span>
                 <Badge
@@ -112,7 +112,7 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
                   <Badge variant="active">Não Lida</Badge>
                 )}
               </div>
-              <span className="text-[11px] text-slate-400 font-mono truncate">
+              <span className="text-[11px] text-[#737373] font-mono truncate">
                 {publication.cnjNumber || 'Sem NPU vinculado'}
               </span>
             </div>
@@ -121,7 +121,7 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
           <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={onClose}
-              className="p-1.5 rounded-full text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
+              className="p-1.5 rounded-none text-[#737373] hover:text-[#FAFAFA] hover:bg-[#1A1A1A] transition-colors"
             >
               <X className="h-4 w-4" />
             </button>
@@ -129,8 +129,8 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
         </div>
 
         {/* Legal Disclaimer */}
-        <div className="px-6 py-2.5 bg-amber-500/10 border-b border-amber-500/20 flex items-center gap-2 text-amber-300 text-[11px] shrink-0">
-          <AlertTriangle className="h-3.5 w-3.5 text-amber-400 shrink-0" />
+        <div className="px-6 py-2.5 bg-amber-950/30 border-b border-amber-600/40 flex items-center gap-2 text-amber-300 text-[11px] shrink-0">
+          <AlertTriangle className="h-3.5 w-3.5 text-amber-500 shrink-0" />
           <span>
             A leitura e triagem internas <strong>não geram ciência oficial</strong> nos autos
             judiciais.
@@ -140,12 +140,12 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
         {/* Scrollable Body */}
         <div className="flex-1 overflow-y-auto p-6 space-y-5">
           {/* Metadata Grid */}
-          <div className="grid grid-cols-2 gap-3 p-4 bg-[#030304] border border-white/10 rounded-2xl">
+          <div className="grid grid-cols-2 gap-3 p-4 bg-[#0A0A0A] border border-[#262626] rounded-none">
             <div>
-              <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
+              <span className="text-[10px] uppercase font-bold text-[#737373] font-mono tracking-wider">
                 Disponibilização
               </span>
-              <div className="text-slate-200 font-mono mt-0.5">
+              <div className="text-[#FAFAFA] font-mono mt-0.5">
                 {publication.availabilityDate
                   ? format(new Date(publication.availabilityDate), 'dd/MM/yyyy', { locale: ptBR })
                   : '—'}
@@ -153,10 +153,10 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
             </div>
 
             <div>
-              <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
+              <span className="text-[10px] uppercase font-bold text-[#737373] font-mono tracking-wider">
                 Publicação Oficial
               </span>
-              <div className="text-slate-200 font-mono mt-0.5">
+              <div className="text-[#FAFAFA] font-mono mt-0.5">
                 {publication.publicationDate
                   ? format(new Date(publication.publicationDate), 'dd/MM/yyyy', { locale: ptBR })
                   : '—'}
@@ -164,19 +164,19 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
             </div>
 
             <div>
-              <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
+              <span className="text-[10px] uppercase font-bold text-[#737373] font-mono tracking-wider">
                 Destinatário / Parte
               </span>
-              <div className="text-slate-200 truncate mt-0.5">
+              <div className="text-[#FAFAFA] truncate mt-0.5">
                 {publication.recipient || '—'}
               </div>
             </div>
 
             <div>
-              <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
+              <span className="text-[10px] uppercase font-bold text-[#737373] font-mono tracking-wider">
                 Advogado / OAB
               </span>
-              <div className="text-slate-200 truncate mt-0.5">
+              <div className="text-[#FAFAFA] truncate mt-0.5 font-mono">
                 {publication.lawyerName || '—'}{' '}
                 {publication.lawyerOab ? `(${publication.lawyerOab})` : ''}
               </div>
@@ -184,16 +184,16 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
           </div>
 
           {/* Linked Process Card */}
-          <div className="p-4 bg-[#030304] border border-white/10 rounded-2xl space-y-2">
+          <div className="p-4 bg-[#0A0A0A] border border-[#262626] rounded-none space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-slate-300 flex items-center gap-1.5 font-heading">
-                <Briefcase className="h-3.5 w-3.5 text-[#FFD600]" />
+              <span className="text-[11px] font-bold text-[#FAFAFA] flex items-center gap-1.5 font-heading">
+                <Briefcase className="h-3.5 w-3.5 text-[#FAFAFA]" />
                 Processo Vinculado
               </span>
               {publication.processId && (
                 <button
                   onClick={() => onUnlink(publication.id)}
-                  className="text-[10px] text-rose-400 hover:text-rose-300 flex items-center gap-1 transition-colors"
+                  className="text-[10px] text-rose-400 hover:text-rose-300 flex items-center gap-1 transition-colors font-mono uppercase"
                   title="Desvincular do processo"
                 >
                   <Unlink className="h-3 w-3" />
@@ -205,14 +205,14 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
             {publication.processId ? (
               <div className="flex items-center justify-between pt-1">
                 <div>
-                  <div className="font-semibold text-slate-200 text-xs font-mono">
+                  <div className="font-bold text-[#FAFAFA] text-xs font-mono">
                     {publication.caseFileNumber || 'Pasta Processual'}
                   </div>
-                  <div className="text-[11px] text-slate-400">
+                  <div className="text-[11px] text-[#737373]">
                     {publication.caseName || 'Título do processo'}
                   </div>
                   {publication.linkProvenance && (
-                    <span className="text-[10px] text-slate-500 font-mono">
+                    <span className="text-[10px] text-[#525252] font-mono">
                       Vínculo: {publication.linkProvenance}{' '}
                       {publication.linkConfidence ? `(${Math.round(publication.linkConfidence * 100)}%)` : ''}
                     </span>
@@ -221,7 +221,7 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
                 {onOpenCase && (
                   <button
                     onClick={() => onOpenCase(publication.processId!)}
-                    className="px-3 py-1.5 rounded-full bg-[#F7931A]/15 hover:bg-[#F7931A]/25 text-[#F7931A] border border-[#F7931A]/40 font-medium flex items-center gap-1 transition-all"
+                    className="px-3 py-1.5 rounded-none bg-[#1A1A1A] hover:bg-[#262626] text-[#FAFAFA] border border-[#262626] font-mono text-[10px] uppercase tracking-wider font-bold flex items-center gap-1 transition-colors"
                   >
                     <span>Abrir Autos</span>
                     <ExternalLink className="h-3 w-3" />
@@ -229,9 +229,9 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
                 )}
               </div>
             ) : (
-              <div className="text-slate-400 text-[11px] flex items-center justify-between">
+              <div className="text-[#737373] text-[11px] flex items-center justify-between">
                 <span>Nenhum processo vinculado automaticamente.</span>
-                <span className="text-[10px] text-[#F7931A] font-medium">
+                <span className="text-[10px] text-[#FF3D00] font-mono uppercase tracking-wider font-bold">
                   Vincular na triagem
                 </span>
               </div>
@@ -240,17 +240,17 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
 
           {/* Suggested Deadlines Ribbon (if detected) */}
           {publication.suggestedDueDate && (
-            <div className="p-4 bg-[#EA580C]/10 border border-[#F7931A]/40 rounded-2xl flex items-center justify-between shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)]">
+            <div className="p-4 bg-[#141414] border border-[#FF3D00]/40 rounded-none flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 text-[#FFD600] shrink-0" />
+                <Clock className="h-4 w-4 text-[#FF3D00] shrink-0" />
                 <div>
-                  <div className="font-semibold text-slate-100">
+                  <div className="font-bold text-[#FAFAFA]">
                     Prazo Sugerido:{' '}
-                    <span className="text-[#FFD600] font-mono">
+                    <span className="text-[#FF3D00] font-mono">
                       {format(new Date(publication.suggestedDueDate), 'dd/MM/yyyy', { locale: ptBR })}
                     </span>
                   </div>
-                  <div className="text-[11px] text-slate-300">
+                  <div className="text-[11px] text-[#737373]">
                     {publication.suggestedDeadlineDays
                       ? `${publication.suggestedDeadlineDays} dias sugeridos pelo teor`
                       : 'Data estimada pela intimação'}
@@ -264,19 +264,19 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
           {/* Publication Full Content / Teor Integral */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider font-mono flex items-center gap-1.5">
-                <FileText className="h-3.5 w-3.5 text-slate-400" />
+              <span className="text-[10px] font-bold text-[#737373] uppercase tracking-wider font-mono flex items-center gap-1.5">
+                <FileText className="h-3.5 w-3.5 text-[#737373]" />
                 Teor Integral da Publicação
               </span>
               <button
                 onClick={handleCopyContent}
-                className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 text-[11px] border border-white/10 flex items-center gap-1.5 transition-colors"
+                className="px-3 py-1 rounded-none bg-[#141414] hover:bg-[#1A1A1A] text-[#FAFAFA] text-[10px] font-mono uppercase tracking-wider border border-[#262626] flex items-center gap-1.5 transition-colors cursor-pointer"
               >
                 {copied ? <Check className="h-3 w-3 text-emerald-400" /> : <Copy className="h-3 w-3" />}
                 {copied ? 'Copiado!' : 'Copiar Texto'}
               </button>
             </div>
-            <div className="p-4 bg-[#030304] border border-white/10 rounded-2xl text-slate-200 leading-relaxed font-sans text-xs whitespace-pre-wrap max-h-64 overflow-y-auto select-text selection:bg-[#F7931A]/30">
+            <div className="p-4 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] leading-relaxed font-sans text-xs whitespace-pre-wrap max-h-64 overflow-y-auto select-text selection:bg-[#FF3D00] selection:text-[#0A0A0A]">
               {publication.content || publication.rawContent || publication.snippet || 'Sem conteúdo'}
             </div>
           </div>
@@ -284,33 +284,33 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
           {/* Linked Tasks Section */}
           {publication.linkedTasks && publication.linkedTasks.length > 0 && (
             <div className="space-y-2">
-              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider font-mono flex items-center gap-1.5">
-                <ListTodo className="h-3.5 w-3.5 text-emerald-400" />
-                Tarefas Geradas a partir desta Publicação ({publication.linkedTasks.length})
+              <span className="text-[10px] font-bold text-[#737373] uppercase tracking-wider font-mono flex items-center gap-1.5">
+                <ListTodo className="h-3.5 w-3.5 text-[#FAFAFA]" />
+                Tarefas Geradas ({publication.linkedTasks.length})
               </span>
               <div className="space-y-1.5">
                 {publication.linkedTasks.map((t) => (
                   <div
                     key={t.id}
                     onClick={() => onOpenTask && onOpenTask(t.id)}
-                    className="p-3 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between cursor-pointer transition-colors"
+                    className="p-3 bg-[#0A0A0A] border border-[#262626] hover:border-[#737373] rounded-none flex items-center justify-between cursor-pointer transition-colors"
                   >
                     <div className="flex items-center gap-2 truncate">
                       <div
-                        className={`h-2 w-2 rounded-full shrink-0 ${
+                        className={`h-2 w-2 rounded-none shrink-0 ${
                           t.priority === 'URGENT'
                             ? 'bg-rose-500'
                             : t.priority === 'HIGH'
-                            ? 'bg-amber-500'
-                            : 'bg-[#F7931A]'
+                            ? 'bg-[#FF3D00]'
+                            : 'bg-[#737373]'
                         }`}
                       />
-                      <span className="font-semibold text-slate-200 truncate">{t.title}</span>
+                      <span className="font-bold text-[#FAFAFA] truncate">{t.title}</span>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <Badge variant={t.status === 'DONE' ? 'green' : 'active'}>{t.status}</Badge>
                       {t.dueDate && (
-                        <span className="text-[10px] text-slate-400 font-mono">
+                        <span className="text-[10px] text-[#737373] font-mono">
                           {format(new Date(t.dueDate), 'dd/MM/yyyy')}
                         </span>
                       )}
@@ -324,23 +324,23 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
           {/* Audit Log / Event History */}
           {publication.events && publication.events.length > 0 && (
             <div className="space-y-2">
-              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider font-mono flex items-center gap-1.5">
-                <History className="h-3.5 w-3.5 text-slate-400" />
-                Trilha de Auditoria & Eventos
+              <span className="text-[10px] font-bold text-[#737373] uppercase tracking-wider font-mono flex items-center gap-1.5">
+                <History className="h-3.5 w-3.5 text-[#737373]" />
+                Trilha de Auditoria
               </span>
-              <div className="p-3.5 bg-[#030304] border border-white/10 rounded-2xl space-y-2 max-h-40 overflow-y-auto">
+              <div className="p-3.5 bg-[#0A0A0A] border border-[#262626] rounded-none space-y-2 max-h-40 overflow-y-auto">
                 {publication.events.map((ev) => (
                   <div key={ev.id} className="flex items-start gap-2 text-[11px]">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#F7931A] mt-1.5 shrink-0" />
+                    <div className="h-1.5 w-1.5 bg-[#FF3D00] mt-1.5 shrink-0" />
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <span className="font-semibold text-slate-300">{ev.eventType}</span>
-                        <span className="text-[10px] text-slate-500 font-mono">
+                        <span className="font-bold text-[#FAFAFA]">{ev.eventType}</span>
+                        <span className="text-[10px] text-[#737373] font-mono">
                           {format(new Date(ev.createdAt), 'dd/MM/yy HH:mm')}
                         </span>
                       </div>
-                      <p className="text-slate-400 text-[11px]">{ev.eventDescription}</p>
-                      <span className="text-[10px] text-slate-500">Por: {ev.actorPrincipal}</span>
+                      <p className="text-[#737373] text-[11px]">{ev.eventDescription}</p>
+                      <span className="text-[10px] text-[#525252] font-mono">Por: {ev.actorPrincipal}</span>
                     </div>
                   </div>
                 ))}
@@ -350,19 +350,19 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
         </div>
 
         {/* Action Footer */}
-        <div className="p-4 border-t border-white/10 bg-[#030304] flex items-center justify-between gap-2 shrink-0">
+        <div className="p-4 border-t border-[#262626] bg-[#0A0A0A] flex items-center justify-between gap-2 shrink-0">
           <div className="flex items-center gap-2">
             <button
               onClick={() => onToggleRead(publication.id, !isRead)}
-              className="px-3.5 py-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 font-medium flex items-center gap-1.5 transition-colors"
+              className="px-3.5 py-2 rounded-none bg-[#141414] hover:bg-[#1A1A1A] text-[#FAFAFA] border border-[#262626] font-mono text-[10px] uppercase tracking-wider font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
-              {isRead ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4 text-[#F7931A]" />}
+              {isRead ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4 text-[#FF3D00]" />}
               <span>{isRead ? 'Marcar Não Lida' : 'Marcar como Lida'}</span>
             </button>
 
             <button
               onClick={() => onArchive(publication.id)}
-              className="px-3.5 py-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-slate-200 border border-white/10 font-medium flex items-center gap-1.5 transition-colors"
+              className="px-3.5 py-2 rounded-none bg-[#141414] hover:bg-[#1A1A1A] text-[#737373] hover:text-[#FAFAFA] border border-[#262626] font-mono text-[10px] uppercase tracking-wider font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
               <Archive className="h-4 w-4" />
               <span>Arquivar</span>
@@ -371,7 +371,7 @@ export const PublicationInspectorDrawer: React.FC<PublicationInspectorDrawerProp
 
           <button
             onClick={() => setIsTreatModalOpen(true)}
-            className="px-4 py-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium shadow-[0_0_15px_rgba(16,185,129,0.3)] flex items-center gap-1.5 transition-all hover:scale-[1.02]"
+            className="px-5 py-2 rounded-none bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] font-bold font-mono text-[10px] uppercase tracking-wider flex items-center gap-1.5 transition-colors cursor-pointer"
           >
             <CheckCircle2 className="h-4 w-4" />
             <span>{isTreated ? 'Revisar Tratamento' : 'Tratar Publicação'}</span>

@@ -29,22 +29,22 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const variantStyles: Record<ButtonVariant, string> = {
       primary:
-        'bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white font-semibold shadow-[0_0_20px_-5px_rgba(234,88,12,0.5)] hover:shadow-[0_0_28px_-4px_rgba(247,147,26,0.7)] hover:scale-[1.02] border border-[#F7931A]/40 focus:ring-2 focus:ring-[#F7931A]/50 active:scale-[0.98] rounded-full',
+        'bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] font-bold border border-[#FF3D00] focus:ring-2 focus:ring-[#FF3D00] focus:ring-offset-2 focus:ring-offset-[#0A0A0A] active:translate-y-px rounded-none tracking-wider uppercase',
       secondary:
-        'bg-[#0F1115] hover:bg-[#181B20] text-slate-200 border border-white/10 hover:border-[#F7931A]/40 hover:text-white focus:ring-2 focus:ring-[#F7931A]/30 rounded-full',
+        'bg-[#1A1A1A] hover:bg-[#262626] text-[#FAFAFA] border border-[#262626] hover:border-[#737373] focus:ring-1 focus:ring-[#FF3D00] active:translate-y-px rounded-none tracking-wider uppercase',
       outline:
-        'bg-transparent hover:bg-white/5 text-slate-300 border border-white/20 hover:border-[#F7931A]/60 hover:text-[#F7931A] focus:ring-2 focus:ring-[#F7931A]/30 rounded-full',
+        'bg-transparent hover:bg-[#FAFAFA] text-[#FAFAFA] hover:text-[#0A0A0A] border border-[#FAFAFA] focus:ring-2 focus:ring-[#FF3D00] active:translate-y-px rounded-none tracking-wider uppercase transition-colors duration-150',
       ghost:
-        'bg-transparent hover:bg-white/5 text-slate-400 hover:text-[#F7931A] border-transparent rounded-full',
+        'bg-transparent hover:bg-[#1A1A1A] text-[#737373] hover:text-[#FAFAFA] border border-transparent hover:border-[#262626] rounded-none tracking-wider uppercase',
       danger:
-        'bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/30 focus:ring-2 focus:ring-rose-500/40 rounded-full',
+        'bg-transparent hover:bg-rose-950/30 text-rose-500 border border-rose-600/40 hover:border-rose-500 active:translate-y-px rounded-none tracking-wider uppercase',
     };
 
     const sizeStyles: Record<ButtonSize, string> = {
-      xs: 'h-7 px-2.5 text-xs rounded-full gap-1.5',
-      sm: 'h-8 px-3.5 text-xs rounded-full gap-2 font-medium',
-      md: 'h-9 px-4 text-sm rounded-full gap-2 font-medium',
-      lg: 'h-10 px-6 text-sm rounded-full gap-2.5 font-semibold',
+      xs: 'h-7 px-3 text-[10px] font-mono gap-1.5',
+      sm: 'h-8 px-4 text-xs font-semibold gap-2',
+      md: 'h-10 px-6 text-xs font-semibold gap-2.5',
+      lg: 'h-12 px-8 text-sm font-bold gap-3',
     };
 
     return (
@@ -52,7 +52,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={disabled || isLoading}
         className={cn(
-          'inline-flex items-center justify-center transition-all duration-150 outline-none select-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer',
+          'inline-flex items-center justify-center transition-all duration-150 outline-none select-none disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap',
           variantStyles[variant],
           sizeStyles[size],
           className
@@ -67,7 +67,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ) : (
           leftIcon
         )}
-        {children}
+        <span>{children}</span>
         {!isLoading && rightIcon}
       </button>
     );

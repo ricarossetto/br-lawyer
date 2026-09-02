@@ -7,7 +7,7 @@ export const CasePartiesTab: React.FC<{ parties: RestfulPartyV1[] }> = ({ partie
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+        <h3 className="text-[10px] font-bold uppercase font-mono tracking-wider text-[#737373]">
           Polos e Envolvidos no Processo ({parties.length})
         </h3>
       </div>
@@ -20,21 +20,21 @@ export const CasePartiesTab: React.FC<{ parties: RestfulPartyV1[] }> = ({ partie
           return (
             <div
               key={party.id}
-              className="p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-700 transition-all flex items-start justify-between"
+              className="p-4 bg-[#0A0A0A] border border-[#262626] rounded-none hover:border-[#737373] transition-colors flex items-start justify-between"
             >
               <div className="flex items-start gap-3">
-                <div className="h-8 w-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0 mt-0.5">
+                <div className="h-7 w-7 rounded-none bg-[#141414] border border-[#262626] flex items-center justify-center text-[#FAFAFA] shrink-0 mt-0.5">
                   <User className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-slate-100">{party.contactName || party.contact}</h4>
-                  <p className="text-[11px] text-slate-500 font-mono mt-0.5">ID Contato: {party.addressId || '—'}</p>
+                  <h4 className="text-xs font-bold text-[#FAFAFA]">{party.contactName || party.contact}</h4>
+                  <p className="text-[10px] text-[#737373] font-mono mt-0.5">ID Contato: {party.addressId || '—'}</p>
                   {party.reference && (
-                    <p className="text-[11px] text-slate-400 mt-1">Ref: {party.reference}</p>
+                    <p className="text-[11px] text-[#737373] mt-1">Ref: {party.reference}</p>
                   )}
                 </div>
               </div>
-              <Badge variant={isAuthor ? 'active' : isDefendant ? 'warning' : 'neutral'} size="sm">
+              <Badge variant={isAuthor ? 'active' : isDefendant ? 'yellow' : 'neutral'} size="sm">
                 {party.involvementType || 'Interessado'}
               </Badge>
             </div>

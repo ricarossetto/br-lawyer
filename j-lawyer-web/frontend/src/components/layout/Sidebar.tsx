@@ -103,27 +103,27 @@ export const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside
       className={cn(
-        'h-screen bg-[#030304] border-r border-white/10 flex flex-col justify-between transition-all duration-200 select-none z-30',
+        'h-screen bg-[#0A0A0A] border-r border-[#262626] flex flex-col justify-between transition-all duration-150 select-none z-30',
         isCollapsed ? 'w-16' : 'w-60'
       )}
     >
       {/* Brand Header */}
       <div>
-        <div className="h-14 px-4 flex items-center justify-between border-b border-white/10">
+        <div className="h-14 px-4 flex items-center justify-between border-b border-[#262626]">
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="h-8 w-8 rounded-lg bg-[#EA580C]/10 border border-[#F7931A]/40 flex items-center justify-center shrink-0 shadow-[0_0_14px_rgba(247,147,26,0.3)]">
-              <img src="/icons/atrium-emblem.svg" alt="BR-LAWYER" className="h-5 w-5" />
+            <div className="h-7 w-7 bg-[#141414] border border-[#262626] flex items-center justify-center shrink-0">
+              <img src="/icons/atrium-emblem.svg" alt="BR-LAWYER" className="h-4 w-4" />
             </div>
             {!isCollapsed && (
               <div className="flex flex-col">
-                <span className="font-serif font-bold text-sm text-[#FFD600] tracking-wide leading-tight">BR-LAWYER</span>
-                <span className="text-[9px] font-semibold text-slate-400 font-mono tracking-widest uppercase">ATRIUM LEGAL</span>
+                <span className="font-heading font-black text-sm text-[#FAFAFA] tracking-tight leading-tight">BR-LAWYER</span>
+                <span className="text-[9px] font-bold text-[#737373] font-mono tracking-widest uppercase">ATRIUM LEGAL</span>
               </div>
             )}
           </div>
           <button
             onClick={onToggleCollapse}
-            className="p-1 rounded-md text-slate-400 hover:text-slate-200 hover:bg-white/5 transition-colors"
+            className="p-1 rounded-none text-[#737373] hover:text-[#FAFAFA] hover:bg-[#141414] transition-colors"
             title={isCollapsed ? 'Expandir Sidebar' : 'Recolher Sidebar'}
           >
             {isCollapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
@@ -131,7 +131,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Navigation List */}
-        <nav className="p-2 space-y-1.5 mt-2">
+        <nav className="p-2 space-y-1 mt-2">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = currentView === item.key;
@@ -140,10 +140,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 key={item.key}
                 onClick={() => onNavigate(item.key)}
                 className={cn(
-                  'w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-all duration-150 group',
+                  'w-full flex items-center justify-between px-3 py-2.5 rounded-none text-xs transition-colors duration-150 group border-l-2',
                   isActive
-                    ? 'bg-[#F7931A]/10 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_15px_-4px_rgba(247,147,26,0.3)] font-semibold'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-white/5 border border-transparent'
+                    ? 'border-[#FF3D00] bg-[#141414] text-[#FAFAFA] font-bold'
+                    : 'border-transparent text-[#737373] hover:text-[#FAFAFA] hover:bg-[#141414] font-medium'
                 )}
                 title={isCollapsed ? item.label : undefined}
               >
@@ -151,14 +151,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   <Icon
                     className={cn(
                       'h-4 w-4 shrink-0',
-                      isActive ? 'text-[#F7931A]' : 'text-slate-400 group-hover:text-slate-200'
+                      isActive ? 'text-[#FF3D00]' : 'text-[#737373] group-hover:text-[#FAFAFA]'
                     )}
                   />
                   {!isCollapsed && (
                     <div className="flex items-center gap-1.5 truncate">
                       <span className="truncate">{item.label}</span>
                       {!item.isFunctional && (
-                        <span className="text-[9px] font-mono text-slate-500 uppercase tracking-wider">
+                        <span className="text-[9px] font-mono text-[#525252] uppercase tracking-wider">
                           breve
                         </span>
                       )}
@@ -169,12 +169,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 {!isCollapsed && item.badge !== undefined && (
                   <span
                     className={cn(
-                      'px-1.5 py-0.2 rounded-full font-mono text-[10px] font-bold shrink-0',
+                      'px-1.5 py-0.2 rounded-none font-mono text-[9px] font-bold uppercase tracking-wider shrink-0 border',
                       item.badgeColor === 'red'
-                        ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30'
-                        : item.badgeColor === 'amber'
-                        ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-                        : 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/30'
+                        ? 'bg-rose-950/30 text-rose-400 border-rose-600/40'
+                        : 'bg-[#1A1A1A] text-[#FF3D00] border-[#262626]'
                     )}
                   >
                     {item.badge}
@@ -187,18 +185,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       {/* User Footer */}
-      <div className="p-3 border-t border-white/10 bg-[#0F1115]/80">
+      <div className="p-3 border-t border-[#262626] bg-[#0A0A0A]">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="h-7 w-7 rounded-full bg-[#181B20] border border-[#F7931A]/40 flex items-center justify-center text-[#F7931A] shrink-0 shadow-[0_0_10px_-2px_rgba(247,147,26,0.3)]">
-              <User className="h-3.5 w-3.5" />
+            <div className="h-7 w-7 rounded-none bg-[#141414] border border-[#262626] flex items-center justify-center text-[#FAFAFA] shrink-0 font-mono text-xs font-bold">
+              {session?.username?.[0]?.toUpperCase() || 'U'}
             </div>
             {!isCollapsed && (
               <div className="flex flex-col truncate">
-                <span className="text-xs font-medium text-slate-200 truncate">
+                <span className="text-xs font-semibold text-[#FAFAFA] truncate">
                   {session?.username || 'Usuário'}
                 </span>
-                <span className="text-[10px] text-slate-500 truncate">
+                <span className="text-[10px] text-[#737373] font-mono uppercase tracking-wider truncate">
                   {isAdmin ? 'Administrador' : 'Advogado'}
                 </span>
               </div>
@@ -207,7 +205,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           {!isCollapsed && (
             <button
               onClick={logout}
-              className="p-1 rounded-md text-slate-500 hover:text-rose-400 hover:bg-white/5 transition-colors"
+              className="p-1 rounded-none text-[#737373] hover:text-rose-400 hover:bg-[#141414] transition-colors"
               title="Encerrar Sessão"
             >
               <LogOut className="h-3.5 w-3.5" />

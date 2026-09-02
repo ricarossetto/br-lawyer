@@ -114,26 +114,26 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-      <div className="bg-[#0F1115] border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden shadow-[0_0_50px_-10px_rgba(247,147,26,0.2)] flex flex-col max-h-[90vh] animate-modal-pop">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
+      <div className="bg-[#0F0F0F] border border-[#262626] rounded-none w-full max-w-lg overflow-hidden flex flex-col max-h-[90vh] animate-modal-pop">
         {/* Header */}
-        <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#030304]/80 shrink-0">
+        <div className="px-6 py-4 border-b border-[#262626] flex items-center justify-between bg-[#0A0A0A] shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="h-8 w-8 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <div className="h-7 w-7 bg-[#141414] border border-[#262626] flex items-center justify-center text-[#FAFAFA]">
               <FileCheck className="h-4 w-4" />
             </div>
             <div>
-              <h2 className="text-sm font-semibold text-slate-100 font-heading">
+              <h2 className="text-sm font-bold text-[#FAFAFA] font-heading tracking-tight">
                 Tratamento de Publicação Judicial
               </h2>
-              <p className="text-[11px] text-slate-400 font-sans">
+              <p className="text-[11px] text-[#737373] font-sans">
                 Defina o fluxo operacional e providências para esta intimação
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
+            className="p-1.5 rounded-none text-[#737373] hover:text-[#FAFAFA] hover:bg-[#1A1A1A] transition-colors"
           >
             <X className="h-4 w-4" />
           </button>
@@ -142,19 +142,19 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
         {/* Content */}
         <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-6 space-y-4 text-xs">
           {/* Context Snippet */}
-          <div className="p-3.5 bg-[#030304] border border-white/10 rounded-xl space-y-1.5">
+          <div className="p-3.5 bg-[#0A0A0A] border border-[#262626] rounded-none space-y-1.5">
             <div className="flex items-center justify-between">
-              <span className="font-semibold text-slate-200 font-mono">
+              <span className="font-bold text-[#FAFAFA] font-mono">
                 {publication.courtCode || 'Tribunal'} — {publication.cnjNumber || 'Processo não vinculado'}
               </span>
               {publication.suggestedDeadlineDays && (
-                <span className="px-2.5 py-0.5 rounded-full bg-[#FFD600]/10 border border-[#FFD600]/30 text-[#FFD600] text-[10px] font-mono font-bold">
+                <span className="px-2.5 py-0.5 rounded-none bg-[#141414] border border-[#FF3D00]/40 text-[#FF3D00] text-[10px] font-mono font-bold uppercase tracking-wider">
                   Prazo sugerido: {publication.suggestedDeadlineDays} dias
                 </span>
               )}
             </div>
             {publication.snippet && (
-              <p className="text-slate-400 text-[11px] line-clamp-2 italic">
+              <p className="text-[#737373] text-[11px] line-clamp-2 italic font-sans">
                 "{publication.snippet}"
               </p>
             )}
@@ -162,35 +162,35 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
 
           {/* Treatment Decision Mode */}
           <div className="space-y-1.5">
-            <label className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider font-mono">
+            <label className="text-[10px] font-bold text-[#737373] uppercase tracking-wider font-mono">
               Ação de Tratamento
             </label>
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
                 onClick={() => setTreatmentType('WITH_TASK')}
-                className={`p-3.5 rounded-xl border text-left transition-all flex items-start gap-2.5 ${
+                className={`p-3.5 rounded-none border text-left transition-colors flex items-start gap-2.5 cursor-pointer ${
                   treatmentType === 'WITH_TASK'
-                    ? 'bg-[#F7931A]/15 border-[#F7931A]/50 text-slate-100 shadow-[0_0_15px_-4px_rgba(247,147,26,0.3)]'
-                    : 'bg-[#030304] border-white/10 text-slate-400 hover:border-white/20'
+                    ? 'bg-[#1A1A1A] border-[#FF3D00] text-[#FAFAFA]'
+                    : 'bg-[#0A0A0A] border-[#262626] text-[#737373] hover:border-[#737373]'
                 }`}
               >
                 <div
-                  className={`mt-0.5 h-4 w-4 rounded-full border flex items-center justify-center shrink-0 ${
+                  className={`mt-0.5 h-3.5 w-3.5 rounded-none border flex items-center justify-center shrink-0 ${
                     treatmentType === 'WITH_TASK'
-                      ? 'border-[#F7931A] bg-[#F7931A]'
-                      : 'border-slate-600'
+                      ? 'border-[#FF3D00] bg-[#FF3D00]'
+                      : 'border-[#525252]'
                   }`}
                 >
                   {treatmentType === 'WITH_TASK' && (
-                    <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                    <div className="h-1.5 w-1.5 bg-[#0A0A0A]" />
                   )}
                 </div>
                 <div>
-                  <div className="font-semibold text-xs text-slate-100">
+                  <div className="font-bold text-xs text-[#FAFAFA]">
                     Tratar e Criar Tarefa / Prazo
                   </div>
-                  <div className="text-[11px] text-slate-400 mt-0.5">
+                  <div className="text-[11px] text-[#737373] mt-0.5 font-sans">
                     Gera providência operacional no Kanban e sincroniza com a agenda
                   </div>
                 </div>
@@ -199,28 +199,28 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
               <button
                 type="button"
                 onClick={() => setTreatmentType('NO_TASK')}
-                className={`p-3.5 rounded-xl border text-left transition-all flex items-start gap-2.5 ${
+                className={`p-3.5 rounded-none border text-left transition-colors flex items-start gap-2.5 cursor-pointer ${
                   treatmentType === 'NO_TASK'
-                    ? 'bg-emerald-600/15 border-emerald-500/50 text-emerald-200 shadow-[0_0_15px_-4px_rgba(16,185,129,0.3)]'
-                    : 'bg-[#030304] border-white/10 text-slate-400 hover:border-white/20'
+                    ? 'bg-[#1A1A1A] border-emerald-500 text-[#FAFAFA]'
+                    : 'bg-[#0A0A0A] border-[#262626] text-[#737373] hover:border-[#737373]'
                 }`}
               >
                 <div
-                  className={`mt-0.5 h-4 w-4 rounded-full border flex items-center justify-center shrink-0 ${
+                  className={`mt-0.5 h-3.5 w-3.5 rounded-none border flex items-center justify-center shrink-0 ${
                     treatmentType === 'NO_TASK'
                       ? 'border-emerald-400 bg-emerald-500'
-                      : 'border-slate-600'
+                      : 'border-[#525252]'
                   }`}
                 >
                   {treatmentType === 'NO_TASK' && (
-                    <div className="h-1.5 w-1.5 rounded-full bg-white" />
+                    <div className="h-1.5 w-1.5 bg-[#0A0A0A]" />
                   )}
                 </div>
                 <div>
-                  <div className="font-semibold text-xs text-slate-100">
+                  <div className="font-bold text-xs text-[#FAFAFA]">
                     Apenas Marcar como Tratada
                   </div>
-                  <div className="text-[11px] text-slate-400 mt-0.5">
+                  <div className="text-[11px] text-[#737373] mt-0.5 font-sans">
                     Ciência tomada sem necessidade de criar nova providência ou prazo
                   </div>
                 </div>
@@ -230,9 +230,9 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
 
           {/* Conditional Task Fields */}
           {treatmentType === 'WITH_TASK' && (
-            <div className="space-y-3 pt-2 border-t border-white/10">
+            <div className="space-y-3 pt-2 border-t border-[#262626]">
               <div className="space-y-1">
-                <label className="text-[11px] font-medium text-slate-300">
+                <label className="text-[10px] font-mono uppercase tracking-wider text-[#737373]">
                   Título da Providência / Tarefa *
                 </label>
                 <input
@@ -240,31 +240,31 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
                   required
                   value={taskTitle}
                   onChange={(e) => setTaskTitle(e.target.value)}
-                  className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all"
+                  className="w-full px-3.5 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors"
                   placeholder="Ex: Elaborar Contestação sobre Intimação STJ..."
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1">
-                  <label className="text-[11px] font-medium text-slate-300">Responsável</label>
+                  <label className="text-[10px] font-mono uppercase tracking-wider text-[#737373]">Responsável</label>
                   <div className="relative">
                     <input
                       type="text"
                       value={taskAssignedUser}
                       onChange={(e) => setTaskAssignedUser(e.target.value)}
-                      className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all"
+                      className="w-full px-3.5 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors"
                       placeholder="Usuário responsável..."
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[11px] font-medium text-slate-300">Prioridade</label>
+                  <label className="text-[10px] font-mono uppercase tracking-wider text-[#737373]">Prioridade</label>
                   <select
                     value={taskPriority}
                     onChange={(e) => setTaskPriority(e.target.value as TaskPriority)}
-                    className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 focus:outline-none focus:border-[#F7931A] transition-colors"
+                    className="w-full px-3.5 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] focus:outline-none focus:border-[#FF3D00] transition-colors font-mono text-xs"
                   >
                     <option value="URGENT">Urgente (Prazo Fatal)</option>
                     <option value="HIGH">Alta Prioridade</option>
@@ -276,11 +276,11 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
 
               <div className="grid grid-cols-3 gap-3">
                 <div className="space-y-1">
-                  <label className="text-[11px] font-medium text-slate-300">Categoria</label>
+                  <label className="text-[10px] font-mono uppercase tracking-wider text-[#737373]">Categoria</label>
                   <select
                     value={taskCategory}
                     onChange={(e) => setTaskCategory(e.target.value as TaskCategory)}
-                    className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 focus:outline-none focus:border-[#F7931A] transition-colors"
+                    className="w-full px-3.5 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] focus:outline-none focus:border-[#FF3D00] transition-colors font-mono text-xs"
                   >
                     <option value="PRAZO_FATAL">Prazo Fatal</option>
                     <option value="PETICAO">Petição / Peça</option>
@@ -292,28 +292,28 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[11px] font-medium text-slate-300 flex items-center gap-1">
-                    <Calendar className="h-3 w-3 text-[#FFD600]" />
+                  <label className="text-[10px] font-mono uppercase tracking-wider text-[#737373] flex items-center gap-1">
+                    <Calendar className="h-3 w-3 text-[#FAFAFA]" />
                     Data de Vencimento
                   </label>
                   <input
                     type="date"
                     value={taskDueDate}
                     onChange={(e) => setTaskDueDate(e.target.value)}
-                    className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 focus:outline-none focus:border-[#F7931A] transition-colors font-mono"
+                    className="w-full px-3.5 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] focus:outline-none focus:border-[#FF3D00] transition-colors font-mono text-xs"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[11px] font-medium text-slate-300 flex items-center gap-1">
-                    <Clock className="h-3 w-3 text-slate-400" />
+                  <label className="text-[10px] font-mono uppercase tracking-wider text-[#737373] flex items-center gap-1">
+                    <Clock className="h-3 w-3 text-[#737373]" />
                     Horário Limite
                   </label>
                   <input
                     type="text"
                     value={taskDueTime}
                     onChange={(e) => setTaskDueTime(e.target.value)}
-                    className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 focus:outline-none focus:border-[#F7931A] transition-colors font-mono"
+                    className="w-full px-3.5 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] focus:outline-none focus:border-[#FF3D00] transition-colors font-mono text-xs"
                     placeholder="18:00"
                   />
                 </div>
@@ -325,9 +325,9 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
                   id="syncCalendar"
                   checked={syncCalendar}
                   onChange={(e) => setSyncCalendar(e.target.checked)}
-                  className="rounded border-white/20 bg-[#030304] text-[#F7931A] focus:ring-[#F7931A] h-3.5 w-3.5 accent-[#F7931A]"
+                  className="rounded-none border-[#262626] bg-[#0A0A0A] text-[#FF3D00] focus:ring-0 h-3.5 w-3.5 accent-[#FF3D00]"
                 />
-                <label htmlFor="syncCalendar" className="text-slate-300 text-[11px] cursor-pointer">
+                <label htmlFor="syncCalendar" className="text-[#FAFAFA] text-[11px] cursor-pointer">
                   Sincronizar com a Agenda & Controle de Prazos do j-lawyer
                 </label>
               </div>
@@ -335,22 +335,22 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
           )}
 
           {/* Notes / Observation */}
-          <div className="space-y-1 pt-2 border-t border-white/10">
-            <label className="text-[11px] font-medium text-slate-300">
+          <div className="space-y-1 pt-2 border-t border-[#262626]">
+            <label className="text-[10px] font-mono uppercase tracking-wider text-[#737373]">
               Observações / Despacho Interno (Opcional)
             </label>
             <textarea
               rows={2}
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] transition-colors"
+              className="w-full px-3.5 py-2 bg-[#0A0A0A] border border-[#262626] rounded-none text-[#FAFAFA] placeholder-[#737373] focus:outline-none focus:border-[#FF3D00] transition-colors text-xs font-sans"
               placeholder="Anotação de triagem sobre esta publicação..."
             />
           </div>
 
           {/* Important Notice */}
-          <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-start gap-2 text-amber-300 text-[11px]">
-            <AlertTriangle className="h-4 w-4 shrink-0 mt-0.5 text-amber-400" />
+          <div className="p-3 bg-amber-950/30 border border-amber-600/40 rounded-none flex items-start gap-2 text-amber-300 text-[11px]">
+            <AlertTriangle className="h-4 w-4 shrink-0 mt-0.5 text-amber-500" />
             <span>
               <strong>Atenção:</strong> O tratamento interno no BR-LAWYER organiza a rotina do
               escritório e <strong>não substitui</strong> a ciência formal nos sistemas dos tribunais
@@ -359,19 +359,19 @@ export const TreatPublicationModal: React.FC<TreatPublicationModalProps> = ({
           </div>
 
           {/* Buttons */}
-          <div className="pt-3 border-t border-white/10 flex items-center justify-end gap-2.5">
+          <div className="pt-3 border-t border-[#262626] flex items-center justify-end gap-2.5">
             <button
               type="button"
               onClick={onClose}
               disabled={isSubmitting}
-              className="px-4 py-2 rounded-full text-slate-300 hover:bg-white/10 transition-colors font-medium"
+              className="px-4 py-2 rounded-none text-[#737373] hover:text-[#FAFAFA] hover:bg-[#1A1A1A] transition-colors font-mono uppercase tracking-wider text-xs font-semibold cursor-pointer"
             >
               Cancelar
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-2 rounded-full bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white font-semibold transition-all shadow-[0_0_20px_-5px_rgba(234,88,12,0.5)] hover:shadow-[0_0_28px_-4px_rgba(247,147,26,0.7)] flex items-center gap-1.5 disabled:opacity-50 hover:scale-[1.02]"
+              className="px-5 py-2 rounded-none bg-[#FF3D00] hover:bg-[#E03600] text-[#0A0A0A] font-bold font-mono uppercase tracking-wider text-xs transition-colors flex items-center gap-1.5 disabled:opacity-50 cursor-pointer"
             >
               <CheckCircle2 className="h-4 w-4" />
               <span>{isSubmitting ? 'Salvando...' : 'Confirmar Tratamento'}</span>
