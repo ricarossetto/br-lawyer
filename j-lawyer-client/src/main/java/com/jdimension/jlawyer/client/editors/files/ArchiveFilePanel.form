@@ -57,7 +57,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/editmove.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="in andere Akte verschieben"/>
+            <Property name="text" type="java.lang.String" value="Mover para outro processo"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuMoveReviewToOtherCaseActionPerformed"/>
@@ -68,7 +68,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/edit.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="bearbeiten"/>
+            <Property name="text" type="java.lang.String" value="Editar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuEditReviewActionPerformed"/>
@@ -79,7 +79,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/editdelete.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="entfernen"/>
+            <Property name="text" type="java.lang.String" value="Remover"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuRemoveReviewActionPerformed"/>
@@ -98,7 +98,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons16/pdf.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="als PDF zur Akte speichern"/>
+            <Property name="text" type="java.lang.String" value="Salvar como PDF no processo"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuDuplicateDocumentAsPdfActionPerformed"/>
@@ -125,7 +125,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/editcopy.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#xf6;ffnen"/>
+            <Property name="text" type="java.lang.String" value="Abrir"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuOpenDocumentActionPerformed"/>
@@ -136,7 +136,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/editcopy.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#xf6;ffnen mit..."/>
+            <Property name="text" type="java.lang.String" value="Abrir com..."/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnuOpenDocumentMicrosoftOffice">
@@ -168,7 +168,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/filesave.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="lokal speichern"/>
+            <Property name="text" type="java.lang.String" value="Salvar localmente"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSaveDocumentsLocallyActionPerformed"/>
@@ -198,7 +198,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/editcopy.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="in andere Akte kopieren"/>
+                <Property name="text" type="java.lang.String" value="Copiar para outro processo"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuCopyDocumentToOtherCaseActionPerformed"/>
@@ -209,7 +209,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/editmove.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="in andere Akte verschieben"/>
+                <Property name="text" type="java.lang.String" value="Mover para outro processo"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuMoveDocumentToOtherCaseActionPerformed"/>
@@ -272,7 +272,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons16/package_favorite.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Favoritendokument an/aus"/>
+            <Property name="text" type="java.lang.String" value="Favoritar / Desfavoritar documento"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuToggleFavoriteActionPerformed"/>
@@ -283,7 +283,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons16/material/baseline_chat_blue_48dp.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nachricht senden"/>
+            <Property name="text" type="java.lang.String" value="Enviar mensagem"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSendMessageForDocumentActionPerformed"/>
@@ -857,7 +857,7 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Aktenzeichen:"/>
+                    <Property name="text" type="java.lang.String" value="Número do Processo:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtFileNumber">
@@ -1580,7 +1580,7 @@
                       <Image iconType="3" name="/icons/folder_documents.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Erstellen"/>
-                    <Property name="toolTipText" type="java.lang.String" value="neues Dokument aus Vorlage erstellen"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Criar novo documento a partir de modelo"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdNewDocumentActionPerformed"/>
@@ -1958,7 +1958,7 @@
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                       <JTabbedPaneConstraints tabName="Aktenkonto">
-                        <Property name="tabTitle" type="java.lang.String" value="Aktenkonto"/>
+                        <Property name="tabTitle" type="java.lang.String" value="Conta do Processo"/>
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>

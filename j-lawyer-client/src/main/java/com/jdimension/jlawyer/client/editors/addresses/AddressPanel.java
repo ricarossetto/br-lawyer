@@ -2400,7 +2400,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
 
         jLabel4.setText("Straße:");
 
-        jLabel5.setText("PLZ:");
+        jLabel5.setText("CEP:");
 
         jLabel6.setText("Ort:");
 
@@ -2557,7 +2557,7 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         });
 
         cmdShowWebsite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/web.png"))); // NOI18N
-        cmdShowWebsite.setToolTipText("im Browser öffnen");
+        cmdShowWebsite.setToolTipText("Abrir no navegador");
         cmdShowWebsite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdShowWebsiteActionPerformed(evt);

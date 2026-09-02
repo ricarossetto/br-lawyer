@@ -993,7 +993,7 @@ public class PaymentDialog extends javax.swing.JDialog implements EventConsumer 
         taDescription.setRows(5);
         jScrollPane1.setViewportView(taDescription);
 
-        jLabel20.setText("Zahlung:");
+        jLabel20.setText("Pagamento:");
 
         lblRecipient.setFont(lblRecipient.getFont());
         lblRecipient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/warning.png"))); // NOI18N

@@ -900,7 +900,7 @@ public class EpostLetterSendStep extends javax.swing.JPanel implements WizardSte
         jLabel7.setText("Adresszeile 5:");
 
         jLabel8.setFont(jLabel8.getFont());
-        jLabel8.setText("PLZ:");
+        jLabel8.setText("CEP:");
 
         jLabel9.setFont(jLabel9.getFont());
         jLabel9.setText("Ort:");
@@ -918,7 +918,7 @@ public class EpostLetterSendStep extends javax.swing.JPanel implements WizardSte
         jLabel13.setText("Straße:");
 
         jLabel14.setFont(jLabel14.getFont());
-        jLabel14.setText("PLZ:");
+        jLabel14.setText("CEP:");
 
         jLabel15.setFont(jLabel15.getFont());
         jLabel15.setText("Ort:");

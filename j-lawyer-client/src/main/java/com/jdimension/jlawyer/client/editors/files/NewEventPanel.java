@@ -850,7 +850,7 @@ public class NewEventPanel extends javax.swing.JPanel implements QuickDateSelect
 
         txtEventBeginDateField.setEditable(false);
         txtEventBeginDateField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtEventBeginDateField.setToolTipText("Doppelklick um heutiges Datum zu übernehmen");
+        txtEventBeginDateField.setToolTipText("Duplo clique para aplicar a data de hoje");
         txtEventBeginDateField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtEventBeginDateFieldMouseClicked(evt);
@@ -877,7 +877,7 @@ public class NewEventPanel extends javax.swing.JPanel implements QuickDateSelect
 
         txtEventEndDateField.setEditable(false);
         txtEventEndDateField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtEventEndDateField.setToolTipText("Doppelklick um heutiges Datum zu übernehmen");
+        txtEventEndDateField.setToolTipText("Duplo clique para aplicar a data de hoje");
 
         cmdEventEndDateSelector.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/schedule.png"))); // NOI18N
         cmdEventEndDateSelector.setMargin(new java.awt.Insets(2, 4, 2, 4));

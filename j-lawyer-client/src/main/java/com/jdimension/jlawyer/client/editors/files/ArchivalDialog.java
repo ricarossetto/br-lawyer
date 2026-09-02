@@ -939,7 +939,7 @@ public class ArchivalDialog extends javax.swing.JDialog {
 
         cmdArchive.setFont(cmdArchive.getFont());
         cmdArchive.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_action_success.png"))); // NOI18N
-        cmdArchive.setText("Akte archivieren");
+        cmdArchive.setText("Arquivar Processo");
         cmdArchive.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdArchiveActionPerformed(evt);

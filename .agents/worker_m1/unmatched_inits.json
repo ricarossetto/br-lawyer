@@ -1,0 +1,3512 @@
+{
+  "% Speichernutzung": {
+    "raw": [
+      "% Speichernutzung"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.java:1053",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.java:1051"
+    ]
+  },
+  "%d Akten, %d Kalendereinträge, %d Adressen, %d archivierte Akten": {
+    "raw": [
+      "%d Akten, %d Kalendereinträge, %d Adressen, %d archivierte Akten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\GlobalSearchDialog.java:447"
+    ]
+  },
+  "00123/22 eine Aktenbezeichnung": {
+    "raw": [
+      "00123/22 eine Aktenbezeichnung"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1086"
+    ]
+  },
+  "2. Passwort setzen / zurücksetzen": {
+    "raw": [
+      "2. Passwort setzen / zurücksetzen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.java:726"
+    ]
+  },
+  "3. Passwort setzen und in die Einstellungen übernehmen": {
+    "raw": [
+      "3. Passwort setzen und in die Einstellungen übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.java:741"
+    ]
+  },
+  "< Zurück": {
+    "raw": [
+      "< Zurück"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\WizardMainPanel.java:799"
+    ]
+  },
+  "<BITTE EINGEBEN>": {
+    "raw": [
+      "<BITTE EINGEBEN>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptV2SetupDialog.java:848"
+    ]
+  },
+  "<Rechnungsadresse>": {
+    "raw": [
+      "<Rechnungsadresse>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.java:828"
+    ]
+  },
+  "<html><b>Volltextsuche</b> im Dokumentinhalt.<br/>Feld optional über das Dropdown wählen<br/>(Dateiname / Aktenname / Aktenzeichen).<br/>Platzhalter <code>*</code>/<code>?</code> nur in Feldsuchen.<br/><i>Klicken für Details.</i></html>": {
+    "raw": [
+      "<html><b>Volltextsuche</b> im Dokumentinhalt.<br/>Feld optional über das Dropdown wählen<br/>(Dateiname / Aktenname / Aktenzeichen).<br/>Platzhalter <code>*</code>/<code>?</code> nur in Feldsuchen.<br/><i>Klicken für Details.</i></html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.java:836"
+    ]
+  },
+  "<html><p>Akte, Adresse, Beteiligte und Kalendereintrag werden wie gewünscht erstellt - Sie können den Status hier kontrollieren und den Assistenten dann schließen.</html>": {
+    "raw": [
+      "<html><p>Akte, Adresse, Beteiligte und Kalendereintrag werden wie gew&uuml;nscht erstellt - Sie k&ouml;nnen den Status hier kontrollieren und den Assistenten dann schlie&szlig;en.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\ConfirmationStep.java:742"
+    ]
+  },
+  "<html><p>Alle ausgewählten Dokumente werden in das PDF-Format konvertiert. Sie können im nächsten Schritt die Reihenfolge der Dokumente festlegen.</html>": {
+    "raw": [
+      "<html><p>Alle ausgewählten Dokumente werden in das PDF-Format konvertiert. Sie können im nächsten Schritt die Reihenfolge der Dokumente festlegen.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfConversionStep.java:750",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfConversionStep.java:736"
+    ]
+  },
+  "<html><p>Beteiligte auswählen oder erstellen. Bereits erfasste Beteiligte werden unten aufgelistet und können dort bearbeitet oder entfernt werden.</p></html>": {
+    "raw": [
+      "<html><p>Beteiligte auswählen oder erstellen. Bereits erfasste Beteiligte werden unten aufgelistet und können dort bearbeitet oder entfernt werden.</p></html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.java:811"
+    ]
+  },
+  "<html><p>Bringen Sie die Dokumente in die gewünschte Reihenfolge. Sie werden im nächsten Schritt zu einem Gesamtdokument zusammengeführt.</html>": {
+    "raw": [
+      "<html><p>Bringen Sie die Dokumente in die gewünschte Reihenfolge. Sie werden im nächsten Schritt zu einem Gesamtdokument zusammengeführt.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.java:744",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.java:771"
+    ]
+  },
+  "<html><p>Das Dokument wird an die E-POST-Schnittstelle übertragen, auf Layoutfehler geprüft und das Ergebnis hier dargestellt. Rot markierte Bereiche kennzeichnen Verletzungen des geforderten Layout.<br/> Eine Zustellung des Ergebnisses per E-Mails ist optional möglich.</html>": {
+    "raw": [
+      "<html><p>Das Dokument wird an die E-POST-Schnittstelle übertragen, auf Layoutfehler geprüft und das Ergebnis hier dargestellt. Rot markierte Bereiche kennzeichnen Verletzungen des geforderten Layout.<br/> Eine Zustellung des Ergebnisses per E-Mails ist optional möglich.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterValidationStep.java:754"
+    ]
+  },
+  "<html><p>Das Dokument wird zwecks Versand an die E-POST-Schnittstelle übertragen. Der Status ist über \"Brief / Fax\" in der Hauptnavigation nachvollziehbar.</html>": {
+    "raw": [
+      "<html><p>Das Dokument wird zwecks Versand an die E-POST-Schnittstelle übertragen. Der Status ist über &quot;Brief / Fax&quot; in der Hauptnavigation nachvollziehbar.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterSendStatus.java:746",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostLetterSendStep.java:811"
+    ]
+  },
+  "<html><p>Die Dokumente werden zusammengeführt und können kontrolliert werden.</html>": {
+    "raw": [
+      "<html><p>Die Dokumente werden zusammengeführt und können kontrolliert werden.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfMergeStep.java:737",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.java:869"
+    ]
+  },
+  "<html><p>Die wichtigsten Kopfdaten zur Aktenerstellung können hier direkt eingegeben werden. Nach Erstellung sollte eine Detaillierung (bspw. Berechtigungen) separat erfolgen.</html>": {
+    "raw": [
+      "<html><p>Die wichtigsten Kopfdaten zur Aktenerstellung k&ouml;nnen hier direkt eingegeben werden. Nach Erstellung sollte eine Detaillierung (bspw. Berechtigungen) separat erfolgen.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\NewCaseStep.java:987"
+    ]
+  },
+  "<html><p>Optionale Erstellung einer Adresse aus dem Text eines Dokuments, z.B. einer Signatur.<br/>Die relevante Textpassage wird so angepasst, dass jedes Attribut auf einer eigenen Zeile steht.<br/>Anschließend die relevanten Zeilen markieren und im rechten Teil des Dialogs eine Zuordnung vornehmen.<br/>Die Daten können im nächsten Schritt vervollständigt werden.</html>": {
+    "raw": [
+      "<html><p>Optionale Erstellung einer Adresse aus dem Text eines Dokuments, z.B. einer Signatur.<br/>Die relevante Textpassage wird so angepasst, dass jedes Attribut auf einer eigenen Zeile steht.<br/>Anschlie&szlig;end die relevanten Zeilen markieren und im rechten Teil des Dialogs eine Zuordnung vornehmen.<br/>Die Daten k&ouml;nnen im nächsten Schritt vervollst&auml;ndigt werden.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressStep.java:809"
+    ]
+  },
+  "<html><p>Wiedervorlage erstellen</html>": {
+    "raw": [
+      "<html><p>Wiedervorlage erstellen</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\AddCalendarEventStep.java:739"
+    ]
+  },
+  "<html>Akte xxx/yy<br/>Rubrum<br/>Zeichen</html>": {
+    "raw": [
+      "<html>Akte xxx/yy<br/>Rubrum<br/>Zeichen</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\CaseForContactEntryPanel.java:794"
+    ]
+  },
+  "<html>Das hier angegebene Postfach wird zum Versand administrativer (bspw. Informationen zur Datensicherung) als auch fachlicher (bspw. Terminerinnerungen) Mitteilungen verwendet.</html>": {
+    "raw": [
+      "<html>Das hier angegebene Postfach wird zum Versand administrativer (bspw. Informationen zur Datensicherung) als auch fachlicher (bspw. Terminerinnerungen) Mitteilungen verwendet.</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SystemMailboxDialog.java:814"
+    ]
+  },
+  "<html>Hinweise:\\n<ul>\\n<li>Postfach wird überwacht</li>\\n<li><b>alle</b> Nachrichten im Posteingang werden automatisch zur Akte gespeichert</li>\\n<li>es wird ein optionales Etikett angebracht</li>\\n<li>die Nachricht wird in einen Ordner <b>\"in Akte importiert\"</b> verschoben</li>\\n<li>ist eine Nachricht nicht eindeutig zuzuordnen, verbleibt sie im Posteingang<br/>oder kann einer Standardakte zugeordnet werden</li>\\n</ul>\\n\\n</html>": {
+    "raw": [
+      "<html>Hinweise:\\n<ul>\\n<li>Postfach wird &uuml;berwacht</li>\\n<li><b>alle</b> Nachrichten im Posteingang werden automatisch zur Akte gespeichert</li>\\n<li>es wird ein optionales Etikett angebracht</li>\\n<li>die Nachricht wird in einen Ordner <b>&quot;in Akte importiert&quot;</b> verschoben</li>\\n<li>ist eine Nachricht nicht eindeutig zuzuordnen, verbleibt sie im Posteingang<br/>oder kann einer Standardakte zugeordnet werden</li>\\n</ul>\\n\\n</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1400"
+    ]
+  },
+  "<html>Stirling PDF ist ein flexibles Werkzeug für die Arbeit mit PDF-Dokumenten.<br/>Es kann separat installiert und durch eine URL-Angabe angebunden werden,<br/> bspw. http://localhost:9080/</html>": {
+    "raw": [
+      "<html>Stirling PDF ist ein flexibles Werkzeug für die Arbeit mit PDF-Dokumenten.<br/>Es kann separat installiert und durch eine URL-Angabe angebunden werden,<br/> bspw. http://localhost:9080/</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\StirlingPdfConfigurationDialog.java:731"
+    ]
+  },
+  "<html>\\n<b>Hinweise:</b>\\nBei Aktivierung der AZ-Erweiterung <b><i>müssen</i></b> die in der Erweiterung<br/>\\ngewünschten Daten zwingend vorhanden sein, um eine Akte anlegen oder speichern zu<br/>\\nkönnen. Stellen Sie also bspw. sicher, dass jeder Nutzer in der Nutzerverwaltung ein Kürzel hat, <br/>\\nund dass neue und veränderte Akten eine Eigentümergruppe haben.\\n</html>": {
+    "raw": [
+      "<html>\\n<b>Hinweise:</b>\\nBei Aktivierung der AZ-Erweiterung <b><i>m&uuml;ssen</i></b> die in der Erweiterung<br/>\\ngew&uuml;nschten Daten zwingend vorhanden sein, um eine Akte anlegen oder speichern zu<br/>\\nkönnen. Stellen Sie also bspw. sicher, dass jeder Nutzer in der Nutzerverwaltung ein K&uuml;rzel hat, <br/>\\nund dass neue und veränderte Akten eine Eigentümergruppe haben.\\n</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:1047"
+    ]
+  },
+  "<html>\\n<strong>Stark:</strong>Grossbuchstaben, Kleinbuchstaben, Ziffern, Sonderzeichen, mindestens 8 Zeichen<br/>\\n<strong>Mittel:</strong>Grossbuchstaben, Kleinbuchstaben, Ziffern, mindestens 8 Zeichen<br/>\\n<strong>Schwach:</strong>alle weiteren<br/>\\n</html>": {
+    "raw": [
+      "<html>\\n<strong>Stark:</strong>Grossbuchstaben, Kleinbuchstaben, Ziffern, Sonderzeichen, mindestens 8 Zeichen<br/>\\n<strong>Mittel:</strong>Grossbuchstaben, Kleinbuchstaben, Ziffern, mindestens 8 Zeichen<br/>\\n<strong>Schwach:</strong>alle weiteren<br/>\\n</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetPasswordDialog.java:734"
+    ]
+  },
+  "<html>\\nDas hier angegebene Programm wird am <b>Server</b> ausgeführt, um OCR für PDF-Dokumente auszuführen. Es sollte der vollständige Aufruf angegeben werden. Es müssen zwei Platzhalter enthalten sein:\\n<ul>\\n<li>DATEIEIN - Datei, welche vom OCR-Programm verarbeitet werden soll</li>\\n<li>DATEIAUS - Datei, welche vom OCR-Programm erstellt werden soll</li>\\n</ul>\\nBeispiel:<br/>\\n<pre>/usr/bin/ocrmypdf --skip-text DATEIEIN DATEIAUS</pre>\\n</html>": {
+    "raw": [
+      "<html>\\nDas hier angegebene Programm wird am <b>Server</b> ausgef&uuml;hrt, um OCR für PDF-Dokumente auszuf&uuml;hren. Es sollte der vollst&auml;ndige Aufruf angegeben werden. Es m&uuml;ssen zwei Platzhalter enthalten sein:\\n<ul>\\n<li>DATEIEIN - Datei, welche vom OCR-Programm verarbeitet werden soll</li>\\n<li>DATEIAUS - Datei, welche vom OCR-Programm erstellt werden soll</li>\\n</ul>\\nBeispiel:<br/>\\n<pre>/usr/bin/ocrmypdf --skip-text DATEIEIN DATEIAUS</pre>\\n</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ScanOptionsDialog.java:738"
+    ]
+  },
+  "<html>als Entwurf im Postfach speichern<br/>(in der Akte wird die Nachricht automatisch als Entwurf gespeichert, bis sie gesendet oder verworfen wird)</html>": {
+    "raw": [
+      "<html>als Entwurf im Postfach speichern<br/>(in der Akte wird die Nachricht automatisch als Entwurf gespeichert, bis sie gesendet oder verworfen wird)</html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2293"
+    ]
+  },
+  "<html>zeitlicher Versatz für den zweiten Eintrag, als Anzahl an Tagen:<br/><ul><li>negativer Wert: zweiter Eintrag liegt zeitlich vor dem Haupteintrag</li><li>positiver Wert: zweiter Eintrag liegt zeitlich nach dem Haupteintrag</li></ul></html>": {
+    "raw": [
+      "<html>zeitlicher Versatz für den zweiten Eintrag, als Anzahl an Tagen:<br/><ul><li>negativer Wert: zweiter Eintrag liegt zeitlich vor dem Haupteintrag</li><li>positiver Wert: zweiter Eintrag liegt zeitlich nach dem Haupteintrag</li></ul></html>"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.java:894"
+    ]
+  },
+  "Ablaufdatum - bei Eintragung wird eine Warnung vor Ablauf erscheinen": {
+    "raw": [
+      "Ablaufdatum - bei Eintragung wird eine Warnung vor Ablauf erscheinen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1188",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1190"
+    ]
+  },
+  "Adressbuch-Synchronisation": {
+    "raw": [
+      "Adressbuch-Synchronisation"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AddressBookSetupDialog.java:780"
+    ]
+  },
+  "Adressdaten aus beA übernehmen": {
+    "raw": [
+      "Adressdaten aus beA übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2703"
+    ]
+  },
+  "Adresse aus Nachricht extrahieren": {
+    "raw": [
+      "Adresse aus Nachricht extrahieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressStep.java:846"
+    ]
+  },
+  "Adressen hinzufügen": {
+    "raw": [
+      "Adressen hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\massmail\\MassMailPanel.java:842"
+    ]
+  },
+  "Akte archivieren - Prüfergebnis": {
+    "raw": [
+      "Akte archivieren - Prüfergebnis"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.java:920"
+    ]
+  },
+  "Akte bearbeiten": {
+    "raw": [
+      "Akte bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsOverviewPanel.java:754",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.java:821",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.java:756"
+    ]
+  },
+  "Akte suchen": {
+    "raw": [
+      "Akte suchen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\SearchAndAssignDialog.java:985",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\NewDocumentNameDialog.java:788"
+    ]
+  },
+  "Akte suchen und zuordnen": {
+    "raw": [
+      "Akte suchen und zuordnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.java:1681"
+    ]
+  },
+  "Akte öffnen": {
+    "raw": [
+      "Akte öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentMgmtEntryPanel.java:883"
+    ]
+  },
+  "Akte-Beteiligte": {
+    "raw": [
+      "Akte-Beteiligte"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.java:897"
+    ]
+  },
+  "Akten für den Export auswählen": {
+    "raw": [
+      "Akten für den Export auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseExportDialog.java:78"
+    ]
+  },
+  "Akten in zu dieser Gruppe transferieren:": {
+    "raw": [
+      "Akten in zu dieser Gruppe transferieren:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.java:766"
+    ]
+  },
+  "Akten ohne offene Wiedervorlagen und Fristen": {
+    "raw": [
+      "Akten ohne offene Wiedervorlagen und Fristen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.java:769"
+    ]
+  },
+  "Aktenetikett auswählen": {
+    "raw": [
+      "Aktenetikett auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1092"
+    ]
+  },
+  "Aktenetikett:": {
+    "raw": [
+      "Aktenetikett:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddNoteFrame.java:1206"
+    ]
+  },
+  "Aktenetiketten:": {
+    "raw": [
+      "Aktenetiketten:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.java:946"
+    ]
+  },
+  "Aktenhistorie": {
+    "raw": [
+      "Aktenhistorie"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4270"
+    ]
+  },
+  "Aktenkonto in Tabellenkalkulation exportieren": {
+    "raw": [
+      "Aktenkonto in Tabellenkalkulation exportieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3750"
+    ]
+  },
+  "Aktenkonto: Auslagen nicht ausgeglichen": {
+    "raw": [
+      "Aktenkonto: Auslagen nicht ausgeglichen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.java:989"
+    ]
+  },
+  "Aktenkonto: Fremdgeld nicht ausgeglichen": {
+    "raw": [
+      "Aktenkonto: Fremdgeld nicht ausgeglichen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.java:987"
+    ]
+  },
+  "Aktenkopf": {
+    "raw": [
+      "Aktenkopf"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2876"
+    ]
+  },
+  "Aktenname": {
+    "raw": [
+      "Aktenname"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.java:838"
+    ]
+  },
+  "Aktenzeichen bearbeiten (nur für Administratoren)": {
+    "raw": [
+      "Aktenzeichen bearbeiten (nur für Administratoren)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3038"
+    ]
+  },
+  "Aktenzeichen in Zwischenablage kopieren": {
+    "raw": [
+      "Aktenzeichen in Zwischenablage kopieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3029"
+    ]
+  },
+  "Aktenzeichen um weitere Angaben erweitern": {
+    "raw": [
+      "Aktenzeichen um weitere Angaben erweitern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:980"
+    ]
+  },
+  "Aktenzeichen-Einstellungen": {
+    "raw": [
+      "Aktenzeichen-Einstellungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:817"
+    ]
+  },
+  "Alle auswählen": {
+    "raw": [
+      "Alle auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseExportDialog.java:92",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\MailingStatusPanel.java:967"
+    ]
+  },
+  "Allgemeine Nachricht": {
+    "raw": [
+      "Allgemeine Nachricht"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1833"
+    ]
+  },
+  "Anhand des Rechnungssenders bestimmen sich u.a. Absender und Zahlungsinformationen \\nfür die elektronische Rechnung. \\nBitte sicherstellen, dass diese Informationen aktuell sind (Administration - Nutzerverwaltung).": {
+    "raw": [
+      "Anhand des Rechnungssenders bestimmen sich u.a. Absender und Zahlungsinformationen \\nfür die elektronische Rechnung. \\nBitte sicherstellen, dass diese Informationen aktuell sind (Administration - Nutzerverwaltung)."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1491"
+    ]
+  },
+  "Anhang entfernen": {
+    "raw": [
+      "Anhang entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\MailContentUI.java:1903"
+    ]
+  },
+  "Anhang öffnen": {
+    "raw": [
+      "Anhang öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1382"
+    ]
+  },
+  "Anhänge ausschließen (kommaseparierte Liste):": {
+    "raw": [
+      "Anhänge ausschließen (kommaseparierte Liste):"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1403"
+    ]
+  },
+  "Anlagen nicht speichern, die kleiner als .. KB sind:": {
+    "raw": [
+      "Anlagen nicht speichern, die kleiner als .. KB sind:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1420"
+    ]
+  },
+  "Anmerkungen entfernen": {
+    "raw": [
+      "Anmerkungen entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfAnonymizerDialog.java:832"
+    ]
+  },
+  "Anzahl an Tagen, für welche Nachrichten geladen werden": {
+    "raw": [
+      "Anzahl an Tagen, für welche Nachrichten geladen werden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.java:892"
+    ]
+  },
+  "Assistent Ingo - Chat öffnen": {
+    "raw": [
+      "Assistent Ingo - Chat öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4558"
+    ]
+  },
+  "Aufnahme speichern": {
+    "raw": [
+      "Aufnahme speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddVoiceMemoDialog.java:870"
+    ]
+  },
+  "Ausgewählte Beteiligte:": {
+    "raw": [
+      "Ausgewählte Beteiligte:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.java:845"
+    ]
+  },
+  "Ausgewählte Dokumente endgültig löschen": {
+    "raw": [
+      "Ausgewählte Dokumente endgültig löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentsBinDialog.java:882"
+    ]
+  },
+  "Ausgewählte Dokumente wiederherstellen": {
+    "raw": [
+      "Ausgewählte Dokumente wiederherstellen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentsBinDialog.java:873"
+    ]
+  },
+  "Ausgewählte Seite entfernen": {
+    "raw": [
+      "Ausgewählte Seite entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfPageImage.java:767"
+    ]
+  },
+  "Auswahl löschen": {
+    "raw": [
+      "Auswahl löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddVoiceMemoDialog.java:853"
+    ]
+  },
+  "Auswahl nach Dateitypen:": {
+    "raw": [
+      "Auswahl nach Dateitypen:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1148"
+    ]
+  },
+  "Authentifizierung zurücksetzen": {
+    "raw": [
+      "Authentifizierung zurücksetzen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1176"
+    ]
+  },
+  "Autor, Titel, Betreff, Datumsangaben etc.": {
+    "raw": [
+      "Autor, Titel, Betreff, Datumsangaben etc."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfAnonymizerDialog.java:837"
+    ]
+  },
+  "Bankverbindung": {
+    "raw": [
+      "Bankverbindung"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2830"
+    ]
+  },
+  "Bearbeiten der Platzhalterwerte durch Doppelklick möglich": {
+    "raw": [
+      "Bearbeiten der Platzhalterwerte durch Doppelklick möglich"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressDocumentFromTemplateDialog.java:1003",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.java:1272"
+    ]
+  },
+  "Bei Erstellen und Bearbeiten von Kalendereinträgen wird auf \\nmögliche Terminkonflikte geprüft und eine Warnung angezeigt.": {
+    "raw": [
+      "Bei Erstellen und Bearbeiten von Kalendereinträgen wird auf \\nmögliche Terminkonflikte geprüft und eine Warnung angezeigt."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.java:857"
+    ]
+  },
+  "Beleg löschen": {
+    "raw": [
+      "Beleg löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetEntryPanel.java:751",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentEntryPanel.java:820",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.java:834",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ClaimLedgerEntryPanel.java:741"
+    ]
+  },
+  "Belegart - Einstellungen": {
+    "raw": [
+      "Belegart - Einstellungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoiceTypesSetupDialog.java:859"
+    ]
+  },
+  "Belege dieser Art in der Offene Posten-Liste anzeigen\\n(bspw. Rechnungen, Korrekturrechnungen, aber keine Angebote)": {
+    "raw": [
+      "Belege dieser Art in der Offene Posten-Liste anzeigen\\n(bspw. Rechnungen, Korrekturrechnungen, aber keine Angebote)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoiceTypesSetupDialog.java:866"
+    ]
+  },
+  "Belegpositionen als Vorlagen": {
+    "raw": [
+      "Belegpositionen als Vorlagen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePositionTemplatesSetupDialog.java:780"
+    ]
+  },
+  "Benachrichtigung senden wenn": {
+    "raw": [
+      "Benachrichtigung senden wenn"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1190"
+    ]
+  },
+  "Benachrichtigungen": {
+    "raw": [
+      "Benachrichtigungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1261"
+    ]
+  },
+  "Bericht speichern": {
+    "raw": [
+      "Bericht speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\MailingStatusPanel.java:950"
+    ]
+  },
+  "Bestehende Adresse hinzufügen": {
+    "raw": [
+      "Bestehende Adresse hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.java:826"
+    ]
+  },
+  "Beteiligte auswählen": {
+    "raw": [
+      "Beteiligte auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.java:807"
+    ]
+  },
+  "Beteiligte vervollständigen": {
+    "raw": [
+      "Beteiligte vervollständigen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\CreateAddressDetailsStep.java:853"
+    ]
+  },
+  "Beteiligte-Akte": {
+    "raw": [
+      "Beteiligte-Akte"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.java:889"
+    ]
+  },
+  "Beteiligte:": {
+    "raw": [
+      "Beteiligte:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.java:816"
+    ]
+  },
+  "Beteiligten entfernen": {
+    "raw": [
+      "Beteiligten entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\PartyPanelRenderer.java:919"
+    ]
+  },
+  "Beteiligten übernehmen": {
+    "raw": [
+      "Beteiligten übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.java:818"
+    ]
+  },
+  "Briefkopf & Vorlage": {
+    "raw": [
+      "Briefkopf & Vorlage"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.java:1319",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressDocumentFromTemplateDialog.java:1046"
+    ]
+  },
+  "Buchung bearbeiten": {
+    "raw": [
+      "Buchung bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3593"
+    ]
+  },
+  "Buchung im Aktenkonto": {
+    "raw": [
+      "Buchung im Aktenkonto"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseAccountEntryDialog.java:724"
+    ]
+  },
+  "Buchung im Aktenkonto erstellen": {
+    "raw": [
+      "Buchung im Aktenkonto erstellen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.java:913"
+    ]
+  },
+  "Buchung löschen": {
+    "raw": [
+      "Buchung löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3601"
+    ]
+  },
+  "Das Dokument ist zu groß für eine Vorschau.": {
+    "raw": [
+      "Das Dokument ist zu groß für eine Vorschau."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\DocumentPreviewTooLarge.java:717"
+    ]
+  },
+  "Dateien zur Akte speichern": {
+    "raw": [
+      "Dateien zur Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1036"
+    ]
+  },
+  "Dateiname ohne Verzeichnis und Erweiterung:": {
+    "raw": [
+      "Dateiname ohne Verzeichnis und Erweiterung:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\NewTemplateDialog.java:761"
+    ]
+  },
+  "Daten aus Kanzleiprofil übernehmen": {
+    "raw": [
+      "Daten aus Kanzleiprofil übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.java:1117"
+    ]
+  },
+  "Daten exportieren": {
+    "raw": [
+      "Daten exportieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\reporting\\DynamicTablePanel.java:840"
+    ]
+  },
+  "Datumsauswahl": {
+    "raw": [
+      "Datumsauswahl"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\components\\MultiCalDialog.java:809"
+    ]
+  },
+  "Deckblatt für Handakte drucken": {
+    "raw": [
+      "Deckblatt für Handakte drucken"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4450"
+    ]
+  },
+  "Der hier eingegebene Wert wird den Vorlagenplatzhaltern in diesem Blatt vorangestellt. In der Regel kann die Voreinstellung ohne Änderung übernommen werden.": {
+    "raw": [
+      "Der hier eingegebene Wert wird den Vorlagenplatzhaltern in diesem Blatt vorangestellt. In der Regel kann die Voreinstellung ohne Änderung übernommen werden."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4184",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4179"
+    ]
+  },
+  "Die Leitweg-ID ist ein Kennzeichen einer elektronischen Rechnung zur eindeutigen Adressierung von öffentlichen Auftraggebern in Deutschland.": {
+    "raw": [
+      "Die Leitweg-ID ist ein Kennzeichen einer elektronischen Rechnung zur eindeutigen Adressierung von öffentlichen Auftraggebern in Deutschland."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2350"
+    ]
+  },
+  "Die aktuellen Daten werden aus dem besonderen elektronischen Anwaltspostfach beA heruntergeladen und importiert. Der Import wird mehrere Minuten in Anspruch nehmen. Währenddessen kann ein zweiter j-lawyer.org Client geöffnet werden, um weiterarbeiten zu können.": {
+    "raw": [
+      "Die aktuellen Daten werden aus dem besonderen elektronischen Anwaltspostfach beA heruntergeladen und importiert. Der Import wird mehrere Minuten in Anspruch nehmen. Währenddessen kann ein zweiter j-lawyer.org Client geöffnet werden, um weiterarbeiten zu können."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportCourtsFromBeaDialog.java:706"
+    ]
+  },
+  "Dokument anzeigen": {
+    "raw": [
+      "Dokument anzeigen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1837"
+    ]
+  },
+  "Dokument erzeugen": {
+    "raw": [
+      "Dokument erzeugen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1817"
+    ]
+  },
+  "Dokument lokal speichern": {
+    "raw": [
+      "Dokument lokal speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\SaveDocumentsLocallyDialog.java:725"
+    ]
+  },
+  "Dokument nach Übernahme in eine Akte aus dem Scaneingang löschen": {
+    "raw": [
+      "Dokument nach Übernahme in eine Akte aus dem Scaneingang löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.java:1735"
+    ]
+  },
+  "Dokument verschlüsseln": {
+    "raw": [
+      "Dokument verschlüsseln"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\encryption\\PDFEncryptionDialog.java:723"
+    ]
+  },
+  "Dokument zum Beleg laden": {
+    "raw": [
+      "Dokument zum Beleg laden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1829"
+    ]
+  },
+  "Dokument-Favoriten anzeigen": {
+    "raw": [
+      "Dokument-Favoriten anzeigen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4521"
+    ]
+  },
+  "Dokumente > Finanzen": {
+    "raw": [
+      "Dokumente > Finanzen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.java:830"
+    ]
+  },
+  "Dokumente > Unterordner": {
+    "raw": [
+      "Dokumente > Unterordner"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1061"
+    ]
+  },
+  "Dokumente bei Bearbeitung automatisch sperren": {
+    "raw": [
+      "Dokumente bei Bearbeitung automatisch sperren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.java:1460"
+    ]
+  },
+  "Dokumente im Suchindex:": {
+    "raw": [
+      "Dokumente im Suchindex:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SearchIndexOptionsDialog.java:730"
+    ]
+  },
+  "Dokumente in der Übersicht per Drag & Drop sortieren": {
+    "raw": [
+      "Dokumente in der Übersicht per Drag & Drop sortieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.java:804",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.java:767"
+    ]
+  },
+  "Dokumente insgesamt:": {
+    "raw": [
+      "Dokumente insgesamt:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SearchIndexOptionsDialog.java:728"
+    ]
+  },
+  "Dokumente sortieren": {
+    "raw": [
+      "Dokumente sortieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.java:767",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.java:740"
+    ]
+  },
+  "Dokumente zusammenführen": {
+    "raw": [
+      "Dokumente zusammenführen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.java:865",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfMergeStep.java:733"
+    ]
+  },
+  "Dokumentensuche": {
+    "raw": [
+      "Dokumentensuche"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.java:811"
+    ]
+  },
+  "Dokumentetikett auswählen": {
+    "raw": [
+      "Dokumentetikett auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.java:841",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1100"
+    ]
+  },
+  "Dokumentetikett:": {
+    "raw": [
+      "Dokumentetikett:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddNoteFrame.java:1210"
+    ]
+  },
+  "Dokumentmonitor": {
+    "raw": [
+      "Dokumentmonitor"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\launcher\\DocumentMonitorDialog.java:752"
+    ]
+  },
+  "Dokumentname und Icon": {
+    "raw": [
+      "Dokumentname und Icon"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\HitPanel.java:738"
+    ]
+  },
+  "Dokumentvorschau laden für Dokumente bis": {
+    "raw": [
+      "Dokumentvorschau laden für Dokumente bis"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentPreviewConfigurationDialog.java:738"
+    ]
+  },
+  "E-Mail nach Übernahme in eine Akte aus dem Posteingang löschen": {
+    "raw": [
+      "E-Mail nach Übernahme in eine Akte aus dem Posteingang löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.java:1846"
+    ]
+  },
+  "E-Mail- / beA-Vorlage": {
+    "raw": [
+      "E-Mail- / beA-Vorlage"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailTemplatesPanel.java:956"
+    ]
+  },
+  "E-Mail- und beA- Vorlagen": {
+    "raw": [
+      "E-Mail- und beA- Vorlagen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailTemplatesPanel.java:850"
+    ]
+  },
+  "E-POST freischalten / Freischaltcode zurücksetzen": {
+    "raw": [
+      "E-POST freischalten / Freischaltcode zurücksetzen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.java:1794"
+    ]
+  },
+  "E-Rechnung (HTML)": {
+    "raw": [
+      "E-Rechnung (HTML)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\XRechnungPanel.java:720",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.java:1072"
+    ]
+  },
+  "E-Rechnung (XML)": {
+    "raw": [
+      "E-Rechnung (XML)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.java:1091",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\XRechnungPanel.java:725"
+    ]
+  },
+  "Einstellungen Dokumentensuche": {
+    "raw": [
+      "Einstellungen Dokumentensuche"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SearchIndexOptionsDialog.java:710"
+    ]
+  },
+  "Einstellungen Positionsvorlage": {
+    "raw": [
+      "Einstellungen Positionsvorlage"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePositionTemplatesSetupDialog.java:876",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetPositionTemplatesSetupDialog.java:873"
+    ]
+  },
+  "Einstellungen Scannerintegration": {
+    "raw": [
+      "Einstellungen Scannerintegration"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ScanOptionsDialog.java:715"
+    ]
+  },
+  "Einstellungen anpassen": {
+    "raw": [
+      "Einstellungen anpassen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\DocumentPreviewTooLarge.java:720"
+    ]
+  },
+  "Einstellungen beA-Schnittstelle": {
+    "raw": [
+      "Einstellungen beA-Schnittstelle"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BeaConfigurationDialog.java:714"
+    ]
+  },
+  "Einstellungen des Falldatenblattes bearbeiten": {
+    "raw": [
+      "Einstellungen des Falldatenblattes bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\plugins\\form\\FormPluginEntryPanel.java:823"
+    ]
+  },
+  "Einstellungen importieren": {
+    "raw": [
+      "Einstellungen importieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportFromSheetsDialog.java:720"
+    ]
+  },
+  "Einstellungen testen": {
+    "raw": [
+      "Einstellungen testen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1166",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SystemMailboxDialog.java:805"
+    ]
+  },
+  "Einstellungen werden nur für diesen Arbeitsplatz gespeichert": {
+    "raw": [
+      "Einstellungen werden nur für diesen Arbeitsplatz gespeichert"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\VoipSoftphoneConfigurationDialog.java:786"
+    ]
+  },
+  "Einstellungen\\": {
+    "raw": [
+      "Einstellungen\\"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptV2SetupDialog.java:884"
+    ]
+  },
+  "Empfänger auswählen": {
+    "raw": [
+      "Empfänger auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\SplitPaymentEntry.java:814"
+    ]
+  },
+  "Empfänger hinzufügen": {
+    "raw": [
+      "Empfänger hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\massmail\\MassMailPanel.java:841"
+    ]
+  },
+  "Ereignis bearbeiten oder duplizieren": {
+    "raw": [
+      "Ereignis bearbeiten oder duplizieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\EditOrDuplicateEventDialog.java:902"
+    ]
+  },
+  "Erstellen eines neuen oder Zurücksetzen eines vorhandenen Passwortes.\\nSie benötigen Kundennnummer und das Mobiltelefon, \\ndas Sie bei Anmeldung bei der Deutschen Post angegeben haben.": {
+    "raw": [
+      "Erstellen eines neuen oder Zurücksetzen eines vorhandenen Passwortes.\\nSie benötigen Kundennnummer und das Mobiltelefon, \\ndas Sie bei Anmeldung bei der Deutschen Post angegeben haben."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.java:1802"
+    ]
+  },
+  "Erstellen und Öffnen": {
+    "raw": [
+      "Erstellen und Öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddDocumentFromTemplateDialog.java:1500",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressDocumentFromTemplateDialog.java:1186"
+    ]
+  },
+  "Erweitert": {
+    "raw": [
+      "Erweitert"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1607"
+    ]
+  },
+  "Erweiterung": {
+    "raw": [
+      "Erweiterung"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:978"
+    ]
+  },
+  "Erweiterung trennen durch:": {
+    "raw": [
+      "Erweiterung trennen durch:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:987"
+    ]
+  },
+  "Erweiterungsfelder trennen durch:": {
+    "raw": [
+      "Erweiterungsfelder trennen durch:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:995"
+    ]
+  },
+  "Es werden die Platzhalter des Vorlagensystems unterst\\u00fctzt.\\nAktenbezogene Platzhalter (bspw. {{AKTE_ZEICHEN}}) werden nur dann ersetzt,\\nwenn der Prompt aus einer Akte heraus verwendet wird.": {
+    "raw": [
+      "Es werden die Platzhalter des Vorlagensystems unterst\\u00fctzt.\\nAktenbezogene Platzhalter (bspw. {{AKTE_ZEICHEN}}) werden nur dann ersetzt,\\nwenn der Prompt aus einer Akte heraus verwendet wird."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptV2SetupDialog.java:504"
+    ]
+  },
+  "Es werden die Platzhalter des Vorlagensystems unterstützt.\\nAktenbezogene Platzhalter (bspw. {{AKTE_ZEICHEN}}) werden nur dann ersetzt,\\nwenn der Prompt aus einer Akte heraus verwendet wird.": {
+    "raw": [
+      "Es werden die Platzhalter des Vorlagensystems unterstützt.\\nAktenbezogene Platzhalter (bspw. {{AKTE_ZEICHEN}}) werden nur dann ersetzt,\\nwenn der Prompt aus einer Akte heraus verwendet wird."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptSetupDialog.java:891"
+    ]
+  },
+  "Etikett hinzufügen": {
+    "raw": [
+      "Etikett hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MultiValueTagConfigurationDialog.java:1303"
+    ]
+  },
+  "Export von Akten, für die Synchronisation mit der App aktiviert sind": {
+    "raw": [
+      "Export von Akten, für die Synchronisation mit der App aktiviert sind"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseExportDialog.java:82"
+    ]
+  },
+  "FTP-Ordner": {
+    "raw": [
+      "FTP-Ordner"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.java:738"
+    ]
+  },
+  "Falldaten als Dokument zur Akte speichern": {
+    "raw": [
+      "Falldaten als Dokument zur Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\plugins\\form\\FormInstancePanel.java:848"
+    ]
+  },
+  "Falldaten hinzufügen": {
+    "raw": [
+      "Falldaten hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4170"
+    ]
+  },
+  "Falldatenblatt löschen": {
+    "raw": [
+      "Falldatenblatt löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\plugins\\form\\FormInstancePanel.java:820"
+    ]
+  },
+  "Fehler beim Navigieren:": {
+    "raw": [
+      "Fehler beim Navigieren: "
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\GlobalSearchDialog.java:513"
+    ]
+  },
+  "Fehler!": {
+    "raw": [
+      "Fehler!"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentMgmtEntryPanel.java:905"
+    ]
+  },
+  "Fehlerprotokoll (Client)": {
+    "raw": [
+      "Fehlerprotokoll (Client)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\BugReportDialog.java:1040"
+    ]
+  },
+  "Fehlerprotokoll (Server)": {
+    "raw": [
+      "Fehlerprotokoll (Server)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\BugReportDialog.java:989"
+    ]
+  },
+  "Freigabe löschen (Dateien werden nicht gelöscht)": {
+    "raw": [
+      "Freigabe löschen (Dateien werden nicht gelöscht)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\ShareInfoPanel.java:865"
+    ]
+  },
+  "Generiert ein neues zufälliges Passwort": {
+    "raw": [
+      "Generiert ein neues zufälliges Passwort"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.java:939"
+    ]
+  },
+  "Gesamtzahlung: 0,00 € vom 01.01.2025": {
+    "raw": [
+      "Gesamtzahlung: 0,00 € vom 01.01.2025"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitPreviewDialog.java:132"
+    ]
+  },
+  "Gesendete Nachricht als Dokument zur Akte speichern": {
+    "raw": [
+      "Gesendete Nachricht als Dokument zur Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1699"
+    ]
+  },
+  "Girocode-Einstellungen": {
+    "raw": [
+      "Girocode-Einstellungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GirocodeConfigurationDialog.java:702"
+    ]
+  },
+  "Gruppe ... wird in diesen Akten verwendet:": {
+    "raw": [
+      "Gruppe ... wird in diesen Akten verwendet:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.java:742"
+    ]
+  },
+  "Gruppe nicht entfernen": {
+    "raw": [
+      "Gruppe nicht entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.java:749"
+    ]
+  },
+  "Gruppen aktualisieren": {
+    "raw": [
+      "Gruppen aktualisieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CasesUsingGroupDialog.java:757"
+    ]
+  },
+  "Gruppen und Berechtigungen bearbeiten": {
+    "raw": [
+      "Gruppen und Berechtigungen bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:906"
+    ]
+  },
+  "Hashtag-Filter zurücksetzen": {
+    "raw": [
+      "Hashtag-Filter zurücksetzen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.java:990"
+    ]
+  },
+  "Hinweis: temporäre Dateien": {
+    "raw": [
+      "Hinweis: temporäre Dateien"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.java:1391"
+    ]
+  },
+  "Hinweise": {
+    "raw": [
+      "Hinweise"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:1046"
+    ]
+  },
+  "Historie als HTML-Dokument zur Akte speichern": {
+    "raw": [
+      "Historie als HTML-Dokument zur Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4335"
+    ]
+  },
+  "Historie im Browser öffnen": {
+    "raw": [
+      "Historie im Browser öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4327"
+    ]
+  },
+  "Hochladen und Bearbeiten": {
+    "raw": [
+      "Hochladen und Bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.java:933"
+    ]
+  },
+  "Import von Gerichtsadressen aus dem beA:": {
+    "raw": [
+      "Import von Gerichtsadressen aus dem beA:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportCourtsFromBeaDialog.java:711"
+    ]
+  },
+  "In Teildokumente mit maximal ... Seiten aufteilen.": {
+    "raw": [
+      "In Teildokumente mit maximal ... Seiten aufteilen."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\PDFSplitDialog.java:761"
+    ]
+  },
+  "In folgenden Akten ist die Adresse in anderer Rolle geführt:": {
+    "raw": [
+      "In folgenden Akten ist die Adresse in anderer Rolle geführt:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ConflictOfInterestDialog.java:757"
+    ]
+  },
+  "Informationen per Copy & Paste-Assistent übernehmen": {
+    "raw": [
+      "Informationen per Copy & Paste-Assistent übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.java:1198",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:1898"
+    ]
+  },
+  "Justizbehörde auswählen": {
+    "raw": [
+      "Justizbehörde auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SelectLegalAuthorityDialog.java:748"
+    ]
+  },
+  "Kalendereintrag hinzufügen": {
+    "raw": [
+      "Kalendereintrag hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1169"
+    ]
+  },
+  "Karte zur Adresse im Browser öffnen": {
+    "raw": [
+      "Karte zur Adresse im Browser öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.java:1052",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.java:1042"
+    ]
+  },
+  "Keine Lust auf Betrieb, Datensicherung und Updates?": {
+    "raw": [
+      "Keine Lust auf Betrieb, Datensicherung und Updates?"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\NextcloudTeaserPanel.java:701"
+    ]
+  },
+  "Keine auswählen": {
+    "raw": [
+      "Keine auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SelectLegalAuthorityDialog.java:785",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\CaseExportDialog.java:100"
+    ]
+  },
+  "Kontoauszug importieren und buchen": {
+    "raw": [
+      "Kontoauszug importieren und buchen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.java:877"
+    ]
+  },
+  "Kopie von existierender Vorlage:": {
+    "raw": [
+      "Kopie von existierender Vorlage:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\NewTemplateDialog.java:771"
+    ]
+  },
+  "Leistungsnachweis in Dokument übertragen - Platzhalter {{ZE_TABELLE}} in einer 1x1-Tabelle einer Vorlage": {
+    "raw": [
+      "Leistungsnachweis in Dokument übertragen - Platzhalter {{ZE_TABELLE}} in einer 1x1-Tabelle einer Vorlage"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1887"
+    ]
+  },
+  "Listenetiketten bearbeiten": {
+    "raw": [
+      "Listenetiketten bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MultiValueTagConfigurationDialog.java:1287"
+    ]
+  },
+  "Lokaler Ordner": {
+    "raw": [
+      "Lokaler Ordner"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.java:754"
+    ]
+  },
+  "Mandanten-ID:": {
+    "raw": [
+      "Mandanten-ID:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1164"
+    ]
+  },
+  "Memo durch weitere Spracheingabe weiterführen": {
+    "raw": [
+      "Memo durch weitere Spracheingabe weiterführen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\SoundplayerPanel.java:840"
+    ]
+  },
+  "Menge der angezeigten Nachrichten beschränken": {
+    "raw": [
+      "Menge der angezeigten Nachrichten beschränken"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.java:1400"
+    ]
+  },
+  "Nachname, Vorname (Username)": {
+    "raw": [
+      "Nachname, Vorname (Username)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\IdentityPanel.java:729"
+    ]
+  },
+  "Nachricht": {
+    "raw": [
+      "Nachricht"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1423"
+    ]
+  },
+  "Nachricht als PDF anzeigen / drucken": {
+    "raw": [
+      "Nachricht als PDF anzeigen / drucken"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1299"
+    ]
+  },
+  "Nachricht ohne Anhänge in Akte speichern": {
+    "raw": [
+      "Nachricht ohne Anhänge in Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.java:784"
+    ]
+  },
+  "Nachricht und Anhänge werden beide separat in die Akte übernommen": {
+    "raw": [
+      "Nachricht und Anhänge werden beide separat in die Akte übernommen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.java:792"
+    ]
+  },
+  "Nachricht verfassen": {
+    "raw": [
+      "Nachricht verfassen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.java:965"
+    ]
+  },
+  "Nachricht wird nicht qualifiziert signiert": {
+    "raw": [
+      "Nachricht wird nicht qualifiziert signiert"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1836"
+    ]
+  },
+  "Nachrichten": {
+    "raw": [
+      "Nachrichten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.java:888"
+    ]
+  },
+  "Nachrichten in separatem Fenster öffnen": {
+    "raw": [
+      "Nachrichten in separatem Fenster öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.java:1000"
+    ]
+  },
+  "Nachrichten samt Anlagen nicht speichern wenn": {
+    "raw": [
+      "Nachrichten samt Anlagen nicht speichern wenn"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1418"
+    ]
+  },
+  "Nachrichten-ID:": {
+    "raw": [
+      "Nachrichten-ID:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\components\\GenericTextViewer.java:704"
+    ]
+  },
+  "Nachrichten: unerledigte Erwähnungen": {
+    "raw": [
+      "Nachrichten: unerledigte Erwähnungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.java:998"
+    ]
+  },
+  "Nachrichtenjournal erneut aus dem Postfach laden": {
+    "raw": [
+      "Nachrichtenjournal erneut aus dem Postfach laden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1485",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1439"
+    ]
+  },
+  "Name und Beschreibung speichern": {
+    "raw": [
+      "Name und Beschreibung speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetLogEntryPanel.java:979"
+    ]
+  },
+  "Neue Akten": {
+    "raw": [
+      "Neue Akten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1338"
+    ]
+  },
+  "Neues Dokument aus Vorlage erstellen und das Ergebnis dieses Dialogs übergeben. \\nDie Vorlage benötigt den Platzhalter {{INGO_TEXT}}.": {
+    "raw": [
+      "Neues Dokument aus Vorlage erstellen und das Ergebnis dieses Dialogs übergeben. \\nDie Vorlage benötigt den Platzhalter {{INGO_TEXT}}."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\SoundplayerPanel.java:822",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\assistant\\AssistantGenerateDialog.java:1108"
+    ]
+  },
+  "Notiz:": {
+    "raw": [
+      "Notiz:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddNoteFrame.java:1047"
+    ]
+  },
+  "Notizdatei.html": {
+    "raw": [
+      "Notizdatei.html"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\HtmlPanel.java:804"
+    ]
+  },
+  "OSCI-Nachrichtenansicht": {
+    "raw": [
+      "OSCI-Nachrichtenansicht"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\components\\GenericTextViewer.java:698"
+    ]
+  },
+  "Optional können für das Projekt die zu nutzenden Positionsvorlagen eingeschränkt werden, um bspw. nur bestimmte Stundensätze zuzulassen.": {
+    "raw": [
+      "Optional können für das Projekt die zu nutzenden Positionsvorlagen eingeschränkt werden, um bspw. nur bestimmte Stundensätze zuzulassen."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetDialog.java:1020"
+    ]
+  },
+  "Ordner auf diesem Gerät überwachen": {
+    "raw": [
+      "Ordner auf diesem Gerät überwachen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.java:1722"
+    ]
+  },
+  "Ordner ausblenden": {
+    "raw": [
+      "Ordner ausblenden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.java:1560"
+    ]
+  },
+  "Ordner auswählen": {
+    "raw": [
+      "Ordner auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1108",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.java:849"
+    ]
+  },
+  "Ordner einblenden": {
+    "raw": [
+      "Ordner einblenden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.java:1569"
+    ]
+  },
+  "Ordneraktionen": {
+    "raw": [
+      "Ordneraktionen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\FolderListCell.java:889"
+    ]
+  },
+  "Ordnervorlagen": {
+    "raw": [
+      "Ordnervorlagen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1166"
+    ]
+  },
+  "PDF Datei entfernen": {
+    "raw": [
+      "PDF Datei entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfPanel.java:770"
+    ]
+  },
+  "PDF anzeigen / speichern": {
+    "raw": [
+      "PDF anzeigen / speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaSignaturesVerificationDialog.java:1089"
+    ]
+  },
+  "PDF-Dokument aufteilen": {
+    "raw": [
+      "PDF-Dokument aufteilen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\PDFSplitDialog.java:745"
+    ]
+  },
+  "Papierkorb leeren und alle Dokumente endgültig löschen": {
+    "raw": [
+      "Papierkorb leeren und alle Dokumente endgültig löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentsBinDialog.java:890"
+    ]
+  },
+  "Passen Sie die Verteilung der Zahlung auf die Komponenten an:": {
+    "raw": [
+      "Passen Sie die Verteilung der Zahlung auf die Komponenten an:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitEditDialog.java:125"
+    ]
+  },
+  "Passwort per SMS senden": {
+    "raw": [
+      "Passwort per SMS senden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:3394"
+    ]
+  },
+  "Passwortschutz:": {
+    "raw": [
+      "Passwortschutz:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\cloud\\CreateCloudShare.java:936"
+    ]
+  },
+  "Platzhalter, bspw. {{MANDANT_NAME}}": {
+    "raw": [
+      "Platzhalter, bspw. {{MANDANT_NAME}}"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentNameTemplatesSetupDialog.java:904"
+    ]
+  },
+  "Position löschen": {
+    "raw": [
+      "Position löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoicePositionEntryPanel.java:855"
+    ]
+  },
+  "Positionen aus Berechnungsplugin übernehmen": {
+    "raw": [
+      "Positionen aus Berechnungsplugin übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1647"
+    ]
+  },
+  "Positionen aus Zeiterfassungsprojekten dieser Akte übernehmen": {
+    "raw": [
+      "Positionen aus Zeiterfassungsprojekten dieser Akte übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1689"
+    ]
+  },
+  "Positionsvorlage übernehmen": {
+    "raw": [
+      "Positionsvorlage übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1681"
+    ]
+  },
+  "Posteingang, Rechnung offen": {
+    "raw": [
+      "Posteingang, Rechnung offen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.java:980"
+    ]
+  },
+  "Primär zu verwendende Textverarbeitung auswählen.\\n\\nDie Einstellung ist spezifisch für dieses Gerät und den dort angemeldeten Nutzer.": {
+    "raw": [
+      "Primär zu verwendende Textverarbeitung auswählen.\\n\\nDie Einstellung ist spezifisch für dieses Gerät und den dort angemeldeten Nutzer."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\WordProcessorConfigurationDialog.java:740"
+    ]
+  },
+  "Prompt aus Datei importieren": {
+    "raw": [
+      "Prompt aus Datei importieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptV2SetupDialog.java:441"
+    ]
+  },
+  "Prüfung auf mögliche Terminkonflikte": {
+    "raw": [
+      "Prüfung auf mögliche Terminkonflikte"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ConflictingEventsDialog.java:727"
+    ]
+  },
+  "Rechnung als bezahlt markieren": {
+    "raw": [
+      "Rechnung als bezahlt markieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.java:910"
+    ]
+  },
+  "Rechnungsdokument": {
+    "raw": [
+      "Rechnungsdokument"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1853"
+    ]
+  },
+  "Rechnungsnummer bei Rechnungserstellung manuell editierbar machen": {
+    "raw": [
+      "Rechnungsnummer bei Rechnungserstellung manuell editierbar machen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentNameTemplatesSetupDialog.java:880",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.java:913"
+    ]
+  },
+  "Rechnungssumme:": {
+    "raw": [
+      "Rechnungssumme:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1995"
+    ]
+  },
+  "Registergericht:": {
+    "raw": [
+      "Registergericht:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2297"
+    ]
+  },
+  "Reihenfolge der Dokumente umkehren": {
+    "raw": [
+      "Reihenfolge der Dokumente umkehren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostPdfOrderingStep.java:776",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfOrderingStep.java:814"
+    ]
+  },
+  "Report ist nur mit erweiterten Rechten ausführbar": {
+    "raw": [
+      "Report ist nur mit erweiterten Rechten ausführbar"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\reporting\\ReportEntryPanel.java:784"
+    ]
+  },
+  "Route zur Adresse im Browser öffnen": {
+    "raw": [
+      "Route zur Adresse im Browser öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.java:1077",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvolvedPartyEntryPanel.java:1067"
+    ]
+  },
+  "Rückfrage mit Auswahl": {
+    "raw": [
+      "Rückfrage mit Auswahl"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetParallelConfigurationDialog.java:741"
+    ]
+  },
+  "SFTP(SSH)-Ordner": {
+    "raw": [
+      "SFTP(SSH)-Ordner"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.java:746"
+    ]
+  },
+  "SMTP-Benutzer / Login:": {
+    "raw": [
+      "SMTP-Benutzer / Login:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SystemMailboxDialog.java:795"
+    ]
+  },
+  "Sicherheitseinstellungen": {
+    "raw": [
+      "Sicherheitseinstellungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\SecurityConfigurationDialog.java:713"
+    ]
+  },
+  "Sincronizar com Calendário / Prazos Oficiais do j-lawyer (Frist / Respite)": {
+    "raw": [
+      "Sincronizar com Calendário / Prazos Oficiais do j-lawyer (Frist / Respite)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\workflow\\TaskEditDialog.java:119"
+    ]
+  },
+  "Sofern ein Kalender mit einer Nextcloud synchronisiert wird, geschieht dies automatisch.\\nEine zusätzliche Synchronisation in Intervallen ist nur in Ausnahmefällen sinnvoll, bspw. \\nwenn die Nextcloud nicht durchgehend erreichbar ist.\\nAuf Geräte mit iOS / macOS kann die Intervallsynchronisation zur doppelten Anzeige von\\nTerminen in den Kalender-Apps führen.": {
+    "raw": [
+      "Sofern ein Kalender mit einer Nextcloud synchronisiert wird, geschieht dies automatisch.\\nEine zusätzliche Synchronisation in Intervallen ist nur in Ausnahmefällen sinnvoll, bspw. \\nwenn die Nextcloud nicht durchgehend erreichbar ist.\\nAuf Geräte mit iOS / macOS kann die Intervallsynchronisation zur doppelten Anzeige von\\nTerminen in den Kalender-Apps führen."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.java:851"
+    ]
+  },
+  "Speichern aktivieren / deaktivieren": {
+    "raw": [
+      "Speichern aktivieren / deaktivieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveEntry.java:797"
+    ]
+  },
+  "Standardakte:": {
+    "raw": [
+      "Standardakte:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1439"
+    ]
+  },
+  "Standardprogramme werden durch Doppelklick auf ein Dokument geöffnet,\\nNicht-Standardprogramme sind über das Kontextmenü des Dokuments aufrufbar.": {
+    "raw": [
+      "Standardprogramme werden durch Doppelklick auf ein Dokument geöffnet,\\nNicht-Standardprogramme sind über das Kontextmenü des Dokuments aufrufbar."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CustomLauncherOptionsDialog.java:879"
+    ]
+  },
+  "Standardschriftart für formatierte E-Mails und Notizen:": {
+    "raw": [
+      "Standardschriftart für formatierte E-Mails und Notizen:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1340"
+    ]
+  },
+  "Start der Datensicherung durch Passworteingabe bestätigen:": {
+    "raw": [
+      "Start der Datensicherung durch Passworteingabe bestätigen: "
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\RequestPasswordOptionPanel.java:716"
+    ]
+  },
+  "Statuseintrag löschen": {
+    "raw": [
+      "Statuseintrag löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\MailingStatusPanel.java:959"
+    ]
+  },
+  "Steuern / Bankverbindung:": {
+    "raw": [
+      "Steuern / Bankverbindung:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ProfileDialog.java:822"
+    ]
+  },
+  "Struktur löschen": {
+    "raw": [
+      "Struktur löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentFolderTemplatesDialog.java:797"
+    ]
+  },
+  "Suchen...": {
+    "raw": [
+      "Suchen..."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\GlobalSearchDialog.java:98"
+    ]
+  },
+  "Tabelleneinstellungen": {
+    "raw": [
+      "Tabelleneinstellungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MappingTablesDialog.java:878"
+    ]
+  },
+  "Textnachrichten / SMS": {
+    "raw": [
+      "Textnachrichten / SMS"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\SendSmsDialog.java:834",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\PlaceCallDialog.java:818",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\SendFaxDialog.java:850"
+    ]
+  },
+  "Textverarbeitung auswählen": {
+    "raw": [
+      "Textverarbeitung auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\WordProcessorConfigurationDialog.java:718"
+    ]
+  },
+  "Titel:": {
+    "raw": [
+      "Titel:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.java:860"
+    ]
+  },
+  "Treffertitel": {
+    "raw": [
+      "Treffertitel"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\research\\urteilegesetze\\UgHitPanel.java:768"
+    ]
+  },
+  "Typ oder Nummernkreis bearbeiten": {
+    "raw": [
+      "Typ oder Nummernkreis bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1386"
+    ]
+  },
+  "Unterverzeichnis des Webservers, ohne führende oder abschließende /": {
+    "raw": [
+      "Unterverzeichnis des Webservers, ohne führende oder abschließende /"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\NextcloudConnectionPanel.java:769"
+    ]
+  },
+  "Verschlüsselungspasswort:": {
+    "raw": [
+      "Verschlüsselungspasswort:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.java:872"
+    ]
+  },
+  "Voice-over-IP - Einstellungen": {
+    "raw": [
+      "Voice-over-IP - Einstellungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\VoipSipgateConfigurationDialog.java:696",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\VoipSoftphoneConfigurationDialog.java:737"
+    ]
+  },
+  "Vorlage herunterladen": {
+    "raw": [
+      "Vorlage herunterladen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ImportFromSheetsDialog.java:753"
+    ]
+  },
+  "Vorlagedaten": {
+    "raw": [
+      "Vorlagedaten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1885",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2658"
+    ]
+  },
+  "Vorlagen - Konfiguration": {
+    "raw": [
+      "Vorlagen - Konfiguration"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.java:876"
+    ]
+  },
+  "Vorlagen für Wiedervorlagen, Fristen und Termine": {
+    "raw": [
+      "Vorlagen für Wiedervorlagen, Fristen und Termine"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.java:770"
+    ]
+  },
+  "Vorlagen suchen": {
+    "raw": [
+      "Vorlagen suchen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2670"
+    ]
+  },
+  "Vorlagenordner wählen": {
+    "raw": [
+      "Vorlagenordner wählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\SelectTemplateFolderDialog.java:766"
+    ]
+  },
+  "Vorname(n):": {
+    "raw": [
+      "Vorname(n):"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2026"
+    ]
+  },
+  "Vorschau laden": {
+    "raw": [
+      "Vorschau laden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\DocumentPreviewTooLarge.java:728"
+    ]
+  },
+  "Vorschau:": {
+    "raw": [
+      "Vorschau:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CaseNumberingConfigurationDialog.java:835",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.java:927"
+    ]
+  },
+  "Warnungen aktivieren": {
+    "raw": [
+      "Warnungen aktivieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.java:1154"
+    ]
+  },
+  "Warnungen per E-Mail": {
+    "raw": [
+      "Warnungen per E-Mail"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.java:1152"
+    ]
+  },
+  "Weiter >": {
+    "raw": [
+      "Weiter >"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\WizardMainPanel.java:792"
+    ]
+  },
+  "Weitere Beteiligte aus Dokument extrahieren": {
+    "raw": [
+      "Weitere Beteiligte aus Dokument extrahieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SelectAddressStep.java:836"
+    ]
+  },
+  "Wert zur Auswahl hinzufügen": {
+    "raw": [
+      "Wert zur Auswahl hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MultiValueTagConfigurationDialog.java:1349"
+    ]
+  },
+  "Wiedervorlagen, Fristen und Termine": {
+    "raw": [
+      "Wiedervorlagen, Fristen und Termine"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3989"
+    ]
+  },
+  "Wiedervorlagen, Fristen und Termine suchen": {
+    "raw": [
+      "Wiedervorlagen, Fristen und Termine suchen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.java:1070"
+    ]
+  },
+  "Windows- / SMB-Freigabeordner": {
+    "raw": [
+      "Windows- / SMB-Freigabeordner"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetExternLocationDialog.java:728"
+    ]
+  },
+  "XJustiz-Viewer öffnen": {
+    "raw": [
+      "XJustiz-Viewer öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\XjustizPanel.java:730"
+    ]
+  },
+  "Zahlung als ausgeführt markieren": {
+    "raw": [
+      "Zahlung als ausgeführt markieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ImportBankStatementFrame.java:1010"
+    ]
+  },
+  "Zahlung(en)": {
+    "raw": [
+      "Zahlung(en)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\SplitPaymentDialog.java:823"
+    ]
+  },
+  "Zahlungen aus Aktenkontobuchung erstellen": {
+    "raw": [
+      "Zahlungen aus Aktenkontobuchung erstellen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\SplitPaymentDialog.java:791"
+    ]
+  },
+  "Zahlungen für Import im Banking bereitstellen": {
+    "raw": [
+      "Zahlungen für Import im Banking bereitstellen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ManagePaymentsFrame.java:781"
+    ]
+  },
+  "Zahlungen vor Export prüfen": {
+    "raw": [
+      "Zahlungen vor Export prüfen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\finance\\ManagePaymentsFrame.java:805"
+    ]
+  },
+  "Zahlungen:": {
+    "raw": [
+      "Zahlungen:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3826"
+    ]
+  },
+  "Zahlungseingang:": {
+    "raw": [
+      "Zahlungseingang:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1993",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.java:867"
+    ]
+  },
+  "Zahlungsverteilung - Vorschau": {
+    "raw": [
+      "Zahlungsverteilung - Vorschau"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitPreviewDialog.java:127"
+    ]
+  },
+  "Zahlungsverteilung manuell anpassen": {
+    "raw": [
+      "Zahlungsverteilung manuell anpassen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentSplitEditDialog.java:121"
+    ]
+  },
+  "Zahlungsziel:": {
+    "raw": [
+      "Zahlungsziel:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.java:960"
+    ]
+  },
+  "Zeichen des Beteiligten": {
+    "raw": [
+      "Zeichen des Beteiligten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\wizard\\PartyPanelRenderer.java:916"
+    ]
+  },
+  "Zeiterfassungspositionen als Vorlagen": {
+    "raw": [
+      "Zeiterfassungspositionen als Vorlagen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetPositionTemplatesSetupDialog.java:777"
+    ]
+  },
+  "Zielakte markieren:": {
+    "raw": [
+      "Zielakte markieren:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2473",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1824"
+    ]
+  },
+  "Zielordner auf dem Server:": {
+    "raw": [
+      "Zielordner auf dem Server:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.java:1138"
+    ]
+  },
+  "Zielordner:": {
+    "raw": [
+      "Zielordner:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.java:1057"
+    ]
+  },
+  "Zum Suchen <Enter> drücken": {
+    "raw": [
+      "Zum Suchen <Enter> drücken"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.java:961"
+    ]
+  },
+  "Zurücksetzen": {
+    "raw": [
+      "Zurücksetzen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.java:948",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopGridLayoutDialog.java:155"
+    ]
+  },
+  "\\u00dcbernehmen": {
+    "raw": [
+      "\\u00dcbernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\AssistantPromptV2SetupDialog.java:491"
+    ]
+  },
+  "aktentag": {
+    "raw": [
+      "aktentag"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1089"
+    ]
+  },
+  "alle Ordner ab Ebene 1 ausklappen": {
+    "raw": [
+      "alle Ordner ab Ebene 1 ausklappen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1194"
+    ]
+  },
+  "alle Ordner ab Ebene 1 einklappen": {
+    "raw": [
+      "alle Ordner ab Ebene 1 einklappen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1204"
+    ]
+  },
+  "alle Positionen auswählen": {
+    "raw": [
+      "alle Positionen auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetAllowedPositionsDialog.java:821"
+    ]
+  },
+  "alle Positionen löschen": {
+    "raw": [
+      "alle Positionen löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetDialog.java:956",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1655"
+    ]
+  },
+  "alle Seiten des Dokuments um 90° nach links drehen": {
+    "raw": [
+      "alle Seiten des Dokuments um 90° nach links drehen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.java:1019"
+    ]
+  },
+  "alle Seiten des Dokuments um 90° nach rechts drehen": {
+    "raw": [
+      "alle Seiten des Dokuments um 90° nach rechts drehen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\viewer\\PdfImageScrollingPanel.java:1011"
+    ]
+  },
+  "alle auswählen": {
+    "raw": [
+      "alle auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1303",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1174",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetBillingDialog.java:911"
+    ]
+  },
+  "alle selektierten Dokumente in ein PDF exportieren": {
+    "raw": [
+      "alle selektierten Dokumente in ein PDF exportieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2666",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1341"
+    ]
+  },
+  "als Dokument speichern": {
+    "raw": [
+      "als Dokument speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1698",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2470"
+    ]
+  },
+  "als PDF lokal speichern": {
+    "raw": [
+      "als PDF lokal speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2685"
+    ]
+  },
+  "als PDF zum Kontakt speichern": {
+    "raw": [
+      "als PDF zum Kontakt speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:1786"
+    ]
+  },
+  "als Vorlage speichern": {
+    "raw": [
+      "als Vorlage speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2844"
+    ]
+  },
+  "archivierte Akte": {
+    "raw": [
+      "archivierte Akte"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2891"
+    ]
+  },
+  "auf Terminkonflikte prüfen": {
+    "raw": [
+      "auf Terminkonflikte prüfen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.java:854"
+    ]
+  },
+  "auf einen späteren Termin verschieben": {
+    "raw": [
+      "auf einen späteren Termin verschieben"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\ReviewDueEntryPanelTransparent.java:978"
+    ]
+  },
+  "aus Serie entfernen": {
+    "raw": [
+      "aus Serie entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\massmail\\MassMailPanel.java:771"
+    ]
+  },
+  "aus dem Scaneingang löschen": {
+    "raw": [
+      "aus dem Scaneingang löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\EditScanPanel.java:785"
+    ]
+  },
+  "aus der Akte": {
+    "raw": [
+      "aus der Akte"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\SelectAttachmentDialog.java:1026"
+    ]
+  },
+  "aus der App entfernen": {
+    "raw": [
+      "aus der App entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:896"
+    ]
+  },
+  "ausgehende Zahlungen": {
+    "raw": [
+      "ausgehende Zahlungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3851"
+    ]
+  },
+  "ausgehende Zahlungen vorbereiten und über \\": {
+    "raw": [
+      "ausgehende Zahlungen vorbereiten und über \\"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3852"
+    ]
+  },
+  "automatisch löschen nach ... Tagen:": {
+    "raw": [
+      "automatisch löschen nach ... Tagen:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentsBinDialog.java:908"
+    ]
+  },
+  "beA-Nachricht senden": {
+    "raw": [
+      "beA-Nachricht senden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2719"
+    ]
+  },
+  "bei Angabe eines Passwortes wird die Datensicherung verschlüsselt und passwortgeschützt": {
+    "raw": [
+      "bei Angabe eines Passwortes wird die Datensicherung verschlüsselt und passwortgeschützt"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BackupConfigurationDialog.java:875"
+    ]
+  },
+  "bei Treffer keine weitere Regel anwenden": {
+    "raw": [
+      "bei Treffer keine weitere Regel anwenden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TagRulesDialog.java:906"
+    ]
+  },
+  "bei erfolgreicher Datensicherung (Zusammenfassung)": {
+    "raw": [
+      "bei erfolgreicher Datensicherung (Zusammenfassung)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\ServerMonitoringDialog.java:1158"
+    ]
+  },
+  "benutzerdefinierte Konfigurationsparameter:": {
+    "raw": [
+      "benutzerdefinierte Konfigurationsparameter:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1541"
+    ]
+  },
+  "bestehenden Eintrag bearbeiten": {
+    "raw": [
+      "bestehenden Eintrag bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetLogEntryPanel.java:998"
+    ]
+  },
+  "bestätigen": {
+    "raw": [
+      "bestätigen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\MailingStatusPanel.java:958"
+    ]
+  },
+  "bestätigen:": {
+    "raw": [
+      "bestätigen:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\GetPasswordDialog.java:731"
+    ]
+  },
+  "bspw. offene Posten, Aktenhistorien": {
+    "raw": [
+      "bspw. offene Posten, Aktenhistorien"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.java:1434",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserAdministrationDialog.java:1465"
+    ]
+  },
+  "deaktiviert den lokalen Eingangsordner": {
+    "raw": [
+      "deaktiviert den lokalen Eingangsordner"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.java:1699"
+    ]
+  },
+  "drucken (Standarddrucker)": {
+    "raw": [
+      "drucken (Standarddrucker)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2809"
+    ]
+  },
+  "eEB zurückweisen": {
+    "raw": [
+      "eEB zurückweisen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1339"
+    ]
+  },
+  "eine Rechnung in einer meiner Akten fällig ist": {
+    "raw": [
+      "eine Rechnung in einer meiner Akten fällig ist"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1199"
+    ]
+  },
+  "eine von mir gesendete Sofortnachricht als erledigt markiert wurde": {
+    "raw": [
+      "eine von mir gesendete Sofortnachricht als erledigt markiert wurde"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1209"
+    ]
+  },
+  "einer meiner Termine in Kürze beginnt": {
+    "raw": [
+      "einer meiner Termine in Kürze beginnt"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1196"
+    ]
+  },
+  "eingebettete Anlagen nicht speichern (bspw. Logo in Signatur)": {
+    "raw": [
+      "eingebettete Anlagen nicht speichern (bspw. Logo in Signatur)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1422"
+    ]
+  },
+  "eingehende Nachrichten automatisch zuordnen": {
+    "raw": [
+      "eingehende Nachrichten automatisch zuordnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\MailboxSetupDialog.java:1393"
+    ]
+  },
+  "elektronische Rechnung": {
+    "raw": [
+      "elektronische Rechnung"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2345"
+    ]
+  },
+  "elektronisches Empfangsbekenntnis zurückweisen": {
+    "raw": [
+      "elektronisches Empfangsbekenntnis zurückweisen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1340"
+    ]
+  },
+  "erledigte Termine aus Nextcloud löschen": {
+    "raw": [
+      "erledigte Termine aus Nextcloud löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarSetupDialog.java:962"
+    ]
+  },
+  "erstellte Rechnungen und Belege": {
+    "raw": [
+      "erstellte Rechnungen und Belege"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3517"
+    ]
+  },
+  "führt eine Texterkennung für die selektieren Dokumente durch": {
+    "raw": [
+      "führt eine Texterkennung für die selektieren Dokumente durch"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2656"
+    ]
+  },
+  "für alle zum Speichern markierten Dateien übernehmen": {
+    "raw": [
+      "für alle zum Speichern markierten Dateien übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1161",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1053",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\BulkSaveDialog.java:1064"
+    ]
+  },
+  "für nicht vorhandene Spalten bitte \\": {
+    "raw": [
+      "für nicht vorhandene Spalten bitte \\"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\BankstatementCsvConfigDialog.java:941"
+    ]
+  },
+  "gesamte Akte als HTML exportieren": {
+    "raw": [
+      "gesamte Akte als HTML exportieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4467"
+    ]
+  },
+  "gewählte Adresse öffnen": {
+    "raw": [
+      "gewählte Adresse öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickAddressSearchPanel.java:823"
+    ]
+  },
+  "gewählte Adressen löschen": {
+    "raw": [
+      "gewählte Adressen löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickAddressSearchPanel.java:843"
+    ]
+  },
+  "gewählte Akte bearbeiten": {
+    "raw": [
+      "gewählte Akte bearbeiten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.java:757",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsOverviewPanel.java:755",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsFindPanel.java:822"
+    ]
+  },
+  "gewählte Akten aus der App entfernen": {
+    "raw": [
+      "gewählte Akten aus der App entfernen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:897"
+    ]
+  },
+  "gewählte Akten duplizieren": {
+    "raw": [
+      "gewählte Akten duplizieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:857"
+    ]
+  },
+  "gewählte Akten in der App bereitstellen": {
+    "raw": [
+      "gewählte Akten in der App bereitstellen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:887"
+    ]
+  },
+  "gewählte Akten löschen": {
+    "raw": [
+      "gewählte Akten löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:877",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:847"
+    ]
+  },
+  "gewählte Akten und deren Falldaten duplizieren": {
+    "raw": [
+      "gewählte Akten und deren Falldaten duplizieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:867"
+    ]
+  },
+  "gewünschtes neues Passwort": {
+    "raw": [
+      "gewünschtes neues Passwort"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.java:732"
+    ]
+  },
+  "hinzufügen als:": {
+    "raw": [
+      "hinzufügen als:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\AddAddressSearchDialog.java:884"
+    ]
+  },
+  "ich in einer Sofortnachricht erwähnt wurde": {
+    "raw": [
+      "ich in einer Sofortnachricht erwähnt wurde"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1192"
+    ]
+  },
+  "im externen Mailprogramm öffnen": {
+    "raw": [
+      "im externen Mailprogramm öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2771"
+    ]
+  },
+  "in Akte speichern (Nachricht und Anhänge separat)...": {
+    "raw": [
+      "in Akte speichern (Nachricht und Anhänge separat)..."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.java:1628"
+    ]
+  },
+  "in Akte...": {
+    "raw": [
+      "in Akte..."
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1115",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\MailContentUI.java:1883"
+    ]
+  },
+  "in Ordner verschieben": {
+    "raw": [
+      "in Ordner verschieben"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1295"
+    ]
+  },
+  "in Rechnung übernehmen": {
+    "raw": [
+      "in Rechnung übernehmen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetBillingDialog.java:867"
+    ]
+  },
+  "in dieser Akte duplizieren": {
+    "raw": [
+      "in dieser Akte duplizieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\PaymentEntryPanel.java:828",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.java:842"
+    ]
+  },
+  "in externem Mailprogramm öffnen": {
+    "raw": [
+      "in externem Mailprogramm öffnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.java:1637"
+    ]
+  },
+  "keine auswählen": {
+    "raw": [
+      "keine auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\TimesheetBillingDialog.java:919"
+    ]
+  },
+  "kompakte Darstellung ein/aus": {
+    "raw": [
+      "kompakte Darstellung ein/aus"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.java:1697"
+    ]
+  },
+  "leere Position hinzufügen": {
+    "raw": [
+      "leere Position hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1639"
+    ]
+  },
+  "lokalen Eingangsordner auswählen": {
+    "raw": [
+      "lokalen Eingangsordner auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.java:1690"
+    ]
+  },
+  "maximale Anzahl Dokumente im Ergebnis": {
+    "raw": [
+      "maximale Anzahl Dokumente im Ergebnis"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\DocumentSearchPanel.java:830"
+    ]
+  },
+  "nach Akten-Etiketten filtern": {
+    "raw": [
+      "nach Akten-Etiketten filtern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:915"
+    ]
+  },
+  "nach Dokument-Etiketten filtern": {
+    "raw": [
+      "nach Dokument-Etiketten filtern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\QuickArchiveFileSearchPanel.java:979"
+    ]
+  },
+  "nach Ordnernamen sortieren": {
+    "raw": [
+      "nach Ordnernamen sortieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\CaseFolderPanel.java:1286"
+    ]
+  },
+  "nach Zuordnung löschen": {
+    "raw": [
+      "nach Zuordnung löschen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\EmailInboxPanel.java:1845",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.java:1734"
+    ]
+  },
+  "neue Akte aus diesem Scan anlegen": {
+    "raw": [
+      "neue Akte aus diesem Scan anlegen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\CreateNewCaseFromScanPanel.java:709"
+    ]
+  },
+  "neue Berechnung": {
+    "raw": [
+      "neue Berechnung"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3942"
+    ]
+  },
+  "neue Notiz hinzufügen": {
+    "raw": [
+      "neue Notiz hinzufügen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4513"
+    ]
+  },
+  "neue Ordnerstruktur anlegen": {
+    "raw": [
+      "neue Ordnerstruktur anlegen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentFolderTemplatesDialog.java:789"
+    ]
+  },
+  "neue Zahlung aus Buchung im Aktenkonto": {
+    "raw": [
+      "neue Zahlung aus Buchung im Aktenkonto"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:3766"
+    ]
+  },
+  "neue ausgehende Zahlung aus Beleg": {
+    "raw": [
+      "neue ausgehende Zahlung aus Beleg"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceEntryPanel.java:898"
+    ]
+  },
+  "neue beA-Nachricht": {
+    "raw": [
+      "neue beA-Nachricht"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1467"
+    ]
+  },
+  "neuer Dateiname:": {
+    "raw": [
+      "neuer Dateiname:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\NewFilenameOptionPanel.java:922"
+    ]
+  },
+  "neuer Dokumentname:": {
+    "raw": [
+      "neuer Dokumentname:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\NewDocumentNameDialog.java:821"
+    ]
+  },
+  "neuer Kontakt (Schnellerfassung)": {
+    "raw": [
+      "neuer Kontakt (Schnellerfassung)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\QuickCreateAddressDialog.java:829"
+    ]
+  },
+  "neues Ereignis": {
+    "raw": [
+      "neues Ereignis"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\de\\costache\\calendar\\NewEventEntryDialog.java:746"
+    ]
+  },
+  "neues Fax senden": {
+    "raw": [
+      "neues Fax senden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2568",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\SendFaxDialog.java:809"
+    ]
+  },
+  "neues Passwort generieren": {
+    "raw": [
+      "neues Passwort generieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\encryption\\PDFEncryptionDialog.java:754"
+    ]
+  },
+  "neues Passwort:": {
+    "raw": [
+      "neues Passwort:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\voip\\EpostSetPasswordDialog.java:730"
+    ]
+  },
+  "neues Serienschreiben": {
+    "raw": [
+      "neues Serienschreiben"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\massmail\\MassMailPanel.java:823"
+    ]
+  },
+  "nicht abgeschlossene Zahlungen": {
+    "raw": [
+      "nicht abgeschlossene Zahlungen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.java:1007"
+    ]
+  },
+  "nur Anhänge in Akte speichern": {
+    "raw": [
+      "nur Anhänge in Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.java:800"
+    ]
+  },
+  "nur diesen auswählen": {
+    "raw": [
+      "nur diesen auswählen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\ui\\folders\\FolderListCell.java:849"
+    ]
+  },
+  "ohne Frist": {
+    "raw": [
+      "ohne Frist"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.java:887"
+    ]
+  },
+  "ohne Wiedervorlage": {
+    "raw": [
+      "ohne Wiedervorlage"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.java:863"
+    ]
+  },
+  "ohne Wiedervorlage / Frist / Termin": {
+    "raw": [
+      "ohne Wiedervorlage / Frist / Termin"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFileReviewsMissingPanel.java:839"
+    ]
+  },
+  "parallele Zeiterfassungen in verschiedenen Akten": {
+    "raw": [
+      "parallele Zeiterfassungen in verschiedenen Akten"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\TimesheetParallelConfigurationDialog.java:723"
+    ]
+  },
+  "rechnung.pdf": {
+    "raw": [
+      "rechnung.pdf"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1856"
+    ]
+  },
+  "schließen": {
+    "raw": [
+      "schließen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchivalDialog.java:966"
+    ]
+  },
+  "setzt den aktuellen Zählerwert auf 0 zurück": {
+    "raw": [
+      "setzt den aktuellen Zählerwert auf 0 zurück"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.java:949"
+    ]
+  },
+  "speichern und später signieren/senden": {
+    "raw": [
+      " speichern und später signieren/senden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1618"
+    ]
+  },
+  "speichern:": {
+    "raw": [
+      "speichern:"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.java:883"
+    ]
+  },
+  "suchen": {
+    "raw": [
+      "suchen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2139",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2149",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\SendEmailFrame.java:2159"
+    ]
+  },
+  "suchen (Adressbuch)": {
+    "raw": [
+      "suchen (Adressbuch)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1430"
+    ]
+  },
+  "suchen (beA-Verzeichnis)": {
+    "raw": [
+      "suchen (beA-Verzeichnis)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\SendBeaMessageFrame.java:1439"
+    ]
+  },
+  "unbearbeitete Erwähnungen im Nachrichtencenter": {
+    "raw": [
+      "unbearbeitete Erwähnungen im Nachrichtencenter"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\desktop\\DesktopPanel.java:1999"
+    ]
+  },
+  "unverändert speichern": {
+    "raw": [
+      "unverändert speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ConflictingEventsDialog.java:743"
+    ]
+  },
+  "verschiebt die Nachricht nach Zuordnung in den Ordner \\": {
+    "raw": [
+      "verschiebt die Nachricht nach Zuordnung in den Ordner \\"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaInboxPanel.java:1382"
+    ]
+  },
+  "verschlüsseltes PDF exportieren": {
+    "raw": [
+      "verschlüsseltes PDF exportieren"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:2713"
+    ]
+  },
+  "vollständige Nachricht in Akte speichern": {
+    "raw": [
+      "vollständige Nachricht in Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\mail\\sidebar\\SaveToCasePanel.java:776"
+    ]
+  },
+  "vor dem Öffnen von E-Mails unbekannter Absender warnen": {
+    "raw": [
+      "vor dem Öffnen von E-Mails unbekannter Absender warnen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\UserProfileDialog.java:1264"
+    ]
+  },
+  "weitere": {
+    "raw": [
+      "weitere"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\bea\\BeaMessageContentUI.java:1280"
+    ]
+  },
+  "weitere Falldatenblätter herunterladen": {
+    "raw": [
+      "weitere Falldatenblätter herunterladen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ArchiveFilePanel.java:4189"
+    ]
+  },
+  "weitere Vornamen": {
+    "raw": [
+      "weitere Vornamen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\addresses\\AddressPanel.java:2112"
+    ]
+  },
+  "weitere Zeichen als fixe Bestandteile": {
+    "raw": [
+      "weitere Zeichen als fixe Bestandteile"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\DocumentNameTemplatesSetupDialog.java:899",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\InvoicePoolsSetupDialog.java:946"
+    ]
+  },
+  "zum Dokument wechseln": {
+    "raw": [
+      "zum Dokument wechseln"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\InvoiceDialog.java:1845"
+    ]
+  },
+  "zur Akte": {
+    "raw": [
+      "zur Akte"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\files\\ExportAsPdfMergeStep.java:878"
+    ]
+  },
+  "zur Akte laden": {
+    "raw": [
+      "zur Akte laden"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\plugins\\form\\FormFileDownloadDialog.java:747"
+    ]
+  },
+  "zur Akte speichern": {
+    "raw": [
+      "zur Akte speichern"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfAnonymizerDialog.java:933",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfPageReorderDialog.java:1049",
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\utils\\pdf\\PdfStamperDialog.java:976"
+    ]
+  },
+  "zur Akte springen (bearbeiten)": {
+    "raw": [
+      "zur Akte springen (bearbeiten)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\search\\HitPanel.java:757"
+    ]
+  },
+  "zurücksetzen": {
+    "raw": [
+      "zurücksetzen"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\editors\\documents\\ScannerPanel.java:1698"
+    ]
+  },
+  "zweiter Eintrag": {
+    "raw": [
+      "zweiter Eintrag"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.java:779"
+    ]
+  },
+  "zweiter Eintrag - bspw. für Vorfristen (optional)": {
+    "raw": [
+      "zweiter Eintrag - bspw. für Vorfristen (optional)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\configuration\\CalendarEntryTemplatesDialog.java:872"
+    ]
+  },
+  "öffentliche Nachrichten anderer Nutzer einsehen (bspw. Vertretungsfall)": {
+    "raw": [
+      "öffentliche Nachrichten anderer Nutzer einsehen (bspw. Vertretungsfall)"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\messenger\\MessagingCenterPanel.java:1010"
+    ]
+  },
+  "übermittelt das Dokument für eine Layoutprüfung an die E-POST-Schnittstelle": {
+    "raw": [
+      "übermittelt das Dokument für eine Layoutprüfung an die E-POST-Schnittstelle"
+    ],
+    "files": [
+      "j-lawyer-client\\src\\main\\java\\com\\jdimension\\jlawyer\\client\\templates\\TemplatesTreePanel.java:980"
+    ]
+  }
+}

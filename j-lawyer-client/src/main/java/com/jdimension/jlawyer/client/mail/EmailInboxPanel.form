@@ -13,7 +13,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/edit_add.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="neuer Ordner"/>
+            <Property name="text" type="java.lang.String" value="Nova pasta"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuNewFolderActionPerformed"/>
@@ -35,7 +35,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/editdelete.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ordner l&#xf6;schen"/>
+            <Property name="text" type="java.lang.String" value="Excluir pasta"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuRemoveFolderActionPerformed"/>
@@ -108,7 +108,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/find.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="in Akte speichern..."/>
+            <Property name="text" type="java.lang.String" value="Salvar no processo..."/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSearchSaveActionPerformed"/>
@@ -119,7 +119,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/find.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="in Akte speichern (ohne Anh&#xe4;nge)..."/>
+            <Property name="text" type="java.lang.String" value="Salvar no processo (sem anexos)..."/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSearchSaveNoAttachmentsActionPerformed"/>
@@ -130,7 +130,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/find.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="in Akte speichern (nur Anh&#xe4;nge)..."/>
+            <Property name="text" type="java.lang.String" value="Salvar no processo (apenas anexos)..."/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSearchSaveOnlyAttachmentsActionPerformed"/>
@@ -510,7 +510,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons32/mail_forward.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Weiterleiten"/>
+            <Property name="toolTipText" type="java.lang.String" value="Encaminhar"/>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>

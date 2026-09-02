@@ -68,7 +68,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons16/bea16.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Import: Gerichtsadressen"/>
+                <Property name="text" type="java.lang.String" value="Importar: Endereços de Tribunais"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuBeaCourtAddressImportActionPerformed"/>
@@ -79,7 +79,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/package_system.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Import / Export: Einstellungen"/>
+                <Property name="text" type="java.lang.String" value="Importar / Exportar: Configurações"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuImportFromSheetActionPerformed"/>
@@ -90,8 +90,8 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons16/webexport.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Export: Akten"/>
-                <Property name="toolTipText" type="java.lang.String" value="Exportieren von zur Synchronisation markierten Akten"/>
+                <Property name="text" type="java.lang.String" value="Exportar: Processos"/>
+                <Property name="toolTipText" type="java.lang.String" value="Exportar processos marcados para sincronização"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuExportSyncedCasesActionPerformed"/>
@@ -116,7 +116,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="mnuView">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ansicht"/>
+            <Property name="text" type="java.lang.String" value="Exibir"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="mnuFontSize">
@@ -334,7 +334,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons/agt_forum.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Beteiligtentypen"/>
+                    <Property name="text" type="java.lang.String" value="Tipos de Partes Envolvidas"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuPartyTypesActionPerformed"/>
@@ -390,7 +390,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons16/favorites.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Akten-Etiketten"/>
+                    <Property name="text" type="java.lang.String" value="Etiquetas de Processos"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuArchiveFileTagsActionPerformed"/>
@@ -401,7 +401,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons16/favorites.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Akten-Listenetiketten"/>
+                    <Property name="text" type="java.lang.String" value="Etiquetas de Listas de Processos"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuArchiveFileTagsMVActionPerformed"/>
@@ -412,7 +412,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons16/material/baseline_account_tree_black_48dp.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Dokumentordner"/>
+                    <Property name="text" type="java.lang.String" value="Pastas de Documentos"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuDocumentFolderTemplatesActionPerformed"/>
@@ -473,7 +473,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons16/kate.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Eigene Felder (Beteiligte)"/>
+                    <Property name="text" type="java.lang.String" value="Campos Personalizados (Partes Envolvidas)"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuArchiveFileCustomFieldsInvolvementsActionPerformed"/>
@@ -597,7 +597,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons/baseline_preview_black_48dp.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Dokumentenvorschau"/>
+                    <Property name="text" type="java.lang.String" value="Pré-visualização de Documentos"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuDocumentPreviewActionPerformed"/>
@@ -653,7 +653,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons/schedule.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Ereignisvorlagen"/>
+                    <Property name="text" type="java.lang.String" value="Modelos de Eventos"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuCalendarEntryTemplatesActionPerformed"/>
@@ -747,7 +747,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons/file_doc.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Belegpositionen (Vorlagen)"/>
+                    <Property name="text" type="java.lang.String" value="Modelos de Lançamento"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuInvoicePositionTemplatesActionPerformed"/>
@@ -811,7 +811,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons16/material/baseline_timer_black_48dp.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Zeiterfassungspositionen (Vorlagen)"/>
+                    <Property name="text" type="java.lang.String" value="Modelos de Registro de Horas"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuTimesheetPositionsActionPerformed"/>
@@ -959,7 +959,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons16/material/baseline_receipt_long_black_48dp.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Buchen: Kontoauszug importieren"/>
+                <Property name="text" type="java.lang.String" value="Lançamento: Importar Extrato Bancário"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuImportAccountStatementActionPerformed"/>
@@ -970,7 +970,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons16/material/credit_card_20dp_0E72B5.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Zahlungen verwalten"/>
+                <Property name="text" type="java.lang.String" value="Gerenciar Pagamentos"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuPaymentsActionPerformed"/>

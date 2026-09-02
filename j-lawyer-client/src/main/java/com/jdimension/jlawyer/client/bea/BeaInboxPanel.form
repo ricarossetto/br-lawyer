@@ -13,7 +13,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/edit_add.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="neuer Ordner"/>
+            <Property name="text" type="java.lang.String" value="Nova pasta"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuNewFolderActionPerformed"/>
@@ -24,7 +24,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/editdelete.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ordner l&#xf6;schen"/>
+            <Property name="text" type="java.lang.String" value="Excluir pasta"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuRemoveFolderActionPerformed"/>
@@ -78,7 +78,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/find.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="in Akte speichern..."/>
+            <Property name="text" type="java.lang.String" value="Salvar no processo..."/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSearchSaveActionPerformed"/>
@@ -89,7 +89,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/find.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="in Akte speichern (ohne Anh&#xe4;nge)..."/>
+            <Property name="text" type="java.lang.String" value="Salvar no processo (sem anexos)..."/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSearchSaveNoAttachmentsActionPerformed"/>
@@ -100,7 +100,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/find.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="in Akte speichern (nur Anh&#xe4;nge)..."/>
+            <Property name="text" type="java.lang.String" value="Salvar no processo (apenas anexos)..."/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSearchSaveOnlyAttachmentsActionPerformed"/>
@@ -236,7 +236,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons32/mail_post_to3.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="neue Nachricht schreiben"/>
+            <Property name="toolTipText" type="java.lang.String" value="Escrever nova mensagem"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
@@ -286,7 +286,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons32/mail_forward.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Weiterleiten"/>
+            <Property name="toolTipText" type="java.lang.String" value="Encaminhar"/>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -502,7 +502,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="in &quot;importiert&quot; verschieben"/>
-        <Property name="toolTipText" type="java.lang.String" value="verschiebt die Nachricht nach Zuordnung in den Ordner &quot;in Akte importiert&quot;"/>
+        <Property name="toolTipText" type="java.lang.String" value="Move a mensagem após vinculação para a pasta &quot;importada no processo&quot;"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkMoveToImportedActionPerformed"/>
@@ -516,7 +516,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/messagebox_warning.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Hinweis: tempor&#xe4;re Dateien"/>
+        <Property name="text" type="java.lang.String" value="Aviso: arquivos temporários"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Handcursor"/>
         </Property>
@@ -535,7 +535,7 @@
             <StringItem index="3" value="Item 4"/>
           </StringArray>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Menge der angezeigten Nachrichten beschr&#xe4;nken"/>
+        <Property name="toolTipText" type="java.lang.String" value="Limitar quantidade de mensagens exibidas"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbDownloadMailsActionPerformed"/>

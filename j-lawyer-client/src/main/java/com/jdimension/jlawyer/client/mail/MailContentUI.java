@@ -1880,7 +1880,7 @@ public class MailContentUI extends javax.swing.JPanel implements HyperlinkListen
         mnuSave.setText("Salvar");
 
         mnuSearchSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSave.setText("in Akte...");
+        mnuSearchSave.setText("No processo...");
         mnuSearchSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveActionPerformed(evt);

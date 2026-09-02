@@ -126,7 +126,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons16/baseline_select_none_black_48dp.png"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Keine ausw&#xe4;hlen"/>
+        <Property name="toolTipText" type="java.lang.String" value="Nenhum selecionado"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deselectAllButtonActionPerformed"/>

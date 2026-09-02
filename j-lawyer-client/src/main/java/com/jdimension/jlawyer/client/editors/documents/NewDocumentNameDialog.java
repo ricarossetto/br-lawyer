@@ -776,7 +776,7 @@ public class NewDocumentNameDialog extends javax.swing.JDialog {
         jTextField1 = new javax.swing.JTextField();
         lblCase = new javax.swing.JLabel();
 
-        mnuNewFolder.setText("Unterordner erstellen");
+        mnuNewFolder.setText("Criar subpasta");
         mnuNewFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuNewFolderActionPerformed(evt);
@@ -960,7 +960,7 @@ public class NewDocumentNameDialog extends javax.swing.JDialog {
                 return;
             }
 
-            Object newNameObject = JOptionPane.showInputDialog(this, "Ordnername: ", "Unterordner erstellen", JOptionPane.QUESTION_MESSAGE, null, null, "Ordner");
+            Object newNameObject = JOptionPane.showInputDialog(this, "Ordnername: ", "Criar subpasta", JOptionPane.QUESTION_MESSAGE, null, null, "Ordner");
             if (newNameObject == null || "".equals(newNameObject)) {
                 return;
             }

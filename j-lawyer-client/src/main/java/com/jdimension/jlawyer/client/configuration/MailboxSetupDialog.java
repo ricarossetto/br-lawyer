@@ -1130,7 +1130,7 @@ public class MailboxSetupDialog extends javax.swing.JDialog {
 
         jLabel14.setText("Kontentyp:");
 
-        jLabel15.setText("Passwort:");
+        jLabel15.setText("Senha:");
 
         cmbAccountType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "imap", "pop3" }));
 
@@ -1147,7 +1147,7 @@ public class MailboxSetupDialog extends javax.swing.JDialog {
 
         jLabel17.setText("Port (optional):");
 
-        jLabel16.setText("Passwort:");
+        jLabel16.setText("Senha:");
 
         chkEmailStartTls.setText("StartTLS");
 
@@ -1349,7 +1349,7 @@ public class MailboxSetupDialog extends javax.swing.JDialog {
                 .addContainerGap(150, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Verbindung", jPanel3);
+        jTabbedPane1.addTab("Conexão", jPanel3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

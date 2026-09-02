@@ -1086,7 +1086,7 @@ public class BeaSignaturesVerificationDialog extends javax.swing.JDialog {
         tabsValidation.addTab("PDF-Report", jPanel1);
 
         cmdDownloadPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/fileicons/file_type_pdf.png"))); // NOI18N
-        cmdDownloadPdf.setText("PDF anzeigen / speichern");
+        cmdDownloadPdf.setText("Visualizar / salvar PDF");
         cmdDownloadPdf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdDownloadPdfActionPerformed(evt);

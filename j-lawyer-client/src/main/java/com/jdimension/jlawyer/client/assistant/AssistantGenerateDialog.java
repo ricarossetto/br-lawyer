@@ -1104,7 +1104,7 @@ public class AssistantGenerateDialog extends javax.swing.JDialog implements Assi
         jSplitPane1.setRightComponent(jScrollPane1);
 
         cmdNewDocument.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit.png"))); // NOI18N
-        cmdNewDocument.setText("neues Dokument");
+        cmdNewDocument.setText("Novo documento");
         cmdNewDocument.setToolTipText("Neues Dokument aus Vorlage erstellen und das Ergebnis dieses Dialogs übergeben. \nDie Vorlage benötigt den Platzhalter {{INGO_TEXT}}.");
         cmdNewDocument.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

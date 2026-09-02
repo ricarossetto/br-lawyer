@@ -973,7 +973,7 @@ public class SearchAndAssignDialog extends javax.swing.JDialog implements Progre
         jScrollPane2 = new javax.swing.JScrollPane();
         treeFolders = new javax.swing.JTree();
 
-        mnuNewFolder.setText("Unterordner erstellen");
+        mnuNewFolder.setText("Criar subpasta");
         mnuNewFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuNewFolderActionPerformed(evt);
@@ -1300,7 +1300,7 @@ public class SearchAndAssignDialog extends javax.swing.JDialog implements Progre
                 return;
             }
 
-            Object newNameObject = JOptionPane.showInputDialog(this, "Ordnername: ", "Unterordner erstellen", JOptionPane.QUESTION_MESSAGE, null, null, "Ordner");
+            Object newNameObject = JOptionPane.showInputDialog(this, "Ordnername: ", "Criar subpasta", JOptionPane.QUESTION_MESSAGE, null, null, "Ordner");
             if (newNameObject == null || "".equals(newNameObject)) {
                 return;
             }

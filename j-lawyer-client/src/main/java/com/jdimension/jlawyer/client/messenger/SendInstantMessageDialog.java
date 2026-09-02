@@ -761,7 +761,7 @@ public class SendInstantMessageDialog extends javax.swing.JDialog implements New
         lblProgress = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Nachricht senden");
+        setTitle("Enviar mensagem");
 
         lblProgress.setFont(lblProgress.getFont());
         lblProgress.setText("jLabel1");

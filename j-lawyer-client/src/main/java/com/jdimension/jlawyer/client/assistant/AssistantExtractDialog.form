@@ -10,7 +10,7 @@
       <SubComponents>
         <MenuItem class="javax.swing.JMenuItem" name="mnuPromptAll">
           <Properties>
-            <Property name="text" type="java.lang.String" value="in Prompt &#xfc;bernehmen"/>
+            <Property name="text" type="java.lang.String" value="Inserir no prompt"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuPromptAllActionPerformed"/>
@@ -18,7 +18,7 @@
         </MenuItem>
         <MenuItem class="javax.swing.JMenuItem" name="mnuPromptSelection">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Auswahl in Prompt &#xfc;bernehmen"/>
+            <Property name="text" type="java.lang.String" value="Inserir seleção no prompt"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuPromptSelectionActionPerformed"/>
@@ -297,7 +297,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/agt_action_success.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xdc;bernehmen"/>
+        <Property name="text" type="java.lang.String" value="Aplicar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdProcessOutputActionPerformed"/>

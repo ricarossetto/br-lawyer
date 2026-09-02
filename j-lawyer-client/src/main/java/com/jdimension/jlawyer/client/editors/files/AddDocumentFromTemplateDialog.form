@@ -286,7 +286,7 @@
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                     <Property name="horizontalAlignment" type="int" value="4"/>
-                    <Property name="toolTipText" type="java.lang.String" value="Doppelklick um heutiges Datum zu &#xfc;bernehmen"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Duplo clique para aplicar a data de hoje"/>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
@@ -558,7 +558,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Vorlage:"/>
+                    <Property name="text" type="java.lang.String" value="Modelo:"/>
                   </Properties>
                 </Component>
                 <Container class="javax.swing.JSplitPane" name="jSplitPane1">

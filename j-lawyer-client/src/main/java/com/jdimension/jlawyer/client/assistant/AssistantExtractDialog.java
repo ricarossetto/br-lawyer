@@ -833,7 +833,7 @@ public class AssistantExtractDialog extends javax.swing.JDialog {
         tblExtractedKeys = new javax.swing.JTable();
         cmdProcessOutput = new javax.swing.JButton();
 
-        mnuPromptAll.setText("in Prompt übernehmen");
+        mnuPromptAll.setText("Inserir no prompt");
         mnuPromptAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuPromptAllActionPerformed(evt);
@@ -841,7 +841,7 @@ public class AssistantExtractDialog extends javax.swing.JDialog {
         });
         popInputText.add(mnuPromptAll);
 
-        mnuPromptSelection.setText("Auswahl in Prompt übernehmen");
+        mnuPromptSelection.setText("Inserir seleção no prompt");
         mnuPromptSelection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuPromptSelectionActionPerformed(evt);

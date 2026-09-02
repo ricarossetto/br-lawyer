@@ -1388,7 +1388,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="PLZ:"/>
+                    <Property name="text" type="java.lang.String" value="CEP:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel6">
@@ -1733,7 +1733,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons16/web.png"/>
                     </Property>
-                    <Property name="toolTipText" type="java.lang.String" value="im Browser &#xf6;ffnen"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Abrir no navegador"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdShowWebsiteActionPerformed"/>

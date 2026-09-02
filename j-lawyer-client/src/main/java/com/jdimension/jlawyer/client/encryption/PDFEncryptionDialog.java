@@ -748,7 +748,7 @@ public class PDFEncryptionDialog extends javax.swing.JDialog {
             }
         });
 
-        jLabel2.setText("Passwort:");
+        jLabel2.setText("Senha:");
 
         cmdGeneratePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/reload.png"))); // NOI18N
         cmdGeneratePassword.setToolTipText("neues Passwort generieren");

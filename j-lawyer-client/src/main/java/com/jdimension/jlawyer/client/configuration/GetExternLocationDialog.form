@@ -199,7 +199,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Passwort:"/>
+        <Property name="text" type="java.lang.String" value="Senha:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPassword">
@@ -210,7 +210,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ordner:"/>
+        <Property name="text" type="java.lang.String" value="Pasta:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtDirectory">
@@ -224,7 +224,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/agt_action_success.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xdc;bernehmen"/>
+        <Property name="text" type="java.lang.String" value="Aplicar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdAcceptActionPerformed"/>

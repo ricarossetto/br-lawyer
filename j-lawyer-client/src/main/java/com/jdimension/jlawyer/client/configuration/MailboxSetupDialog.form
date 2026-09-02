@@ -232,7 +232,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/agt_action_success.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xdc;bernehmen"/>
+        <Property name="text" type="java.lang.String" value="Aplicar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdSaveActionPerformed"/>
@@ -340,7 +340,7 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Verbindung">
-                <Property name="tabTitle" type="java.lang.String" value="Verbindung"/>
+                <Property name="tabTitle" type="java.lang.String" value="Conexão"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -587,7 +587,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel15">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Passwort:"/>
+                <Property name="text" type="java.lang.String" value="Senha:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="pwdInPassword">
@@ -642,7 +642,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel16">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Passwort:"/>
+                <Property name="text" type="java.lang.String" value="Senha:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtOutPort">

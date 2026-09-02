@@ -13,7 +13,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/folder.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#xf6;ffnen"/>
+            <Property name="text" type="java.lang.String" value="Abrir"/>
             <Property name="toolTipText" type="java.lang.String" value="gew&#xe4;hlte Akten l&#xf6;schen"/>
           </Properties>
           <Events>
@@ -274,7 +274,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons16/calc.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Liste nach LibreOffice exportieren"/>
+            <Property name="toolTipText" type="java.lang.String" value="Exportar lista para LibreOffice"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdExportActionPerformed"/>

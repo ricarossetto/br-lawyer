@@ -1007,7 +1007,7 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
         popDelete.add(mnuDelete);
 
         mnuUpdatePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/ksysv.png"))); // NOI18N
-        mnuUpdatePassword.setText("Passwort ändern");
+        mnuUpdatePassword.setText("Alterar Senha");
         mnuUpdatePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuUpdatePasswordActionPerformed(evt);
@@ -1075,7 +1075,7 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
 
         chkLawyer.setText("Nutzer ist Anwalt");
 
-        jLabel14.setText("Vorname:");
+        jLabel14.setText("Nome:");
 
         jLabel17.setText("Name:");
 
@@ -1087,7 +1087,7 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
 
         jLabel29.setText("Adresszusatz:");
 
-        jLabel30.setText("PLZ:");
+        jLabel30.setText("CEP:");
 
         jLabel31.setText("Ort:");
 
@@ -1667,7 +1667,7 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
 
         pwdBeaCertificatePassword.setEditable(false);
 
-        jLabel16.setText("Passwort:");
+        jLabel16.setText("Senha:");
 
         cmdSelectCertificate.setText("...");
         cmdSelectCertificate.setToolTipText("Zertifikat uploaden");
@@ -1783,7 +1783,7 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
         jLabel10.setText("E-POST");
 
         jLabel11.setFont(jLabel11.getFont());
-        jLabel11.setText("Passwort:");
+        jLabel11.setText("Senha:");
 
         jLabel12.setFont(jLabel12.getFont());
         jLabel12.setText("Secret:");
@@ -2257,12 +2257,12 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
     private String getNewPassword() {
         boolean changed = false;
 
-        Object newPwd = JOptionPane.showInputDialog(this, "neues Passwort: ", "Passwort ändern", JOptionPane.QUESTION_MESSAGE, null, null, "");
+        Object newPwd = JOptionPane.showInputDialog(this, "neues Passwort: ", "Alterar Senha", JOptionPane.QUESTION_MESSAGE, null, null, "");
         if (newPwd == null || "".equals(newPwd)) {
             // user cancelled
         } else {
             // confirm
-            Object confirmPwd = JOptionPane.showInputDialog(this, "Passwort bestätigen: ", "Passwort ändern", JOptionPane.QUESTION_MESSAGE, null, null, "");
+            Object confirmPwd = JOptionPane.showInputDialog(this, "Passwort bestätigen: ", "Alterar Senha", JOptionPane.QUESTION_MESSAGE, null, null, "");
             if (confirmPwd == null || "".equals(confirmPwd)) {
                 // cancelled
             } else {
@@ -2918,7 +2918,7 @@ public class UserAdministrationDialog extends javax.swing.JDialog {
             String principalId = ((AppUserBean) o).getPrincipalId();
 
             if (principalId.equals(UserSettings.getInstance().getCurrentUser().getPrincipalId())) {
-                int response = JOptionPane.showConfirmDialog(this, "Nach Passwortänderung muss die Anwendung neu gestartet werden. Stellen Sie sicher dass alle Dokumente / Akten geschlossen sind. Fortfahren?", "Passwort ändern", JOptionPane.YES_NO_OPTION);
+                int response = JOptionPane.showConfirmDialog(this, "Nach Passwortänderung muss die Anwendung neu gestartet werden. Stellen Sie sicher dass alle Dokumente / Akten geschlossen sind. Fortfahren?", "Alterar Senha", JOptionPane.YES_NO_OPTION);
                 if (response == JOptionPane.NO_OPTION) {
                     return;
                 }

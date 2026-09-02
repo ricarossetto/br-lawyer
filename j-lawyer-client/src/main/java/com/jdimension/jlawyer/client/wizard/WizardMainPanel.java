@@ -803,7 +803,7 @@ public class WizardMainPanel extends javax.swing.JPanel {
             }
         });
 
-        cmdDone.setText("Fertig");
+        cmdDone.setText("Concluir");
         cmdDone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdDoneActionPerformed(evt);

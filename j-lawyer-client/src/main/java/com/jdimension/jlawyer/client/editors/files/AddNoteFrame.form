@@ -332,7 +332,7 @@
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="toolTipText" type="java.lang.String" value="Doppelklick um heutiges Datum zu &#xfc;bernehmen"/>
+            <Property name="toolTipText" type="java.lang.String" value="Duplo clique para aplicar a data de hoje"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
           <Events>

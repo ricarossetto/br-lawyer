@@ -133,7 +133,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons16/baseline_select_none_black_48dp.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Auswahl aufheben"/>
+            <Property name="toolTipText" type="java.lang.String" value="Desmarcar seleção"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -297,7 +297,7 @@
         </Component>
         <Component class="com.jdimension.jlawyer.ui.folders.SortButton" name="sortFolder">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ordner"/>
+            <Property name="text" type="java.lang.String" value="Pasta"/>
             <Property name="toolTipText" type="java.lang.String" value="nach Ordnernamen sortieren"/>
             <Property name="iconTextGap" type="int" value="2"/>
           </Properties>
@@ -338,7 +338,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons16/baseline_select_none_black_48dp.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Auswahl aufheben"/>
+            <Property name="toolTipText" type="java.lang.String" value="Desmarcar seleção"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>

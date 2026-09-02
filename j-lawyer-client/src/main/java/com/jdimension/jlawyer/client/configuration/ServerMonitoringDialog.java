@@ -1048,9 +1048,9 @@ public class ServerMonitoringDialog extends javax.swing.JDialog {
 
         jLabel15.setText("% Auslastung (10min-Schnitt)");
 
-        jLabel16.setText("% Speichernutzung");
+        jLabel16.setText("% Uso de Memória");
 
-        jLabel17.setText("% Speichernutzung");
+        jLabel17.setText("% Uso de Memória");
 
         jLabel18.setText("% Kapazitätsnutzung");
 

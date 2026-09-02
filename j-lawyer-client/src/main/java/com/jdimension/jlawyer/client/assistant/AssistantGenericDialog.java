@@ -914,7 +914,7 @@ public class AssistantGenericDialog extends javax.swing.JDialog {
         pnlMessages = new javax.swing.JPanel();
         cmdProcessOutput = new javax.swing.JButton();
 
-        mnuPromptAll.setText("in Prompt übernehmen");
+        mnuPromptAll.setText("Inserir no prompt");
         mnuPromptAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuPromptAllActionPerformed(evt);
@@ -922,7 +922,7 @@ public class AssistantGenericDialog extends javax.swing.JDialog {
         });
         popInputText.add(mnuPromptAll);
 
-        mnuPromptSelection.setText("Auswahl in Prompt übernehmen");
+        mnuPromptSelection.setText("Inserir seleção no prompt");
         mnuPromptSelection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuPromptSelectionActionPerformed(evt);

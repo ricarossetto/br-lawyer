@@ -711,7 +711,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Zahlung:"/>
+                <Property name="text" type="java.lang.String" value="Pagamento:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblError">

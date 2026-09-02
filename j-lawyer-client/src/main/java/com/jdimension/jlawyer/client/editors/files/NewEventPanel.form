@@ -191,7 +191,7 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="toolTipText" type="java.lang.String" value="Doppelklick um heutiges Datum zu &#xfc;bernehmen"/>
+        <Property name="toolTipText" type="java.lang.String" value="Duplo clique para aplicar a data de hoje"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtEventBeginDateFieldMouseClicked"/>
@@ -284,7 +284,7 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="toolTipText" type="java.lang.String" value="Doppelklick um heutiges Datum zu &#xfc;bernehmen"/>
+        <Property name="toolTipText" type="java.lang.String" value="Duplo clique para aplicar a data de hoje"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="cmdEventEndDateSelector">

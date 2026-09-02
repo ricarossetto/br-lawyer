@@ -870,14 +870,14 @@ public class ShareInfoPanel extends javax.swing.JPanel {
         });
 
         cmdBrowser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/web.png"))); // NOI18N
-        cmdBrowser.setToolTipText("im Browser öffnen");
+        cmdBrowser.setToolTipText("Abrir no navegador");
         cmdBrowser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdBrowserActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("Ordner:");
+        jLabel5.setText("Pasta:");
 
         cmbFolder.setEditable(true);
         cmbFolder.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));

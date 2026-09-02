@@ -803,14 +803,14 @@ public class BeaIdentitySearchDialog extends javax.swing.JDialog {
         txtOfficeName = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("beA-Teilnehmer suchen");
+        setTitle("Pesquisar participante beA / Tribunal");
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
                 formComponentResized(evt);
             }
         });
 
-        jLabel1.setText("Vorname:");
+        jLabel1.setText("Nome:");
 
         txtFirstname.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -845,7 +845,7 @@ public class BeaIdentitySearchDialog extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(tblResults);
 
-        jLabel2.setText("Nachname:");
+        jLabel2.setText("Sobrenome:");
 
         jLabel3.setText("Nutzername:");
 

@@ -766,7 +766,7 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Passwort:"/>
+                            <Property name="text" type="java.lang.String" value="Senha:"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel19">
@@ -852,7 +852,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/icons/fileimport.png"/>
                         </Property>
-                        <Property name="toolTipText" type="java.lang.String" value="Profil aus Zwischenablage importieren"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Importar perfil da área de transferência"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdImportProfileActionPerformed"/>
@@ -1024,7 +1024,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="root-Passwort:"/>
+                        <Property name="text" type="java.lang.String" value="Senha de Administrador (root):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JPasswordField" name="txtBoxPassword">
@@ -1149,7 +1149,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="j-lawyer.BOX Management Console &#xf6;ffnen"/>
+                        <Property name="text" type="java.lang.String" value="Abrir Console de Gerenciamento ATRIUM"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel12">
@@ -1181,7 +1181,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="j-lawyer.BOX suchen"/>
+                        <Property name="text" type="java.lang.String" value="Pesquisar Servidor ATRIUM"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1302,7 +1302,7 @@
                       <Color blue="d" green="bf" red="97" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="2. App starten und Profile-Dialog &#xf6;ffnen"/>
+                    <Property name="text" type="java.lang.String" value="2. Iniciar aplicativo e abrir diálogo de perfis"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel22">
@@ -1316,7 +1316,7 @@
                       <Color blue="d" green="bf" red="97" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="3. Profil durch scannen des QR-Codes &#xfc;bernehmen"/>
+                    <Property name="text" type="java.lang.String" value="3. Importar perfil escaneando o código QR"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel23">

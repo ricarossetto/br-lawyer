@@ -782,7 +782,7 @@ public class SelectLegalAuthorityDialog extends javax.swing.JDialog {
         });
 
         cmdUnknown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/help_index.png"))); // NOI18N
-        cmdUnknown.setText("Keine auswählen");
+        cmdUnknown.setText("Nenhum selecionado");
         cmdUnknown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdUnknownActionPerformed(evt);

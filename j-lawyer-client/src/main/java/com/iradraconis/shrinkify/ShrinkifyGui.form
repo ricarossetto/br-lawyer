@@ -170,7 +170,7 @@
           <Image iconType="3" name="/icons16/material/preview_24dp_0E72B5.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Visualizar"/>
-        <Property name="toolTipText" type="java.lang.String" value="Vorschau der Komprimierung"/>
+        <Property name="toolTipText" type="java.lang.String" value="Visualização da compactação"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="testButtonActionPerformed"/>
@@ -182,7 +182,7 @@
           <Image iconType="3" name="/icons16/material/compress_24dp_0E72B5.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Komprimieren"/>
-        <Property name="toolTipText" type="java.lang.String" value="Komprimieren und Speichern"/>
+        <Property name="toolTipText" type="java.lang.String" value="Compactar e Salvar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>

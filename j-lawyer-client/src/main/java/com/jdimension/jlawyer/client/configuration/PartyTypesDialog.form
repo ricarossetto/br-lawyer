@@ -3,7 +3,7 @@
 <Form version="1.6" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
-    <Property name="title" type="java.lang.String" value="Beteiligtentypen"/>
+    <Property name="title" type="java.lang.String" value="Tipos de Partes Envolvidas"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -61,7 +61,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Beteiligtentypen"/>
+            <TitledBorder title="Tipos de Partes Envolvidas"/>
           </Border>
         </Property>
       </Properties>
@@ -240,7 +240,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/agt_action_success.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#xdc;bernehmen"/>
+            <Property name="text" type="java.lang.String" value="Aplicar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdSaveActionPerformed"/>

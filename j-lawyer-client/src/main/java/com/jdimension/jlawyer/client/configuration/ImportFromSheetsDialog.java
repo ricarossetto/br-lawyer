@@ -749,7 +749,7 @@ public class ImportFromSheetsDialog extends javax.swing.JDialog {
         progBar.setStringPainted(true);
 
         cmdDownloadTemplate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/file_download_20dp_0E72B5.png"))); // NOI18N
-        cmdDownloadTemplate.setText("Vorlage");
+        cmdDownloadTemplate.setText("Modelo");
         cmdDownloadTemplate.setToolTipText("Vorlage herunterladen");
         cmdDownloadTemplate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

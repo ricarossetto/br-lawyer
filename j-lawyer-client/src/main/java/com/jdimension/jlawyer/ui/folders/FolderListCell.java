@@ -870,7 +870,7 @@ public class FolderListCell extends javax.swing.JPanel implements DropTargetList
         });
         popFolder.add(mnuDelete);
 
-        mnuCreate.setText("Unterordner erstellen");
+        mnuCreate.setText("Criar subpasta");
         mnuCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuCreateActionPerformed(evt);
@@ -1022,7 +1022,7 @@ public class FolderListCell extends javax.swing.JPanel implements DropTargetList
     private void mnuCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuCreateActionPerformed
         try {
 
-            Object newNameObject = JOptionPane.showInputDialog(this, "Ordnername: ", "Unterordner erstellen", JOptionPane.QUESTION_MESSAGE, null, null, "Ordner");
+            Object newNameObject = JOptionPane.showInputDialog(this, "Ordnername: ", "Criar subpasta", JOptionPane.QUESTION_MESSAGE, null, null, "Ordner");
             if (newNameObject == null || "".equals(newNameObject)) {
                 return;
             }

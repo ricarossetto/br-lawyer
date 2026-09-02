@@ -1132,7 +1132,7 @@ public class UserProfileDialog extends javax.swing.JDialog {
 
         lblAbbreviation.setText("jLabel4");
 
-        jLabel2.setText("Passwort:");
+        jLabel2.setText("Senha:");
 
         cmdChangePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/ksysv.png"))); // NOI18N
         cmdChangePassword.setText("ändern");

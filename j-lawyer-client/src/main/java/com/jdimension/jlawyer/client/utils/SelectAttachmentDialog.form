@@ -166,7 +166,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="cmdSelect">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&#xd6;ffnen"/>
+                <Property name="text" type="java.lang.String" value="Abrir"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdSelectActionPerformed"/>

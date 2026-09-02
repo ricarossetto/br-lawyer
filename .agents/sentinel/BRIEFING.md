@@ -6,7 +6,7 @@ Monitor, route, and audit the full localization and translation of the Desktop c
 ## 🔒 My Identity
 - Archetype: sentinel
 - Working directory: c:\projetos IA\BR-LAWYER\br-lawyer\.agents\sentinel
-- Orchestrator: 9cc797a6-730a-4996-8916-758baca42063
+- Orchestrator: e7305ee0-b21d-412c-9bdc-0d4f91084902 (Gen 2)
 - Victory Auditor: to be spawned on victory claim
 
 ## 🔒 Key Constraints

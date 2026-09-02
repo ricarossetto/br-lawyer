@@ -97,7 +97,7 @@ public class CaseExportDialog extends javax.swing.JDialog {
         });
 
         deselectAllButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/baseline_select_none_black_48dp.png"))); // NOI18N
-        deselectAllButton.setToolTipText("Keine auswählen");
+        deselectAllButton.setToolTipText("Nenhum selecionado");
         deselectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deselectAllButtonActionPerformed(evt);

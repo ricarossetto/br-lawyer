@@ -723,7 +723,7 @@ public class EpostSetPasswordDialog extends javax.swing.JDialog {
 
         jLabel1.setText("1. SMS-Code anfordern");
 
-        jLabel2.setText("2. Passwort setzen / zurücksetzen");
+        jLabel2.setText("2. Definir / redefinir senha");
 
         jLabel3.setText("SMS-Code:");
 
@@ -738,7 +738,7 @@ public class EpostSetPasswordDialog extends javax.swing.JDialog {
 
         txtSmsCode.setToolTipText("Der per SMS angeforderte Code ist von Mobiltelefon in dieses Feld zu übertragen.");
 
-        jLabel5.setText("3. Passwort setzen und in die Einstellungen übernehmen");
+        jLabel5.setText("3. Definir senha e aplicar às configurações");
 
         cmdConfirm.setText("Aplicar");
         cmdConfirm.addActionListener(new java.awt.event.ActionListener() {

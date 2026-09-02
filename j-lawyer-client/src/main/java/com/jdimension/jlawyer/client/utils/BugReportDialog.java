@@ -1056,7 +1056,7 @@ public class BugReportDialog extends javax.swing.JDialog {
         });
 
         cmdDownload.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/agt_update_misc.png"))); // NOI18N
-        cmdDownload.setToolTipText("lokal speichern");
+        cmdDownload.setToolTipText("Salvar localmente");
         cmdDownload.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdDownloadActionPerformed(evt);

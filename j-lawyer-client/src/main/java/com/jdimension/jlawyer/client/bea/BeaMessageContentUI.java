@@ -1112,7 +1112,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         mnuSave.setText("Salvar");
 
         mnuSearchSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSave.setText("in Akte...");
+        mnuSearchSave.setText("No processo...");
         mnuSearchSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveActionPerformed(evt);
@@ -1277,7 +1277,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         });
         jScrollPane5.setViewportView(lstAttachmentsTechnical);
 
-        tabAttachments.addTab("weitere", jScrollPane5);
+        tabAttachments.addTab("mais", jScrollPane5);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -1296,7 +1296,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         jSplitPane1.setRightComponent(jPanel2);
 
         cmdToPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/fileicons/file_type_pdf.png"))); // NOI18N
-        cmdToPdf.setToolTipText("Nachricht als PDF anzeigen / drucken");
+        cmdToPdf.setToolTipText("Visualizar / imprimir mensagem como PDF");
         cmdToPdf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdToPdfActionPerformed(evt);
@@ -1336,8 +1336,8 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         });
 
         cmdEebReject.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        cmdEebReject.setText("eEB zurückweisen");
-        cmdEebReject.setToolTipText("elektronisches Empfangsbekenntnis zurückweisen");
+        cmdEebReject.setText("Recusar aviso de recebimento eletrônico");
+        cmdEebReject.setToolTipText("Recusar aviso de recebimento eletrônico");
         cmdEebReject.setEnabled(false);
         cmdEebReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1420,7 +1420,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Nachricht", jPanel3);
+        jTabbedPane1.addTab("Mensagem", jPanel3);
 
         tblJournal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1436,7 +1436,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         jScrollPane3.setViewportView(tblJournal);
 
         cmdRefreshJournal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/reload.png"))); // NOI18N
-        cmdRefreshJournal.setToolTipText("Nachrichtenjournal erneut aus dem Postfach laden");
+        cmdRefreshJournal.setToolTipText("Recarregar histórico de mensagens da caixa de correio");
         cmdRefreshJournal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdRefreshJournalActionPerformed(evt);
@@ -1482,7 +1482,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         jScrollPane4.setViewportView(tblProcessCard);
 
         cmdRefreshProcessCard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/reload.png"))); // NOI18N
-        cmdRefreshProcessCard.setToolTipText("Nachrichtenjournal erneut aus dem Postfach laden");
+        cmdRefreshProcessCard.setToolTipText("Recarregar histórico de mensagens da caixa de correio");
         cmdRefreshProcessCard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdRefreshProcessCardActionPerformed(evt);
@@ -1903,7 +1903,7 @@ public class BeaMessageContentUI extends javax.swing.JPanel implements Hyperlink
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         try {
 
-            BeaMessage m = this.getMessageFromPostbox("eEB zurückweisen");
+            BeaMessage m = this.getMessageFromPostbox("Recusar aviso de recebimento eletrônico");
             if (m == null) {
                 return;
             }

@@ -1530,7 +1530,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
         cmdSearch = new javax.swing.JButton();
 
         mnuNewFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        mnuNewFolder.setText("neuer Ordner");
+        mnuNewFolder.setText("Nova pasta");
         mnuNewFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuNewFolderActionPerformed(evt);
@@ -1548,7 +1548,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
         popFolders.add(mnuEmptyTrash);
 
         mnuRemoveFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        mnuRemoveFolder.setText("Ordner löschen");
+        mnuRemoveFolder.setText("Excluir pasta");
         mnuRemoveFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveFolderActionPerformed(evt);
@@ -1598,7 +1598,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
         popEmailList.add(mnuMarkUnread);
 
         mnuSearchSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSave.setText("in Akte speichern...");
+        mnuSearchSave.setText("Salvar no processo...");
         mnuSearchSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveActionPerformed(evt);
@@ -1607,7 +1607,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
         popEmailList.add(mnuSearchSave);
 
         mnuSearchSaveNoAttachments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSaveNoAttachments.setText("in Akte speichern (ohne Anhänge)...");
+        mnuSearchSaveNoAttachments.setText("Salvar no processo (sem anexos)...");
         mnuSearchSaveNoAttachments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveNoAttachmentsActionPerformed(evt);
@@ -1616,7 +1616,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
         popEmailList.add(mnuSearchSaveNoAttachments);
 
         mnuSearchSaveOnlyAttachments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSaveOnlyAttachments.setText("in Akte speichern (nur Anhänge)...");
+        mnuSearchSaveOnlyAttachments.setText("Salvar no processo (apenas anexos)...");
         mnuSearchSaveOnlyAttachments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveOnlyAttachmentsActionPerformed(evt);
@@ -1805,7 +1805,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
         jToolBar1.add(jSeparator3);
 
         cmdForward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/mail_forward.png"))); // NOI18N
-        cmdForward.setToolTipText("Weiterleiten");
+        cmdForward.setToolTipText("Encaminhar");
         cmdForward.setEnabled(false);
         cmdForward.setFocusable(false);
         cmdForward.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -2275,7 +2275,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
     private void mnuNewFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuNewFolderActionPerformed
         DefaultMutableTreeNode tn = (DefaultMutableTreeNode) this.treeFolders.getSelectionPath().getLastPathComponent();
         FolderContainer folderC = (FolderContainer) tn.getUserObject();
-        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "neuer Ordner");
+        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "Nova pasta");
         if (newNameObject == null) {
             return;
         }
@@ -2324,7 +2324,7 @@ public class EmailInboxPanel extends javax.swing.JPanel implements SaveToCaseExe
         DefaultMutableTreeNode tn = (DefaultMutableTreeNode) this.treeFolders.getSelectionPath().getLastPathComponent();
         FolderContainer folderC = (FolderContainer) tn.getUserObject();
 
-        int response = JOptionPane.showConfirmDialog(this, "Ordner " + folderC.toString() + " löschen?", "Ordner löschen", JOptionPane.YES_NO_OPTION);
+        int response = JOptionPane.showConfirmDialog(this, "Ordner " + folderC.toString() + " löschen?", "Excluir pasta", JOptionPane.YES_NO_OPTION);
         if (response == JOptionPane.YES_OPTION) {
             try {
                 if (folderC.isServerBased()) {

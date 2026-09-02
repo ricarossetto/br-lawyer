@@ -1493,7 +1493,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
         lblDirectDebit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
         lblDirectDebit.setText("Lastschrift");
 
-        jLabel20.setText("Zahlung:");
+        jLabel20.setText("Pagamento:");
 
         lblError.setFont(lblError.getFont());
         lblError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

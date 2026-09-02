@@ -778,7 +778,7 @@ public class ViewBeaDialog extends javax.swing.JDialog {
         jToolBar1.add(cmdReplyAll);
 
         cmdForward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/mail_forward.png"))); // NOI18N
-        cmdForward.setToolTipText("Weiterleiten");
+        cmdForward.setToolTipText("Encaminhar");
         cmdForward.setFocusable(false);
         cmdForward.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cmdForward.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

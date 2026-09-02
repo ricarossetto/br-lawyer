@@ -2462,7 +2462,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         reviewsPopup.add(mnuPostponeReview);
 
         mnuMoveReviewToOtherCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editmove.png"))); // NOI18N
-        mnuMoveReviewToOtherCase.setText("in andere Akte verschieben");
+        mnuMoveReviewToOtherCase.setText("Mover para outro processo");
         mnuMoveReviewToOtherCase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuMoveReviewToOtherCaseActionPerformed(evt);
@@ -2471,7 +2471,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         reviewsPopup.add(mnuMoveReviewToOtherCase);
 
         mnuEditReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit.png"))); // NOI18N
-        mnuEditReview.setText("bearbeiten");
+        mnuEditReview.setText("Editar");
         mnuEditReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuEditReviewActionPerformed(evt);
@@ -2480,7 +2480,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         reviewsPopup.add(mnuEditReview);
 
         mnuRemoveReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        mnuRemoveReview.setText("entfernen");
+        mnuRemoveReview.setText("Remover");
         mnuRemoveReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveReviewActionPerformed(evt);
@@ -2489,7 +2489,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         reviewsPopup.add(mnuRemoveReview);
 
         mnuDuplicateDocumentAsPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/pdf.png"))); // NOI18N
-        mnuDuplicateDocumentAsPdf.setText("als PDF zur Akte speichern");
+        mnuDuplicateDocumentAsPdf.setText("Salvar como PDF no processo");
         mnuDuplicateDocumentAsPdf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuDuplicateDocumentAsPdfActionPerformed(evt);
@@ -2508,7 +2508,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         documentsPopup.add(mnuCopyFilesToClipboard);
 
         mnuOpenDocument.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editcopy.png"))); // NOI18N
-        mnuOpenDocument.setText("öffnen");
+        mnuOpenDocument.setText("Abrir");
         mnuOpenDocument.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuOpenDocumentActionPerformed(evt);
@@ -2517,7 +2517,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         documentsPopup.add(mnuOpenDocument);
 
         mnuOpenDocumentWith.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editcopy.png"))); // NOI18N
-        mnuOpenDocumentWith.setText("öffnen mit...");
+        mnuOpenDocumentWith.setText("Abrir com...");
 
         mnuOpenDocumentMicrosoftOffice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/exec_wine.png"))); // NOI18N
         mnuOpenDocumentMicrosoftOffice.setText("Microsoft Office");
@@ -2540,7 +2540,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         documentsPopup.add(mnuOpenDocumentWith);
 
         mnuSaveDocumentsLocally.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filesave.png"))); // NOI18N
-        mnuSaveDocumentsLocally.setText("lokal speichern");
+        mnuSaveDocumentsLocally.setText("Salvar localmente");
         mnuSaveDocumentsLocally.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSaveDocumentsLocallyActionPerformed(evt);
@@ -2561,7 +2561,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         mnuCopyMove.setText("kopieren oder verschieben");
 
         mnuCopyDocumentToOtherCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editcopy.png"))); // NOI18N
-        mnuCopyDocumentToOtherCase.setText("in andere Akte kopieren");
+        mnuCopyDocumentToOtherCase.setText("Copiar para outro processo");
         mnuCopyDocumentToOtherCase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuCopyDocumentToOtherCaseActionPerformed(evt);
@@ -2570,7 +2570,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         mnuCopyMove.add(mnuCopyDocumentToOtherCase);
 
         mnuMoveDocumentToOtherCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editmove.png"))); // NOI18N
-        mnuMoveDocumentToOtherCase.setText("in andere Akte verschieben");
+        mnuMoveDocumentToOtherCase.setText("Mover para outro processo");
         mnuMoveDocumentToOtherCase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuMoveDocumentToOtherCaseActionPerformed(evt);
@@ -2621,7 +2621,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         documentsPopup.add(mnuDocumentHighlights);
 
         mnuToggleFavorite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/package_favorite.png"))); // NOI18N
-        mnuToggleFavorite.setText("Favoritendokument an/aus");
+        mnuToggleFavorite.setText("Favoritar / Desfavoritar documento");
         mnuToggleFavorite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuToggleFavoriteActionPerformed(evt);
@@ -2630,7 +2630,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         documentsPopup.add(mnuToggleFavorite);
 
         mnuSendMessageForDocument.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_chat_blue_48dp.png"))); // NOI18N
-        mnuSendMessageForDocument.setText("Nachricht senden");
+        mnuSendMessageForDocument.setText("Enviar mensagem");
         mnuSendMessageForDocument.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSendMessageForDocumentActionPerformed(evt);
@@ -2875,7 +2875,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Aktenkopf"));
 
-        jLabel1.setText("Aktenzeichen:");
+        jLabel1.setText("Número do Processo:");
 
         txtFileNumber.setEnabled(false);
 
@@ -3297,7 +3297,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
 
         cmdNewDocument.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder_documents.png"))); // NOI18N
         cmdNewDocument.setText("Erstellen");
-        cmdNewDocument.setToolTipText("neues Dokument aus Vorlage erstellen");
+        cmdNewDocument.setToolTipText("Criar novo documento a partir de modelo");
         cmdNewDocument.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdNewDocumentActionPerformed(evt);
@@ -3820,7 +3820,7 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
                 .addContainerGap())
         );
 
-        subTabsFinance.addTab("Aktenkonto", jPanel15);
+        subTabsFinance.addTab("Conta do Processo", jPanel15);
 
         jLabel29.setFont(jLabel29.getFont().deriveFont(jLabel29.getFont().getStyle() | java.awt.Font.BOLD));
         jLabel29.setText("Zahlungen:");

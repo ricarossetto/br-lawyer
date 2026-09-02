@@ -595,12 +595,12 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel16">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="% Speichernutzung"/>
+                    <Property name="text" type="java.lang.String" value="% Uso de Memória"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel17">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="% Speichernutzung"/>
+                    <Property name="text" type="java.lang.String" value="% Uso de Memória"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel18">

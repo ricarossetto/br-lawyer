@@ -791,7 +791,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
                     if (tempFolders > tempFoldersLimit) {
                         SwingUtilities.invokeLater(() -> {
                             lblTempFilesWarning.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/messagebox_warning.png"))); // NOI18N
-                            lblTempFilesWarning.setText("Hinweis: temporäre Dateien");
+                            lblTempFilesWarning.setText("Aviso: arquivos temporários");
                             lblTempFilesWarning.setToolTipText("Verzeichnis " + System.lineSeparator() + "   " + BeaAccess.getTempFolder() + System.lineSeparator() + "enthält " + tempFolders + " Ordner - Verzeichnis sollte manuell bereinigt werden," + System.lineSeparator() + "anderenfalls ist mit Geschwindigkeitseinbußen zu rechnen.");
                         });
                     }
@@ -1103,7 +1103,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         cmbDownloadMails = new javax.swing.JComboBox<>();
 
         mnuNewFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        mnuNewFolder.setText("neuer Ordner");
+        mnuNewFolder.setText("Nova pasta");
         mnuNewFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuNewFolderActionPerformed(evt);
@@ -1112,7 +1112,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         popFolders.add(mnuNewFolder);
 
         mnuRemoveFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        mnuRemoveFolder.setText("Ordner löschen");
+        mnuRemoveFolder.setText("Excluir pasta");
         mnuRemoveFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveFolderActionPerformed(evt);
@@ -1149,7 +1149,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         popEmailList.add(mnuMarkRead);
 
         mnuSearchSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSave.setText("in Akte speichern...");
+        mnuSearchSave.setText("Salvar no processo...");
         mnuSearchSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveActionPerformed(evt);
@@ -1158,7 +1158,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         popEmailList.add(mnuSearchSave);
 
         mnuSearchSaveNoAttachments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSaveNoAttachments.setText("in Akte speichern (ohne Anhänge)...");
+        mnuSearchSaveNoAttachments.setText("Salvar no processo (sem anexos)...");
         mnuSearchSaveNoAttachments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveNoAttachmentsActionPerformed(evt);
@@ -1167,7 +1167,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         popEmailList.add(mnuSearchSaveNoAttachments);
 
         mnuSearchSaveOnlyAttachments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchSaveOnlyAttachments.setText("in Akte speichern (nur Anhänge)...");
+        mnuSearchSaveOnlyAttachments.setText("Salvar no processo (apenas anexos)...");
         mnuSearchSaveOnlyAttachments.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchSaveOnlyAttachmentsActionPerformed(evt);
@@ -1200,7 +1200,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         jToolBar1.setOpaque(false);
 
         cmdNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/mail_post_to3.png"))); // NOI18N
-        cmdNew.setToolTipText("neue Nachricht schreiben");
+        cmdNew.setToolTipText("Escrever nova mensagem");
         cmdNew.setFocusable(false);
         cmdNew.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         cmdNew.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -1241,7 +1241,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         jToolBar1.add(jSeparator3);
 
         cmdForward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/mail_forward.png"))); // NOI18N
-        cmdForward.setToolTipText("Weiterleiten");
+        cmdForward.setToolTipText("Encaminhar");
         cmdForward.setEnabled(false);
         cmdForward.setFocusable(false);
         cmdForward.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1388,7 +1388,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
 
         lblTempFilesWarning.setForeground(new java.awt.Color(255, 255, 255));
         lblTempFilesWarning.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/messagebox_warning.png"))); // NOI18N
-        lblTempFilesWarning.setText("Hinweis: temporäre Dateien");
+        lblTempFilesWarning.setText("Aviso: arquivos temporários");
         lblTempFilesWarning.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblTempFilesWarning.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1397,7 +1397,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         });
 
         cmbDownloadMails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbDownloadMails.setToolTipText("Menge der angezeigten Nachrichten beschränken");
+        cmbDownloadMails.setToolTipText("Limitar quantidade de mensagens exibidas");
         cmbDownloadMails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbDownloadMailsActionPerformed(evt);
@@ -1627,7 +1627,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
     private void mnuNewFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuNewFolderActionPerformed
         DefaultMutableTreeNode tn = (DefaultMutableTreeNode) this.treeFolders.getSelectionPath().getLastPathComponent();
         BeaFolder f = (BeaFolder) tn.getUserObject();
-        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "neuer Ordner");
+        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "Nova pasta");
         if (newNameObject == null) {
             return;
         }
@@ -1754,7 +1754,7 @@ public class BeaInboxPanel extends javax.swing.JPanel implements SaveToCaseExecu
         DefaultMutableTreeNode tn = (DefaultMutableTreeNode) this.treeFolders.getSelectionPath().getLastPathComponent();
         BeaFolder f = (BeaFolder) tn.getUserObject();
 
-        int response = JOptionPane.showConfirmDialog(this, "Ordner " + f.getName() + " löschen?", "Ordner löschen", JOptionPane.YES_NO_OPTION);
+        int response = JOptionPane.showConfirmDialog(this, "Ordner " + f.getName() + " löschen?", "Excluir pasta", JOptionPane.YES_NO_OPTION);
         if (response == JOptionPane.YES_OPTION) {
             try {
 

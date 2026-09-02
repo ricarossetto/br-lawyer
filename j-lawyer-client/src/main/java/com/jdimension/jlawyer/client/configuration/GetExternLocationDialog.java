@@ -780,7 +780,7 @@ public class GetExternLocationDialog extends javax.swing.JDialog {
             }
         });
 
-        jLabel4.setText("Passwort:");
+        jLabel4.setText("Senha:");
 
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -791,7 +791,7 @@ public class GetExternLocationDialog extends javax.swing.JDialog {
             }
         });
 
-        jLabel5.setText("Ordner:");
+        jLabel5.setText("Pasta:");
 
         txtDirectory.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {

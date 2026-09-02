@@ -1571,7 +1571,7 @@ public class LoginDialog extends javax.swing.JFrame {
         jLabel17.setToolTipText("Port, auf welchem der j-lawyer.org Server auf dem Zielsystem lauscht");
 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Passwort:");
+        jLabel16.setText("Senha:");
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/help.png"))); // NOI18N
         jLabel19.setToolTipText("Port, auf welchem der j-lawyer.org Server auf dem Zielsystem lauscht");
@@ -1670,7 +1670,7 @@ public class LoginDialog extends javax.swing.JFrame {
         });
 
         cmdImportProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fileimport.png"))); // NOI18N
-        cmdImportProfile.setToolTipText("Profil aus Zwischenablage importieren");
+        cmdImportProfile.setToolTipText("Importar perfil da área de transferência");
         cmdImportProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdImportProfileActionPerformed(evt);
@@ -1762,7 +1762,7 @@ public class LoginDialog extends javax.swing.JFrame {
         jPanel8.setOpaque(false);
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("root-Passwort:");
+        jLabel6.setText("Senha de Administrador (root):");
 
         cmdBoxCheck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/info.png"))); // NOI18N
         cmdBoxCheck.setToolTipText(bundle.getString("box.check.tooltip")); // NOI18N
@@ -1832,7 +1832,7 @@ public class LoginDialog extends javax.swing.JFrame {
         jLabel10.setText("Erreichbarkeit der Box prüfen");
 
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("j-lawyer.BOX Management Console öffnen");
+        jLabel11.setText("Abrir Console de Gerenciamento ATRIUM");
 
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("j-lawyer.BOX herunterfahren");
@@ -1844,7 +1844,7 @@ public class LoginDialog extends javax.swing.JFrame {
         jLabel14.setText("j-lawyer.org Serverdienst neu starten");
 
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("j-lawyer.BOX suchen");
+        jLabel15.setText("Pesquisar Servidor ATRIUM");
 
         org.jdesktop.layout.GroupLayout jPanel8Layout = new org.jdesktop.layout.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -1980,12 +1980,12 @@ public class LoginDialog extends javax.swing.JFrame {
         jLabel21.setFont(jLabel21.getFont().deriveFont(jLabel21.getFont().getStyle() | java.awt.Font.BOLD, jLabel21.getFont().getSize()+3));
         jLabel21.setForeground(new java.awt.Color(151, 191, 13));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("2. App starten und Profile-Dialog öffnen");
+        jLabel21.setText("2. Iniciar aplicativo e abrir diálogo de perfis");
 
         jLabel22.setFont(jLabel22.getFont().deriveFont(jLabel22.getFont().getStyle() | java.awt.Font.BOLD, jLabel22.getFont().getSize()+3));
         jLabel22.setForeground(new java.awt.Color(151, 191, 13));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("3. Profil durch scannen des QR-Codes übernehmen");
+        jLabel22.setText("3. Importar perfil escaneando o código QR");
 
         jLabel23.setFont(jLabel23.getFont().deriveFont(jLabel23.getFont().getStyle() | java.awt.Font.BOLD));
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));

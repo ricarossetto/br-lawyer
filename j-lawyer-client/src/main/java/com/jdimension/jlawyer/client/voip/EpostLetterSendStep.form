@@ -396,7 +396,7 @@
             <Font component="jLabel8" property="font" relativeSize="true" size="0"/>
           </FontInfo>
         </Property>
-        <Property name="text" type="java.lang.String" value="PLZ:"/>
+        <Property name="text" type="java.lang.String" value="CEP:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtZipCode">
@@ -470,7 +470,7 @@
             <Font component="jLabel14" property="font" relativeSize="true" size="0"/>
           </FontInfo>
         </Property>
-        <Property name="text" type="java.lang.String" value="PLZ:"/>
+        <Property name="text" type="java.lang.String" value="CEP:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel15">

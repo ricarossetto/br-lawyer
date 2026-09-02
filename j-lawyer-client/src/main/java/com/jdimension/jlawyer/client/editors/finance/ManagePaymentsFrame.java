@@ -773,7 +773,7 @@ public class ManagePaymentsFrame extends javax.swing.JFrame {
         cmdValidateForExport = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Zahlungen verwalten");
+        setTitle("Gerenciar Pagamentos");
         setIconImage(new ImageIcon(getClass().getResource("/icons/windowicon.png")).getImage());
 
         cmdGenerateSepaXml.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/credit_card_20dp_0E72B5.png"))); // NOI18N

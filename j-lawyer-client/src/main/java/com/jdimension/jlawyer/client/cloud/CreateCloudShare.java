@@ -866,7 +866,7 @@ public class CreateCloudShare extends javax.swing.JDialog {
         });
 
         lblFolderCaption.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/folder.png"))); // NOI18N
-        lblFolderCaption.setText("Ordner:");
+        lblFolderCaption.setText("Pasta:");
 
         grpFolder.add(rdFolderCase);
         rdFolderCase.setText("Processo");

@@ -806,7 +806,7 @@ public class InvoiceEntryPanel extends javax.swing.JPanel {
         lblInvoiceNumber.setText("RG123");
 
         cmdOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/kfind.png"))); // NOI18N
-        cmdOpen.setToolTipText("einsehen / bearbeiten");
+        cmdOpen.setToolTipText("Visualizar / Editar");
         cmdOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdOpenActionPerformed(evt);
@@ -825,7 +825,7 @@ public class InvoiceEntryPanel extends javax.swing.JPanel {
         lblStatus.setText("offen");
 
         lblRecipient.setFont(lblRecipient.getFont());
-        lblRecipient.setText("<Rechnungsadresse>");
+        lblRecipient.setText("<Endereço de Faturamento>");
 
         lblInvoiceType.setFont(lblInvoiceType.getFont());
         lblInvoiceType.setText("Angebot");
@@ -847,7 +847,7 @@ public class InvoiceEntryPanel extends javax.swing.JPanel {
         });
 
         cmdCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editcopy3.png"))); // NOI18N
-        cmdCopy.setToolTipText("in andere Akte kopieren");
+        cmdCopy.setToolTipText("Copiar para outro processo");
         cmdCopy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdCopyActionPerformed(evt);

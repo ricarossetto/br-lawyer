@@ -292,7 +292,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/agt_action_success.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xdc;bernehmen"/>
+        <Property name="text" type="java.lang.String" value="Aplicar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdProcessOutputActionPerformed"/>
@@ -303,7 +303,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/editcopy.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="neues Dokument"/>
+        <Property name="text" type="java.lang.String" value="Novo documento"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdNewDocumentActionPerformed"/>

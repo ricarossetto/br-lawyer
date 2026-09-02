@@ -334,7 +334,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Vorlage:"/>
+                    <Property name="text" type="java.lang.String" value="Modelo:"/>
                   </Properties>
                 </Component>
                 <Container class="javax.swing.JSplitPane" name="jSplitPane1">

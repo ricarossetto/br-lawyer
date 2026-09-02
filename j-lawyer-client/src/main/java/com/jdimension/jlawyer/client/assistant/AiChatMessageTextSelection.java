@@ -694,7 +694,7 @@ public class AiChatMessageTextSelection extends javax.swing.JDialog {
         cmdCopy = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Textauswahl kopieren");
+        setTitle("Copiar seleção de texto");
 
         taText.setColumns(20);
         taText.setLineWrap(true);

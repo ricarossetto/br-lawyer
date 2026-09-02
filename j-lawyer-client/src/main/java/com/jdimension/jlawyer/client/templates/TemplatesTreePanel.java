@@ -913,7 +913,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
         cmdRefresh = new javax.swing.JButton();
 
         mnuNewFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        mnuNewFolder.setText("neuer Ordner");
+        mnuNewFolder.setText("Nova pasta");
         mnuNewFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuNewFolderActionPerformed(evt);
@@ -931,7 +931,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
         popFolders.add(mnuRenameFolder);
 
         mnuRemoveFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        mnuRemoveFolder.setText("Ordner löschen");
+        mnuRemoveFolder.setText("Excluir pasta");
         mnuRemoveFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveFolderActionPerformed(evt);
@@ -940,7 +940,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
         popFolders.add(mnuRemoveFolder);
 
         mnuEditTemplate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit.png"))); // NOI18N
-        mnuEditTemplate.setText("bearbeiten");
+        mnuEditTemplate.setText("Editar");
         mnuEditTemplate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuEditTemplateActionPerformed(evt);
@@ -989,7 +989,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
 
         lblPanelTitle.setFont(lblPanelTitle.getFont().deriveFont(lblPanelTitle.getFont().getStyle() | java.awt.Font.BOLD, lblPanelTitle.getFont().getSize()+12));
         lblPanelTitle.setForeground(new java.awt.Color(255, 255, 255));
-        lblPanelTitle.setText("Vorlagen");
+        lblPanelTitle.setText("Modelos");
 
         cmdNewODT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
         cmdNewODT.setText("Neu (Text)");
@@ -1259,7 +1259,7 @@ public class TemplatesTreePanel extends javax.swing.JPanel implements ThemeableE
         GenericNode gn = (GenericNode) tn.getUserObject();
 
         ClientSettings settings = ClientSettings.getInstance();
-        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "neuer Ordner");
+        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "Nova pasta");
         if (newNameObject == null) {
             return;
         }

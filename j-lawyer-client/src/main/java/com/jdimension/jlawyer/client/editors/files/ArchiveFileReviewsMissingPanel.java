@@ -772,7 +772,7 @@ public class ArchiveFileReviewsMissingPanel extends javax.swing.JPanel implement
         jPanel1.setOpaque(false);
 
         cmdExport.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/calc.png"))); // NOI18N
-        cmdExport.setToolTipText("Liste nach LibreOffice exportieren");
+        cmdExport.setToolTipText("Exportar lista para LibreOffice");
         cmdExport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdExportActionPerformed(evt);

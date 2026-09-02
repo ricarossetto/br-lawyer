@@ -1181,7 +1181,7 @@ public class CaseFolderPanel extends javax.swing.JPanel implements EventConsumer
         });
 
         cmdSelectNone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/baseline_select_none_black_48dp.png"))); // NOI18N
-        cmdSelectNone.setToolTipText("Auswahl aufheben");
+        cmdSelectNone.setToolTipText("Desmarcar seleção");
         cmdSelectNone.setBorder(null);
         cmdSelectNone.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cmdSelectNone.addActionListener(new java.awt.event.ActionListener() {
@@ -1282,7 +1282,7 @@ public class CaseFolderPanel extends javax.swing.JPanel implements EventConsumer
             }
         });
 
-        sortFolder.setText("Ordner");
+        sortFolder.setText("Pasta");
         sortFolder.setToolTipText("nach Ordnernamen sortieren");
         sortFolder.setIconTextGap(2);
         sortFolder.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1310,7 +1310,7 @@ public class CaseFolderPanel extends javax.swing.JPanel implements EventConsumer
         });
 
         cmdSelectNone1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/baseline_select_none_black_48dp.png"))); // NOI18N
-        cmdSelectNone1.setToolTipText("Auswahl aufheben");
+        cmdSelectNone1.setToolTipText("Desmarcar seleção");
         cmdSelectNone1.setBorder(null);
         cmdSelectNone1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cmdSelectNone1.addActionListener(new java.awt.event.ActionListener() {

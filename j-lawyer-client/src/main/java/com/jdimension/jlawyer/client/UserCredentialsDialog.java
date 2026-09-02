@@ -724,7 +724,7 @@ public class UserCredentialsDialog extends javax.swing.JDialog {
         jLabel1.setText("Nutzer:");
 
         jLabel2.setFont(jLabel2.getFont());
-        jLabel2.setText("Passwort:");
+        jLabel2.setText("Senha:");
 
         lblHint.setFont(lblHint.getFont());
         lblHint.setForeground(new java.awt.Color(255, 255, 255));

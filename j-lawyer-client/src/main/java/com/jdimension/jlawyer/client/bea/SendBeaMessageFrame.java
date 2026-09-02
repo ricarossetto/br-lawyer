@@ -1192,7 +1192,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
             this.txtAzSender.setText(af.getFileNumber());
         } else {
             this.chkSaveAsDocument.setEnabled(true);
-            this.chkSaveAsDocument.setText("als Dokument speichern");
+            this.chkSaveAsDocument.setText("Salvar como documento");
         }
 
         if (this.contextArchiveFile != null && this.contextArchiveFile.getAssistant() != null) {
@@ -1427,7 +1427,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
         pnlParties = new com.jdimension.jlawyer.client.editors.files.PartiesPanel();
 
         mnuSearchRecipient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchRecipient.setText("suchen (Adressbuch)");
+        mnuSearchRecipient.setText("Pesquisar (Contatos)");
         mnuSearchRecipient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchRecipientActionPerformed(evt);
@@ -1436,7 +1436,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
         popRecipients.add(mnuSearchRecipient);
 
         mnuSearchRecipientInBea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/find.png"))); // NOI18N
-        mnuSearchRecipientInBea.setText("suchen (beA-Verzeichnis)");
+        mnuSearchRecipientInBea.setText("Pesquisar (Tribunal)");
         mnuSearchRecipientInBea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSearchRecipientInBeaActionPerformed(evt);
@@ -1446,7 +1446,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
         popRecipients.add(jSeparator1);
 
         mnuRemoveAttachment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        mnuRemoveAttachment.setText("entfernen");
+        mnuRemoveAttachment.setText("Remover");
         mnuRemoveAttachment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveAttachmentActionPerformed(evt);
@@ -1455,7 +1455,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
         popAttachments.add(mnuRemoveAttachment);
 
         mnuRemoveRecipient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        mnuRemoveRecipient.setText("entfernen");
+        mnuRemoveRecipient.setText("Remover");
         mnuRemoveRecipient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveRecipientActionPerformed(evt);
@@ -1464,7 +1464,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
         popRecipientList.add(mnuRemoveRecipient);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("neue beA-Nachricht");
+        setTitle("Nova mensagem judicial");
         setIconImage(new ImageIcon(getClass().getResource("/icons/windowicon-bea.png")).getImage());
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
@@ -1695,8 +1695,8 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
         jSplitPane1.setLeftComponent(jPanel5);
 
         chkSaveAsDocument.setSelected(true);
-        chkSaveAsDocument.setText("als Dokument speichern");
-        chkSaveAsDocument.setToolTipText("Gesendete Nachricht als Dokument zur Akte speichern");
+        chkSaveAsDocument.setText("Salvar como documento");
+        chkSaveAsDocument.setToolTipText("Salvar mensagem enviada como documento no processo");
 
         cmbDocumentTag.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1741,7 +1741,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
 
         txtReviewDateField.setEditable(false);
         txtReviewDateField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtReviewDateField.setToolTipText("Doppelklick um heutiges Datum zu übernehmen");
+        txtReviewDateField.setToolTipText("Duplo clique para aplicar a data de hoje");
         txtReviewDateField.setEnabled(false);
         txtReviewDateField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1884,7 +1884,7 @@ public class SendBeaMessageFrame extends javax.swing.JFrame implements SendCommu
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Vorlagedaten"));
 
-        jLabel4.setText("Vorlage:");
+        jLabel4.setText("Modelo:");
 
         cmbTemplates.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

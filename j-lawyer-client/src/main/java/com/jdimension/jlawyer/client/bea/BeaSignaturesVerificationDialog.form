@@ -238,7 +238,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons16/fileicons/file_type_pdf.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="PDF anzeigen / speichern"/>
+        <Property name="text" type="java.lang.String" value="Visualizar / salvar PDF"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdDownloadPdfActionPerformed"/>

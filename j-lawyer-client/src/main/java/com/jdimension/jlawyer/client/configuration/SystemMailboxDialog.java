@@ -790,7 +790,7 @@ public class SystemMailboxDialog extends javax.swing.JDialog {
 
         jLabel19.setText("Senden an:");
 
-        jLabel8.setText("Passwort:");
+        jLabel8.setText("Senha:");
 
         jLabel7.setText("SMTP-Benutzer / Login:");
 

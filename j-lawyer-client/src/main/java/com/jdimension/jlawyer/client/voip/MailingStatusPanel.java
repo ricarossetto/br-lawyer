@@ -926,7 +926,7 @@ public class MailingStatusPanel extends javax.swing.JPanel implements ThemeableE
 
         jLabel6.setText("gesendet:");
 
-        jLabel7.setText("Akte:");
+        jLabel7.setText("Processo:");
 
         lblSession.setText("jLabel8");
 

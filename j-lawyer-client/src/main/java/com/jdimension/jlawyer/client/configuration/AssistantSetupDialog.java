@@ -883,7 +883,7 @@ public class AssistantSetupDialog extends javax.swing.JDialog {
 
         jLabel7.setText("Nutzer:");
 
-        jLabel8.setText("Passwort:");
+        jLabel8.setText("Senha:");
 
         txtPwd.setText("jPasswordField1");
 

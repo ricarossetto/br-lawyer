@@ -24,7 +24,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/ksysv.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Passwort &#xe4;ndern"/>
+            <Property name="text" type="java.lang.String" value="Alterar Senha"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuUpdatePasswordActionPerformed"/>
@@ -418,7 +418,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Vorname:"/>
+                <Property name="text" type="java.lang.String" value="Nome:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtName">
@@ -460,7 +460,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel30">
               <Properties>
-                <Property name="text" type="java.lang.String" value="PLZ:"/>
+                <Property name="text" type="java.lang.String" value="CEP:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel31">
@@ -1256,7 +1256,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel16">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Passwort:"/>
+                <Property name="text" type="java.lang.String" value="Senha:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="cmdSelectCertificate">
@@ -1583,7 +1583,7 @@
                     <Font component="jLabel11" property="font" relativeSize="true" size="0"/>
                   </FontInfo>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Passwort:"/>
+                <Property name="text" type="java.lang.String" value="Senha:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">

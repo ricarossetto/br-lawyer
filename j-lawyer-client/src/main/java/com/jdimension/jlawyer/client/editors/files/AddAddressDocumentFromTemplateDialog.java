@@ -1051,7 +1051,7 @@ public class AddAddressDocumentFromTemplateDialog extends javax.swing.JDialog im
             }
         });
 
-        jLabel3.setText("Vorlage:");
+        jLabel3.setText("Modelo:");
 
         lstTemplates.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };

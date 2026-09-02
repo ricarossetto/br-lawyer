@@ -724,7 +724,7 @@ public class EpostTeaserPanel extends javax.swing.JPanel {
         txtEpostOrder.setText("https://www.j-lawyer.org/?page_id=1119");
 
         cmdShowWebsite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/web.png"))); // NOI18N
-        cmdShowWebsite.setToolTipText("im Browser öffnen");
+        cmdShowWebsite.setToolTipText("Abrir no navegador");
         cmdShowWebsite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdShowWebsiteActionPerformed(evt);

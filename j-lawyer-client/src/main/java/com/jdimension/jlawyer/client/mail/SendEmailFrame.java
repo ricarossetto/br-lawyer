@@ -1462,7 +1462,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
             this.chkSaveAsDocument.setText("als Dokument speichern in " + af.getFileNumber());
         } else {
             this.chkSaveAsDocument.setEnabled(true);
-            this.chkSaveAsDocument.setText("als Dokument speichern");
+            this.chkSaveAsDocument.setText("Salvar como documento");
         }
         if (af != null && this.contextArchiveFile.getAssistant() != null) {
             this.cmbReviewAssignee.setSelectedItem(this.contextArchiveFile.getAssistant());
@@ -2166,7 +2166,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
         popRecipientsBcc.add(jSeparator3);
 
         mnuRemoveAttachment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cancel.png"))); // NOI18N
-        mnuRemoveAttachment.setText("entfernen");
+        mnuRemoveAttachment.setText("Remover");
         mnuRemoveAttachment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveAttachmentActionPerformed(evt);
@@ -2467,7 +2467,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
         lblEncryption.setText(LABEL_SEND_UNENCRYPTED);
 
         chkSaveAsDocument.setSelected(true);
-        chkSaveAsDocument.setText("als Dokument speichern");
+        chkSaveAsDocument.setText("Salvar como documento");
 
         chkDocumentTagging.setText("Etikett:");
         chkDocumentTagging.setActionCommand("Zielakte markieren:");
@@ -2576,7 +2576,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
 
         txtReviewDateField.setEditable(false);
         txtReviewDateField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtReviewDateField.setToolTipText("Doppelklick um heutiges Datum zu übernehmen");
+        txtReviewDateField.setToolTipText("Duplo clique para aplicar a data de hoje");
         txtReviewDateField.setEnabled(false);
         txtReviewDateField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2657,7 +2657,7 @@ public class SendEmailFrame extends javax.swing.JFrame implements SendCommunicat
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Vorlagedaten"));
 
-        jLabel4.setText("Vorlage:");
+        jLabel4.setText("Modelo:");
 
         cmbTemplates.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

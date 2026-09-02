@@ -864,7 +864,7 @@ public class CreateAddressDetailsStep extends javax.swing.JPanel implements Wiza
 
         jLabel4.setText("Name:");
 
-        jLabel5.setText("Vorname:");
+        jLabel5.setText("Nome:");
 
         jLabel6.setText("Firma:");
 
@@ -886,7 +886,7 @@ public class CreateAddressDetailsStep extends javax.swing.JPanel implements Wiza
 
         jLabel11.setText("Hausnr.:");
 
-        jLabel12.setText("PLZ:");
+        jLabel12.setText("CEP:");
 
         jLabel13.setText("Ort:");
 

@@ -21,7 +21,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/find.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="in Akte..."/>
+                <Property name="text" type="java.lang.String" value="No processo..."/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuSearchSaveActionPerformed"/>
@@ -81,7 +81,7 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Nachricht">
-                <Property name="tabTitle" type="java.lang.String" value="Nachricht"/>
+                <Property name="tabTitle" type="java.lang.String" value="Mensagem"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -407,7 +407,7 @@
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                               <JTabbedPaneConstraints tabName="weitere">
-                                <Property name="tabTitle" type="java.lang.String" value="weitere"/>
+                                <Property name="tabTitle" type="java.lang.String" value="mais"/>
                               </JTabbedPaneConstraints>
                             </Constraint>
                           </Constraints>
@@ -450,7 +450,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons16/fileicons/file_type_pdf.png"/>
                 </Property>
-                <Property name="toolTipText" type="java.lang.String" value="Nachricht als PDF anzeigen / drucken"/>
+                <Property name="toolTipText" type="java.lang.String" value="Visualizar / imprimir mensagem como PDF"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdToPdfActionPerformed"/>
@@ -557,8 +557,8 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/icons/cancel.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="eEB zurückweisen"/>
-                    <Property name="toolTipText" type="java.lang.String" value="elektronisches Empfangsbekenntnis zurückweisen"/>
+                    <Property name="text" type="java.lang.String" value="Recusar aviso de recebimento eletrônico"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Recusar aviso de recebimento eletrônico"/>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
@@ -646,7 +646,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/reload.png"/>
                 </Property>
-                <Property name="toolTipText" type="java.lang.String" value="Nachrichtenjournal erneut aus dem Postfach laden"/>
+                <Property name="toolTipText" type="java.lang.String" value="Recarregar histórico de mensagens da caixa de correio"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdRefreshJournalActionPerformed"/>
@@ -722,7 +722,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/icons/reload.png"/>
                 </Property>
-                <Property name="toolTipText" type="java.lang.String" value="Nachrichtenjournal erneut aus dem Postfach laden"/>
+                <Property name="toolTipText" type="java.lang.String" value="Recarregar histórico de mensagens da caixa de correio"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdRefreshProcessCardActionPerformed"/>

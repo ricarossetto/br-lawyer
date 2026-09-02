@@ -1083,7 +1083,7 @@ public class BulkSaveDialog extends javax.swing.JDialog implements NewEventEntry
 
         lblCase.setFont(lblCase.getFont().deriveFont(lblCase.getFont().getStyle() | java.awt.Font.BOLD, lblCase.getFont().getSize()+2));
         lblCase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/sharp_folder_blue_36dp.png"))); // NOI18N
-        lblCase.setText("00123/22 eine Aktenbezeichnung");
+        lblCase.setText("00123/22 Descrição do processo");
 
         lblCaseTags.setFont(lblCaseTags.getFont());
         lblCaseTags.setText("aktentag");

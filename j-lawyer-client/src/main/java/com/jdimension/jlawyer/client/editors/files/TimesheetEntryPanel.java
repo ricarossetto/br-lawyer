@@ -732,7 +732,7 @@ public class TimesheetEntryPanel extends javax.swing.JPanel {
         cmdTransferPositions = new javax.swing.JButton();
 
         cmdOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/kfind.png"))); // NOI18N
-        cmdOpen.setToolTipText("einsehen / bearbeiten");
+        cmdOpen.setToolTipText("Visualizar / Editar");
         cmdOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmdOpenActionPerformed(evt);

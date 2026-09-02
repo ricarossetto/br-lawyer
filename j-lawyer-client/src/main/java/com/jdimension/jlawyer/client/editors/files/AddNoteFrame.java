@@ -1123,7 +1123,7 @@ public class AddNoteFrame extends javax.swing.JFrame implements AssistantFlowAda
 
         txtReviewDateField.setEditable(false);
         txtReviewDateField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtReviewDateField.setToolTipText("Doppelklick um heutiges Datum zu übernehmen");
+        txtReviewDateField.setToolTipText("Duplo clique para aplicar a data de hoje");
         txtReviewDateField.setEnabled(false);
         txtReviewDateField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

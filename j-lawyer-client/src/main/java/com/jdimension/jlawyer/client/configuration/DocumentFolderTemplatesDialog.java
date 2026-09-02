@@ -739,7 +739,7 @@ public class DocumentFolderTemplatesDialog extends javax.swing.JDialog {
         cmdCloneTemplate = new javax.swing.JButton();
 
         mnuNewFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit_add.png"))); // NOI18N
-        mnuNewFolder.setText("neuer Ordner");
+        mnuNewFolder.setText("Nova pasta");
         mnuNewFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuNewFolderActionPerformed(evt);
@@ -748,7 +748,7 @@ public class DocumentFolderTemplatesDialog extends javax.swing.JDialog {
         popFolders.add(mnuNewFolder);
 
         mnuRemoveFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editdelete.png"))); // NOI18N
-        mnuRemoveFolder.setText("Ordner löschen");
+        mnuRemoveFolder.setText("Excluir pasta");
         mnuRemoveFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRemoveFolderActionPerformed(evt);
@@ -757,7 +757,7 @@ public class DocumentFolderTemplatesDialog extends javax.swing.JDialog {
         popFolders.add(mnuRemoveFolder);
 
         mnuRenameFolder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/kate.png"))); // NOI18N
-        mnuRenameFolder.setText("Ordner umbenennen");
+        mnuRenameFolder.setText("Renomear pasta");
         mnuRenameFolder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRenameFolderActionPerformed(evt);
@@ -766,7 +766,7 @@ public class DocumentFolderTemplatesDialog extends javax.swing.JDialog {
         popFolders.add(mnuRenameFolder);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Dokumentordner");
+        setTitle("Pastas de Documentos");
 
         cmbTemplates.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cmbTemplates.addActionListener(new java.awt.event.ActionListener() {
@@ -978,7 +978,7 @@ public class DocumentFolderTemplatesDialog extends javax.swing.JDialog {
 
         ClientSettings settings = ClientSettings.getInstance();
         String newFolderName = "Neuer Ordner";
-        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "neuer Ordner");
+        Object newNameObject = JOptionPane.showInputDialog(this, "Name des Ordners: ", "Neuen Ordner anlegen", JOptionPane.QUESTION_MESSAGE, null, null, "Nova pasta");
         if (newNameObject == null) {
             return;
         }
@@ -1059,7 +1059,7 @@ public class DocumentFolderTemplatesDialog extends javax.swing.JDialog {
 
         ClientSettings settings = ClientSettings.getInstance();
         String newFolderName = gn.getName();
-        Object newNameObject = JOptionPane.showInputDialog(this, "neuer Name: ", "Ordner umbenennen", JOptionPane.QUESTION_MESSAGE, null, null, newFolderName);
+        Object newNameObject = JOptionPane.showInputDialog(this, "neuer Name: ", "Renomear pasta", JOptionPane.QUESTION_MESSAGE, null, null, newFolderName);
         if (newNameObject == null) {
             return;
         }

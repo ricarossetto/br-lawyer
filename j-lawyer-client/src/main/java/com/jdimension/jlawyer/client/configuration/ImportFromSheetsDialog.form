@@ -133,7 +133,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons16/material/file_download_20dp_0E72B5.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Vorlage"/>
+        <Property name="text" type="java.lang.String" value="Modelo"/>
         <Property name="toolTipText" type="java.lang.String" value="Vorlage herunterladen"/>
       </Properties>
       <Events>

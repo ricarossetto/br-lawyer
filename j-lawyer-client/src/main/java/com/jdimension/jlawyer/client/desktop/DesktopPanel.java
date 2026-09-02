@@ -1869,7 +1869,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
         });
 
         cmdTagFilter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_label_white_36dp.png"))); // NOI18N
-        cmdTagFilter.setToolTipText("Akten-Etiketten");
+        cmdTagFilter.setToolTipText("Etiquetas de Processos");
         cmdTagFilter.setBorder(null);
         cmdTagFilter.setContentAreaFilled(false);
         cmdTagFilter.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1880,7 +1880,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
         });
 
         cmdDocumentTagFilter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_label_white_36dp.png"))); // NOI18N
-        cmdDocumentTagFilter.setToolTipText("Dokument-Etiketten");
+        cmdDocumentTagFilter.setToolTipText("Etiquetas de Documentos");
         cmdDocumentTagFilter.setBorder(null);
         cmdDocumentTagFilter.setContentAreaFilled(false);
         cmdDocumentTagFilter.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -2061,25 +2061,25 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
         lblArchiveFileCount.setForeground(java.awt.Color.white);
         lblArchiveFileCount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_folder_white_36dp.png"))); // NOI18N
         lblArchiveFileCount.setText("0");
-        lblArchiveFileCount.setToolTipText("0 Akten");
+        lblArchiveFileCount.setToolTipText("0 Processos");
 
         lblArchiveFileArchivedCount.setFont(lblArchiveFileArchivedCount.getFont().deriveFont(lblArchiveFileArchivedCount.getFont().getStyle() | java.awt.Font.BOLD));
         lblArchiveFileArchivedCount.setForeground(java.awt.Color.white);
         lblArchiveFileArchivedCount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/inventory_24dp_FFFFFF.png"))); // NOI18N
         lblArchiveFileArchivedCount.setText("0");
-        lblArchiveFileArchivedCount.setToolTipText("0 Akten im Archiv");
+        lblArchiveFileArchivedCount.setToolTipText("0 Processos arquivados");
 
         lblAddressCount.setFont(lblAddressCount.getFont().deriveFont(lblAddressCount.getFont().getStyle() | java.awt.Font.BOLD));
         lblAddressCount.setForeground(java.awt.Color.white);
         lblAddressCount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_perm_contact_calendar_white_36dp.png"))); // NOI18N
         lblAddressCount.setText("0");
-        lblAddressCount.setToolTipText("0 Adressbucheinträge");
+        lblAddressCount.setToolTipText("0 Contatos");
 
         lblDocumentCount.setFont(lblDocumentCount.getFont().deriveFont(lblDocumentCount.getFont().getStyle() | java.awt.Font.BOLD));
         lblDocumentCount.setForeground(java.awt.Color.white);
         lblDocumentCount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_insert_drive_file_white_36dp.png"))); // NOI18N
         lblDocumentCount.setText("0");
-        lblDocumentCount.setToolTipText("0 Dokumente");
+        lblDocumentCount.setToolTipText("0 Documentos");
 
         lblVoipBalance.setFont(lblVoipBalance.getFont().deriveFont(lblVoipBalance.getFont().getStyle() | java.awt.Font.BOLD));
         lblVoipBalance.setForeground(java.awt.Color.white);

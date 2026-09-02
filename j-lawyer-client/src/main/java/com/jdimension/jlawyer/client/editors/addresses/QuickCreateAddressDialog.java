@@ -853,7 +853,7 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
 
         jLabel1.setText("Name:");
 
-        jLabel2.setText("Vorname:");
+        jLabel2.setText("Nome:");
 
         jLabel3.setText("Unternehmen:");
 
@@ -1011,7 +1011,7 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
 
         jLabel4.setText("Straße:");
 
-        jLabel5.setText("PLZ:");
+        jLabel5.setText("CEP:");
 
         jLabel6.setText("Ort:");
 

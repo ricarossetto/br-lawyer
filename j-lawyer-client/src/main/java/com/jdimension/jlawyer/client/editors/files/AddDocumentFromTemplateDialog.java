@@ -1158,7 +1158,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
 
         txtReviewDateField.setEditable(false);
         txtReviewDateField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtReviewDateField.setToolTipText("Doppelklick um heutiges Datum zu übernehmen");
+        txtReviewDateField.setToolTipText("Duplo clique para aplicar a data de hoje");
         txtReviewDateField.setEnabled(false);
         txtReviewDateField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1324,7 +1324,7 @@ public class AddDocumentFromTemplateDialog extends javax.swing.JDialog implement
             }
         });
 
-        jLabel3.setText("Vorlage:");
+        jLabel3.setText("Modelo:");
 
         lstTemplates.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };

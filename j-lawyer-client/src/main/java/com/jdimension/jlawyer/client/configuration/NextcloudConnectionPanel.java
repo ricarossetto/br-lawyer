@@ -764,7 +764,7 @@ public class NextcloudConnectionPanel extends javax.swing.JPanel {
 
         jLabel4.setText("Nutzername:");
 
-        jLabel5.setText("Passwort:");
+        jLabel5.setText("Senha:");
 
         txtCloudPath.setToolTipText("Unterverzeichnis des Webservers, ohne führende oder abschließende /");
 
