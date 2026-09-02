@@ -306,15 +306,13 @@ public class PublicationsEndpointV8 implements PublicationsEndpointLocalV8 {
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     @RolesAllowed({"writeArchiveFileRole"})
     @io.swagger.annotations.ApiOperation(value = "Marks publication as treated, optionally creating follow-up task/deadline", response = RestfulPublicationDetailV8.class)
-    public Response treatPublication(@PathParam("id") String id, PublicationTreatRequestDTO request) {
+    public Response treatPublication(@PathParam("id") String id, RestfulPublicationTreatRequestV8 request) {
         try {
-            if (request == null) {
-                request = new PublicationTreatRequestDTO();
+            PublicationTreatRequestDTO dto = request != null ? request.toDTO() : new PublicationTreatRequestDTO();
+            if (dto.getUser() == null || dto.getUser().trim().isEmpty() || "CURRENT_USER".equalsIgnoreCase(dto.getUser().trim())) {
+                dto.setUser(getCallerPrincipal());
             }
-            if (request.getUser() == null || request.getUser().trim().isEmpty() || "CURRENT_USER".equalsIgnoreCase(request.getUser().trim())) {
-                request.setUser(getCallerPrincipal());
-            }
-            PublicationDetailDTO updated = getService().treatPublication(id, request);
+            PublicationDetailDTO updated = getService().treatPublication(id, dto);
             if (updated == null) {
                 return Response.status(Response.Status.NOT_FOUND).build();
             }

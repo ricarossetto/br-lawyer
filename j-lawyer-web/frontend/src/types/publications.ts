@@ -34,10 +34,14 @@ export interface PublicationOverview {
 
 export interface PublicationEvent {
   id: string;
-  publicationId: string;
+  publicationId?: string;
+  taskId?: string;
+  processId?: string;
   eventType: string;
-  actorPrincipal: string;
-  eventDescription: string;
+  actor?: string;
+  actorPrincipal?: string;
+  details?: string;
+  eventDescription?: string;
   payloadJson?: string;
   createdAt: number;
 }

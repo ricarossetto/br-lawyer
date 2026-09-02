@@ -1,4 +1,4 @@
-﻿-- ============================================================================
+-- ============================================================================
 -- BR-LAWYER: Migration V3_6_0_11 - Brazilian Legal Workflow Domain
 -- Publicações, Tarefas Jurídicas, Checklist, Comentários e Auditoria
 -- ============================================================================
@@ -10,7 +10,7 @@ CREATE TABLE br_publications (
     `source` VARCHAR(100) DEFAULT 'MANUAL',
     `source_type` VARCHAR(50) DEFAULT 'DIARIO_OFICIAL',
     `court_code` VARCHAR(20),
-    `process_id` VARCHAR(250) BINARY,
+    `process_id` VARCHAR(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin,
     `cnj_number` VARCHAR(25),
     `cnj_number_clean` VARCHAR(20),
     `publication_date` DATETIME,
@@ -61,9 +61,9 @@ CREATE TABLE br_tasks (
     `id` VARCHAR(36) BINARY NOT NULL,
     `title` VARCHAR(255) NOT NULL,
     `description` MEDIUMTEXT,
-    `process_id` VARCHAR(250) BINARY,
+    `process_id` VARCHAR(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin,
     `publication_id` VARCHAR(36) BINARY,
-    `calendar_event_id` VARCHAR(36) BINARY,
+    `calendar_event_id` VARCHAR(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin,
     `assigned_user` VARCHAR(100),
     `created_by` VARCHAR(100),
     `status` VARCHAR(30) NOT NULL DEFAULT 'TODO',
@@ -125,7 +125,7 @@ CREATE TABLE br_publication_events (
     `id` VARCHAR(36) BINARY NOT NULL,
     `publication_id` VARCHAR(36) BINARY,
     `task_id` VARCHAR(36) BINARY,
-    `process_id` VARCHAR(250) BINARY,
+    `process_id` VARCHAR(250) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin,
     `event_type` VARCHAR(50) NOT NULL,
     `actor` VARCHAR(100) NOT NULL,
     `details` TEXT,

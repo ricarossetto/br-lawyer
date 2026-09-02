@@ -3,15 +3,19 @@ import { useQuery } from '@tanstack/react-query';
 import {
   LayoutDashboard,
   Briefcase,
-  Calendar,
-  FileText,
-  Settings,
   Scale,
+  ListTodo,
+  Calendar,
+  Users,
+  FileText,
+  DollarSign,
+  Clock,
+  Sparkles,
+  Settings,
   LogOut,
   ChevronLeft,
   ChevronRight,
   User,
-  ListTodo,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { workflowService } from '../../api/workflowService';
@@ -23,7 +27,11 @@ export type NavItemKey =
   | 'publications'
   | 'tasks'
   | 'calendar'
+  | 'clients'
   | 'documents'
+  | 'finance'
+  | 'timesheets'
+  | 'assistant'
   | 'settings';
 
 interface SidebarProps {
@@ -41,11 +49,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const { session, logout, isAdmin } = useAuth();
 
-  // Query workflow dashboard for dynamic badges
+  // Query workflow dashboard for real dynamic operational badges
   const { data: dashboard } = useQuery({
     queryKey: ['workflow-dashboard'],
     queryFn: () => workflowService.getDashboard(),
     staleTime: 1000 * 30, // 30s
+    refetchInterval: 1000 * 60, // 1 min poll
   });
 
   const untreatedPubs = dashboard?.totalUntreatedPublications ?? 0;
@@ -56,22 +65,25 @@ export const Sidebar: React.FC<SidebarProps> = ({
     key: NavItemKey;
     label: string;
     icon: React.ComponentType<{ className?: string }>;
+    isFunctional: boolean;
     badge?: number | string;
     badgeColor?: 'red' | 'amber' | 'blue' | 'gray';
   }> = [
-    { key: 'dashboard', label: 'Central Diária', icon: LayoutDashboard },
-    { key: 'cases', label: 'Processos', icon: Briefcase },
+    { key: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, isFunctional: true },
+    { key: 'cases', label: 'Processos', icon: Briefcase, isFunctional: true },
     {
       key: 'publications',
       label: 'Publicações',
       icon: Scale,
+      isFunctional: true,
       badge: untreatedPubs > 0 ? untreatedPubs : undefined,
       badgeColor: untreatedPubs > 0 ? 'amber' : 'gray',
     },
     {
       key: 'tasks',
-      label: 'Tarefas & Kanban',
+      label: 'Tarefas',
       icon: ListTodo,
+      isFunctional: true,
       badge:
         overdueTasks > 0
           ? `${overdueTasks} atrasada(s)`
@@ -80,9 +92,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
           : undefined,
       badgeColor: overdueTasks > 0 ? 'red' : 'amber',
     },
-    { key: 'calendar', label: 'Prazos & Agenda', icon: Calendar },
-    { key: 'documents', label: 'Documentos', icon: FileText },
-    { key: 'settings', label: 'Configurações', icon: Settings },
+    { key: 'calendar', label: 'Agenda', icon: Calendar, isFunctional: false },
+    { key: 'clients', label: 'Clientes', icon: Users, isFunctional: false },
+    { key: 'documents', label: 'Documentos', icon: FileText, isFunctional: false },
+    { key: 'finance', label: 'Financeiro', icon: DollarSign, isFunctional: false },
+    { key: 'timesheets', label: 'Apontamentos', icon: Clock, isFunctional: false },
+    { key: 'assistant', label: 'Assistente IA', icon: Sparkles, isFunctional: false },
   ];
 
   return (
@@ -139,7 +154,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
                       isActive ? 'text-indigo-400' : 'text-slate-400 group-hover:text-slate-200'
                     )}
                   />
-                  {!isCollapsed && <span className="truncate">{item.label}</span>}
+                  {!isCollapsed && (
+                    <div className="flex items-center gap-1.5 truncate">
+                      <span className="truncate">{item.label}</span>
+                      {!item.isFunctional && (
+                        <span className="text-[9px] font-mono text-slate-400 uppercase tracking-wider">
+                          breve
+                        </span>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {!isCollapsed && item.badge !== undefined && (

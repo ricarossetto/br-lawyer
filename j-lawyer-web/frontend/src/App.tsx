@@ -104,9 +104,25 @@ const MainAppContent: React.FC = () => {
       title: 'Prazos & Agenda Processual',
       subtitle: 'Controle de prazos fatais, audiências e perícias judiciais',
     },
+    clients: {
+      title: 'Gestão de Clientes & Contatos',
+      subtitle: 'Cadastro de pessoas físicas e jurídicas integrado à base WildFly',
+    },
     documents: {
       title: 'Repositório de Documentos & Modelos',
       subtitle: 'Pesquisa em texto integral via Apache Lucene',
+    },
+    finance: {
+      title: 'Gestão Financeira & Honorários',
+      subtitle: 'Controle de custas processuais, depósitos judiciais e faturamento',
+    },
+    timesheets: {
+      title: 'Apontamentos & Time Tracking',
+      subtitle: 'Registro de horas trabalhadas por processo e atividade',
+    },
+    assistant: {
+      title: 'Assistente Jurídico IA',
+      subtitle: 'Geração e resumo de peças processuais com inteligência artificial',
     },
     settings: {
       title: 'Configurações & Painel do Sistema',

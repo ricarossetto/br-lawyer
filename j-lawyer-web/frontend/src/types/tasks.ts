@@ -24,7 +24,8 @@ export interface TaskChecklistItem {
 export interface TaskComment {
   id: string;
   taskId: string;
-  authorUser: string;
+  userName?: string;
+  authorUser?: string;
   commentText: string;
   createdAt: number;
 }

@@ -12,7 +12,7 @@ package org.jlawyer.io.rest.v8;
 
 import com.jdimension.jlawyer.domain.legal.model.PublicationDetailDTO;
 import com.jdimension.jlawyer.domain.legal.model.PublicationLinkRequestDTO;
-import com.jdimension.jlawyer.domain.legal.model.PublicationTreatRequestDTO;
+import org.jlawyer.io.rest.v8.pojo.RestfulPublicationTreatRequestV8;
 import javax.ejb.Local;
 import javax.ws.rs.core.Response;
 
@@ -41,7 +41,7 @@ public interface PublicationsEndpointLocalV8 {
 
     Response markRead(String id, boolean read);
 
-    Response treatPublication(String id, PublicationTreatRequestDTO request);
+    Response treatPublication(String id, RestfulPublicationTreatRequestV8 request);
 
     Response archivePublication(String id, String reason);
 

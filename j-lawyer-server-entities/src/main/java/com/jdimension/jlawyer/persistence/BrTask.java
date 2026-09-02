@@ -16,9 +16,9 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Entidade JPA para Tarefas Jurídicas no BR-LAWYER.
+ * Entidade JPA para Tarefas JurÃƒÂ­dicas no BR-LAWYER.
  * Suporta ciclo de vida: TODO -> IN_PROGRESS -> WAITING -> DONE / CANCELLED.
- * Integração direta com prazo fatal/duedate do j-lawyer (calendar_event_id).
+ * IntegraÃƒÂ§ÃƒÂ£o direta com prazo fatal/duedate do j-lawyer (calendar_event_id).
  *
  * @author BR-LAWYER Team
  */
@@ -81,7 +81,7 @@ public class BrTask implements Serializable {
     @Column(name = "publication_id", length = 36)
     private String publicationId;
 
-    @Column(name = "calendar_event_id", length = 36)
+    @Column(name = "calendar_event_id", length = 250)
     private String calendarEventId;
 
     @Column(name = "assigned_user", length = 100)
