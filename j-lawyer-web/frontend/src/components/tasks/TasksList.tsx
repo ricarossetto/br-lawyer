@@ -38,8 +38,8 @@ export const TasksList: React.FC<TasksListProps> = ({
 }) => {
   if (isLoading) {
     return (
-      <div className="p-16 flex flex-col items-center justify-center text-slate-400 space-y-3 bg-slate-900 border border-slate-800 rounded-xl">
-        <div className="h-6 w-6 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+      <div className="p-16 flex flex-col items-center justify-center text-slate-400 space-y-3 bg-[#0F1115] border border-white/10 rounded-2xl">
+        <div className="h-6 w-6 border-2 border-[#F7931A] border-t-transparent rounded-full animate-spin" />
         <span className="text-xs">Carregando lista de tarefas...</span>
       </div>
     );
@@ -47,10 +47,10 @@ export const TasksList: React.FC<TasksListProps> = ({
 
   if (!pageData || pageData.items.length === 0) {
     return (
-      <div className="p-16 text-center text-slate-400 space-y-2 bg-slate-900 border border-slate-800 rounded-xl">
+      <div className="p-16 text-center text-slate-400 space-y-2 bg-[#0F1115] border border-white/10 rounded-2xl">
         <ListTodo className="h-8 w-8 mx-auto text-slate-600" />
         <div className="text-xs font-medium text-slate-300">Nenhuma tarefa encontrada</div>
-        <p className="text-[11px] text-slate-500 max-w-sm mx-auto">
+        <p className="text-[11px] text-slate-500 max-w-sm mx-auto font-sans">
           Não há tarefas ou providências correspondentes aos filtros selecionados.
         </p>
       </div>
@@ -64,35 +64,35 @@ export const TasksList: React.FC<TasksListProps> = ({
       case 'HIGH':
         return <Badge variant="yellow">Alta</Badge>;
       case 'NORMAL':
-        return <Badge variant="blue">Normal</Badge>;
+        return <Badge variant="active">Normal</Badge>;
       case 'LOW':
-        return <Badge variant="gray">Baixa</Badge>;
+        return <Badge variant="neutral">Baixa</Badge>;
     }
   };
 
   const getStatusBadge = (status: TaskStatus) => {
     switch (status) {
       case 'TODO':
-        return <Badge variant="blue">A Fazer</Badge>;
+        return <Badge variant="active">A Fazer</Badge>;
       case 'IN_PROGRESS':
         return <Badge variant="yellow">Em Andamento</Badge>;
       case 'WAITING':
-        return <Badge variant="purple">Aguardando</Badge>;
+        return <Badge variant="mono">Aguardando</Badge>;
       case 'DONE':
         return <Badge variant="green">Concluída</Badge>;
       case 'CANCELLED':
-        return <Badge variant="gray">Cancelada</Badge>;
+        return <Badge variant="neutral">Cancelada</Badge>;
     }
   };
 
   const totalPages = Math.ceil(pageData.total / pageSize);
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xs">
+    <div className="bg-[#0F1115] border border-white/10 rounded-2xl overflow-hidden shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)]">
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse text-xs">
           <thead>
-            <tr className="border-b border-slate-800 bg-slate-950/70 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+            <tr className="border-b border-white/10 bg-[#030304]/60 text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-mono select-none">
               <th className="py-2.5 px-3 w-10 text-center">OK</th>
               <th className="py-2.5 px-3">Prioridade</th>
               <th className="py-2.5 px-3 min-w-[240px]">Título da Tarefa / Providência</th>
@@ -103,7 +103,7 @@ export const TasksList: React.FC<TasksListProps> = ({
               <th className="py-2.5 px-3 text-center">Status</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-800/60">
+          <tbody className="divide-y divide-white/5">
             {pageData.items.map((task) => {
               const isDone = task.status === 'DONE';
 
@@ -111,7 +111,7 @@ export const TasksList: React.FC<TasksListProps> = ({
                 <tr
                   key={task.id}
                   onClick={() => onSelectTask(task.id)}
-                  className={`group hover:bg-slate-800/50 cursor-pointer transition-colors ${
+                  className={`group hover:bg-white/5 cursor-pointer transition-colors ${
                     isDone ? 'opacity-60' : ''
                   }`}
                 >
@@ -127,7 +127,7 @@ export const TasksList: React.FC<TasksListProps> = ({
                     }}
                   >
                     <button
-                      className="p-1 rounded text-slate-400 hover:text-indigo-400 transition-colors"
+                      className="p-1 rounded-full text-slate-400 hover:text-[#F7931A] transition-colors"
                       title={isDone ? 'Reabrir tarefa' : 'Marcar como concluída'}
                     >
                       {isDone ? (
@@ -153,7 +153,7 @@ export const TasksList: React.FC<TasksListProps> = ({
                       {task.title}
                     </div>
                     {task.checklistTotalCount > 0 && (
-                      <div className="text-[10px] text-slate-500 mt-0.5 flex items-center gap-2">
+                      <div className="text-[10px] text-slate-400 mt-0.5 flex items-center gap-2 font-mono">
                         <span>
                           Checklist: {task.checklistDoneCount}/{task.checklistTotalCount}
                         </span>
@@ -168,7 +168,7 @@ export const TasksList: React.FC<TasksListProps> = ({
                   <td className="py-2.5 px-3">
                     {task.caseFileNumber || task.cnjNumber ? (
                       <div
-                        className="text-slate-200 font-mono text-[11px] hover:text-indigo-300 transition-colors flex items-center gap-1 truncate max-w-[180px]"
+                        className="text-[#FFD600] font-mono text-[11px] hover:underline transition-colors flex items-center gap-1 truncate max-w-[180px]"
                         onClick={(e) => {
                           if (task.processId && onSelectCase) {
                             e.stopPropagation();
@@ -176,11 +176,11 @@ export const TasksList: React.FC<TasksListProps> = ({
                           }
                         }}
                       >
-                        <Briefcase className="h-3 w-3 text-indigo-400 shrink-0" />
+                        <Briefcase className="h-3 w-3 text-[#FFD600] shrink-0" />
                         <span className="truncate">{task.caseFileNumber || task.cnjNumber}</span>
                       </div>
                     ) : (
-                      <span className="text-slate-600 text-[11px]">—</span>
+                      <span className="text-slate-600 text-[11px] font-mono">—</span>
                     )}
                   </td>
 

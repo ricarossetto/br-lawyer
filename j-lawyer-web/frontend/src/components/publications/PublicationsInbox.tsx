@@ -138,13 +138,13 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
   return (
     <div className="space-y-4">
       {/* Top Header & Metrics Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-900 border border-slate-800 p-4 rounded-xl shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-[#0F1115] border border-white/10 p-5 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)]">
         <div>
-          <h1 className="text-sm font-semibold text-slate-100 flex items-center gap-2">
-            <Scale className="h-4 w-4 text-indigo-400" />
+          <h1 className="text-sm font-semibold text-slate-100 flex items-center gap-2 font-heading">
+            <Scale className="h-4 w-4 text-[#F7931A]" />
             Inbox de Publicações & Intimações Judiciais
           </h1>
-          <p className="text-[11px] text-slate-400 mt-0.5">
+          <p className="text-[11px] text-slate-400 mt-0.5 font-sans">
             Triagem operacional de comunicações processuais, diários de justiça e intimações
           </p>
         </div>
@@ -153,78 +153,78 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
           <button
             onClick={() => refetch()}
             disabled={isFetching}
-            className="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium border border-slate-700 flex items-center gap-1.5 transition-colors disabled:opacity-50"
+            className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-medium border border-white/10 flex items-center gap-1.5 transition-all disabled:opacity-50 hover:border-[#F7931A]/40"
             title="Atualizar lista de publicações"
           >
-            <RotateCw className={`h-3.5 w-3.5 ${isFetching ? 'animate-spin text-indigo-400' : ''}`} />
+            <RotateCw className={`h-3.5 w-3.5 ${isFetching ? 'animate-spin text-[#F7931A]' : ''}`} />
             <span>Atualizar</span>
           </button>
         </div>
       </div>
 
       {/* Filter Ribbon & Tab Switcher */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-3 space-y-3 shadow-xs">
+      <div className="bg-[#0F1115] border border-white/10 rounded-2xl p-4 space-y-3 shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)]">
         {/* Status Tabs */}
-        <div className="flex items-center gap-1 overflow-x-auto pb-1 text-xs border-b border-slate-800">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs border-b border-white/10">
           <button
             onClick={() => { setActiveTab('ALL'); setPage(0); }}
-            className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'ALL'
-                ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
             }`}
           >
             Todas
           </button>
           <button
             onClick={() => { setActiveTab('NEW'); setPage(0); }}
-            className={`px-3 py-1.5 rounded-md font-medium transition-colors flex items-center gap-1.5 ${
+            className={`px-3.5 py-1.5 rounded-full font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'NEW'
-                ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
             }`}
           >
             <span>Novas</span>
-            <span className="px-1.5 py-0.2 rounded-full bg-indigo-500/30 text-indigo-200 text-[10px]">
+            <span className="px-1.5 py-0.2 rounded-full bg-[#F7931A]/30 text-[#F7931A] text-[10px] font-mono font-bold">
               Recentes
             </span>
           </button>
           <button
             onClick={() => { setActiveTab('UNREAD'); setPage(0); }}
-            className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'UNREAD'
-                ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
             }`}
           >
             Não Lidas
           </button>
           <button
             onClick={() => { setActiveTab('ANALYZING'); setPage(0); }}
-            className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'ANALYZING'
-                ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
             }`}
           >
             Em Análise
           </button>
           <button
             onClick={() => { setActiveTab('TREATED'); setPage(0); }}
-            className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'TREATED'
-                ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
             }`}
           >
             Tratadas
           </button>
           <button
             onClick={() => { setActiveTab('ARCHIVED'); setPage(0); }}
-            className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full font-medium transition-all ${
               activeTab === 'ARCHIVED'
-                ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                ? 'bg-[#F7931A]/15 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
             }`}
           >
             Arquivadas
@@ -232,7 +232,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
         </div>
 
         {/* Filter Inputs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
           {/* Search Input */}
           <div className="relative">
             <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-500" />
@@ -241,7 +241,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
               value={searchText}
               onChange={(e) => { setSearchText(e.target.value); setPage(0); }}
               placeholder="Buscar por teor, CNJ, advogado, destinatário..."
-              className="w-full pl-9 pr-3 py-1.5 bg-slate-950 border border-slate-800 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors text-xs"
+              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
             />
           </div>
 
@@ -253,7 +253,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
               value={courtCode}
               onChange={(e) => { setCourtCode(e.target.value); setPage(0); }}
               placeholder="Filtrar por Tribunal (ex: STJ, TJSP, TRF3)..."
-              className="w-full pl-9 pr-3 py-1.5 bg-slate-950 border border-slate-800 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors text-xs uppercase"
+              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs uppercase font-mono"
             />
           </div>
 
@@ -265,17 +265,17 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
               value={assignedUser}
               onChange={(e) => { setAssignedUser(e.target.value); setPage(0); }}
               placeholder="Filtrar por Responsável..."
-              className="w-full pl-9 pr-3 py-1.5 bg-slate-950 border border-slate-800 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors text-xs"
+              className="w-full pl-9 pr-3 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
             />
           </div>
         </div>
       </div>
 
       {/* Publications Table Card */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xs">
+      <div className="bg-[#0F1115] border border-white/10 rounded-2xl overflow-hidden shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)]">
         {isLoading ? (
           <div className="p-12 flex flex-col items-center justify-center text-slate-400 space-y-3">
-            <div className="h-6 w-6 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+            <div className="h-6 w-6 border-2 border-[#F7931A] border-t-transparent rounded-full animate-spin" />
             <span className="text-xs">Carregando publicações do servidor...</span>
           </div>
         ) : !pageData || pageData.items.length === 0 ? (
@@ -290,7 +290,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
-                <tr className="border-b border-slate-800 bg-slate-950/70 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                <tr className="border-b border-white/10 bg-[#030304]/70 text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-mono">
                   <th className="py-2.5 px-3">Data</th>
                   <th className="py-2.5 px-3">Tribunal</th>
                   <th className="py-2.5 px-3">Processo / CNJ</th>
@@ -301,7 +301,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                   <th className="py-2.5 px-3 text-right">Ações</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800/60">
+              <tbody className="divide-y divide-white/5">
                 {pageData.items.map((pub) => {
                   const isUnread = pub.readStatus === 'UNREAD';
                   const isTreated = pub.treatmentStatus === 'TREATED';
@@ -310,8 +310,8 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                     <tr
                       key={pub.id}
                       onClick={() => handleRowClick(pub)}
-                      className={`group hover:bg-slate-800/50 cursor-pointer transition-colors ${
-                        isUnread ? 'bg-indigo-950/20 font-medium' : ''
+                      className={`group hover:bg-white/5 cursor-pointer transition-colors ${
+                        isUnread ? 'bg-[#F7931A]/5 font-medium' : ''
                       }`}
                     >
                       {/* Date */}
@@ -322,7 +322,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                             : '—'}
                         </div>
                         {pub.suggestedDueDate && (
-                          <div className="text-[10px] text-amber-400/90 flex items-center gap-1">
+                          <div className="text-[10px] text-[#FFD600] flex items-center gap-1 font-semibold">
                             <Clock className="h-3 w-3" />
                             Prazo: {format(new Date(pub.suggestedDueDate), 'dd/MM')}
                           </div>
@@ -338,11 +338,11 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
 
                       {/* Process / CNJ */}
                       <td className="py-2.5 px-3">
-                        <div className="font-mono text-slate-200 text-[11px]">
+                        <div className="font-mono text-slate-200 text-[11px] group-hover:text-[#FFD600] transition-colors">
                           {pub.cnjNumber || 'Sem NPU'}
                         </div>
                         {pub.processId ? (
-                          <div className="text-[10px] text-indigo-400 flex items-center gap-1">
+                          <div className="text-[10px] text-[#FFD600] flex items-center gap-1">
                             <Briefcase className="h-3 w-3" />
                             <span>{pub.caseFileNumber || 'Vinculado'}</span>
                           </div>
@@ -372,7 +372,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                       {/* Assigned User */}
                       <td className="py-2.5 px-3 whitespace-nowrap text-slate-300">
                         {pub.assignedUser ? (
-                          <span className="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[10px]">
+                          <span className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono">
                             {pub.assignedUser}
                           </span>
                         ) : (
@@ -385,7 +385,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
                         {isTreated ? (
                           <Badge variant="green">Tratada</Badge>
                         ) : isUnread ? (
-                          <Badge variant="blue">Nova / Não Lida</Badge>
+                          <Badge variant="active">Nova / Não Lida</Badge>
                         ) : (
                           <Badge variant="yellow">Pendente</Badge>
                         )}
@@ -393,28 +393,23 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
 
                       {/* Quick Actions */}
                       <td className="py-2.5 px-3 text-right whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
-                        <div className="flex items-center justify-end gap-1">
+                        <div className="flex items-center justify-end gap-1.5">
                           <button
                             onClick={() =>
                               markReadMutation.mutate({
                                 id: pub.id,
-                                read: pub.readStatus !== 'READ',
+                                read: isUnread ? true : false,
                               })
                             }
-                            className="p-1 rounded text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors"
-                            title={pub.readStatus === 'READ' ? 'Marcar não lida' : 'Marcar como lida'}
+                            className="p-1 rounded-md text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
+                            title={isUnread ? 'Marcar como lida' : 'Marcar como não lida'}
                           >
-                            {pub.readStatus === 'READ' ? (
-                              <EyeOff className="h-3.5 w-3.5" />
-                            ) : (
-                              <Eye className="h-3.5 w-3.5 text-indigo-400" />
-                            )}
+                            {isUnread ? <Eye className="h-3.5 w-3.5" /> : <EyeOff className="h-3.5 w-3.5" />}
                           </button>
 
                           <button
                             onClick={() => setQuickTreatPub(pub)}
-                            className="px-2 py-1 rounded bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-medium text-[11px] flex items-center gap-1 transition-colors"
-                            title="Tratar publicação"
+                            className="px-3 py-1 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-[11px] flex items-center gap-1 shadow-[0_0_10px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.03]"
                           >
                             <CheckCircle2 className="h-3 w-3" />
                             <span>Tratar</span>
@@ -431,7 +426,7 @@ export const PublicationsInbox: React.FC<PublicationsInboxProps> = ({
 
         {/* Pagination Footer */}
         {pageData && pageData.total > 0 && (
-          <div className="px-4 py-3 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between text-xs text-slate-400">
+          <div className="px-4 py-3 border-t border-white/10 bg-[#030304]/40 flex items-center justify-between text-xs text-slate-400">
             <div>
               Mostrando{' '}
               <span className="font-semibold text-slate-200">

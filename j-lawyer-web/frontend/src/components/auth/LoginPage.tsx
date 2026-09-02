@@ -37,28 +37,32 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-screen bg-slate-950 flex flex-col items-center justify-center p-4 selection:bg-indigo-600 selection:text-white">
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))]" />
+    <div className="min-h-screen w-screen bg-[#030304] bg-grid-pattern flex flex-col items-center justify-center p-4 selection:bg-[#F7931A] selection:text-white relative overflow-hidden">
+      {/* Background Ambient Heat Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#F7931A]/10 blur-[140px] pointer-events-none rounded-full" />
 
-      <div className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-8 backdrop-blur z-10">
+      <div className="relative w-full max-w-md bg-[#0F1115]/90 border border-white/10 rounded-2xl shadow-[0_0_50px_-10px_rgba(247,147,26,0.15)] p-8 backdrop-blur-xl z-10">
         {/* Brand Header */}
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="h-12 w-12 rounded-xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 mb-4 shadow-inner">
-            <Scale className="h-6 w-6" />
+          <div className="h-14 w-14 rounded-2xl bg-[#EA580C]/15 border border-[#F7931A]/40 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(247,147,26,0.3)] animate-float">
+            <img src="/icons/atrium-emblem.svg" alt="BR-LAWYER" className="h-8 w-8" />
           </div>
-          <h1 className="text-xl font-bold text-slate-100 tracking-tight">BR-LAWYER</h1>
-          <p className="text-xs text-slate-400 mt-1">Plataforma de Prática Jurídica & Gestão Processual</p>
-          <div className="mt-3 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-[11px] text-slate-300 font-mono">
-            <ShieldCheck className="h-3 w-3 text-emerald-400" />
+          <h1 className="text-2xl font-bold font-serif tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#F7931A] to-[#FFD600]">
+            BR-LAWYER
+          </h1>
+          <p className="text-xs text-slate-400 mt-1 font-sans">
+            Plataforma de Prática Jurídica & Gestão Processual
+          </p>
+          <div className="mt-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181B20] border border-white/10 text-[11px] text-slate-300 font-mono shadow-xs">
+            <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
             <span>WildFly Elytron JWT Authentication</span>
           </div>
         </div>
 
         {/* Error Alert */}
         {error && (
-          <div className="mb-6 p-3 rounded-lg bg-red-500/10 border border-red-500/30 flex items-start gap-2.5 text-xs text-red-300">
-            <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-red-400" />
+          <div className="mb-6 p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-2.5 text-xs text-rose-300 shadow-sm">
+            <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-rose-400" />
             <div>{error}</div>
           </div>
         )}
@@ -108,12 +112,12 @@ export const LoginPage: React.FC = () => {
         </form>
 
         {/* Development Tip */}
-        <div className="mt-8 pt-4 border-t border-slate-800/80 text-center">
+        <div className="mt-8 pt-4 border-t border-white/10 text-center">
           <p className="text-[11px] text-slate-400">
-            Ambiente Local: <span className="font-mono text-slate-300">admin</span> / <span className="font-mono text-slate-300">a</span>
+            Ambiente Local: <span className="font-mono text-[#FFD600]">admin</span> / <span className="font-mono text-[#FFD600]">a</span>
           </p>
-          <p className="text-[10px] text-slate-400 mt-1">
-            Conectando diretamente a <span className="font-mono">http://localhost:8000</span>
+          <p className="text-[10px] text-slate-500 mt-1">
+            Conectando diretamente a <span className="font-mono text-slate-400">http://localhost:8000</span>
           </p>
         </div>
       </div>

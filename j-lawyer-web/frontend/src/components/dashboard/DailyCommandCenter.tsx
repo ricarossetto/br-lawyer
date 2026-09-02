@@ -158,27 +158,27 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
       />
 
       {/* Minha Fila de Trabalho / Daily Work Queue */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-xs space-y-3 p-4 text-xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
-          <div className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-              <ListTodo className="h-3.5 w-3.5" />
+      <div className="bg-[#0F1115] border border-white/10 rounded-2xl overflow-hidden shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)] space-y-3 p-5 text-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
+          <div className="flex items-center gap-2.5">
+            <div className="h-8 w-8 rounded-xl bg-[#EA580C]/15 border border-[#F7931A]/40 flex items-center justify-center text-[#F7931A] shadow-[0_0_12px_rgba(247,147,26,0.25)]">
+              <ListTodo className="h-4 w-4" />
             </div>
             <div>
-              <h2 className="font-semibold text-slate-100 text-xs">Minha Fila de Trabalho Prioritária</h2>
-              <p className="text-[11px] text-slate-400">
+              <h2 className="font-semibold text-slate-100 text-sm font-heading">Minha Fila de Trabalho Prioritária</h2>
+              <p className="text-[11px] text-slate-400 font-sans">
                 Ações imediatas selecionadas pelo motor de workflow para o dia de hoje
               </p>
             </div>
           </div>
 
           {/* Queue Filter Tabs */}
-          <div className="flex items-center gap-1 bg-slate-950 p-1 border border-slate-800 rounded-lg">
+          <div className="flex items-center gap-1 bg-[#030304] p-1 border border-white/10 rounded-full">
             <button
               onClick={() => setActiveQueueTab('URGENT_TASKS')}
-              className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all flex items-center gap-1.5 ${
                 activeQueueTab === 'URGENT_TASKS'
-                  ? 'bg-rose-600/30 text-rose-200 border border-rose-500/40'
+                  ? 'bg-rose-600/30 text-rose-200 border border-rose-500/40 shadow-[0_0_10px_rgba(244,63,94,0.25)]'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
@@ -190,9 +190,9 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
 
             <button
               onClick={() => setActiveQueueTab('TODAY_TASKS')}
-              className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all flex items-center gap-1.5 ${
                 activeQueueTab === 'TODAY_TASKS'
-                  ? 'bg-amber-600/30 text-amber-200 border border-amber-500/40'
+                  ? 'bg-amber-600/30 text-amber-200 border border-amber-500/40 shadow-[0_0_10px_rgba(245,158,11,0.25)]'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
@@ -204,14 +204,14 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
 
             <button
               onClick={() => setActiveQueueTab('PENDING_PUBS')}
-              className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors flex items-center gap-1.5 ${
+              className={`px-3 py-1 rounded-full text-[11px] font-medium transition-all flex items-center gap-1.5 ${
                 activeQueueTab === 'PENDING_PUBS'
-                  ? 'bg-indigo-600/30 text-indigo-200 border border-indigo-500/40'
+                  ? 'bg-[#F7931A]/20 text-[#F7931A] border border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)] font-semibold'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
               <span>Publicações Pendentes</span>
-              <span className="px-1.5 py-0.2 rounded-full bg-indigo-500/30 text-indigo-200 font-mono text-[10px] font-bold">
+              <span className="px-1.5 py-0.2 rounded-full bg-[#F7931A]/30 text-[#F7931A] font-mono text-[10px] font-bold">
                 {urgentPubs.length}
               </span>
             </button>
@@ -232,7 +232,7 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                 <div
                   key={t.id}
                   onClick={() => setSelectedTaskId(t.id)}
-                  className="p-3 bg-slate-950 border border-slate-800 hover:border-slate-700 rounded-lg flex items-center justify-between gap-3 cursor-pointer transition-colors group"
+                  className="p-3.5 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all duration-200 hover:shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)] group"
                 >
                   <div className="flex items-center gap-3 truncate">
                     <button
@@ -247,12 +247,12 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                     </button>
 
                     <div className="truncate">
-                      <div className="font-semibold text-slate-100 group-hover:text-indigo-300 transition-colors truncate">
+                      <div className="font-semibold text-slate-100 group-hover:text-[#FFD600] transition-colors truncate">
                         {t.title}
                       </div>
                       <div className="flex items-center gap-2 mt-0.5 text-[10px] text-slate-400">
                         {t.caseFileNumber && (
-                          <span className="font-mono text-indigo-400">{t.caseFileNumber}</span>
+                          <span className="font-mono text-[#FFD600]">{t.caseFileNumber}</span>
                         )}
                         <span>•</span>
                         <span className="uppercase">{t.category}</span>
@@ -268,7 +268,7 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
 
                   <div className="flex items-center gap-3 shrink-0">
                     <div className="text-right font-mono">
-                      <span className="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold">
+                      <span className="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold">
                         {t.overdue ? 'ATRASADA' : 'URGENTE'}
                       </span>
                       {t.dueDate && (
@@ -278,7 +278,7 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                       )}
                     </div>
 
-                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-slate-300 transition-colors" />
+                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-[#F7931A] transition-colors" />
                   </div>
                 </div>
               ))
@@ -300,7 +300,7 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                 <div
                   key={t.id}
                   onClick={() => setSelectedTaskId(t.id)}
-                  className="p-3 bg-slate-950 border border-slate-800 hover:border-slate-700 rounded-lg flex items-center justify-between gap-3 cursor-pointer transition-colors group"
+                  className="p-3.5 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all duration-200 hover:shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)] group"
                 >
                   <div className="flex items-center gap-3 truncate">
                     <button
@@ -315,12 +315,12 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                     </button>
 
                     <div className="truncate">
-                      <div className="font-semibold text-slate-100 group-hover:text-indigo-300 transition-colors truncate">
+                      <div className="font-semibold text-slate-100 group-hover:text-[#FFD600] transition-colors truncate">
                         {t.title}
                       </div>
                       <div className="flex items-center gap-2 mt-0.5 text-[10px] text-slate-400">
                         {t.caseFileNumber && (
-                          <span className="font-mono text-indigo-400">{t.caseFileNumber}</span>
+                          <span className="font-mono text-[#FFD600]">{t.caseFileNumber}</span>
                         )}
                         <span>•</span>
                         <span className="uppercase">{t.category}</span>
@@ -329,10 +329,10 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                   </div>
 
                   <div className="flex items-center gap-3 shrink-0">
-                    <span className="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">
+                    <span className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">
                       HOJE {t.dueTime ? `(${t.dueTime})` : ''}
                     </span>
-                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-slate-300 transition-colors" />
+                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-[#F7931A] transition-colors" />
                   </div>
                 </div>
               ))
@@ -354,15 +354,15 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                 <div
                   key={pub.id}
                   onClick={() => setSelectedPubId(pub.id)}
-                  className="p-3 bg-slate-950 border border-slate-800 hover:border-slate-700 rounded-lg flex items-center justify-between gap-3 cursor-pointer transition-colors group"
+                  className="p-3.5 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between gap-3 cursor-pointer transition-all duration-200 hover:shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)] group"
                 >
                   <div className="flex items-center gap-3 truncate">
-                    <div className="p-2 rounded bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 shrink-0 font-bold text-[10px]">
+                    <div className="p-2 rounded-lg bg-[#EA580C]/15 border border-[#F7931A]/30 text-[#F7931A] shrink-0 font-bold text-[10px] shadow-[0_0_8px_rgba(247,147,26,0.2)]">
                       {pub.courtCode || 'DJ'}
                     </div>
 
                     <div className="truncate">
-                      <div className="font-semibold text-slate-100 group-hover:text-indigo-300 transition-colors truncate">
+                      <div className="font-semibold text-slate-100 group-hover:text-[#FFD600] transition-colors truncate">
                         {pub.cnjNumber || pub.recipient || 'Publicação Judicial'}
                       </div>
                       <p className="text-[11px] text-slate-400 truncate line-clamp-1 mt-0.5">
@@ -374,13 +374,13 @@ export const DailyCommandCenter: React.FC<DailyCommandCenterProps> = ({
                   <div className="flex items-center gap-2 shrink-0" onClick={(e) => e.stopPropagation()}>
                     <button
                       onClick={() => setQuickTreatPub(pub)}
-                      className="px-2.5 py-1 rounded bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-medium text-[11px] flex items-center gap-1 transition-colors"
+                      className="px-3 py-1 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-[11px] flex items-center gap-1.5 shadow-[0_0_12px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.03]"
                     >
-                      <CheckCircle2 className="h-3 w-3" />
+                      <CheckCircle2 className="h-3.5 w-3.5" />
                       <span>Tratar</span>
                     </button>
 
-                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-slate-300 transition-colors" />
+                    <ChevronRight className="h-4 w-4 text-slate-600 group-hover:text-[#F7931A] transition-colors" />
                   </div>
                 </div>
               ))

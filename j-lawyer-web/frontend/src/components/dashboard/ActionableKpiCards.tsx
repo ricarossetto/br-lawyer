@@ -70,16 +70,16 @@ export const ActionableKpiCards: React.FC<ActionableKpiCardsProps> = ({
   ];
 
   const colorStyles = {
-    urgent: 'text-rose-400 bg-rose-500/10 border-rose-500/30',
-    warning: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
-    amber: 'text-amber-300 bg-amber-500/10 border-amber-500/30',
-    active: 'text-indigo-400 bg-indigo-500/10 border-indigo-500/30',
-    success: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
-    neutral: 'text-slate-400 bg-slate-800/40 border-slate-700/40',
+    urgent: 'text-rose-400 bg-rose-500/10 border-rose-500/30 shadow-[0_0_12px_rgba(244,63,94,0.2)]',
+    warning: 'text-[#FFD600] bg-[#FFD600]/10 border-[#FFD600]/30 shadow-[0_0_12px_rgba(255,214,0,0.2)]',
+    amber: 'text-amber-400 bg-amber-500/10 border-amber-500/30 shadow-[0_0_12px_rgba(245,158,11,0.2)]',
+    active: 'text-[#F7931A] bg-[#EA580C]/15 border-[#F7931A]/40 shadow-[0_0_12px_rgba(247,147,26,0.25)]',
+    success: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30 shadow-[0_0_12px_rgba(16,185,129,0.2)]',
+    neutral: 'text-slate-400 bg-white/5 border-white/10',
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {cards.map((card, idx) => {
         const Icon = card.icon;
         const style = colorStyles[card.accent as keyof typeof colorStyles];
@@ -88,24 +88,24 @@ export const ActionableKpiCards: React.FC<ActionableKpiCardsProps> = ({
           <div
             key={idx}
             onClick={card.onClick}
-            className={`p-4 bg-slate-900 border border-slate-800 rounded-xl shadow-xs transition-all duration-150 select-none ${
-              card.onClick ? 'hover:border-slate-700 hover:bg-slate-900/90 cursor-pointer' : ''
+            className={`p-5 bg-[#0F1115] border border-white/10 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] transition-all duration-200 select-none group ${
+              card.onClick ? 'hover:-translate-y-1 hover:border-[#F7931A]/50 hover:shadow-[0_0_25px_-5px_rgba(247,147,26,0.25)] cursor-pointer' : ''
             }`}
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-slate-400">{card.title}</span>
-              <div className={`p-2 rounded-lg border ${style}`}>
+              <span className="text-xs font-medium text-slate-400 font-sans">{card.title}</span>
+              <div className={`p-2.5 rounded-xl border transition-all duration-200 ${style}`}>
                 <Icon className="h-4 w-4" />
               </div>
             </div>
 
             <div className="mt-3 flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-slate-100 font-mono tracking-tight">
+              <span className="text-3xl font-bold text-white font-mono tracking-tight group-hover:text-[#FFD600] transition-colors">
                 {card.value}
               </span>
             </div>
 
-            <p className="mt-1 text-[11px] text-slate-500 truncate">{card.subtitle}</p>
+            <p className="mt-1 text-[11px] text-slate-400 truncate">{card.subtitle}</p>
           </div>
         );
       })}

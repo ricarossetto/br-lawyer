@@ -73,9 +73,9 @@ export const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({
     >
       <div className="flex flex-col h-[70vh]">
         {/* Top Action Bar */}
-        <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
-          <div className="flex items-center gap-2 text-xs text-slate-400 font-mono">
-            <FileText className="h-4 w-4 text-indigo-400" />
+        <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+          <div className="flex items-center gap-2 text-xs text-slate-300 font-mono">
+            <FileText className="h-4 w-4 text-[#FFD600]" />
             <span>{documentName}</span>
           </div>
           <Button
@@ -89,10 +89,10 @@ export const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({
         </div>
 
         {/* Content Viewer */}
-        <div className="flex-1 overflow-y-auto bg-slate-950 rounded-lg p-4 border border-slate-800">
+        <div className="flex-1 overflow-y-auto bg-[#030304] rounded-xl p-4 border border-white/10">
           {isLoading ? (
             <div className="h-full flex flex-col items-center justify-center text-slate-500 text-xs">
-              <svg className="animate-spin h-6 w-6 text-indigo-400 mb-2" viewBox="0 0 24 24" fill="none">
+              <svg className="animate-spin h-6 w-6 text-[#F7931A] mb-2" viewBox="0 0 24 24" fill="none">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
               </svg>

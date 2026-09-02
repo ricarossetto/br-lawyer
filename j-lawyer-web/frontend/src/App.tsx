@@ -43,7 +43,7 @@ const queryClient = new QueryClient({
 
 const ViewLoadingFallback = () => (
   <div className="py-20 flex flex-col items-center justify-center text-slate-400 space-y-3 text-xs">
-    <div className="h-6 w-6 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+    <div className="h-6 w-6 border-2 border-[#F7931A] border-t-transparent rounded-full animate-spin" />
     <span>Carregando módulo...</span>
   </div>
 );
@@ -55,8 +55,8 @@ const MainAppContent: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="h-screen w-screen bg-slate-950 flex flex-col items-center justify-center text-slate-400 text-xs">
-        <svg className="animate-spin h-8 w-8 text-indigo-500 mb-3" viewBox="0 0 24 24" fill="none">
+      <div className="h-screen w-screen bg-[#030304] flex flex-col items-center justify-center text-slate-400 text-xs font-sans">
+        <svg className="animate-spin h-8 w-8 text-[#F7931A] mb-3" viewBox="0 0 24 24" fill="none">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
         </svg>
@@ -176,11 +176,11 @@ const MainAppContent: React.FC = () => {
 
         {currentView === 'calendar' && (
           <div className="space-y-4">
-            <div className="p-8 bg-slate-900 border border-slate-800 rounded-xl text-center">
-              <Calendar className="h-10 w-10 text-indigo-400 mx-auto mb-3" />
-              <h3 className="text-sm font-semibold text-slate-100">Agenda & Prazos Processuais</h3>
-              <p className="text-xs text-slate-400 mt-1 max-w-md mx-auto">
-                Eventos integrados via endpoint <span className="font-mono text-indigo-300">/v8/calendar/events</span> com suporte a prazos de 15 dias úteis (CPC), audiências e sessões de julgamento.
+            <div className="p-8 bg-[#0F1115] border border-white/10 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] text-center">
+              <Calendar className="h-10 w-10 text-[#FFD600] mx-auto mb-3" />
+              <h3 className="text-sm font-semibold text-slate-100 font-heading">Agenda & Prazos Processuais</h3>
+              <p className="text-xs text-slate-400 mt-1 max-w-md mx-auto font-sans">
+                Eventos integrados via endpoint <span className="font-mono text-[#FFD600]">/v8/calendar/events</span> com suporte a prazos de 15 dias úteis (CPC), audiências e sessões de julgamento.
               </p>
             </div>
           </div>
@@ -188,11 +188,11 @@ const MainAppContent: React.FC = () => {
 
         {currentView === 'documents' && (
           <div className="space-y-4">
-            <div className="p-8 bg-slate-900 border border-slate-800 rounded-xl text-center">
-              <FileText className="h-10 w-10 text-indigo-400 mx-auto mb-3" />
-              <h3 className="text-sm font-semibold text-slate-100">Repositório Geral de Documentos</h3>
-              <p className="text-xs text-slate-400 mt-1 max-w-md mx-auto">
-                Utilize o atalho <kbd className="px-1.5 py-0.5 font-mono text-[10px] bg-slate-800 rounded border border-slate-700">Ctrl+K</kbd> para pesquisar em texto integral através do motor Apache Lucene v8.
+            <div className="p-8 bg-[#0F1115] border border-white/10 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] text-center">
+              <FileText className="h-10 w-10 text-[#FFD600] mx-auto mb-3" />
+              <h3 className="text-sm font-semibold text-slate-100 font-heading">Repositório Geral de Documentos</h3>
+              <p className="text-xs text-slate-400 mt-1 max-w-md mx-auto font-sans">
+                Utilize o atalho <kbd className="px-2 py-0.5 font-mono text-[10px] bg-[#030304] rounded border border-white/10 text-[#FFD600]">Ctrl+K</kbd> para pesquisar em texto integral através do motor Apache Lucene v8.
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ const MainAppContent: React.FC = () => {
 
         {currentView === 'settings' && (
           <div className="space-y-4">
-            <div className="p-6 bg-slate-900 border border-slate-800 rounded-xl">
+            <div className="p-6 bg-[#0F1115] border border-white/10 rounded-2xl shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)]">
               <h3 className="text-sm font-semibold text-slate-100 mb-4">Informações do Operador & Sessão</h3>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between py-2 border-b border-slate-800">

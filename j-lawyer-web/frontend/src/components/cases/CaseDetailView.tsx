@@ -92,7 +92,7 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
   if (isLoading && !caseData) {
     return (
       <div className="py-20 text-center text-slate-500 text-xs">
-        <svg className="animate-spin h-6 w-6 text-indigo-400 mx-auto mb-2" viewBox="0 0 24 24" fill="none">
+        <svg className="animate-spin h-6 w-6 text-[#F7931A] mx-auto mb-2" viewBox="0 0 24 24" fill="none">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
         </svg>
@@ -106,18 +106,18 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
       {/* Top Back Button */}
       <button
         onClick={onBack}
-        className="flex items-center gap-2 text-xs font-medium text-slate-400 hover:text-slate-100 transition-colors cursor-pointer"
+        className="flex items-center gap-2 text-xs font-medium text-slate-400 hover:text-[#F7931A] transition-colors cursor-pointer"
       >
         <ArrowLeft className="h-4 w-4" />
         <span>Voltar para a Lista de Processos</span>
       </button>
 
       {/* Case Header Card */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-sm">
+      <div className="bg-[#0F1115] border border-white/10 rounded-2xl p-6 shadow-[0_0_30px_-10px_rgba(247,147,26,0.1)]">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-3 flex-wrap">
-              <span className="font-mono text-sm font-semibold text-indigo-400 tracking-tight bg-indigo-950/60 px-2.5 py-1 rounded border border-indigo-500/30">
+              <span className="font-mono text-sm font-semibold text-[#FFD600] tracking-tight bg-[#FFD600]/10 px-3 py-1 rounded-full border border-[#FFD600]/30 shadow-[0_0_12px_rgba(255,214,0,0.2)]">
                 {formatCNJ(caseData?.fileNumber)}
               </span>
               <Badge variant={caseData?.archived ? 'neutral' : 'active'}>
@@ -125,9 +125,9 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
               </Badge>
               <Badge variant="mono">{caseData?.subjectField || 'Cível Geral'}</Badge>
             </div>
-            <h2 className="text-lg font-bold text-slate-100 mt-2">{caseData?.name}</h2>
+            <h2 className="text-xl font-bold text-white mt-2.5 font-heading">{caseData?.name}</h2>
             {caseData?.notice && (
-              <p className="text-xs text-slate-400 mt-1 italic">{caseData.notice}</p>
+              <p className="text-xs text-slate-400 mt-1 italic font-sans">{caseData.notice}</p>
             )}
           </div>
 
@@ -139,33 +139,33 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
         </div>
 
         {/* Metadata Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-slate-800/80 text-xs">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-white/10 text-xs">
           <div>
-            <span className="text-slate-500 block text-[11px]">Advogado Responsável</span>
+            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Advogado Responsável</span>
             <div className="flex items-center gap-1.5 mt-1 text-slate-200 font-medium">
               <User className="h-3.5 w-3.5 text-slate-400" />
               <span>{caseData?.lawyer || 'Não informado'}</span>
             </div>
           </div>
           <div>
-            <span className="text-slate-500 block text-[11px]">Valor da Causa</span>
-            <span className="font-mono font-medium text-slate-200 mt-1 block">
+            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Valor da Causa</span>
+            <span className="font-mono font-bold text-[#FFD600] mt-1 block">
               {formatBRL(caseData?.claimValue)}
             </span>
           </div>
           <div>
-            <span className="text-slate-500 block text-[11px]">Assistente</span>
+            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Assistente</span>
             <span className="text-slate-200 mt-1 block">{caseData?.assistant || 'Gabinete'}</span>
           </div>
           <div>
-            <span className="text-slate-500 block text-[11px]">Número da Pasta</span>
+            <span className="text-slate-500 block text-[11px] font-mono uppercase tracking-wider">Número da Pasta</span>
             <span className="font-mono text-slate-200 mt-1 block">{caseData?.claimNumber || caseData?.id || '—'}</span>
           </div>
         </div>
       </div>
 
       {/* Tabs Navigation */}
-      <div className="flex items-center gap-1 border-b border-slate-800 select-none overflow-x-auto">
+      <div className="flex items-center gap-1 border-b border-white/10 select-none overflow-x-auto">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.key;
@@ -176,14 +176,14 @@ export const CaseDetailView: React.FC<CaseDetailViewProps> = ({ caseId, onBack }
               className={cn(
                 'flex items-center gap-2 px-4 py-3 text-xs font-medium border-b-2 transition-all cursor-pointer whitespace-nowrap',
                 isActive
-                  ? 'border-indigo-500 text-indigo-400 bg-slate-900/50'
-                  : 'border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-700'
+                  ? 'border-[#F7931A] text-[#F7931A] bg-[#0F1115] shadow-[0_0_12px_rgba(247,147,26,0.15)] font-semibold'
+                  : 'border-transparent text-slate-400 hover:text-slate-200 hover:border-white/20'
               )}
             >
               <Icon className="h-4 w-4" />
               <span>{tab.label}</span>
               {tab.count !== undefined && (
-                <span className="px-1.5 py-0.2 rounded-full bg-slate-800 text-[10px] font-mono text-slate-300">
+                <span className="px-2 py-0.2 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">
                   {tab.count}
                 </span>
               )}

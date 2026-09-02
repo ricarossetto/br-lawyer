@@ -51,7 +51,7 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
   if (isLoading) {
     return (
       <div className="p-12 flex flex-col items-center justify-center text-slate-400 space-y-3">
-        <div className="h-6 w-6 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+        <div className="h-6 w-6 border-2 border-[#F7931A] border-t-transparent rounded-full animate-spin" />
         <span className="text-xs">Carregando publicações vinculadas aos autos...</span>
       </div>
     );
@@ -59,7 +59,7 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
 
   if (!publications || publications.length === 0) {
     return (
-      <div className="p-12 text-center text-slate-400 space-y-2 bg-slate-900/60 border border-slate-800 rounded-xl">
+      <div className="p-12 text-center text-slate-400 space-y-2 bg-[#0F1115] border border-white/10 rounded-2xl">
         <Scale className="h-8 w-8 mx-auto text-slate-600" />
         <div className="text-xs font-medium text-slate-300">Nenhuma publicação vinculada</div>
         <p className="text-[11px] text-slate-500 max-w-sm mx-auto">
@@ -73,16 +73,16 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
     <div className="space-y-4 text-xs">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-slate-200">
+          <span className="font-semibold text-slate-100 font-heading">
             Publicações Judiciais ({publications.length})
           </span>
           {cnjNumber && (
-            <span className="text-[10px] text-slate-400 font-mono">CNJ: {cnjNumber}</span>
+            <span className="text-[10px] text-[#FFD600] font-mono">CNJ: {cnjNumber}</span>
           )}
         </div>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-3">
         {publications.map((pub) => {
           const isUnread = pub.readStatus === 'UNREAD';
           const isTreated = pub.treatmentStatus === 'TREATED';
@@ -91,13 +91,13 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
             <div
               key={pub.id}
               onClick={() => setSelectedPubId(pub.id)}
-              className={`p-3.5 bg-slate-900 border rounded-xl hover:border-slate-700 cursor-pointer transition-colors space-y-2 group ${
-                isUnread ? 'border-indigo-500/40 bg-indigo-950/10' : 'border-slate-800'
+              className={`p-4 bg-[#0F1115] border rounded-2xl hover:border-[#F7931A]/40 cursor-pointer transition-all duration-200 space-y-2.5 group shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] ${
+                isUnread ? 'border-[#F7931A]/40 bg-[#F7931A]/5 shadow-[0_0_15px_-4px_rgba(247,147,26,0.2)]' : 'border-white/10'
               }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Badge variant={pub.courtCode ? 'purple' : 'gray'}>
+                  <Badge variant={pub.courtCode ? 'active' : 'neutral'}>
                     {pub.courtCode || 'DJ'}
                   </Badge>
                   <span className="font-mono text-slate-400 text-[11px]">
@@ -105,27 +105,27 @@ export const CasePublicationsTab: React.FC<CasePublicationsTabProps> = ({ caseId
                       ? format(new Date(pub.availabilityDate), 'dd/MM/yyyy')
                       : 'Data recente'}
                   </span>
-                  {isUnread && <Badge variant="blue">Nova / Não Lida</Badge>}
+                  {isUnread && <Badge variant="active">Nova / Não Lida</Badge>}
                   {isTreated ? <Badge variant="green">Tratada</Badge> : <Badge variant="yellow">Pendente</Badge>}
                 </div>
 
                 <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
                   <button
                     onClick={() => setQuickTreatPub(pub)}
-                    className="px-2 py-1 rounded bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-medium text-[11px] flex items-center gap-1 transition-colors"
+                    className="px-3 py-1 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-[11px] flex items-center gap-1 shadow-[0_0_10px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.03]"
                   >
-                    <CheckCircle2 className="h-3 w-3" />
+                    <CheckCircle2 className="h-3.5 w-3.5" />
                     <span>Tratar</span>
                   </button>
                 </div>
               </div>
 
-              <p className="text-slate-300 text-xs line-clamp-2 leading-relaxed">
+              <p className="text-slate-200 text-xs line-clamp-2 leading-relaxed font-sans">
                 {pub.snippet || 'Sem resumo disponível'}
               </p>
 
               {pub.suggestedDueDate && (
-                <div className="text-[10px] text-amber-400/90 flex items-center gap-1 font-mono pt-1 border-t border-slate-800/60">
+                <div className="text-[10px] text-[#FFD600] flex items-center gap-1 font-mono pt-1.5 border-t border-white/5 font-semibold">
                   <Clock className="h-3 w-3" />
                   <span>
                     Prazo Heurístico:{' '}

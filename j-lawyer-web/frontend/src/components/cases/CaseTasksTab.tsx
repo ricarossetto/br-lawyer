@@ -74,16 +74,16 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
       case 'HIGH':
         return <Badge variant="yellow">Alta</Badge>;
       case 'NORMAL':
-        return <Badge variant="blue">Normal</Badge>;
+        return <Badge variant="active">Normal</Badge>;
       case 'LOW':
-        return <Badge variant="gray">Baixa</Badge>;
+        return <Badge variant="neutral">Baixa</Badge>;
     }
   };
 
   if (isLoading) {
     return (
       <div className="p-12 flex flex-col items-center justify-center text-slate-400 space-y-3">
-        <div className="h-6 w-6 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+        <div className="h-6 w-6 border-2 border-[#F7931A] border-t-transparent rounded-full animate-spin" />
         <span className="text-xs">Carregando tarefas vinculadas ao processo...</span>
       </div>
     );
@@ -93,7 +93,7 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
     <div className="space-y-4 text-xs">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-slate-200">
+          <span className="font-semibold text-slate-100 font-heading">
             Tarefas & Providências ({tasks?.length || 0})
           </span>
         </div>
@@ -103,7 +103,7 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
             setEditingTask(null);
             setIsNewTaskModalOpen(true);
           }}
-          className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium flex items-center gap-1.5 transition-colors shadow-xs"
+          className="px-4 py-2 rounded-full bg-gradient-to-r from-[#EA580C] to-[#F7931A] text-white font-semibold flex items-center gap-1.5 transition-all shadow-[0_0_20px_-5px_rgba(234,88,12,0.5)] hover:scale-[1.02]"
         >
           <Plus className="h-3.5 w-3.5" />
           <span>Nova Tarefa</span>
@@ -111,15 +111,15 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
       </div>
 
       {!tasks || tasks.length === 0 ? (
-        <div className="p-12 text-center text-slate-400 space-y-2 bg-slate-900/60 border border-slate-800 rounded-xl">
+        <div className="p-12 text-center text-slate-400 space-y-2 bg-[#0F1115] border border-white/10 rounded-2xl">
           <ListTodo className="h-8 w-8 mx-auto text-slate-600" />
           <div className="text-xs font-medium text-slate-300">Nenhuma tarefa cadastrada</div>
-          <p className="text-[11px] text-slate-500 max-w-sm mx-auto">
+          <p className="text-[11px] text-slate-500 max-w-sm mx-auto font-sans">
             Crie tarefas ou providências judiciais diretamente para este processo.
           </p>
         </div>
       ) : (
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           {tasks.map((task) => {
             const isDone = task.status === 'DONE';
 
@@ -127,8 +127,8 @@ export const CaseTasksTab: React.FC<CaseTasksTabProps> = ({ caseId, cnjNumber })
               <div
                 key={task.id}
                 onClick={() => setSelectedTaskId(task.id)}
-                className={`p-3.5 bg-slate-900 border rounded-xl hover:border-slate-700 cursor-pointer transition-colors space-y-2 group ${
-                  isDone ? 'border-slate-800/60 opacity-60' : 'border-slate-800'
+                className={`p-4 bg-[#0F1115] border rounded-2xl hover:border-[#F7931A]/40 cursor-pointer transition-all duration-200 space-y-2 group shadow-[0_0_20px_-8px_rgba(247,147,26,0.1)] ${
+                  isDone ? 'border-white/5 opacity-60' : 'border-white/10'
                 }`}
               >
                 <div className="flex items-center justify-between">

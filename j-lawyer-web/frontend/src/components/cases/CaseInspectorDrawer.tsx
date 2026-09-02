@@ -108,13 +108,13 @@ export const CaseInspectorDrawer: React.FC<CaseInspectorDrawerProps> = ({
 
         {/* Parties Quick List */}
         <div>
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 mb-2">
-            <Users className="h-3.5 w-3.5 text-indigo-400" />
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-100 mb-2 font-heading">
+            <Users className="h-3.5 w-3.5 text-[#FFD600]" />
             <span>Polos e Partes Envolvidas</span>
           </div>
           <div className="space-y-1.5">
             {parties.map((p) => (
-              <div key={p.id} className="p-2.5 bg-slate-950/40 border border-slate-800/60 rounded-md flex items-center justify-between text-xs">
+              <div key={p.id} className="p-3 bg-[#030304] border border-white/10 rounded-xl flex items-center justify-between text-xs">
                 <span className="font-medium text-slate-200">{p.contactName || p.contact}</span>
                 <Badge variant="neutral" size="sm">{p.involvementType || 'Interessado'}</Badge>
               </div>

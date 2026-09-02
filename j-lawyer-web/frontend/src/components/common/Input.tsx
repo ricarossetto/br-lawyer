@@ -19,7 +19,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           className={cn(
-            'w-full h-8 bg-slate-900 border border-slate-800 rounded-md text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 transition-colors',
+            'w-full h-8 bg-[#0F1115] border border-white/10 rounded-lg text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/40 focus:shadow-[0_0_15px_-3px_rgba(247,147,26,0.3)] transition-all',
             leftIcon ? 'pl-8' : 'pl-3',
             rightIcon ? 'pr-8' : 'pr-3',
             error && 'border-red-500 focus:border-red-500 focus:ring-red-500/50',

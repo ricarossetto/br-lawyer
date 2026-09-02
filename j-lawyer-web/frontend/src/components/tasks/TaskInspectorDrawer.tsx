@@ -99,16 +99,16 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
 
   return (
     <>
-      <div className="fixed inset-0 z-40 bg-black/50 backdrop-blur-xs" onClick={onClose} />
-      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-xl bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col animate-in slide-in-from-right duration-200 text-xs">
+      <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity" onClick={onClose} />
+      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-xl bg-[#0F1115] border-l border-white/10 shadow-[0_0_50px_-10px_rgba(247,147,26,0.15)] flex flex-col animate-drawer-in text-xs">
         {/* Header */}
-        <div className="px-5 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/70 shrink-0">
+        <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#030304]/80 shrink-0">
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="h-8 w-8 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 shrink-0">
+            <div className="h-8 w-8 rounded-xl bg-[#EA580C]/15 border border-[#F7931A]/40 flex items-center justify-center text-[#F7931A] shrink-0 shadow-[0_0_12px_rgba(247,147,26,0.25)]">
               <ListTodo className="h-4 w-4" />
             </div>
             <div className="flex flex-col truncate">
-              <span className="font-semibold text-slate-100 truncate text-sm">
+              <span className="font-semibold text-slate-100 truncate text-sm font-heading">
                 {task.title}
               </span>
               <div className="flex items-center gap-2 mt-0.5">
@@ -116,12 +116,12 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
                   {task.category || 'TAREFA'}
                 </span>
                 {task.overdue && (
-                  <span className="px-1.5 py-0.2 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold">
+                  <span className="px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-[10px] font-bold font-mono">
                     ATRASADA
                   </span>
                 )}
                 {task.dueToday && (
-                  <span className="px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">
+                  <span className="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold font-mono">
                     VENCE HOJE
                   </span>
                 )}
@@ -132,14 +132,14 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
           <div className="flex items-center gap-1.5 shrink-0">
             <button
               onClick={() => onEditTask(task)}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors"
+              className="p-1.5 rounded-full text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
               title="Editar tarefa"
             >
               <Edit className="h-4 w-4" />
             </button>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors"
+              className="p-1.5 rounded-full text-slate-400 hover:text-slate-200 hover:bg-white/10 transition-colors"
             >
               <X className="h-4 w-4" />
             </button>
@@ -147,17 +147,17 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
         </div>
 
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-5 space-y-5">
+        <div className="flex-1 overflow-y-auto p-6 space-y-5">
           {/* Status & Priority Control Row */}
-          <div className="grid grid-cols-2 gap-3 p-3 bg-slate-950 border border-slate-800 rounded-lg">
+          <div className="grid grid-cols-2 gap-3 p-4 bg-[#030304] border border-white/10 rounded-2xl">
             <div className="space-y-1">
-              <label className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">
+              <label className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
                 Status da Tarefa
               </label>
               <select
                 value={task.status}
                 onChange={handleStatusSelect}
-                className="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-md text-slate-100 font-medium focus:outline-none focus:border-indigo-500 transition-colors text-xs"
+                className="w-full px-3 py-1.5 bg-[#0F1115] border border-white/10 rounded-xl text-slate-100 font-medium focus:outline-none focus:border-[#F7931A] transition-colors text-xs"
               >
                 <option value="TODO">A Fazer</option>
                 <option value="IN_PROGRESS">Em Andamento</option>
@@ -168,7 +168,7 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
             </div>
 
             <div className="space-y-1">
-              <label className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">
+              <label className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
                 Prioridade
               </label>
               <div className="pt-1.5 flex items-center gap-2">
@@ -179,8 +179,8 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
                       : task.priority === 'HIGH'
                       ? 'yellow'
                       : task.priority === 'NORMAL'
-                      ? 'blue'
-                      : 'gray'
+                      ? 'active'
+                      : 'neutral'
                   }
                 >
                   {task.priority === 'URGENT'
@@ -198,14 +198,14 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
           {/* Context Links: Process & Publication */}
           <div className="space-y-2">
             {/* Linked Process */}
-            <div className="p-3 bg-slate-950 border border-slate-800 rounded-lg flex items-center justify-between">
+            <div className="p-4 bg-[#030304] border border-white/10 rounded-2xl flex items-center justify-between">
               <div className="flex items-center gap-2.5 truncate">
-                <Briefcase className="h-4 w-4 text-indigo-400 shrink-0" />
+                <Briefcase className="h-4 w-4 text-[#FFD600] shrink-0" />
                 <div className="truncate">
-                  <span className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">
+                  <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
                     Processo Vinculado
                   </span>
-                  <div className="font-semibold text-slate-200 truncate">
+                  <div className="font-semibold text-slate-200 truncate font-mono">
                     {task.caseFileNumber || task.cnjNumber || 'Sem processo vinculado'}
                   </div>
                   {task.caseName && (
@@ -217,7 +217,7 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
               {task.processId && onOpenCase && (
                 <button
                   onClick={() => onOpenCase(task.processId!)}
-                  className="px-2.5 py-1 rounded bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 font-medium text-[11px] flex items-center gap-1 transition-colors shrink-0"
+                  className="px-3 py-1.5 rounded-full bg-[#F7931A]/15 hover:bg-[#F7931A]/25 text-[#F7931A] border border-[#F7931A]/40 font-medium text-[11px] flex items-center gap-1 transition-all shrink-0"
                 >
                   <span>Ver Autos</span>
                   <ExternalLink className="h-3 w-3" />
@@ -227,11 +227,11 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
 
             {/* Publication of Origin */}
             {task.publicationId && (
-              <div className="p-3 bg-slate-950 border border-slate-800 rounded-lg flex items-center justify-between">
+              <div className="p-4 bg-[#030304] border border-white/10 rounded-2xl flex items-center justify-between">
                 <div className="flex items-center gap-2.5 truncate">
                   <FileText className="h-4 w-4 text-emerald-400 shrink-0" />
                   <div className="truncate">
-                    <span className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">
+                    <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
                       Publicação de Origem
                     </span>
                     <div className="font-medium text-slate-200 truncate">
@@ -243,7 +243,7 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
                 {onOpenPublication && (
                   <button
                     onClick={() => onOpenPublication(task.publicationId!)}
-                    className="px-2.5 py-1 rounded bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-medium text-[11px] flex items-center gap-1 transition-colors shrink-0"
+                    className="px-3 py-1.5 rounded-full bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 font-medium text-[11px] flex items-center gap-1 transition-colors shrink-0"
                   >
                     <span>Ver Publicação</span>
                     <ChevronRight className="h-3 w-3" />
@@ -254,9 +254,9 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
           </div>
 
           {/* Dates & Assignment Grid */}
-          <div className="grid grid-cols-2 gap-3 p-3 bg-slate-950/60 border border-slate-800 rounded-lg">
+          <div className="grid grid-cols-2 gap-3 p-4 bg-[#030304] border border-white/10 rounded-2xl">
             <div>
-              <span className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">
+              <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
                 Data de Vencimento
               </span>
               <div
@@ -274,11 +274,11 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
             </div>
 
             <div>
-              <span className="text-[10px] uppercase font-semibold text-slate-500 tracking-wider">
+              <span className="text-[10px] uppercase font-semibold text-slate-500 font-mono tracking-wider">
                 Responsável
               </span>
               <div className="text-slate-200 font-medium mt-0.5 flex items-center gap-1.5">
-                <div className="h-5 w-5 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-[10px] text-slate-300">
+                <div className="h-5 w-5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[10px] text-slate-300 font-mono font-bold">
                   {task.assignedUser ? task.assignedUser.slice(0, 2).toUpperCase() : '??'}
                 </div>
                 <span>{task.assignedUser || 'Não atribuído'}</span>
@@ -289,10 +289,10 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
           {/* Description */}
           {task.description && (
             <div className="space-y-1">
-              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider">
+              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider font-mono">
                 Descrição / Instruções
               </span>
-              <div className="p-3 bg-slate-950 border border-slate-800 rounded-lg text-slate-200 leading-relaxed whitespace-pre-wrap">
+              <div className="p-4 bg-[#030304] border border-white/10 rounded-2xl text-slate-200 leading-relaxed whitespace-pre-wrap font-sans">
                 {task.description}
               </div>
             </div>
@@ -301,8 +301,8 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
           {/* Checklist Section */}
           <div className="space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                <CheckSquare className="h-3.5 w-3.5 text-indigo-400" />
+              <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider font-mono flex items-center gap-1.5">
+                <CheckSquare className="h-3.5 w-3.5 text-[#FFD600]" />
                 Checklist / Subtarefas (
                 {task.checklistItems?.filter((i) => i.done).length || 0}/
                 {task.checklistItems?.length || 0})
@@ -315,7 +315,7 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
                 task.checklistItems.map((item) => (
                   <div
                     key={item.id}
-                    className="p-2 bg-slate-950 border border-slate-800 hover:border-slate-700 rounded-lg flex items-center justify-between group transition-colors"
+                    className="p-2.5 bg-[#030304] border border-white/10 hover:border-[#F7931A]/40 rounded-xl flex items-center justify-between group transition-colors"
                   >
                     <div
                       onClick={() => onToggleChecklistItem(task.id, item.id, !item.done)}
@@ -345,25 +345,25 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
                   </div>
                 ))
               ) : (
-                <div className="text-slate-500 text-[11px] p-2 bg-slate-950/40 rounded border border-slate-800 italic">
+                <div className="text-slate-500 text-[11px] p-3 bg-[#030304] rounded-xl border border-white/10 italic">
                   Nenhum item adicionado ao checklist.
                 </div>
               )}
             </div>
 
             {/* Add Checklist Input */}
-            <form onSubmit={handleChecklistSubmit} className="flex items-center gap-1.5 pt-1">
+            <form onSubmit={handleChecklistSubmit} className="flex items-center gap-2 pt-1">
               <input
                 type="text"
                 value={newChecklistTitle}
                 onChange={(e) => setNewChecklistTitle(e.target.value)}
                 placeholder="Adicionar item ao checklist..."
-                className="flex-1 px-3 py-1.5 bg-slate-950 border border-slate-800 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors text-xs"
+                className="flex-1 px-3.5 py-1.5 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
               />
               <button
                 type="submit"
                 disabled={isSubmittingChecklist || !newChecklistTitle.trim()}
-                className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium rounded-lg border border-slate-700 flex items-center gap-1 transition-colors disabled:opacity-40"
+                className="px-3.5 py-1.5 bg-white/5 hover:bg-white/10 text-slate-200 font-medium rounded-full border border-white/10 flex items-center gap-1 transition-colors disabled:opacity-40"
               >
                 <Plus className="h-3.5 w-3.5" />
                 <span>Adicionar</span>
@@ -373,8 +373,8 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
 
           {/* Comments Section */}
           <div className="space-y-2">
-            <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-              <MessageSquare className="h-3.5 w-3.5 text-indigo-400" />
+            <span className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider font-mono flex items-center gap-1.5">
+              <MessageSquare className="h-3.5 w-3.5 text-[#FFD600]" />
               Comentários & Histórico ({task.comments?.length || 0})
             </span>
 
@@ -382,37 +382,37 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
             <div className="space-y-2 max-h-48 overflow-y-auto">
               {task.comments && task.comments.length > 0 ? (
                 task.comments.map((c) => (
-                  <div key={c.id} className="p-3 bg-slate-950 border border-slate-800 rounded-lg space-y-1">
+                  <div key={c.id} className="p-3.5 bg-[#030304] border border-white/10 rounded-xl space-y-1">
                     <div className="flex items-center justify-between text-[10px] text-slate-500">
                       <span className="font-semibold text-slate-300">{c.authorUser}</span>
                       <span className="font-mono">
                         {format(new Date(c.createdAt), 'dd/MM/yy HH:mm')}
                       </span>
                     </div>
-                    <p className="text-slate-200 text-xs whitespace-pre-wrap">{c.commentText}</p>
+                    <p className="text-slate-200 text-xs whitespace-pre-wrap font-sans">{c.commentText}</p>
                   </div>
                 ))
               ) : (
-                <div className="text-slate-500 text-[11px] p-2 bg-slate-950/40 rounded border border-slate-800 italic">
+                <div className="text-slate-500 text-[11px] p-3 bg-[#030304] rounded-xl border border-white/10 italic">
                   Nenhum comentário registrado.
                 </div>
               )}
             </div>
 
             {/* Add Comment Input */}
-            <form onSubmit={handleCommentSubmit} className="space-y-1.5 pt-1">
+            <form onSubmit={handleCommentSubmit} className="space-y-2 pt-1">
               <textarea
                 rows={2}
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
                 placeholder="Escreva um comentário ou atualização sobre esta tarefa..."
-                className="w-full px-3 py-2 bg-slate-950 border border-slate-800 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors text-xs"
+                className="w-full px-3.5 py-2 bg-[#030304] border border-white/10 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#F7931A] focus:ring-1 focus:ring-[#F7931A]/30 transition-all text-xs"
               />
               <div className="flex justify-end">
                 <button
                   type="submit"
                   disabled={isSubmittingComment || !newComment.trim()}
-                  className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg shadow-sm flex items-center gap-1.5 transition-colors disabled:opacity-40 text-xs"
+                  className="px-4 py-1.5 bg-[#F7931A] hover:bg-[#EA580C] text-white font-semibold rounded-full shadow-[0_0_12px_rgba(247,147,26,0.3)] flex items-center gap-1.5 transition-all disabled:opacity-40 text-xs hover:scale-[1.02]"
                 >
                   <Send className="h-3 w-3" />
                   <span>Enviar Comentário</span>
@@ -423,10 +423,10 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
         </div>
 
         {/* Footer Actions */}
-        <div className="p-4 border-t border-slate-800 bg-slate-950 flex items-center justify-between shrink-0">
+        <div className="p-4 border-t border-white/10 bg-[#030304] flex items-center justify-between shrink-0">
           <button
             onClick={() => onDeleteTask(task.id)}
-            className="px-3 py-2 rounded-lg bg-slate-900 hover:bg-rose-950/40 text-slate-400 hover:text-rose-400 border border-slate-800 hover:border-rose-800/40 font-medium flex items-center gap-1.5 transition-colors"
+            className="px-4 py-2 rounded-full bg-white/5 hover:bg-rose-950/40 text-slate-400 hover:text-rose-400 border border-white/10 hover:border-rose-800/40 font-medium flex items-center gap-1.5 transition-colors"
           >
             <Trash2 className="h-4 w-4" />
             <span>Excluir</span>
@@ -440,9 +440,9 @@ export const TaskInspectorDrawer: React.FC<TaskInspectorDrawerProps> = ({
                 syncCalendar: true,
               })
             }
-            className={`px-4 py-2 rounded-lg font-medium shadow-sm flex items-center gap-1.5 transition-colors ${
+            className={`px-5 py-2 rounded-full font-semibold shadow-[0_0_15px_rgba(16,185,129,0.3)] flex items-center gap-1.5 transition-all hover:scale-[1.02] ${
               isDone
-                ? 'bg-slate-800 hover:bg-slate-700 text-slate-200'
+                ? 'bg-white/10 hover:bg-white/20 text-slate-200'
                 : 'bg-emerald-600 hover:bg-emerald-500 text-white'
             }`}
           >
