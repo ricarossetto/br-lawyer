@@ -111,13 +111,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div>
         <div className="h-14 px-4 flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="h-8 w-8 rounded-lg bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 shrink-0">
-              <Scale className="h-4 w-4" />
+            <div className="h-8 w-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(212,175,55,0.2)]">
+              <img src="/icons/atrium-emblem.svg" alt="BR-LAWYER" className="h-5 w-5" />
             </div>
             {!isCollapsed && (
               <div className="flex flex-col">
-                <span className="font-semibold text-xs text-slate-100 tracking-wider">BR-LAWYER</span>
-                <span className="text-[10px] text-slate-400 font-mono">MINERAL UI</span>
+                <span className="font-serif font-bold text-sm text-gold tracking-wide leading-tight">BR-LAWYER</span>
+                <span className="text-[9px] font-semibold text-slate-400 font-sans tracking-widest uppercase">ATRIUM LEGAL</span>
               </div>
             )}
           </div>

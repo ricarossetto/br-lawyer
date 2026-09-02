@@ -28,10 +28,17 @@ export default {
           warning: '#f59e0b', // amber
           success: '#10b981', // emerald
           neutral: '#64748b', // slate
+        },
+        gold: {
+          DEFAULT: '#D4AF37',
+          dark: '#8C7322',
+          soft: '#F5E6A3',
+          gleam: '#FDF3C6',
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'Menlo', 'Monaco', 'Courier New', 'monospace'],
       },
       fontSize: {

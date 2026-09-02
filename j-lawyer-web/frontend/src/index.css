@@ -1,6 +1,64 @@
+@import './styles/ui-v2/tokens.css';
+@import './styles/ui-v2/primitives.css';
+@import './styles/ui-v2/shell.css';
+@import './styles/ui-v2/dashboard.css';
+@import './styles/ui-v2/publications.css';
+@import './styles/ui-v2/tasks.css';
+@import './styles/ui-v2/processes.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-700.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/playfair-500.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/playfair-600.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/playfair-700.ttf') format('truetype');
+}
 
 @layer base {
   :root {
@@ -9,6 +67,9 @@
     --border-color: #e2e8f0;
     --text-primary: #0f172a;
     --text-secondary: #64748b;
+    --gold: #D4AF37;
+    --gold-dark: #8C7322;
+    --gold-soft: #F5E6A3;
   }
 
   .dark {
@@ -17,6 +78,9 @@
     --border-color: #1e293b;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
+    --gold: #D4AF37;
+    --gold-dark: #8C7322;
+    --gold-soft: #F5E6A3;
   }
 }
 
