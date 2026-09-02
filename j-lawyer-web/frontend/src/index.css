@@ -61,39 +61,50 @@
 }
 
 @layer base {
+  /* LIGHT MODE (Bold Typography Light / Editorial stark paper) */
   :root {
-    --bg-primary: #0A0A0A;
-    --bg-surface: #0F0F0F;
-    --bg-surface-elevated: #1A1A1A;
-    --border-color: #262626;
-    --text-primary: #FAFAFA;
-    --text-secondary: #737373;
+    --bg-primary: #F4F4F0;
+    --bg-surface: #FFFFFF;
+    --bg-surface-elevated: #ECECE8;
+    --bg-surface-hover: #E2E2DC;
+    --bg-input: #FFFFFF;
+    --border-color: #D6D6D0;
+    --border-muted: #E8E8E4;
+    --text-primary: #0A0A0A;
+    --text-secondary: #666666;
     --accent-primary: #FF3D00;
     --accent-hover: #E03600;
+    --accent-fg: #FFFFFF;
   }
 
+  /* DARK MODE (Bold Typography Dark / Near-black) */
   .dark {
     --bg-primary: #0A0A0A;
     --bg-surface: #0F0F0F;
-    --bg-surface-elevated: #1A1A1A;
+    --bg-surface-elevated: #141414;
+    --bg-surface-hover: #1F1F1F;
+    --bg-input: #141414;
     --border-color: #262626;
+    --border-muted: #1F1F1F;
     --text-primary: #FAFAFA;
     --text-secondary: #737373;
     --accent-primary: #FF3D00;
     --accent-hover: #E03600;
+    --accent-fg: #0A0A0A;
   }
 
   body {
-    background-color: #0A0A0A;
-    color: #FAFAFA;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   ::selection {
     background-color: #FF3D00;
-    color: #0A0A0A;
+    color: #FFFFFF;
   }
 }
 
@@ -103,10 +114,10 @@
   height: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: var(--border-color);
   border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -117,12 +128,12 @@
 .dense-table-row {
   height: 40px;
   transition: background-color 0.15s ease;
-  border-bottom: 1px solid #262626;
+  border-bottom: 1px solid var(--border-color);
 }
 .dense-table-row:hover {
-  background-color: #141414;
+  background-color: var(--bg-surface-elevated);
 }
 .dense-table-row.selected {
-  background-color: #1A1A1A;
+  background-color: var(--bg-surface-elevated);
   border-left: 2px solid #FF3D00;
 }

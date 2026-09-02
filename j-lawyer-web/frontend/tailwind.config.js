@@ -8,24 +8,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Bold Typography Design System Tokens
-        bg: '#0A0A0A',
-        surface: '#0F0F0F',
-        muted: '#1A1A1A',
-        'muted-fg': '#737373',
-        fg: '#FAFAFA',
+        // Bold Typography Design System Tokens (Light & Dark via CSS variables)
+        bg: 'var(--bg-primary)',
+        surface: 'var(--bg-surface)',
+        elevated: 'var(--bg-surface-elevated)',
+        'elevated-hover': 'var(--bg-surface-hover)',
+        fg: 'var(--text-primary)',
+        'muted-fg': 'var(--text-secondary)',
+        border: {
+          DEFAULT: 'var(--border-color)',
+          muted: 'var(--border-muted)',
+          thick: '#FF3D00',
+        },
         accent: {
           DEFAULT: '#FF3D00', // Vermillion — warm, urgent, visible
           hover: '#E03600',
-          fg: '#0A0A0A',
+          fg: 'var(--accent-fg)',
         },
-        border: {
-          DEFAULT: '#262626',
-          muted: '#1F1F1F',
-          thick: '#FF3D00',
-        },
-        input: '#1A1A1A',
-        card: '#0F0F0F',
+        input: 'var(--bg-input)',
+        card: 'var(--bg-surface)',
       },
       fontFamily: {
         heading: ['"Inter Tight"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
