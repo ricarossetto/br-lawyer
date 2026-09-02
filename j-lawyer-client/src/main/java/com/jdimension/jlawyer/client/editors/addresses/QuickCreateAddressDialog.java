@@ -752,6 +752,8 @@ public class QuickCreateAddressDialog extends javax.swing.JDialog {
         
         this.txtNotice.setDocument(new JTextFieldLimit(2499));
         
+        com.jdimension.jlawyer.client.utils.BrazilianUiUtils.installCepFormatter(this.txtZipCode, null);
+        
         ComponentUtils.restoreDialogSize(this);
     }
 

@@ -1019,11 +1019,11 @@ public class Main {
             mailInbox.setHotKey(KeyStroke.getKeyStroke(KeyEvent.VK_F7, InputEvent.SHIFT_DOWN_MASK), "Shift+F7");
         }
         mail.addChildModule(mailInbox);
-        ModuleMetadata bea = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.comm.bea"));
-        bea.setEditorClass("com.jdimension.jlawyer.client.bea.BeaInboxPanel");
+        ModuleMetadata bea = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.workflow.br"));
+        bea.setEditorClass("com.jdimension.jlawyer.client.workflow.BrazilianWorkflowPanel");
         bea.setBackgroundImage("emails.jpg");
-        bea.setFullName("Publicações & Intimações");
-        bea.setEditorName("Publicações");
+        bea.setFullName("Workflow Jurídico");
+        bea.setEditorName("Workflow Jurídico");
         bea.setModuleName("Comunicações");
         bea.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-16-blue.png")));
         bea.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-16-green.png")));

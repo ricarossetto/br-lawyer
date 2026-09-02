@@ -12,6 +12,9 @@ import com.jdimension.jlawyer.domain.legal.model.*;
 import com.jdimension.jlawyer.services.*;
 import com.jdimension.jlawyer.client.settings.ClientSettings;
 import com.jdimension.jlawyer.client.settings.UserSettings;
+import com.jdimension.jlawyer.client.editors.ResetOnDisplayEditor;
+import com.jdimension.jlawyer.client.editors.StatusBarProvider;
+import com.jdimension.jlawyer.client.editors.ThemeableEditor;
 import javax.naming.Context;
 import java.util.Properties;
 import org.apache.log4j.Logger;
@@ -33,10 +36,13 @@ import java.util.List;
  *
  * @author BR-LAWYER Team
  */
-public class BrazilianWorkflowPanel extends JPanel {
+public class BrazilianWorkflowPanel extends JPanel implements ThemeableEditor, ResetOnDisplayEditor, StatusBarProvider {
 
     private static final Logger log = Logger.getLogger(BrazilianWorkflowPanel.class.getName());
     private static final SimpleDateFormat DATE_FMT = new SimpleDateFormat("dd/MM/yyyy");
+
+    private Image backgroundImage = null;
+    private boolean needsReset = false;
 
     private JTabbedPane tabbedPane;
 
@@ -464,6 +470,49 @@ public class BrazilianWorkflowPanel extends JPanel {
             refreshDashboard();
         } catch (Exception ex) {
             log.error("Erro ao concluir tarefa: " + ex.getMessage(), ex);
+        }
+    }
+
+    // ==========================================
+    // INTERFACE CONTRACTS
+    // ==========================================
+
+    @Override
+    public void setBackgroundImage(Image image) {
+        this.backgroundImage = image;
+        this.repaint();
+    }
+
+    @Override
+    public Image getBackgroundImage() {
+        return this.backgroundImage;
+    }
+
+    @Override
+    public void reset() {
+        refreshAll();
+        this.needsReset = false;
+    }
+
+    @Override
+    public boolean needsReset() {
+        return this.needsReset;
+    }
+
+    public void setNeedsReset(boolean needsReset) {
+        this.needsReset = needsReset;
+    }
+
+    @Override
+    public void notifyStatusBarReady() {
+        // Status bar notification if needed
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (this.backgroundImage != null) {
+            g.drawImage(this.backgroundImage, 0, 0, this.getWidth(), this.getHeight(), this);
         }
     }
 }

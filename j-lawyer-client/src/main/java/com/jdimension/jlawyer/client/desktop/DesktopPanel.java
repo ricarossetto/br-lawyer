@@ -923,9 +923,14 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
         timer6.schedule(docObserverTask, 5000, DocumentObserverTask.getDefaultInterval());
         
         Timer timer7 = new Timer();
-        BeaCheckTimerTask beaCheckTask=new BeaCheckTimerTask();
-        // poll for unread beA messages every 9,75mins
-        timer7.schedule(beaCheckTask, 2500,585000);
+        final BeaCheckTimerTask beaCheckTask;
+        if (ClientSettings.getInstance().getBoolean("jlawyer.client.bea.enabled", false)) {
+            beaCheckTask = new BeaCheckTimerTask();
+            // poll for unread beA messages every 9,75mins
+            timer7.schedule(beaCheckTask, 2500, 585000);
+        } else {
+            beaCheckTask = null;
+        }
         
         try {
             timer9 = new Timer();
@@ -1005,8 +1010,10 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
                 log.error("Error shutting down timer", t);
             }
             try {
-                log.info("shutting down BeaCheckTimerTask");
-                beaCheckTask.stop();
+                if (beaCheckTask != null) {
+                    log.info("shutting down BeaCheckTimerTask");
+                    beaCheckTask.stop();
+                }
                 timer7.cancel();
             } catch (Throwable t) {
                 log.error("Error shutting down timer", t);
@@ -1124,7 +1131,7 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
         configureStatusLabel(this.lblUnreadMail, EmailInboxPanel.class, "desktop-mail");
         configureStatusLabel(this.lblScans, ScannerPanel.class, "desktop-scans");
         configureStatusLabel(this.lblMailingStatus, MailingStatusPanel.class, "desktop-mailingstatus");
-        configureStatusLabel(this.lblUnreadBea, BeaInboxPanel.class, "desktop-bea");
+        configureStatusLabel(this.lblUnreadBea, com.jdimension.jlawyer.client.workflow.BrazilianWorkflowPanel.class, "desktop-bea");
         configureStatusLabel(this.lblUnreadInstantMessages, MessagingCenterPanel.class, "desktop-messages");
     }
 
@@ -1967,9 +1974,9 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
         lblUnreadBea.setForeground(java.awt.Color.white);
         lblUnreadBea.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblUnreadBea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Icons2-16.png"))); // NOI18N
-        lblUnreadBea.setText("?");
-        lblUnreadBea.setToolTipText("noch nicht eingeloggt");
-        lblUnreadBea.setEnabled(false);
+        lblUnreadBea.setText("");
+        lblUnreadBea.setToolTipText("Publicações & Intimações");
+        lblUnreadBea.setEnabled(true);
 
         lblScans.setFont(lblScans.getFont().deriveFont(lblScans.getFont().getStyle() | java.awt.Font.BOLD, lblScans.getFont().getSize()+2));
         lblScans.setForeground(java.awt.Color.white);
@@ -2864,10 +2871,10 @@ public class DesktopPanel extends javax.swing.JPanel implements ThemeableEditor,
             this.lblUnreadBea.setEnabled(true);
             if(((BeaStatusEvent) e).getUnread()>0) {
                 this.lblUnreadBea.setText("" + ((BeaStatusEvent) e).getUnread());
-                this.lblUnreadBea.setToolTipText("" + ((BeaStatusEvent) e).getUnread() + " ungelesene beA-Nachricht(en)");
+                this.lblUnreadBea.setToolTipText(((BeaStatusEvent) e).getUnread() + " publicação(ões) não lida(s)");
             } else {
                 this.lblUnreadBea.setText("");
-                this.lblUnreadBea.setToolTipText("keine ungelesenen beA-Nachrichten");
+                this.lblUnreadBea.setToolTipText("Nenhuma publicação não lida");
             }
             
             this.revalidate();

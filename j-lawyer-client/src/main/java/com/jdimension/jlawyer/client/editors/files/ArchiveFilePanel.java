@@ -895,6 +895,13 @@ public class ArchiveFilePanel extends javax.swing.JPanel implements ThemeableEdi
         this.initializing = true;
         initComponents();
 
+        com.jdimension.jlawyer.client.utils.BrazilianUiUtils.installCnjFormatter(this.txtClaimNumber, (cnj) -> {
+            if (this.dto != null) {
+                this.dto.setJusticeSegment(cnj.getJusticeSegment());
+                this.dto.setCourtCode(cnj.getJusticeSegment() == 8 ? "TJ" + cnj.getCourtNumber() : "TR" + cnj.getCourtNumber());
+            }
+        });
+
         this.txtFilterParties.putClientProperty("JTextField.placeholderText", "Beteiligte filtern...");
         this.txtFilterParties.putClientProperty("JTextField.showClearButton", true);
         this.txtFilterParties.getDocument().addDocumentListener(new DocumentListener() {

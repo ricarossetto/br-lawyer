@@ -695,9 +695,13 @@ public class AboutDialog extends javax.swing.JDialog {
         sb.append("<br/><br/>");
         sb.append("<b>");
         sb.append(java.text.MessageFormat.format(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/AboutDialog").getString("server.version"), new Object[] {VersionUtils.getServerVersion()}));
-        sb.append(java.text.MessageFormat.format(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/AboutDialog").getString("client.version"), new Object[] {VersionUtils.getFullClientVersion()}));
         sb.append("<br/>");
-        sb.append("beA-Wrapper-Version: ").append(BeaAccess.getBeaWrapperVersion());
+        try {
+            if (com.jdimension.jlawyer.client.settings.ClientSettings.getInstance().getBoolean("jlawyer.client.bea.enabled", false)) {
+                sb.append("beA-Wrapper-Version: ").append(BeaAccess.getBeaWrapperVersion());
+            }
+        } catch (Throwable ignored) {
+        }
         sb.append("</b>");
         sb.append("</html>");
         

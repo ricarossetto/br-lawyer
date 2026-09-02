@@ -1335,8 +1335,11 @@ public class InvolvedPartyEntryPanel extends javax.swing.JPanel implements Event
     private void mnuSendBeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSendBeaActionPerformed
 
         try {
+            if (!com.jdimension.jlawyer.client.settings.ClientSettings.getInstance().getBoolean("jlawyer.client.bea.enabled", false)) {
+                return;
+            }
             if (!BeaAccess.getInstance().ensureLoggedIn()) return;
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             log.error(ex);
             return;
         }
@@ -1360,18 +1363,22 @@ public class InvolvedPartyEntryPanel extends javax.swing.JPanel implements Event
                 this.casePanel.saveInvolvements(this.caseDto.getId());
             }
 
-            SendBeaMessageFrame dlg = new SendBeaMessageFrame();
-            dlg.setArchiveFile(this.caseDto);
-            dlg.setTo(iTo);
+            try {
+                SendBeaMessageFrame dlg = new SendBeaMessageFrame();
+                dlg.setArchiveFile(this.caseDto);
+                dlg.setTo(iTo);
 
-            ArrayList<ArchiveFileAddressesBean> involved = this.container.getInvolvedParties();
-            for (ArchiveFileAddressesBean aab : involved) {
-                dlg.addParty(aab);
+                ArrayList<ArchiveFileAddressesBean> involved = this.container.getInvolvedParties();
+                for (ArchiveFileAddressesBean aab : involved) {
+                    dlg.addParty(aab);
+                }
+                dlg.setAzRecipient(this.txtReference.getText());
+                FrameUtils.centerFrame(dlg, null);
+                EditorsRegistry.getInstance().registerFrame(dlg);
+                dlg.setVisible(true);
+            } catch (Throwable t) {
+                log.error("Could not open SendBeaMessageFrame", t);
             }
-            dlg.setAzRecipient(this.txtReference.getText());
-            FrameUtils.centerFrame(dlg, null);
-            EditorsRegistry.getInstance().registerFrame(dlg);
-            dlg.setVisible(true);
         }
 
     }//GEN-LAST:event_mnuSendBeaActionPerformed
@@ -1379,8 +1386,11 @@ public class InvolvedPartyEntryPanel extends javax.swing.JPanel implements Event
     private void mnuShowBeaIdentityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuShowBeaIdentityActionPerformed
 
         try {
+            if (!com.jdimension.jlawyer.client.settings.ClientSettings.getInstance().getBoolean("jlawyer.client.bea.enabled", false)) {
+                return;
+            }
             if (!BeaAccess.getInstance().ensureLoggedIn()) return;
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             log.error(ex);
             return;
         }

@@ -936,6 +936,14 @@ public class ClientSettings {
             value=defaultValue;
         return value;
     }
+
+    public boolean getBoolean(String key, boolean defaultValue) {
+        String value = this.clientConfiguration.getProperty(key);
+        if (value == null) {
+            return defaultValue;
+        }
+        return Boolean.parseBoolean(value);
+    }
     
     public String[] getConfigurationArray(String key, String[] defaultValue) {
         String value=this.clientConfiguration.getProperty(key);

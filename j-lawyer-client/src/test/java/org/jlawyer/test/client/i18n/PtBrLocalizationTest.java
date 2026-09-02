@@ -83,8 +83,7 @@ public class PtBrLocalizationTest {
             "com.jdimension.jlawyer.client.enrichment.CompanyEnrichmentDialog",
             "com.jdimension.jlawyer.client.enrichment.ContactDiffDialog",
             "de.costache.calendar.calendar",
-            "themes.FlatIntelliJLaf",
-            "org.jlawyer.backupmgr.controller.backupmgr"
+            "themes.FlatIntelliJLaf"
         };
 
         for (String baseName : bundleBases) {

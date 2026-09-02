@@ -2414,7 +2414,7 @@ public class JKanzleiGUI extends javax.swing.JFrame implements com.jdimension.jl
 
     private void exitApplication() {
         try {
-            if (BeaAccess.hasInstance()) {
+            if (ClientSettings.getInstance().getBoolean("jlawyer.client.bea.enabled", false) && BeaAccess.hasInstance()) {
                 BeaAccess bea = BeaAccess.getInstance();
                 Collection<BeaPostbox> postboxes = bea.getPostBoxes();
                 boolean pendingMessages = false;
@@ -2428,7 +2428,7 @@ public class JKanzleiGUI extends javax.swing.JFrame implements com.jdimension.jl
                     JOptionPane.showMessageDialog(this, "Es sind noch Nachrichten im beA-Postausgang - bitte manuell prüfen!", com.jdimension.jlawyer.client.utils.DesktopUtils.POPUP_TITLE_WARNING, JOptionPane.WARNING_MESSAGE);
                 }
             }
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             log.error(ex);
         }
 
@@ -2723,9 +2723,17 @@ public class JKanzleiGUI extends javax.swing.JFrame implements com.jdimension.jl
     private void mnuBeaSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuBeaSettingsActionPerformed
 
         if (checkSysAdmin()) {
-            BeaConfigurationDialog dlg = new BeaConfigurationDialog(this, true);
-            FrameUtils.centerDialog(dlg, this);
-            dlg.setVisible(true);
+            if (ClientSettings.getInstance().getBoolean("jlawyer.client.bea.enabled", false)) {
+                try {
+                    BeaConfigurationDialog dlg = new BeaConfigurationDialog(this, true);
+                    FrameUtils.centerDialog(dlg, this);
+                    dlg.setVisible(true);
+                } catch (Throwable t) {
+                    log.error("Could not open beA configuration dialog", t);
+                }
+            } else {
+                openBrazilianIntegrationsConfigDialog();
+            }
         }
     }//GEN-LAST:event_mnuBeaSettingsActionPerformed
 
@@ -2772,9 +2780,13 @@ public class JKanzleiGUI extends javax.swing.JFrame implements com.jdimension.jl
     private void mnuBeaCourtAddressImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuBeaCourtAddressImportActionPerformed
 
         if (checkAdmin()) {
-            ImportCourtsFromBeaDialog dlg = new ImportCourtsFromBeaDialog(this, true);
-            FrameUtils.centerDialog(dlg, this);
-            dlg.setVisible(true);
+            try {
+                ImportCourtsFromBeaDialog dlg = new ImportCourtsFromBeaDialog(this, true);
+                FrameUtils.centerDialog(dlg, this);
+                dlg.setVisible(true);
+            } catch (Throwable t) {
+                log.error("Could not open beA court import dialog", t);
+            }
         }
     }//GEN-LAST:event_mnuBeaCourtAddressImportActionPerformed
 

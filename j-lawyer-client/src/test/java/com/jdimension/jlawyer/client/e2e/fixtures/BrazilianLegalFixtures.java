@@ -34,8 +34,8 @@ public final class BrazilianLegalFixtures {
 
     public static final String VALID_CNJ_STF = "0000001-95.2020.1.00.0000";
     public static final String VALID_CNJ_STJ = "0000045-15.2021.3.00.0000";
-    public static final String VALID_CNJ_TJRJ = "0005678-45.2022.8.19.0001";
-    public static final String VALID_CNJ_TJMG = "5009876-12.2023.8.13.0024";
+    public static final String VALID_CNJ_TJRJ = "0005678-22.2022.8.19.0001";
+    public static final String VALID_CNJ_TJMG = "5009876-76.2023.8.13.0024";
 
     public static final String[] ALL_VALID_CNJ = {
         VALID_CNJ_TJSP, VALID_CNJ_TRF3, VALID_CNJ_TRT2,

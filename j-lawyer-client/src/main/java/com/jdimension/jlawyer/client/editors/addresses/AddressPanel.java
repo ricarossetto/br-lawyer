@@ -825,6 +825,10 @@ public class AddressPanel extends javax.swing.JPanel implements ThemeableEditor,
         this.txtInitials.setDocument(new JTextFieldLimit(19));
         this.txtAdjunct.setDocument(new JTextFieldLimit(249));
 
+        com.jdimension.jlawyer.client.utils.BrazilianUiUtils.installCpfFormatter(this.txtTin);
+        com.jdimension.jlawyer.client.utils.BrazilianUiUtils.installCnpjFormatter(this.txtVatId);
+        com.jdimension.jlawyer.client.utils.BrazilianUiUtils.installCepFormatter(this.txtZipCode, null);
+
         ServerSettings sset = ServerSettings.getInstance();
         this.lblCustom1.setText(sset.getSetting(ServerSettings.DATA_CUSTOMFIELD_ADDRESS_PREFIX + "1", "Eigenes Feld 1"));
         this.lblCustom2.setText(sset.getSetting(ServerSettings.DATA_CUSTOMFIELD_ADDRESS_PREFIX + "2", "Eigenes Feld 2"));
