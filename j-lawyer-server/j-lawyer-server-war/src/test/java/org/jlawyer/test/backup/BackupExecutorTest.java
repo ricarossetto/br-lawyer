@@ -710,6 +710,7 @@ public class BackupExecutorTest {
     
     @Before
     public void setUp() {
+        org.junit.Assume.assumeTrue(new File("/home/jens/dev/projects/j-lawyer-data").exists());
     }
     
     @After

@@ -13,4 +13,4 @@ if not exist "j-lawyer-client.jar" (
     exit /b 1
 )
 
-java -Duser.language=pt -Duser.country=BR --add-exports=jdk.crypto.cryptoki/sun.security.pkcs11=ALL-UNNAMED -jar j-lawyer-client.jar %*
+java -Xms256m -Xmx2048m -Dfile.encoding=UTF-8 -Duser.language=pt -Duser.country=BR --add-exports=jdk.crypto.cryptoki/sun.security.pkcs11=ALL-UNNAMED -jar j-lawyer-client.jar %*

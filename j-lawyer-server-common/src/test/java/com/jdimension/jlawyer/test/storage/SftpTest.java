@@ -702,6 +702,7 @@ public class SftpTest {
         this.ftpUser=System.getenv("ftpuser");
         this.ftpHome=System.getenv("ftphome");
         this.ftpHost=System.getenv("ftphost");
+        org.junit.Assume.assumeNotNull(this.ftpHost);
         
     }
     

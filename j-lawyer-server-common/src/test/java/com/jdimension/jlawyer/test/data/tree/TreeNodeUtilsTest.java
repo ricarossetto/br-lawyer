@@ -734,7 +734,7 @@ public class TreeNodeUtilsTest {
      @Test
      public void testBuildNodePathLeaf() {
          GenericNode leaf=generateLeafNode();
-         String path=TreeNodeUtils.buildNodePath(leaf);
+         String path=TreeNodeUtils.buildNodePath(leaf).replace('\\', '/');
          System.out.println(path);
          Assert.assertTrue(path.startsWith("/"));
          Assert.assertFalse(path.endsWith("/"));

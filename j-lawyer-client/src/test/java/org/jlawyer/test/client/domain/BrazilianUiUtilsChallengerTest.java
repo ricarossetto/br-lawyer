@@ -432,4 +432,180 @@ public class BrazilianUiUtilsChallengerTest {
         field.setText("200400029999");
         assertEquals("20040-002", field.getText());
     }
+
+    // =========================================================================
+    // 6. ADVERSARIAL ORACLE & GENERATOR STRESS TESTS
+    // =========================================================================
+
+    @Test
+    public void testCnjModulo97MathematicalExhaustiveStress() {
+        java.util.Random rnd = new java.util.Random(42L);
+
+        for (int i = 0; i < 50; i++) {
+            long seq = rnd.nextInt(9999999) + 1;
+            String n7 = String.format("%07d", seq);
+            int year = 1990 + rnd.nextInt(40);
+            int justice = 1 + rnd.nextInt(9);
+            int court = rnd.nextInt(30);
+            int origin = rnd.nextInt(9999);
+            String o4 = String.format("%04d", origin);
+
+            int dv = CnjNumberValidator.calculateCheckDigit(n7, year, justice, court, o4);
+            assertTrue("DV must be between 1 and 97", dv >= 1 && dv <= 97);
+            String d2 = String.format("%02d", dv);
+
+            String cnjClean = String.format("%s%s%04d%d%02d%s", n7, d2, year, justice, court, o4);
+            String cnjFormatted = String.format("%s-%s.%04d.%d.%02d.%s", n7, d2, year, justice, court, o4);
+
+            // 1. Must be valid
+            assertTrue("Generated CNJ must be valid: " + cnjFormatted, CnjNumberValidator.isValid(cnjClean));
+            assertTrue("Formatted CNJ must be valid: " + cnjFormatted, CnjNumberValidator.isValid(cnjFormatted));
+
+            // 2. Corrupting DV must invalidate
+            int badDv = (dv == 97) ? 1 : (dv + 1);
+            String badCnj = String.format("%s%02d%04d%d%02d%s", n7, badDv, year, justice, court, o4);
+            assertFalse("Corrupted DV must be invalid: " + badCnj, CnjNumberValidator.isValid(badCnj));
+
+            // 3. Single transposition check: swap two adjacent characters in n7
+            if (n7.charAt(0) != n7.charAt(1)) {
+                String transposedN7 = "" + n7.charAt(1) + n7.charAt(0) + n7.substring(2);
+                String transposedCnj = String.format("%s%s%04d%d%02d%s", transposedN7, d2, year, justice, court, o4);
+                assertFalse("Transposition error must be detected: " + transposedCnj, CnjNumberValidator.isValid(transposedCnj));
+            }
+        }
+    }
+
+    @Test
+    public void testCnjModelIntegrityAndComparison() {
+        CnjNumber cnj1 = CnjNumberValidator.parse("0001234-08.2023.8.26.0100");
+        CnjNumber cnj2 = CnjNumberValidator.parse("00012340820238260100");
+        CnjNumber cnj3 = CnjNumberValidator.parse("5001234-03.2024.4.03.6100");
+
+        assertEquals(cnj1, cnj2);
+        assertEquals(cnj1.hashCode(), cnj2.hashCode());
+        assertNotEquals(cnj1, cnj3);
+        assertEquals("0001234-08.2023.8.26.0100", cnj1.toString());
+        assertEquals("00012340820238260100", cnj1.getRawDigits());
+        assertEquals(2023, cnj1.getYear());
+        assertEquals(8, cnj1.getJusticeSegment());
+        assertEquals(26, cnj1.getCourtNumber());
+        assertEquals("0100", cnj1.getOriginUnit());
+
+        assertTrue(cnj1.compareTo(cnj3) < 0);
+    }
+
+    @Test
+    public void testCpfOracleStress() {
+        java.util.Random rnd = new java.util.Random(12345L);
+
+        for (int k = 0; k < 50; k++) {
+            int[] base = new int[9];
+            for (int i = 0; i < 9; i++) {
+                base[i] = rnd.nextInt(10);
+            }
+            // Skip repeated digits base
+            boolean allSame = true;
+            for (int i = 1; i < 9; i++) {
+                if (base[i] != base[0]) {
+                    allSame = false;
+                    break;
+                }
+            }
+            if (allSame) continue;
+
+            int sum1 = 0;
+            for (int i = 0; i < 9; i++) sum1 += base[i] * (10 - i);
+            int rem1 = sum1 % 11;
+            int dv1 = (rem1 < 2) ? 0 : (11 - rem1);
+
+            int sum2 = 0;
+            for (int i = 0; i < 9; i++) sum2 += base[i] * (11 - i);
+            sum2 += dv1 * 2;
+            int rem2 = sum2 % 11;
+            int dv2 = (rem2 < 2) ? 0 : (11 - rem2);
+
+            StringBuilder sb = new StringBuilder();
+            for (int d : base) sb.append(d);
+            sb.append(dv1).append(dv2);
+            String validCpf = sb.toString();
+
+            assertTrue("Generated CPF must be valid: " + validCpf, BrazilianDocumentValidator.isValidCpf(validCpf));
+
+            // Tamper DV2
+            int badDv2 = (dv2 + 1) % 10;
+            String badCpf = validCpf.substring(0, 10) + badDv2;
+            assertFalse("Tampered CPF must be invalid: " + badCpf, BrazilianDocumentValidator.isValidCpf(badCpf));
+        }
+
+        // Test Masking
+        assertEquals("***.444.777-**", BrazilianDocumentValidator.maskCpf("11144477735"));
+        assertNull(BrazilianDocumentValidator.maskCpf(null));
+        assertEquals("***.***.***-**", BrazilianDocumentValidator.maskCpf("123"));
+    }
+
+    @Test
+    public void testAlphanumericCnpjComprehensiveCombinations() {
+        // Diverse alphanumeric test cases
+        String[] alphaBases = {
+            "12ABC34501DE",
+            "AB12CD34EF56",
+            "00A00B00C00D",
+            "BR99LAW001SP"
+        };
+
+        int[] weights1 = {5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
+        int[] weights2 = {6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
+
+        for (String base : alphaBases) {
+            int sum1 = 0;
+            for (int i = 0; i < 12; i++) {
+                sum1 += (base.charAt(i) - 48) * weights1[i];
+            }
+            int rem1 = sum1 % 11;
+            int dv1 = (rem1 < 2) ? 0 : (11 - rem1);
+
+            int sum2 = 0;
+            for (int i = 0; i < 12; i++) {
+                sum2 += (base.charAt(i) - 48) * weights2[i];
+            }
+            sum2 += dv1 * weights2[12];
+            int rem2 = sum2 % 11;
+            int dv2 = (rem2 < 2) ? 0 : (11 - rem2);
+
+            String validCnpj = base + dv1 + dv2;
+            assertTrue("Alphanumeric CNPJ must be valid: " + validCnpj, BrazilianDocumentValidator.isValidCnpj(validCnpj));
+
+            JTextField field = new JTextField();
+            BrazilianUiUtils.installCnpjFormatter(field);
+            field.setText(validCnpj);
+            assertNull("Outline must be clean for valid alpha CNPJ: " + validCnpj, field.getClientProperty(BrazilianUiUtils.OUTLINE_KEY));
+        }
+    }
+
+    @Test
+    public void testIncrementalTypingAndBackspaceSimulation() throws Exception {
+        JTextField field = new JTextField();
+        AtomicReference<CnjNumber> captured = new AtomicReference<>();
+        BrazilianUiUtils.installCnjFormatter(field, captured::set);
+
+        javax.swing.text.Document doc = field.getDocument();
+
+        // Simulate typing character by character: "00012340820238260100"
+        String raw = "00012340820238260100";
+        for (int i = 0; i < raw.length(); i++) {
+            doc.insertString(doc.getLength(), String.valueOf(raw.charAt(i)), null);
+        }
+
+        assertEquals("0001234-08.2023.8.26.0100", field.getText());
+        assertNull(field.getClientProperty(BrazilianUiUtils.OUTLINE_KEY));
+        assertNotNull(captured.get());
+
+        // Simulate backspacing last 5 characters
+        for (int i = 0; i < 5; i++) {
+            if (doc.getLength() > 0) {
+                doc.remove(doc.getLength() - 1, 1);
+            }
+        }
+        assertTrue(field.getText().length() < 25);
+    }
 }

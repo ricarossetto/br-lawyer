@@ -679,6 +679,10 @@ import org.junit.Test;
  */
 public class LocalFileTest {
 
+    private String tempDirPath;
+    private File tempDir;
+    private File testDir;
+
     public LocalFileTest() {
     }
 
@@ -693,9 +697,19 @@ public class LocalFileTest {
     @Before
     public void setUp() {
         try {
-            File f = new File("/tmp/jlawyertest");
-            f.mkdirs();
-            File tf = new File("/tmp/jlawyertest/jlawyertest.txt");
+            tempDir = new File(System.getProperty("java.io.tmpdir"));
+            String p = tempDir.getAbsolutePath().replace('\\', '/');
+            if (!p.startsWith("/")) {
+                p = "/" + p;
+            }
+            if (!p.endsWith("/")) {
+                p = p + "/";
+            }
+            tempDirPath = "file://" + p;
+
+            testDir = new File(tempDir, "jlawyertest");
+            testDir.mkdirs();
+            File tf = new File(testDir, "jlawyertest.txt");
             tf.createNewFile();
         } catch (Throwable t) {
             t.printStackTrace();
@@ -709,7 +723,7 @@ public class LocalFileTest {
     @Test
     public void testTraverse() {
         try {
-            VirtualFile vf = VirtualFile.getFile("file:///tmp/jlawyertest/");
+            VirtualFile vf = VirtualFile.getFile(tempDirPath + "jlawyertest/");
             traverse(vf);
         } catch (Exception ex) {
             Assert.fail(ex.getMessage());
@@ -719,7 +733,7 @@ public class LocalFileTest {
     @Test
     public void testIsDirectory() {
         try {
-            VirtualFile vf = VirtualFile.getFile("file://tmp/");
+            VirtualFile vf = VirtualFile.getFile(tempDirPath);
             Assert.assertTrue(vf.isDirectory());
             Assert.assertFalse(vf.isFile());
         } catch (Exception ex) {
@@ -730,12 +744,12 @@ public class LocalFileTest {
     @Test
     public void testCreateDeleteDirectory() {
         try {
-            VirtualFile vf = VirtualFile.getFile("file:///tmp/");
+            VirtualFile vf = VirtualFile.getFile(tempDirPath);
 
             String subDir = "" + System.currentTimeMillis();
             vf.createDirectory(subDir);
 
-            vf = VirtualFile.getFile("file:///tmp/" + subDir + "/");
+            vf = VirtualFile.getFile(tempDirPath + subDir + "/");
             vf.delete();
 
         } catch (Exception ex) {
@@ -746,7 +760,7 @@ public class LocalFileTest {
     @Test
     public void testCopy() {
         try {
-            VirtualFile vf = VirtualFile.getFile("file:///tmp/jlawyertest/");
+            VirtualFile vf = VirtualFile.getFile(tempDirPath + "jlawyertest/");
 
             File f = File.createTempFile("jlawyertest2", ".txt");
             String name = f.getName();
@@ -768,7 +782,7 @@ public class LocalFileTest {
     @Test
     public void testDelete() {
         try {
-            VirtualFile vf = VirtualFile.getFile("file:///tmp/jlawyertest/");
+            VirtualFile vf = VirtualFile.getFile(tempDirPath + "jlawyertest/");
 
             Collection<VirtualFile> c = vf.listFiles();
             for (VirtualFile v : c) {
@@ -786,9 +800,9 @@ public class LocalFileTest {
     @Test
     public void testIsFile() {
         try {
-            File tf = new File("/tmp/gugge.txt");
+            File tf = new File(tempDir, "gugge.txt");
             tf.createNewFile();
-            VirtualFile vf = VirtualFile.getFile("file:///tmp/gugge.txt");
+            VirtualFile vf = VirtualFile.getFile(tempDirPath + "gugge.txt");
             Assert.assertTrue(vf.isFile());
             Assert.assertFalse(vf.isDirectory());
 

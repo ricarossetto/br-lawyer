@@ -701,7 +701,8 @@ public class SyncTest {
         this.ftpPassword=System.getenv("ftppassword");
         this.ftpUser=System.getenv("ftpuser");
         this.ftpHome=System.getenv("ftphome");
-        
+        org.junit.Assume.assumeNotNull(this.ftpUser);
+        org.junit.Assume.assumeNotNull(this.ftpPassword);
         
     }
 

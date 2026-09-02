@@ -704,11 +704,29 @@ public class DocumentPreviewTest {
     public void tearDown() {
     }
 
+    private byte[] loadResourceBytes(String name) throws Exception {
+        try (java.io.InputStream is = getClass().getResourceAsStream("/data/" + name)) {
+            if (is == null) {
+                File f = new File("test/data/" + name);
+                if (f.exists()) {
+                    return FileUtils.readFile(f);
+                }
+                throw new java.io.FileNotFoundException("Resource not found on classpath: /data/" + name);
+            }
+            return org.apache.commons.io.IOUtils.toByteArray(is);
+        }
+    }
+
+    private String loadResourceString(String name) throws Exception {
+        return new String(loadResourceBytes(name), java.nio.charset.StandardCharsets.UTF_8);
+    }
+
      @Test
      public void testTextPreview() {
          JComponent textPanel=null;
         try {
-            textPanel = DocumentViewerFactory.getDocumentViewer(null, "test.txt", true, new FixedStringPreviewProvider(FileUtils.readFileAsString(new File("test/data/test.txt"))), FileUtils.readFileAsString(new File("test/data/test.txt")).getBytes(), 200, 200, null);
+            String text = loadResourceString("test.txt");
+            textPanel = DocumentViewerFactory.getDocumentViewer(null, "test.txt", true, new FixedStringPreviewProvider(text), text.getBytes(java.nio.charset.StandardCharsets.UTF_8), 200, 200, null);
         } catch (Exception ex) {
             Assert.fail(ex.getMessage());
         }
@@ -720,7 +738,7 @@ public class DocumentPreviewTest {
      public void testPngPreview() {
          JComponent pngPanel=null;
         try {
-            pngPanel = DocumentViewerFactory.getDocumentViewer(null, "test.png", true, new FixedStringPreviewProvider("nix vorschau"), FileUtils.readFile(new File("test/data/test.png")), 200, 200, null);
+            pngPanel = DocumentViewerFactory.getDocumentViewer(null, "test.png", true, new FixedStringPreviewProvider("nix vorschau"), loadResourceBytes("test.png"), 200, 200, null);
         } catch (Exception ex) {
             Assert.fail(ex.getMessage());
         }
@@ -732,7 +750,7 @@ public class DocumentPreviewTest {
      public void testPdfPreview() {
          JComponent pdfPanel=null;
         try {
-            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.pdf", true, new FixedStringPreviewProvider("nix vorschau"), FileUtils.readFile(new File("test/data/test.pdf")), 200, 200, null);
+            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.pdf", true, new FixedStringPreviewProvider("nix vorschau"), loadResourceBytes("test.pdf"), 200, 200, null);
         } catch (Exception ex) {
             Assert.fail(ex.getMessage());
         }
@@ -744,7 +762,7 @@ public class DocumentPreviewTest {
      public void testTifPreview() {
          JComponent pdfPanel=null;
         try {
-            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.tif", true, new FixedStringPreviewProvider("nix vorschau"), FileUtils.readFile(new File("test/data/test.tif")), 200, 200, null);
+            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.tif", true, new FixedStringPreviewProvider("nix vorschau"), loadResourceBytes("test.tif"), 200, 200, null);
         } catch (Exception ex) {
             Assert.fail(ex.getMessage());
         }
@@ -756,7 +774,7 @@ public class DocumentPreviewTest {
      public void testBmpPreview() {
          JComponent pdfPanel=null;
         try {
-            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.bmp", true, new FixedStringPreviewProvider("nix vorschau"), FileUtils.readFile(new File("test/data/test.bmp")), 200, 200, null);
+            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.bmp", true, new FixedStringPreviewProvider("nix vorschau"), loadResourceBytes("test.bmp"), 200, 200, null);
         } catch (Exception ex) {
             Assert.fail(ex.getMessage());
         }
@@ -768,7 +786,7 @@ public class DocumentPreviewTest {
      public void testTiffPreview() {
          JComponent pdfPanel=null;
         try {
-            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.tiff", true, new FixedStringPreviewProvider("nix vorschau"), FileUtils.readFile(new File("test/data/test.tiff")), 200, 200, null);
+            pdfPanel = DocumentViewerFactory.getDocumentViewer(null, "test.tiff", true, new FixedStringPreviewProvider("nix vorschau"), loadResourceBytes("test.tiff"), 200, 200, null);
         } catch (Exception ex) {
             Assert.fail(ex.getMessage());
         }

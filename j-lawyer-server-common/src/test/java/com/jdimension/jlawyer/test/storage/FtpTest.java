@@ -713,6 +713,7 @@ public class FtpTest {
         this.ftpHost = System.getenv("ftphost");
         
         System.out.println("using host " + ftpHost);
+        org.junit.Assume.assumeNotNull(this.ftpHost);
 
     }
 

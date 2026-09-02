@@ -1626,7 +1626,7 @@ public class PdfImageScrollingPanel extends javax.swing.JPanel implements Previe
                 }
             }
 
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             log.error("Error rendering e-invoice", ex);
         }
         log.debug("invoice checking / rendering took " + (System.currentTimeMillis() - start));

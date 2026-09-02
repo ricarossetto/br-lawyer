@@ -773,7 +773,7 @@ public class XRechnungPanel extends javax.swing.JPanel implements PreviewPanel {
 
                 }
 
-            } catch (Exception ex) {
+            } catch (Throwable ex) {
                 log.error("Error rendering e-invoice", ex);
             }
 

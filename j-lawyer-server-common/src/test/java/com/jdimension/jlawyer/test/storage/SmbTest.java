@@ -700,6 +700,7 @@ public class SmbTest {
                 this.runsontravis = true;
             }
         }
+        org.junit.Assume.assumeNotNull(System.getenv("smbhost"));
     }
 
     @After
