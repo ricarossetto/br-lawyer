@@ -61,20 +61,20 @@ public class InvoicesOpenPanel extends JPanel {
         setOpaque(false);
         setBorder(BorderFactory.createEmptyBorder(12, 12, 12, 12));
 
-        currencyFormat = NumberFormat.getCurrencyInstance(Locale.GERMANY);
+        currencyFormat = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
         // Header
         JPanel pnlHeader = new JPanel(new BorderLayout());
         pnlHeader.setOpaque(false);
 
-        JLabel lblTitle = new JLabel("Offene Rechnungen");
+        JLabel lblTitle = new JLabel("Faturas em Aberto");
         lblTitle.setFont(lblTitle.getFont().deriveFont(lblTitle.getFont().getStyle() | Font.BOLD, lblTitle.getFont().getSize() + 2));
         lblTitle.setForeground(Color.WHITE);
         pnlHeader.add(lblTitle, BorderLayout.WEST);
 
         cmdRefresh = new JButton();
         cmdRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons16/material/baseline_refresh_white_36dp.png")));
-        cmdRefresh.setToolTipText("Aktualisieren");
+        cmdRefresh.setToolTipText("Atualizar");
         cmdRefresh.setBorder(null);
         cmdRefresh.setContentAreaFilled(false);
         cmdRefresh.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -91,7 +91,7 @@ public class InvoicesOpenPanel extends JPanel {
         pnlCards.setLayout(new BoxLayout(pnlCards, BoxLayout.Y_AXIS));
 
         // Loading placeholder
-        lblLoading = new JLabel("Rechnungen werden geladen...");
+        lblLoading = new JLabel("Carregando faturas...");
         lblLoading.setForeground(Color.WHITE);
         pnlCards.add(lblLoading);
 
@@ -102,7 +102,7 @@ public class InvoicesOpenPanel extends JPanel {
         cardNotDue = createCard();
         lblNotDueBadge = new JLabel("0");
         lblNotDueBadge.setIcon(new BadgeIcon("0", ServerColorTheme.COLOR_LOGO_GREEN, badgeFont));
-        lblNotDueBadge.setText("Noch nicht fällig");
+        lblNotDueBadge.setText("A vencer");
         lblNotDueBadge.setFont(lblNotDueBadge.getFont().deriveFont(Font.BOLD, lblNotDueBadge.getFont().getSize() + 1f));
         lblNotDueBadge.setForeground(Color.WHITE);
         lblNotDueBadge.setIconTextGap(10);
@@ -120,7 +120,7 @@ public class InvoicesOpenPanel extends JPanel {
         cardOverdue = createCard();
         lblOverdueBadge = new JLabel("0");
         lblOverdueBadge.setIcon(new BadgeIcon("0", ServerColorTheme.COLOR_LOGO_RED, badgeFont));
-        lblOverdueBadge.setText("Fällig / Überfällig");
+        lblOverdueBadge.setText("Vencidas");
         lblOverdueBadge.setFont(lblOverdueBadge.getFont().deriveFont(Font.BOLD, lblOverdueBadge.getFont().getSize() + 1f));
         lblOverdueBadge.setForeground(Color.WHITE);
         lblOverdueBadge.setIconTextGap(10);
@@ -185,11 +185,11 @@ public class InvoicesOpenPanel extends JPanel {
         Font badgeFont = lblNotDueBadge.getFont().deriveFont(Font.BOLD, 13f);
 
         lblNotDueBadge.setIcon(new BadgeIcon(String.valueOf(notDueCount), ServerColorTheme.COLOR_LOGO_GREEN, badgeFont));
-        lblNotDueAmount.setText("Summe: " + currencyFormat.format(notDueTotal));
+        lblNotDueAmount.setText("Total: " + currencyFormat.format(notDueTotal));
         cardNotDue.setVisible(true);
 
         lblOverdueBadge.setIcon(new BadgeIcon(String.valueOf(overdueCount), ServerColorTheme.COLOR_LOGO_RED, badgeFont));
-        lblOverdueAmount.setText("Summe: " + currencyFormat.format(overdueTotal));
+        lblOverdueAmount.setText("Total: " + currencyFormat.format(overdueTotal));
         cardOverdue.setVisible(true);
 
         revalidate();

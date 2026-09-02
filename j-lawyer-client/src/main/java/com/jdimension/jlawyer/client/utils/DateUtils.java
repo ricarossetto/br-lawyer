@@ -677,10 +677,11 @@ import java.util.Locale;
  */
 public class DateUtils {
 
-    public static final String DATEFORMAT_DATETIME_FULL = "EEE, dd.MM.yyyy HH:mm:ss";
-    public static final String DATEFORMAT_DATETIME_DEFAULT = "dd.MM.yyyy, HH:mm";
+    public static final String DATEFORMAT_DATETIME_FULL = "EEE, dd/MM/yyyy HH:mm:ss";
+    public static final String DATEFORMAT_DATETIME_DEFAULT = "dd/MM/yyyy, HH:mm";
     
     private static final String[] DATE_FORMATS = {
+        "dd/MM/yyyy", "dd/MM/yyyy HH:mm", "dd/MM/yyyy HH:mm:ss",
         "dd.MM.yyyy", "dd.MM.yyyy HH:mm", "dd.MM.yyyy HH:mm:ss",
         "yyyy-MM-dd", "yyyy-MM-dd HH:mm", "yyyy-MM-dd HH:mm:ss",
         "MM/dd/yyyy", "MM/dd/yyyy HH:mm", "MM/dd/yyyy HH:mm:ss",
@@ -689,7 +690,7 @@ public class DateUtils {
     
     public static Date parseDate(String dateString) {
         for (String format : DATE_FORMATS) {
-            for (Locale locale : new Locale[]{Locale.GERMANY, Locale.ENGLISH}) {
+            for (Locale locale : new Locale[]{new Locale("pt", "BR"), Locale.GERMANY, Locale.ENGLISH}) {
                 try {
                     SimpleDateFormat sdf = new SimpleDateFormat(format, locale);
                     sdf.setLenient(false);
@@ -788,7 +789,7 @@ public class DateUtils {
     public static String getHumanReadableTimeInPast(Date d) {
 
         if (d == null) {
-            return "unbekannt";
+            return "desconhecido";
         }
 
         long jetzt = System.currentTimeMillis();
@@ -803,31 +804,31 @@ public class DateUtils {
         long wochen = tage / 7;
 
         if (wochen > 0) {
-            return "vor " + wochen + (wochen == 1 ? " Woche" : " Wochen");
+            return "h\u00e1 " + wochen + (wochen == 1 ? " semana" : " semanas");
         } else if (tage > 0) {
-            return "vor " + tage + (tage == 1 ? " Tag" : " Tagen");
+            return "h\u00e1 " + tage + (tage == 1 ? " dia" : " dias");
         } else if (stunden > 0) {
-            return "vor " + stunden + (stunden == 1 ? " Stunde" : " Stunden");
+            return "h\u00e1 " + stunden + (stunden == 1 ? " hora" : " horas");
         } else if (minuten > 0) {
-            return "vor " + minuten + (minuten == 1 ? " Minute" : " Minuten");
+            return "h\u00e1 " + minuten + (minuten == 1 ? " minuto" : " minutos");
         } else {
-            return "vor " + sekunden + (sekunden == 1 ? " Sekunde" : " Sekunden");
+            return "h\u00e1 " + sekunden + (sekunden == 1 ? " segundo" : " segundos");
         }
     }
 
     public static String getHumanReadableTime(Date d) {
 
         if (d == null) {
-            return "unbekannt";
+            return "desconhecido";
         }
 
         long jetzt = System.currentTimeMillis();
         long vergangeneZeitInMs = d.getTime();
 
         long differenzInMs = jetzt - vergangeneZeitInMs;
-        String prefix = "vor ";
+        String prefix = "h\u00e1 ";
         if (differenzInMs < 0) {
-            prefix = "in ";
+            prefix = "em ";
             differenzInMs = differenzInMs * -1l;
         }
 
@@ -839,17 +840,17 @@ public class DateUtils {
         long jahre = wochen / 52;
 
         if (jahre > 0) {
-            return prefix + jahre + (jahre == 1 ? " Jahr" : " Jahren");
+            return prefix + jahre + (jahre == 1 ? " ano" : " anos");
         } else if (wochen > 0) {
-            return prefix + wochen + (wochen == 1 ? " Woche" : " Wochen");
+            return prefix + wochen + (wochen == 1 ? " semana" : " semanas");
         } else if (tage > 0) {
-            return prefix + tage + (tage == 1 ? " Tag" : " Tagen");
+            return prefix + tage + (tage == 1 ? " dia" : " dias");
         } else if (stunden > 0) {
-            return prefix + stunden + (stunden == 1 ? " Stunde" : " Stunden");
+            return prefix + stunden + (stunden == 1 ? " hora" : " horas");
         } else if (minuten > 0) {
-            return prefix + minuten + (minuten == 1 ? " Minute" : " Minuten");
+            return prefix + minuten + (minuten == 1 ? " minuto" : " minutos");
         } else {
-            return prefix + sekunden + (sekunden == 1 ? " Sekunde" : " Sekunden");
+            return prefix + sekunden + (sekunden == 1 ? " segundo" : " segundos");
         }
     }
 }

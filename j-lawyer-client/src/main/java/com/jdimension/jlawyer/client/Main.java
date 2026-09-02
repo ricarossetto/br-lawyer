@@ -676,9 +676,10 @@ import java.awt.Toolkit;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.util.Locale;
 import javax.swing.KeyStroke;
-
 import javax.swing.ToolTipManager;
+import javax.swing.UIManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -705,6 +706,31 @@ public class Main {
      */
     public static void main(String[] args) {
         
+        Locale ptBrLocale = new Locale("pt", "BR");
+        Locale.setDefault(ptBrLocale);
+        Locale.setDefault(Locale.Category.FORMAT, ptBrLocale);
+        Locale.setDefault(Locale.Category.DISPLAY, ptBrLocale);
+
+        // Swing Dialogs (JOptionPane)
+        UIManager.put("OptionPane.yesButtonText", "Sim");
+        UIManager.put("OptionPane.noButtonText", "Não");
+        UIManager.put("OptionPane.cancelButtonText", "Cancelar");
+        UIManager.put("OptionPane.okButtonText", "OK");
+
+        // File Chooser (JFileChooser)
+        UIManager.put("FileChooser.lookInLabelText", "Examinar em:");
+        UIManager.put("FileChooser.saveInLabelText", "Salvar em:");
+        UIManager.put("FileChooser.openButtonText", "Abrir");
+        UIManager.put("FileChooser.saveButtonText", "Salvar");
+        UIManager.put("FileChooser.cancelButtonText", "Cancelar");
+        UIManager.put("FileChooser.fileNameLabelText", "Nome do Arquivo:");
+        UIManager.put("FileChooser.filesOfTypeLabelText", "Arquivos do Tipo:");
+        UIManager.put("FileChooser.upFolderToolTipText", "Um Nível Acima");
+        UIManager.put("FileChooser.homeFolderToolTipText", "Pasta Inicial");
+        UIManager.put("FileChooser.newFolderToolTipText", "Nova Pasta");
+        UIManager.put("FileChooser.listViewButtonToolTipText", "Lista");
+        UIManager.put("FileChooser.detailsViewButtonToolTipText", "Detalhes");
+
         ClientSettings.migrateClientSettingsDirectory();
         
         String userHomeConfLogParent = System.getProperty(USER_HOME) + System.getProperty(FILE_SEPARATOR) + ClientSettings.JLAWYERCLIENT_SETTINGDIR + System.getProperty(FILE_SEPARATOR) + "log";
@@ -843,13 +869,13 @@ public class Main {
         // todo: load this from the server
         ModuleMetadata root = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.mydesktop"));
 
-        final String moduleNameCalendar="Kalender";
+        final String moduleNameCalendar="Agenda";
         
         boolean isMacOs=SystemUtils.isMacOs();
         
         root.setEditorClass("com.jdimension.jlawyer.client.desktop.DesktopPanel");
-        root.setFullName("Mein Desktop");
-        root.setEditorName("Desktop");
+        root.setFullName("Painel Principal");
+        root.setEditorName("Painel");
         root.setModuleName("");
         root.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_desktop_windows_blue_36dp.png")));
         root.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_desktop_windows_green_36dp.png")));
@@ -860,15 +886,15 @@ public class Main {
         }
         
         ModuleMetadata files = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.cases"));
-        files.setFullName("Akten");
+        files.setFullName("Processos");
         root.addChildModule(files);
         ModuleMetadata filesNew = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.cases.new"));
         filesNew.setEditorClass("com.jdimension.jlawyer.client.editors.files.NewArchiveFilePanel");
         filesNew.setBackgroundImage("mydesktop.jpg");
         files.addChildModule(filesNew);
-        filesNew.setFullName("neue Akte anlegen");
-        filesNew.setEditorName("neu");
-        filesNew.setModuleName("Akten");
+        filesNew.setFullName("Cadastrar Novo Processo");
+        filesNew.setEditorName("Novo");
+        filesNew.setModuleName("Processos");
         filesNew.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-12-blue.png")));
         filesNew.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-12-green.png")));
         if(isMacOs) {
@@ -880,9 +906,9 @@ public class Main {
         ModuleMetadata filesEdit = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.cases.edit"));
         filesEdit.setEditorClass("com.jdimension.jlawyer.client.editors.files.EditArchiveFilePanel");
         filesEdit.setBackgroundImage("mydesktop.jpg");
-        filesEdit.setFullName("vorhandene Akte suchen");
-        filesEdit.setEditorName("suchen");
-        filesEdit.setModuleName("Akten");
+        filesEdit.setFullName("Pesquisar Processos");
+        filesEdit.setEditorName("Pesquisar");
+        filesEdit.setModuleName("Processos");
         filesEdit.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-13-blue.png")));
         filesEdit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-13-green.png")));
         if(isMacOs) {
@@ -893,14 +919,14 @@ public class Main {
         files.addChildModule(filesEdit);
 
         ModuleMetadata addresses = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.contacts"));
-        addresses.setFullName("Adressen");
+        addresses.setFullName("Contatos");
         root.addChildModule(addresses);
         ModuleMetadata addressesNew = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.contacts.new"));
         addressesNew.setEditorClass("com.jdimension.jlawyer.client.editors.addresses.NewAddressPanel");
         addressesNew.setBackgroundImage("addresses.jpg");
-        addressesNew.setFullName("neue Adresse anlegen");
-        addressesNew.setEditorName("neu");
-        addressesNew.setModuleName("Adressen");
+        addressesNew.setFullName("Cadastrar Novo Contato");
+        addressesNew.setEditorName("Novo");
+        addressesNew.setModuleName("Contatos");
         addressesNew.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-19-blue.png")));
         addressesNew.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-19-green.png")));
         if(isMacOs) {
@@ -913,9 +939,9 @@ public class Main {
         ModuleMetadata addressesEdit = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.contacts.edit"));
         addressesEdit.setEditorClass("com.jdimension.jlawyer.client.editors.addresses.EditAddressPanel");
         addressesEdit.setBackgroundImage("addresses.jpg");
-        addressesEdit.setFullName("vorhandene Adresse suchen");
-        addressesEdit.setEditorName("suchen");
-        addressesEdit.setModuleName("Adressen");
+        addressesEdit.setFullName("Pesquisar Contatos");
+        addressesEdit.setEditorName("Pesquisar");
+        addressesEdit.setModuleName("Contatos");
         addressesEdit.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-20-blue.png")));
         addressesEdit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-20-green.png")));
         if(isMacOs) {
@@ -926,13 +952,13 @@ public class Main {
         addresses.addChildModule(addressesEdit);
 
         ModuleMetadata reviews = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.fup"));
-        reviews.setFullName("Wiedervorlagen und Fristen");
+        reviews.setFullName("Prazos e Audiências");
         root.addChildModule(reviews);
         ModuleMetadata reviewsDue = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.fup.byduedate"));
         reviewsDue.setEditorClass("com.jdimension.jlawyer.client.editors.files.ArchiveFileReviewsOverviewPanel");
         reviewsDue.setBackgroundImage("reviews.jpg");
-        reviewsDue.setFullName("Wiedervorlagen, Fristen und Termine in chronologischer Reihenfolge");
-        reviewsDue.setEditorName("chronologisch");
+        reviewsDue.setFullName("Prazos e Audiências por Vencimento");
+        reviewsDue.setEditorName("Cronológico");
         reviewsDue.setModuleName(moduleNameCalendar);
         reviewsDue.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-22-blue.png")));
         reviewsDue.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-22-green.png")));
@@ -945,8 +971,8 @@ public class Main {
         ModuleMetadata reviewsSearch = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.fup.find"));
         reviewsSearch.setEditorClass("com.jdimension.jlawyer.client.editors.files.ArchiveFileReviewsFindPanel");
         reviewsSearch.setBackgroundImage("reviews.jpg");
-        reviewsSearch.setFullName("Suche nach Wiedervorlagen, Fristen und Terminen");
-        reviewsSearch.setEditorName("suchen");
+        reviewsSearch.setFullName("Pesquisar Prazos e Audiências");
+        reviewsSearch.setEditorName("Pesquisar");
         reviewsSearch.setModuleName(moduleNameCalendar);
         reviewsSearch.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-15-blue.png")));
         reviewsSearch.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-15-green.png")));
@@ -954,8 +980,8 @@ public class Main {
         ModuleMetadata reviewsMissing = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.fup.missing"));
         reviewsMissing.setEditorClass("com.jdimension.jlawyer.client.editors.files.ArchiveFileReviewsMissingPanel");
         reviewsMissing.setBackgroundImage("reviews.jpg");
-        reviewsMissing.setFullName("fehlende Wiedervorlagen / Fristen");
-        reviewsMissing.setEditorName("fehlende");
+        reviewsMissing.setFullName("Pendências de Prazos");
+        reviewsMissing.setEditorName("Pendências");
         reviewsMissing.setModuleName(moduleNameCalendar);
         reviewsMissing.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-14-blue.png")));
         reviewsMissing.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-14-green.png")));
@@ -963,15 +989,15 @@ public class Main {
         reviews.addChildModule(reviewsMissing);
 
         ModuleMetadata mail = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.comm"));
-        mail.setFullName("Kommunikation");
+        mail.setFullName("Comunicações");
         root.addChildModule(mail);
         
-        ModuleMetadata instantMessages = new ModuleMetadata("Nachrichten");
+        ModuleMetadata instantMessages = new ModuleMetadata("Mensagens Instantâneas");
         instantMessages.setEditorClass("com.jdimension.jlawyer.client.messenger.MessagingCenterPanel");
         instantMessages.setBackgroundImage("messaging.jpg");
-        instantMessages.setFullName("Instant Messaging Center");
-        instantMessages.setEditorName("Messaging");
-        instantMessages.setModuleName("Post");
+        instantMessages.setFullName("Central de Mensagens");
+        instantMessages.setEditorName("Mensagens");
+        instantMessages.setModuleName("Comunicações");
         instantMessages.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_chat_blue_48dp.png")));
         instantMessages.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_chat_green_48dp.png")));
         instantMessages.setStatusEventType(Event.TYPE_INSTANTMESSAGING_OPENMENTIONS);
@@ -981,9 +1007,9 @@ public class Main {
         ModuleMetadata mailInbox = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.comm.inbox"));
         mailInbox.setEditorClass("com.jdimension.jlawyer.client.mail.EmailInboxPanel");
         mailInbox.setBackgroundImage("emails.jpg");
-        mailInbox.setFullName("E-Mail-Posteingang");
+        mailInbox.setFullName("Caixa de Entrada de E-mails");
         mailInbox.setEditorName("E-Mail");
-        mailInbox.setModuleName("Post");
+        mailInbox.setModuleName("Comunicações");
         mailInbox.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-30-blue.png")));
         mailInbox.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-30-green.png")));
         mailInbox.setStatusEventType(Event.TYPE_MAILSTATUS);
@@ -996,9 +1022,9 @@ public class Main {
         ModuleMetadata bea = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.comm.bea"));
         bea.setEditorClass("com.jdimension.jlawyer.client.bea.BeaInboxPanel");
         bea.setBackgroundImage("emails.jpg");
-        bea.setFullName("beA-Posteingang");
-        bea.setEditorName("beA");
-        bea.setModuleName("Post");
+        bea.setFullName("Publicações & Intimações");
+        bea.setEditorName("Publicações");
+        bea.setModuleName("Comunicações");
         bea.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-16-blue.png")));
         bea.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-16-green.png")));
         bea.setStatusEventType(Event.TYPE_BEASTATUS);
@@ -1011,9 +1037,9 @@ public class Main {
         ModuleMetadata mailingStatus = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.comm.fax"));
         mailingStatus.setEditorClass("com.jdimension.jlawyer.client.voip.MailingStatusPanel");
         mailingStatus.setBackgroundImage("emails.jpg");
-        mailingStatus.setFullName("Mailingstatus");
-        mailingStatus.setEditorName("Brief / Fax");
-        mailingStatus.setModuleName("Post");
+        mailingStatus.setFullName("Status de Despacho");
+        mailingStatus.setEditorName("Cartas / Faxes");
+        mailingStatus.setModuleName("Comunicações");
         mailingStatus.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_print_blue_36dp.png")));
         mailingStatus.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_print_green_36dp.png")));
         mailingStatus.setStatusEventType(Event.TYPE_MAILINGSTATUS);
@@ -1021,9 +1047,9 @@ public class Main {
         ModuleMetadata mailTpl = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.comm.templates"));
         mailTpl.setEditorClass("com.jdimension.jlawyer.client.mail.EmailTemplatesPanel");
         mailTpl.setBackgroundImage("emails.jpg");
-        mailTpl.setFullName("E-Mail- und beA-Vorlagen");
-        mailTpl.setEditorName("Vorlagen");
-        mailTpl.setModuleName("Post");
+        mailTpl.setFullName("Modelos de Mensagens e Petições");
+        mailTpl.setEditorName("Modelos");
+        mailTpl.setModuleName("Comunicações");
         mailTpl.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_email_blue_36dp.png")));
         mailTpl.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_email_green_36dp.png")));
         mailTpl.setSettingsEntry(true);
@@ -1031,9 +1057,9 @@ public class Main {
         ModuleMetadata massmail = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.comm.massmail"));
         massmail.setEditorClass("com.jdimension.jlawyer.client.massmail.MassMailPanel");
         massmail.setBackgroundImage("emails.jpg");
-        massmail.setFullName("Serienschreiben erstellen");
-        massmail.setEditorName("Serie");
-        massmail.setModuleName("Post");
+        massmail.setFullName("Mala Direta");
+        massmail.setEditorName("Mala Direta");
+        massmail.setModuleName("Comunicações");
         massmail.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_email_blue_36dp.png")));
         massmail.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_email_green_36dp.png")));
         massmail.setSettingsEntry(true);
@@ -1041,9 +1067,9 @@ public class Main {
         ModuleMetadata scans = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.docs.scans"));
         scans.setEditorClass("com.jdimension.jlawyer.client.editors.documents.ScannerPanel");
         scans.setBackgroundImage("templates.jpg");
-        scans.setFullName("Scaneingang");
-        scans.setEditorName("Scans");
-        scans.setModuleName("Post");
+        scans.setFullName("Digitalizações (Scans)");
+        scans.setEditorName("Digitalizações");
+        scans.setModuleName("Comunicações");
         scans.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_scanner_blue_36dp.png")));
         scans.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_scanner_green_36dp.png")));
         scans.setStatusEventType(Event.TYPE_SCANNERSTATUS);
@@ -1056,26 +1082,26 @@ public class Main {
         mail.addChildModule(scans);
 
         ModuleMetadata templates = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.docs"));
-        templates.setFullName("Dokumente");
+        templates.setFullName("Documentos");
         root.addChildModule(templates);
         ModuleMetadata allTpl = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.docs.templates"));
         allTpl.setEditorClass("com.jdimension.jlawyer.client.templates.LetterTemplatesTreePanel");
         allTpl.setBackgroundImage("templates.jpg");
-        allTpl.setFullName("Dokumentvorlagen");
-        allTpl.setEditorName("Dokumentvorlagen");
-        allTpl.setModuleName("Akten");
+        allTpl.setFullName("Modelos de Documentos");
+        allTpl.setEditorName("Modelos");
+        allTpl.setModuleName("Processos");
         allTpl.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_insert_drive_file_blue_36dp.png")));
         allTpl.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_insert_drive_file_green_36dp.png")));
         allTpl.setSettingsEntry(true);
         templates.addChildModule(allTpl);
         
-        final String modLetterHeads="Briefköpfe";
+        final String modLetterHeads="Papéis Timbrados";
         ModuleMetadata allTplHeads = new ModuleMetadata(modLetterHeads);
         allTplHeads.setEditorClass("com.jdimension.jlawyer.client.templates.LetterHeadsTreePanel");
         allTplHeads.setBackgroundImage("templates.jpg");
         allTplHeads.setFullName(modLetterHeads);
         allTplHeads.setEditorName(modLetterHeads);
-        allTplHeads.setModuleName("Akten");
+        allTplHeads.setModuleName("Processos");
         allTplHeads.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_insert_drive_file_blue_36dp.png")));
         allTplHeads.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_insert_drive_file_green_36dp.png")));
         allTplHeads.setSettingsEntry(true);
@@ -1084,29 +1110,29 @@ public class Main {
         ModuleMetadata docSearch = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.docs.search"));
         docSearch.setEditorClass("com.jdimension.jlawyer.client.editors.search.DocumentSearchPanel");
         docSearch.setBackgroundImage("templates.jpg");
-        docSearch.setFullName("Suchmaschine");
-        docSearch.setEditorName("Volltext");
-        docSearch.setModuleName("Recherche");
+        docSearch.setFullName("Busca Textual nos Documentos");
+        docSearch.setEditorName("Texto Completo");
+        docSearch.setModuleName("Pesquisa");
         docSearch.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-21-blue.png")));
         docSearch.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/Icons2-21-green.png")));
         templates.addChildModule(docSearch);
 
         ModuleMetadata history = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.history"));
-        history.setFullName("Historie");
+        history.setFullName("Histórico");
         root.addChildModule(history);
         
-        ModuleMetadata reporting = new ModuleMetadata("Auswertungen");
+        ModuleMetadata reporting = new ModuleMetadata("Relatórios e Estatísticas");
         reporting.setEditorClass("com.jdimension.jlawyer.client.editors.reporting.ReportingPanel");
         reporting.setBackgroundImage("history.jpg");
-        reporting.setFullName("Auswertungen");
-        reporting.setEditorName("Auswertungen");
-        reporting.setModuleName("Recherche");
+        reporting.setFullName("Relatórios e Estatísticas");
+        reporting.setEditorName("Relatórios");
+        reporting.setModuleName("Pesquisa");
         reporting.setDefaultIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_insert_chart_blue_48dp.png")));
         reporting.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/icons32/material/baseline_insert_chart_green_48dp.png")));
         history.addChildModule(reporting);
 
         ModuleMetadata knowledge = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.knowledge"));
-        knowledge.setFullName("Historie");
+        knowledge.setFullName("Jurisprudência");
         root.addChildModule(knowledge);
 //        ModuleMetadata ug = new ModuleMetadata(java.util.ResourceBundle.getBundle("com/jdimension/jlawyer/client/Modules").getString("mod.knowledge.ug"));
 //        ug.setEditorClass("com.jdimension.jlawyer.client.editors.research.urteilegesetze.UgDocumentSearchPanel");

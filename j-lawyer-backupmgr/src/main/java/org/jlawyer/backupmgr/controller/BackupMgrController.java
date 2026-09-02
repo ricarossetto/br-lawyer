@@ -78,7 +78,7 @@ public class BackupMgrController implements Initializable {
             Platform.runLater(() -> {
                 cmdRestore.disableProperty().set(true);
                 prgRestore.setProgress(0.0d);
-                lblProgress.setText("Prüfe Datensicherung...");
+                lblProgress.setText("Verificando backup...");
             });
             System.out.println("validate");
             boolean failed=false;
@@ -98,7 +98,7 @@ public class BackupMgrController implements Initializable {
                 return;
             
             Platform.runLater(() -> {
-                lblProgress.setText("Prüfung erfolgreich...");
+                lblProgress.setText("Verificação concluída com sucesso...");
             });
             
             try {
@@ -124,7 +124,7 @@ public class BackupMgrController implements Initializable {
             
             Platform.runLater(() -> {
                 prgRestore.setProgress(1.0d);
-                lblProgress.setText("Wiederherstellung abgeschlossen.");
+                lblProgress.setText("Restauração concluída com sucesso.");
                 cmdRestore.disableProperty().set(false);
             });
         }).start();

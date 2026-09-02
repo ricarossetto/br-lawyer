@@ -12,12 +12,12 @@
 <AnchorPane id="AnchorPane" prefHeight="306.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jlawyer.backupmgr.controller.BackupMgrController">
    <children>
       <AmbientLight color="CHARTREUSE" layoutX="258.0" layoutY="200.0" lightOn="true" />
-      <Label layoutX="14.0" layoutY="14.0" text="Hinweis: ">
+      <Label layoutX="14.0" layoutY="14.0" text="Aviso: ">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="91.0" layoutY="15.0" text="Die Wiederherstellung ersetzt alle vorhandenen Daten!" />
+      <Label layoutX="91.0" layoutY="15.0" text="A restauração substituirá todos os dados existentes!" />
       <VBox alignment="TOP_CENTER" layoutX="12.0" layoutY="40.0" prefHeight="223.0" prefWidth="855.0" spacing="10.0">
          <children>
             <GridPane hgap="10.0" prefHeight="138.0" prefWidth="936.0">
@@ -33,27 +33,27 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Datensicherungsordner:">
+                  <Label text="Pasta do backup:">
                      <padding>
                         <Insets right="10.0" />
                      </padding>
                   </Label>
-                  <Label text="Verschlüsselt mit Passwort:" GridPane.rowIndex="1">
+                  <Label text="Criptografado com senha:" GridPane.rowIndex="1">
                      <padding>
                         <Insets right="10.0" />
                      </padding>
                   </Label>
-                  <Label text="Datenbankpasswort:" GridPane.rowIndex="2" />
+                  <Label text="Senha do banco de dados:" GridPane.rowIndex="2" />
                   <TextField fx:id="txtBackupDir" editable="false" GridPane.columnIndex="1" />
                   <TextField fx:id="txtEncryptionPwd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="txtMysqlPwd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Button fx:id="cmdBrowseBackupDir" mnemonicParsing="false" onAction="#cmdBrowseBackupDirClicked" text="..." GridPane.columnIndex="2" />
-                  <Label text="j-lawyer.org Datenverzeichnis:" GridPane.rowIndex="3" />
+                  <Label text="Diretório de dados BR-LAWYER:" GridPane.rowIndex="3" />
                   <TextField fx:id="txtDataDir" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Button fx:id="cmdBrowseDataDir" mnemonicParsing="false" onAction="#cmdBrowseDataDirClicked" text="..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <Button fx:id="cmdRestore" mnemonicParsing="false" onAction="#cmdRestoreClicked" text="Wiederherstellen" />
+            <Button fx:id="cmdRestore" mnemonicParsing="false" onAction="#cmdRestoreClicked" text="Restaurar Backup" />
             <ProgressBar fx:id="prgRestore" prefHeight="20.0" prefWidth="839.0" progress="0.0" />
             <Label fx:id="lblProgress" prefHeight="15.0" prefWidth="837.0" />
          </children>

@@ -748,7 +748,7 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
     private static final String ICON_SUCCESS = "/icons/agt_action_success.png";
 
     private static final Logger log = Logger.getLogger(InvoiceDialog.class.getName());
-    private final SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+    private final SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     private final DecimalFormat cf = new DecimalFormat(ServerSettings.getInstance().getSetting("plugins.global.tableproperties.numberFormat", "#,##0.00"));
     private final DecimalFormat accountEntryFormat = new DecimalFormat("#,##0.00");
     private final DecimalFormat percentageFormat = new DecimalFormat("0.0");
@@ -2251,10 +2251,14 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
             ct.addHeaders("Persoon", "Datum", "Tijd", "Uurtarief", "Totaal", "handeling");
             dfDateTime = new SimpleDateFormat("dd-MM-yyyy");
             currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("nl", "NL")));
+        } else if ("PT".equalsIgnoreCase(language) || "BR".equalsIgnoreCase(language) || "PT_BR".equalsIgnoreCase(language)) {
+            ct.addHeaders("Profissional", "Data", "Tempo", "Valor/Hora", "Total", "Atividade");
+            dfDateTime = new SimpleDateFormat("dd/MM/yyyy");
+            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("pt", "BR")));
         } else {
-            ct.addHeaders("Person", "Datum", "Dauer", "Stundensatz", "Total", "Aktivität");
-            dfDateTime = new SimpleDateFormat("dd.MM.yyyy");
-            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(Locale.GERMANY));
+            ct.addHeaders("Profissional", "Data", "Tempo", "Valor/Hora", "Total", "Atividade");
+            dfDateTime = new SimpleDateFormat("dd/MM/yyyy");
+            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("pt", "BR")));
         }
 
         if (ServerSettings.getInstance().getSettingAsBoolean("plugins.global.tableproperties.table.emptyRows", true)) {
@@ -2325,9 +2329,12 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
         } else if ("NL".equalsIgnoreCase(language)) {
             ct.addHeaders("Persoon", "Tijd", "Totaal");
             currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("nl", "NL")));
+        } else if ("PT".equalsIgnoreCase(language) || "BR".equalsIgnoreCase(language) || "PT_BR".equalsIgnoreCase(language)) {
+            ct.addHeaders("Profissional", "Tempo", "Total");
+            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("pt", "BR")));
         } else {
-            ct.addHeaders("Person", "Dauer", "Total");
-            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(Locale.GERMANY));
+            ct.addHeaders("Profissional", "Tempo", "Total");
+            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("pt", "BR")));
         }
 
         if (ServerSettings.getInstance().getSettingAsBoolean("plugins.global.tableproperties.table.emptyRows", true)) {
@@ -2412,9 +2419,12 @@ public class InvoiceDialog extends javax.swing.JDialog implements EventConsumer 
         } else if ("NL".equalsIgnoreCase(language)) {
             ct.addHeaders("", "Factuuritem", "Aantal", "Prijs", "BTW", "Totaal");
             currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("nl", "NL")));
+        } else if ("PT".equalsIgnoreCase(language) || "BR".equalsIgnoreCase(language) || "PT_BR".equalsIgnoreCase(language)) {
+            ct.addHeaders("", "Item", "Qtd", "Valor Unit.", "Imposto", "Total");
+            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("pt", "BR")));
         } else {
-            ct.addHeaders("", "Position", "Menge", "Einzel", "USt.", "Gesamt");
-            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(Locale.GERMANY));
+            ct.addHeaders("", "Item", "Qtd", "Valor Unit.", "Imposto", "Total");
+            currencyFormat = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(new Locale("pt", "BR")));
         }
         if (ServerSettings.getInstance().getSettingAsBoolean("plugins.global.tableproperties.table.emptyRows", true)) {
             ct.addRow("", "", "", "", "", "");

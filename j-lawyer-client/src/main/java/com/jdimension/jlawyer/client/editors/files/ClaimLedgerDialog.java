@@ -721,7 +721,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
     private static final String ICON_SUCCESS = "/icons/agt_action_success.png";
 
     private static final Logger log = Logger.getLogger(ClaimLedgerDialog.class.getName());
-    private final SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+    private final SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     private final DecimalFormat cf = new DecimalFormat(ServerSettings.getInstance().getSetting("plugins.global.tableproperties.numberFormat", "#,##0.00"));
     private final DecimalFormat percentageFormat = new DecimalFormat("0.0");
 
@@ -880,16 +880,16 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
             XYChart chart = new XYChartBuilder()
                     .width(800)
                     .height(300)
-                    .title("Saldoverlauf")
-                    .xAxisTitle("Datum")
-                    .yAxisTitle("Saldo (€)")
+                    .title("Evolução do Saldo")
+                    .xAxisTitle("Data")
+                    .yAxisTitle("Saldo (R$)")
                     .build();
 
             // Styling mit DefaultColorTheme-Farben
             chart.getStyler().setLegendVisible(false);
-            chart.getStyler().setDatePattern("dd.MM.yyyy");
-            chart.getStyler().setDecimalPattern("#,##0.00");
-            chart.getStyler().setLocale(java.util.Locale.GERMAN);
+            chart.getStyler().setDatePattern("dd/MM/yyyy");
+            chart.getStyler().setDecimalPattern("R$ #,##0.00");
+            chart.getStyler().setLocale(new java.util.Locale("pt", "BR"));
             chart.getStyler().setPlotGridLinesVisible(true);
             chart.getStyler().setXAxisLabelRotation(45);
 
@@ -1018,7 +1018,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
             this.tblBaseInterest.getColumnModel().getColumn(2).setPreferredWidth(200); // Quelle
 
             // Date renderer for the date column
-            final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+            final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
             this.tblBaseInterest.getColumnModel().getColumn(0).setCellRenderer(new javax.swing.table.DefaultTableCellRenderer() {
                 @Override
                 public java.awt.Component getTableCellRendererComponent(javax.swing.JTable table, Object value,
@@ -2353,9 +2353,9 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
         public CurrencyRenderer() {
             setHorizontalAlignment(SwingConstants.RIGHT);
-            // Deutsches Locale für Komma als Dezimaltrennzeichen
-            DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.GERMAN);
-            currencyFormat = new DecimalFormat("0.00", symbols);
+            // Formatação padrão brasileira (pt-BR)
+            DecimalFormatSymbols symbols = new DecimalFormatSymbols(new Locale("pt", "BR"));
+            currencyFormat = new DecimalFormat("#,##0.00", symbols);
         }
 
         @Override
@@ -2439,7 +2439,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
 
         private final String[] columns = {"Datum", "Typ", "Betrag", "Komponente", "Bezeichnung", "Kommentar"};
         private final List<ClaimLedgerEntry> data;
-        private final SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+        private final SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 
         LedgerTableModel(List<ClaimLedgerEntry> data) {
             this.data = data;
@@ -2583,7 +2583,7 @@ public class ClaimLedgerDialog extends javax.swing.JDialog implements EventConsu
         };
 
         private final List<ClaimLedgerEntry> data;
-        private final SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+        private final SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 
         private BigDecimal sumZahlung = BigDecimal.ZERO;
         private BigDecimal sumUnverzKosten = BigDecimal.ZERO;
